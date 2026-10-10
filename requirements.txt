@@ -1,0 +1,10 @@
+requests
+Pillow
+selenium
+webdriver-manager
+pyinstaller
+pandas
+openpyxl
+beautifulsoup4
+playwright
+Flask>=3.1,<4
