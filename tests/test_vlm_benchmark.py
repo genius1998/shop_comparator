@@ -101,6 +101,7 @@ class RemoteBackendTests(unittest.TestCase):
         with mock.patch.object(bench, "_load", side_effect=lambda path, default: pairs if path == bench.PAIRS else {}), \
                 mock.patch.object(bench, "_save", side_effect=lambda path, value: saved.update(value)), \
                 mock.patch.object(bench, "image_paths", return_value=("a", "b")), \
+                mock.patch("builtins.print"), \
                 mock.patch.object(bench, "ask_remote", side_effect=RuntimeError("tunnel did not open")) as ask:
             bench.run("remote")
         self.assertEqual(ask.call_count, 2)          # no hammering of someone else's server

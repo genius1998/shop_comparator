@@ -7,6 +7,8 @@ on:
 jobs:
   unit:
     runs-on: windows-latest
+    env:
+      PYTHONIOENCODING: utf-8   # progress messages are Korean; the runner console is cp1252
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -18,5 +20,3 @@ jobs:
         run: python -m unittest discover -s tests
       - name: Matching evaluation on the frozen dataset
         run: python -m shop_comparator.matching.evaluate
-        env:
-          PYTHONIOENCODING: utf-8
