@@ -11,6 +11,7 @@ shop_comparator/
 │               templates/, static/
 ├─ services/    pipeline.py            수집 단계(무신사 / 매칭 / KREAM 가격 / 비교 / 필터 / POIZON / 전체)
 │               jobs.py                작업 관리(작업 ID, 상태, 진행률, 중단, 쇼핑몰별 배타 실행)
+│               vlm_review.py          VLM 제안 저장·검증, 사람의 승인·거절·보류, 업무량 집계
 │               comparison_service.py  사이즈 정규화와 비교 행 계산(네트워크 없음)
 │               monitoring.py          재입고·가격변동·구매제한 모니터링, 이벤트 자동화
 │               exports.py             비교 엑셀/CSV, GUI 형식 CSV, KREAM 입찰 엑셀
@@ -18,6 +19,7 @@ shop_comparator/
 │               vlm_match.py       이미지 판정(OpenAI / 로컬 Ollama)
 │               evaluate.py        기존 규칙 대비 성능 평가(고정 데이터)
 │               vlm_benchmark.py   VLM 모델 비교(이미지 쌍 구성, 실행, 채점)
+│               method_eval.py     방법 비교(규칙·텍스트·VLM·결합, 1:N)
 │               product_matcher.py 기존 자동 판별기(규칙 + OpenAI)
 ├─ shops/       browser_transport.py  쇼핑몰 Chrome 페이지 안에서 fetch()로 요청을 보내는 어댑터
 │               site_login.py         쇼핑몰별 로그인, 인증 확인, 메모리 계정 보관

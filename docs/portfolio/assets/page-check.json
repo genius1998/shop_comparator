@@ -1,0 +1,75 @@
+{
+ "nodesOpened": [
+  {
+   "node": "web",
+   "title": "사용자 웹 화면",
+   "hash": "#web"
+  },
+  {
+   "node": "jobs",
+   "title": "작업 관리: 실행, 취소, 실패, 재시도",
+   "hash": "#jobs"
+  },
+  {
+   "node": "collect",
+   "title": "쇼핑몰 데이터 수집",
+   "hash": "#collect"
+  },
+  {
+   "node": "normalize",
+   "title": "상품·사이즈 정규화와 회원가 계산",
+   "hash": "#normalize"
+  },
+  {
+   "node": "storage",
+   "title": "SQLite 저장: 테이블 관계와 갱신 방식",
+   "hash": "#storage"
+  },
+  {
+   "node": "rules",
+   "title": "규칙 기반 후보 매칭",
+   "hash": "#rules"
+  },
+  {
+   "node": "vlm",
+   "title": "VLM 판정: 이미지 입력에서 응답 검증까지",
+   "hash": "#vlm"
+  },
+  {
+   "node": "review",
+   "title": "사람 검수: 승인, 거절, 보류",
+   "hash": "#review"
+  },
+  {
+   "node": "compare",
+   "title": "가격 비교",
+   "hash": "#compare"
+  },
+  {
+   "node": "export",
+   "title": "Excel · CSV 내보내기",
+   "hash": "#export"
+  },
+  {
+   "node": "monitor",
+   "title": "알림 · 모니터링",
+   "hash": "#monitor"
+  },
+  {
+   "node": "eval",
+   "title": "평가 · 벤치마크",
+   "hash": "#eval"
+  },
+  {
+   "node": "planned",
+   "title": "계획 단계: 자동 승인과 자동화 (미구현)",
+   "hash": "#planned"
+  }
+ ],
+ "keyboardOpens": true,
+ "imageZoom": true,
+ "deepLink": "SQLite 저장: 테이블 관계와 갱신 방식",
+ "pageErrors": [],
+ "mobileHorizontalScroll": false,
+ "readableWithoutImages": true
+}

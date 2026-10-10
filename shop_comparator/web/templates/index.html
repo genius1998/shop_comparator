@@ -11,6 +11,7 @@
   <div class="sessions" id="session-badges"></div>
   <span class="local">● 이 PC 전용</span>
 </header>
+{% if demo %}<div class="demo-banner" role="note">{{ demo }}</div>{% endif %}
 <nav id="tabs" role="tablist">
   <button role="tab" data-tab="login" class="on">로그인</button>
   <button role="tab" data-tab="collect">수집</button>

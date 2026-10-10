@@ -168,7 +168,7 @@ def render(report):
         "[4] 같은 상품을 찾은 수",
         f"  기존 규칙(품번 일치)                     {found['legacy_exact']:4d}  ({_pct(found['legacy_exact'], n)})",
         f"  모델번호 대조                            {found['model_code']:4d}  ({_pct(found['model_code'], n)})",
-        f"  모델번호 대조 + 이미지 판정 후 사람 확인 {found['model_code_plus_reviewed']:4d}  ({_pct(found['model_code_plus_reviewed'], n)})",
+        f"  모델번호 대조 + VLM 제안 중 AI 보조 검토 채택분 {found['model_code_plus_reviewed']:4d}  ({_pct(found['model_code_plus_reviewed'], n)})",
     ]
     return "\n".join(lines)
 

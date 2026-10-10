@@ -28,6 +28,9 @@ def load_local_env(env_path: str | Path | None = None, override: bool = True) ->
     global _ENV_LOADED
     if _ENV_LOADED:
         return
+    if os.getenv("SHOP_SKIP_DOTENV") == "1" and not env_path:   # demo and capture runs: no accounts, no API keys
+        _ENV_LOADED = True
+        return
 
     path = Path(env_path) if env_path else Path(__file__).resolve().parents[2] / ".env"
     if not path.exists():

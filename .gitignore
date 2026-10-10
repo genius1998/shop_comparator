@@ -48,6 +48,9 @@ output_*.xlsx
 !docs/
 !docs/images/
 !docs/images/*.png
+!docs/portfolio/
+!docs/portfolio/assets/
+!docs/portfolio/assets/*.png
 
 kakao_out/
 kream_product_list/
@@ -78,3 +81,6 @@ poizon_search_blacklist.csv
 필수파일/
 reports/
 swea_study/
+
+# Demo copy of the database used for portfolio captures (rebuilt by scripts/portfolio/build_demo.py)
+portfolio_demo/

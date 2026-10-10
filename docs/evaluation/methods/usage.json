@@ -1,0 +1,1724 @@
+{
+ "6997721": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 810,
+  "output_tokens": 155,
+  "seconds": 2.9,
+  "at": "2026-10-09T07:13:43+00:00"
+ },
+ "5619910": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2228,
+  "output_tokens": 147,
+  "seconds": 2.8,
+  "at": "2026-10-09T10:24:06+00:00"
+ },
+ "7165976": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 834,
+  "output_tokens": 158,
+  "seconds": 2.3,
+  "at": "2026-10-09T07:13:48+00:00"
+ },
+ "7466121": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2582,
+  "output_tokens": 168,
+  "seconds": 3.1,
+  "at": "2026-10-09T10:24:09+00:00"
+ },
+ "6931948": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2669,
+  "output_tokens": 342,
+  "seconds": 4.1,
+  "at": "2026-10-09T10:24:13+00:00"
+ },
+ "3276429": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1139,
+  "output_tokens": 187,
+  "seconds": 4.0,
+  "at": "2026-10-09T10:24:18+00:00"
+ },
+ "7466120": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2223,
+  "output_tokens": 160,
+  "seconds": 3.2,
+  "at": "2026-10-09T10:24:21+00:00"
+ },
+ "7284480": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 814,
+  "output_tokens": 166,
+  "seconds": 2.6,
+  "at": "2026-10-09T07:14:06+00:00"
+ },
+ "5599231": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1884,
+  "output_tokens": 168,
+  "seconds": 3.8,
+  "at": "2026-10-09T10:24:25+00:00"
+ },
+ "3976350": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2670,
+  "output_tokens": 175,
+  "seconds": 2.0,
+  "at": "2026-10-09T10:24:27+00:00"
+ },
+ "4678344": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1805,
+  "output_tokens": 178,
+  "seconds": 3.2,
+  "at": "2026-10-09T09:56:06+00:00"
+ },
+ "4371012": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 831,
+  "output_tokens": 141,
+  "seconds": 3.0,
+  "at": "2026-10-09T09:56:09+00:00"
+ },
+ "2716424": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3281,
+  "output_tokens": 296,
+  "seconds": 2.9,
+  "at": "2026-10-09T10:24:30+00:00"
+ },
+ "3901126": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1885,
+  "output_tokens": 155,
+  "seconds": 2.5,
+  "at": "2026-10-09T10:26:27+00:00"
+ },
+ "2032850": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 821,
+  "output_tokens": 165,
+  "seconds": 3.0,
+  "at": "2026-10-09T09:56:21+00:00"
+ },
+ "4207634": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1176,
+  "output_tokens": 149,
+  "seconds": 1.9,
+  "at": "2026-10-09T10:24:31+00:00"
+ },
+ "4201382": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2518,
+  "output_tokens": 345,
+  "seconds": 3.6,
+  "at": "2026-10-09T10:24:35+00:00"
+ },
+ "4751231": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3220,
+  "output_tokens": 143,
+  "seconds": 3.2,
+  "at": "2026-10-09T10:26:30+00:00"
+ },
+ "6996757": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 851,
+  "output_tokens": 147,
+  "seconds": 2.9,
+  "at": "2026-10-09T09:56:33+00:00"
+ },
+ "5767147": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 830,
+  "output_tokens": 112,
+  "seconds": 3.2,
+  "at": "2026-10-09T09:56:36+00:00"
+ },
+ "3777398": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1148,
+  "output_tokens": 431,
+  "seconds": 4.8,
+  "at": "2026-10-09T09:56:41+00:00"
+ },
+ "4104562": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1858,
+  "output_tokens": 139,
+  "seconds": 3.5,
+  "at": "2026-10-09T10:26:33+00:00"
+ },
+ "4727100": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2870,
+  "output_tokens": 128,
+  "seconds": 3.1,
+  "at": "2026-10-09T10:26:36+00:00"
+ },
+ "6030953": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 821,
+  "output_tokens": 125,
+  "seconds": 2.9,
+  "at": "2026-10-09T09:56:50+00:00"
+ },
+ "5228975": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 820,
+  "output_tokens": 132,
+  "seconds": 3.6,
+  "at": "2026-10-09T09:56:54+00:00"
+ },
+ "2340324": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2220,
+  "output_tokens": 124,
+  "seconds": 4.3,
+  "at": "2026-10-09T10:26:41+00:00"
+ },
+ "5206545": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1843,
+  "output_tokens": 249,
+  "seconds": 3.9,
+  "at": "2026-10-09T10:26:45+00:00"
+ },
+ "5321121": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 805,
+  "output_tokens": 134,
+  "seconds": 2.9,
+  "at": "2026-10-09T09:57:03+00:00"
+ },
+ "3721889": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3291,
+  "output_tokens": 215,
+  "seconds": 4.1,
+  "at": "2026-10-09T10:26:49+00:00"
+ },
+ "7044931": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1859,
+  "output_tokens": 171,
+  "seconds": 3.5,
+  "at": "2026-10-09T10:26:52+00:00"
+ },
+ "5767150": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 821,
+  "output_tokens": 125,
+  "seconds": 2.6,
+  "at": "2026-10-09T09:57:12+00:00"
+ },
+ "4702792": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1893,
+  "output_tokens": 177,
+  "seconds": 3.2,
+  "at": "2026-10-09T09:57:15+00:00"
+ },
+ "4289272": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2541,
+  "output_tokens": 130,
+  "seconds": 3.2,
+  "at": "2026-10-09T10:26:56+00:00"
+ },
+ "6997720": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 810,
+  "output_tokens": 158,
+  "seconds": 3.1,
+  "at": "2026-10-09T09:57:22+00:00"
+ },
+ "7036381": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2596,
+  "output_tokens": 216,
+  "seconds": 3.1,
+  "at": "2026-10-09T10:26:59+00:00"
+ },
+ "5835214": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 801,
+  "output_tokens": 113,
+  "seconds": 2.8,
+  "at": "2026-10-09T09:57:28+00:00"
+ },
+ "5378047": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3249,
+  "output_tokens": 177,
+  "seconds": 3.4,
+  "at": "2026-10-09T10:27:02+00:00"
+ },
+ "5444818": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1911,
+  "output_tokens": 106,
+  "seconds": 2.8,
+  "at": "2026-10-09T10:27:05+00:00"
+ },
+ "3157671": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1852,
+  "output_tokens": 268,
+  "seconds": 3.4,
+  "at": "2026-10-09T10:27:08+00:00"
+ },
+ "3889276": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1152,
+  "output_tokens": 199,
+  "seconds": 3.0,
+  "at": "2026-10-09T09:57:39+00:00"
+ },
+ "4466957": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 817,
+  "output_tokens": 138,
+  "seconds": 2.8,
+  "at": "2026-10-09T09:57:42+00:00"
+ },
+ "4861646": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 836,
+  "output_tokens": 155,
+  "seconds": 2.8,
+  "at": "2026-10-09T09:57:45+00:00"
+ },
+ "6111437": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 808,
+  "output_tokens": 155,
+  "seconds": 2.7,
+  "at": "2026-10-09T09:57:48+00:00"
+ },
+ "5378044": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3273,
+  "output_tokens": 173,
+  "seconds": 3.0,
+  "at": "2026-10-09T10:27:11+00:00"
+ },
+ "7356386": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1855,
+  "output_tokens": 117,
+  "seconds": 2.9,
+  "at": "2026-10-09T10:27:14+00:00"
+ },
+ "7318369": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 833,
+  "output_tokens": 101,
+  "seconds": 2.6,
+  "at": "2026-10-09T09:57:55+00:00"
+ },
+ "2114461": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1171,
+  "output_tokens": 171,
+  "seconds": 2.5,
+  "at": "2026-10-09T10:27:17+00:00"
+ },
+ "6819740": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 832,
+  "output_tokens": 167,
+  "seconds": 3.2,
+  "at": "2026-10-09T09:58:01+00:00"
+ },
+ "4371041": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 837,
+  "output_tokens": 201,
+  "seconds": 3.3,
+  "at": "2026-10-09T09:58:04+00:00"
+ },
+ "5077217": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1169,
+  "output_tokens": 192,
+  "seconds": 3.1,
+  "at": "2026-10-09T09:58:07+00:00"
+ },
+ "7263428": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3313,
+  "output_tokens": 240,
+  "seconds": 3.4,
+  "at": "2026-10-09T10:27:20+00:00"
+ },
+ "5960952": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1854,
+  "output_tokens": 126,
+  "seconds": 3.6,
+  "at": "2026-10-09T10:27:24+00:00"
+ },
+ "6183054": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2651,
+  "output_tokens": 225,
+  "seconds": 4.3,
+  "at": "2026-10-09T10:27:28+00:00"
+ },
+ "4878503": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 823,
+  "output_tokens": 146,
+  "seconds": 2.7,
+  "at": "2026-10-09T09:58:20+00:00"
+ },
+ "816033": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1860,
+  "output_tokens": 163,
+  "seconds": 3.7,
+  "at": "2026-10-09T09:58:24+00:00"
+ },
+ "1163169": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1481,
+  "output_tokens": 208,
+  "seconds": 3.5,
+  "at": "2026-10-09T09:58:28+00:00"
+ },
+ "4201520": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 821,
+  "output_tokens": 168,
+  "seconds": 2.7,
+  "at": "2026-10-09T09:58:30+00:00"
+ },
+ "6996754": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 828,
+  "output_tokens": 129,
+  "seconds": 3.3,
+  "at": "2026-10-09T09:58:34+00:00"
+ },
+ "6996753": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 827,
+  "output_tokens": 134,
+  "seconds": 3.0,
+  "at": "2026-10-09T09:58:37+00:00"
+ },
+ "4645224": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1849,
+  "output_tokens": 214,
+  "seconds": 3.1,
+  "at": "2026-10-09T10:27:31+00:00"
+ },
+ "5590698": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 840,
+  "output_tokens": 155,
+  "seconds": 3.3,
+  "at": "2026-10-09T09:58:43+00:00"
+ },
+ "7407733": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 828,
+  "output_tokens": 123,
+  "seconds": 3.2,
+  "at": "2026-10-09T09:58:46+00:00"
+ },
+ "5270777": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3268,
+  "output_tokens": 162,
+  "seconds": 4.2,
+  "at": "2026-10-09T10:27:35+00:00"
+ },
+ "5042975": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1469,
+  "output_tokens": 475,
+  "seconds": 4.7,
+  "at": "2026-10-09T09:58:53+00:00"
+ },
+ "4742557": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 827,
+  "output_tokens": 114,
+  "seconds": 12.8,
+  "at": "2026-10-09T09:59:06+00:00"
+ },
+ "6747992": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1898,
+  "output_tokens": 237,
+  "seconds": 3.6,
+  "at": "2026-10-09T10:27:39+00:00"
+ },
+ "6897456": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 817,
+  "output_tokens": 140,
+  "seconds": 2.7,
+  "at": "2026-10-09T09:59:12+00:00"
+ },
+ "6755843": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1199,
+  "output_tokens": 89,
+  "seconds": 2.7,
+  "at": "2026-10-09T10:27:42+00:00"
+ },
+ "6024097": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 826,
+  "output_tokens": 170,
+  "seconds": 3.3,
+  "at": "2026-10-09T09:59:18+00:00"
+ },
+ "6092233": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 834,
+  "output_tokens": 113,
+  "seconds": 2.8,
+  "at": "2026-10-09T09:59:21+00:00"
+ },
+ "636821": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2920,
+  "output_tokens": 329,
+  "seconds": 4.1,
+  "at": "2026-10-09T10:27:46+00:00"
+ },
+ "4876555": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3307,
+  "output_tokens": 244,
+  "seconds": 3.9,
+  "at": "2026-10-09T10:27:50+00:00"
+ },
+ "7284464": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 817,
+  "output_tokens": 228,
+  "seconds": 3.9,
+  "at": "2026-10-09T09:59:32+00:00"
+ },
+ "7037241": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 808,
+  "output_tokens": 242,
+  "seconds": 3.5,
+  "at": "2026-10-09T09:59:35+00:00"
+ },
+ "4667476": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1861,
+  "output_tokens": 138,
+  "seconds": 2.9,
+  "at": "2026-10-09T10:27:53+00:00"
+ },
+ "7010557": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3299,
+  "output_tokens": 137,
+  "seconds": 2.8,
+  "at": "2026-10-09T10:27:56+00:00"
+ },
+ "4343634": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 821,
+  "output_tokens": 153,
+  "seconds": 3.0,
+  "at": "2026-10-09T09:59:44+00:00"
+ },
+ "166001": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1861,
+  "output_tokens": 173,
+  "seconds": 2.8,
+  "at": "2026-10-09T09:59:47+00:00"
+ },
+ "6111791": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 838,
+  "output_tokens": 154,
+  "seconds": 3.0,
+  "at": "2026-10-09T09:59:50+00:00"
+ },
+ "4627224": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 838,
+  "output_tokens": 199,
+  "seconds": 3.0,
+  "at": "2026-10-09T09:59:53+00:00"
+ },
+ "4910752": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2902,
+  "output_tokens": 117,
+  "seconds": 2.9,
+  "at": "2026-10-09T10:27:58+00:00"
+ },
+ "5359809": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 807,
+  "output_tokens": 304,
+  "seconds": 3.8,
+  "at": "2026-10-09T09:59:59+00:00"
+ },
+ "7213843": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2205,
+  "output_tokens": 135,
+  "seconds": 2.7,
+  "at": "2026-10-09T10:28:01+00:00"
+ },
+ "6046378": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 794,
+  "output_tokens": 132,
+  "seconds": 2.8,
+  "at": "2026-10-09T10:00:07+00:00"
+ },
+ "6636852": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3281,
+  "output_tokens": 271,
+  "seconds": 3.9,
+  "at": "2026-10-09T10:28:05+00:00"
+ },
+ "7276916": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2192,
+  "output_tokens": 161,
+  "seconds": 3.1,
+  "at": "2026-10-09T10:28:08+00:00"
+ },
+ "5987818": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1135,
+  "output_tokens": 250,
+  "seconds": 4.1,
+  "at": "2026-10-09T10:00:17+00:00"
+ },
+ "5247211": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 838,
+  "output_tokens": 173,
+  "seconds": 3.0,
+  "at": "2026-10-09T10:00:20+00:00"
+ },
+ "5262448": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2931,
+  "output_tokens": 208,
+  "seconds": 3.3,
+  "at": "2026-10-09T10:28:11+00:00"
+ },
+ "2200892": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2516,
+  "output_tokens": 210,
+  "seconds": 3.2,
+  "at": "2026-10-09T10:28:15+00:00"
+ },
+ "6111436": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2901,
+  "output_tokens": 375,
+  "seconds": 4.0,
+  "at": "2026-10-09T10:28:19+00:00"
+ },
+ "6711014": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 843,
+  "output_tokens": 137,
+  "seconds": 3.1,
+  "at": "2026-10-09T10:00:34+00:00"
+ },
+ "5329560": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 804,
+  "output_tokens": 138,
+  "seconds": 3.0,
+  "at": "2026-10-09T10:00:37+00:00"
+ },
+ "6427482": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 813,
+  "output_tokens": 219,
+  "seconds": 3.2,
+  "at": "2026-10-09T10:00:40+00:00"
+ },
+ "6583026": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 833,
+  "output_tokens": 144,
+  "seconds": 2.7,
+  "at": "2026-10-09T10:00:43+00:00"
+ },
+ "6937826": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3284,
+  "output_tokens": 191,
+  "seconds": 3.8,
+  "at": "2026-10-09T10:28:22+00:00"
+ },
+ "6332182": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 831,
+  "output_tokens": 166,
+  "seconds": 3.1,
+  "at": "2026-10-09T10:00:52+00:00"
+ },
+ "4409450": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1467,
+  "output_tokens": 352,
+  "seconds": 4.2,
+  "at": "2026-10-09T10:00:56+00:00"
+ },
+ "3441099": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3299,
+  "output_tokens": 150,
+  "seconds": 3.4,
+  "at": "2026-10-09T10:28:26+00:00"
+ },
+ "3972398": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2892,
+  "output_tokens": 366,
+  "seconds": 4.0,
+  "at": "2026-10-09T10:28:30+00:00"
+ },
+ "7318373": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1944,
+  "output_tokens": 142,
+  "seconds": 3.2,
+  "at": "2026-10-09T12:07:58+00:00"
+ },
+ "595039": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1861,
+  "output_tokens": 178,
+  "seconds": 2.4,
+  "at": "2026-10-09T12:08:00+00:00"
+ },
+ "4662556": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2222,
+  "output_tokens": 132,
+  "seconds": 2.4,
+  "at": "2026-10-09T12:08:03+00:00"
+ },
+ "7260774": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1919,
+  "output_tokens": 140,
+  "seconds": 1.8,
+  "at": "2026-10-09T12:08:04+00:00"
+ },
+ "5835213": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 821,
+  "output_tokens": 129,
+  "seconds": 3.2,
+  "at": "2026-10-09T12:08:08+00:00"
+ },
+ "6701045": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2236,
+  "output_tokens": 166,
+  "seconds": 2.9,
+  "at": "2026-10-09T12:08:10+00:00"
+ },
+ "5151822": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3266,
+  "output_tokens": 209,
+  "seconds": 2.4,
+  "at": "2026-10-09T12:08:13+00:00"
+ },
+ "4313969": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2257,
+  "output_tokens": 451,
+  "seconds": 4.2,
+  "at": "2026-10-09T12:08:17+00:00"
+ },
+ "7213842": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2940,
+  "output_tokens": 153,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:08:19+00:00"
+ },
+ "7207269": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3349,
+  "output_tokens": 269,
+  "seconds": 3.5,
+  "at": "2026-10-09T12:08:23+00:00"
+ },
+ "5835212": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 809,
+  "output_tokens": 103,
+  "seconds": 1.9,
+  "at": "2026-10-09T12:08:25+00:00"
+ },
+ "595038": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1847,
+  "output_tokens": 181,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:08:27+00:00"
+ },
+ "4398435": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2930,
+  "output_tokens": 156,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:08:29+00:00"
+ },
+ "5652517": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3350,
+  "output_tokens": 106,
+  "seconds": 2.0,
+  "at": "2026-10-09T12:08:31+00:00"
+ },
+ "7093622": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1845,
+  "output_tokens": 145,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:08:34+00:00"
+ },
+ "5331552": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2248,
+  "output_tokens": 148,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:08:36+00:00"
+ },
+ "6005388": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2957,
+  "output_tokens": 197,
+  "seconds": 3.5,
+  "at": "2026-10-09T12:08:39+00:00"
+ },
+ "6192575": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2565,
+  "output_tokens": 165,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:08:42+00:00"
+ },
+ "5705621": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1916,
+  "output_tokens": 139,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:08:44+00:00"
+ },
+ "6257985": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 845,
+  "output_tokens": 106,
+  "seconds": 1.6,
+  "at": "2026-10-09T12:08:46+00:00"
+ },
+ "4786149": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1198,
+  "output_tokens": 147,
+  "seconds": 1.9,
+  "at": "2026-10-09T12:08:48+00:00"
+ },
+ "4778565": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3620,
+  "output_tokens": 186,
+  "seconds": 2.6,
+  "at": "2026-10-09T12:08:50+00:00"
+ },
+ "6680958": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 839,
+  "output_tokens": 118,
+  "seconds": 1.7,
+  "at": "2026-10-09T12:08:52+00:00"
+ },
+ "5059393": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1923,
+  "output_tokens": 163,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:08:54+00:00"
+ },
+ "6477847": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 833,
+  "output_tokens": 98,
+  "seconds": 1.8,
+  "at": "2026-10-09T12:08:56+00:00"
+ },
+ "6852386": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2256,
+  "output_tokens": 187,
+  "seconds": 2.6,
+  "at": "2026-10-09T12:08:59+00:00"
+ },
+ "3976349": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2289,
+  "output_tokens": 188,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:09:01+00:00"
+ },
+ "6192576": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2579,
+  "output_tokens": 169,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:09:03+00:00"
+ },
+ "4409448": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1178,
+  "output_tokens": 121,
+  "seconds": 1.8,
+  "at": "2026-10-09T12:09:05+00:00"
+ },
+ "6653232": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1163,
+  "output_tokens": 152,
+  "seconds": 2.4,
+  "at": "2026-10-09T12:09:07+00:00"
+ },
+ "4319321": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2196,
+  "output_tokens": 307,
+  "seconds": 3.3,
+  "at": "2026-10-09T12:09:11+00:00"
+ },
+ "4384975": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3318,
+  "output_tokens": 187,
+  "seconds": 3.2,
+  "at": "2026-10-09T12:09:14+00:00"
+ },
+ "4028712": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1852,
+  "output_tokens": 132,
+  "seconds": 1.8,
+  "at": "2026-10-09T12:09:16+00:00"
+ },
+ "4226785": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2308,
+  "output_tokens": 184,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:09:18+00:00"
+ },
+ "5029004": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2561,
+  "output_tokens": 173,
+  "seconds": 2.7,
+  "at": "2026-10-09T12:09:21+00:00"
+ },
+ "5340969": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1901,
+  "output_tokens": 165,
+  "seconds": 2.6,
+  "at": "2026-10-09T12:09:23+00:00"
+ },
+ "4923314": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1837,
+  "output_tokens": 137,
+  "seconds": 2.1,
+  "at": "2026-10-09T12:09:25+00:00"
+ },
+ "5379027": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1947,
+  "output_tokens": 168,
+  "seconds": 2.4,
+  "at": "2026-10-09T12:09:28+00:00"
+ },
+ "4939603": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3225,
+  "output_tokens": 127,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:09:30+00:00"
+ },
+ "6691450": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3294,
+  "output_tokens": 270,
+  "seconds": 3.1,
+  "at": "2026-10-09T12:09:33+00:00"
+ },
+ "7271990": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2603,
+  "output_tokens": 157,
+  "seconds": 2.8,
+  "at": "2026-10-09T12:09:36+00:00"
+ },
+ "5981569": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3560,
+  "output_tokens": 133,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:09:38+00:00"
+ },
+ "6918834": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1157,
+  "output_tokens": 170,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:09:40+00:00"
+ },
+ "6965588": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 826,
+  "output_tokens": 151,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:09:43+00:00"
+ },
+ "7312737": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1873,
+  "output_tokens": 156,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:09:45+00:00"
+ },
+ "5837662": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3236,
+  "output_tokens": 237,
+  "seconds": 2.7,
+  "at": "2026-10-09T12:09:48+00:00"
+ },
+ "5279986": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3953,
+  "output_tokens": 217,
+  "seconds": 2.6,
+  "at": "2026-10-09T12:09:50+00:00"
+ },
+ "6879519": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2303,
+  "output_tokens": 391,
+  "seconds": 3.8,
+  "at": "2026-10-09T12:09:54+00:00"
+ },
+ "4791040": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3270,
+  "output_tokens": 160,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:09:57+00:00"
+ },
+ "1590039": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1851,
+  "output_tokens": 184,
+  "seconds": 2.6,
+  "at": "2026-10-09T12:09:59+00:00"
+ },
+ "6697125": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1895,
+  "output_tokens": 108,
+  "seconds": 2.1,
+  "at": "2026-10-09T12:10:01+00:00"
+ },
+ "5332518": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3254,
+  "output_tokens": 243,
+  "seconds": 2.9,
+  "at": "2026-10-09T12:10:04+00:00"
+ },
+ "6009391": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1154,
+  "output_tokens": 141,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:10:06+00:00"
+ },
+ "3741204": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2557,
+  "output_tokens": 162,
+  "seconds": 2.4,
+  "at": "2026-10-09T12:10:09+00:00"
+ },
+ "6886576": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2204,
+  "output_tokens": 163,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:10:11+00:00"
+ },
+ "5975032": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1893,
+  "output_tokens": 179,
+  "seconds": 2.9,
+  "at": "2026-10-09T12:10:14+00:00"
+ },
+ "5247213": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2312,
+  "output_tokens": 145,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:10:16+00:00"
+ },
+ "4463013": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1515,
+  "output_tokens": 153,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:10:19+00:00"
+ },
+ "7260775": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1933,
+  "output_tokens": 139,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:10:21+00:00"
+ },
+ "4680101": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2965,
+  "output_tokens": 180,
+  "seconds": 2.9,
+  "at": "2026-10-09T12:10:24+00:00"
+ },
+ "5347573": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3257,
+  "output_tokens": 173,
+  "seconds": 2.9,
+  "at": "2026-10-09T12:10:27+00:00"
+ },
+ "5269359": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3191,
+  "output_tokens": 198,
+  "seconds": 3.0,
+  "at": "2026-10-09T12:10:30+00:00"
+ },
+ "7046676": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2208,
+  "output_tokens": 170,
+  "seconds": 2.8,
+  "at": "2026-10-09T12:10:32+00:00"
+ },
+ "6245020": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2287,
+  "output_tokens": 160,
+  "seconds": 2.4,
+  "at": "2026-10-09T12:10:35+00:00"
+ },
+ "5277377": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1924,
+  "output_tokens": 167,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:10:37+00:00"
+ },
+ "7181158": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1851,
+  "output_tokens": 188,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:10:39+00:00"
+ },
+ "6382400": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1843,
+  "output_tokens": 248,
+  "seconds": 2.7,
+  "at": "2026-10-09T12:10:42+00:00"
+ },
+ "3645257": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2890,
+  "output_tokens": 141,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:10:44+00:00"
+ },
+ "5270467": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1897,
+  "output_tokens": 216,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:10:47+00:00"
+ },
+ "2980918": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2213,
+  "output_tokens": 166,
+  "seconds": 2.9,
+  "at": "2026-10-09T12:10:50+00:00"
+ },
+ "4046672": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3286,
+  "output_tokens": 155,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:10:52+00:00"
+ },
+ "5214071": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3244,
+  "output_tokens": 133,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:10:54+00:00"
+ },
+ "7266366": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2304,
+  "output_tokens": 189,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:10:57+00:00"
+ },
+ "5983235": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1869,
+  "output_tokens": 120,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:10:59+00:00"
+ },
+ "6653235": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1156,
+  "output_tokens": 177,
+  "seconds": 2.7,
+  "at": "2026-10-09T12:11:02+00:00"
+ },
+ "6098215": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3274,
+  "output_tokens": 156,
+  "seconds": 2.6,
+  "at": "2026-10-09T12:11:04+00:00"
+ },
+ "7249959": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2865,
+  "output_tokens": 298,
+  "seconds": 3.3,
+  "at": "2026-10-09T12:11:08+00:00"
+ },
+ "5960953": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1853,
+  "output_tokens": 182,
+  "seconds": 2.1,
+  "at": "2026-10-09T12:11:10+00:00"
+ },
+ "6937839": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3275,
+  "output_tokens": 134,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:11:12+00:00"
+ },
+ "706935": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1851,
+  "output_tokens": 155,
+  "seconds": 2.4,
+  "at": "2026-10-09T12:11:15+00:00"
+ },
+ "5484356": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1169,
+  "output_tokens": 176,
+  "seconds": 2.0,
+  "at": "2026-10-09T12:11:17+00:00"
+ },
+ "4397345": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1915,
+  "output_tokens": 301,
+  "seconds": 3.2,
+  "at": "2026-10-09T12:11:20+00:00"
+ },
+ "3633613": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1901,
+  "output_tokens": 90,
+  "seconds": 1.5,
+  "at": "2026-10-09T12:11:21+00:00"
+ },
+ "3892794": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2286,
+  "output_tokens": 267,
+  "seconds": 2.8,
+  "at": "2026-10-09T12:11:24+00:00"
+ },
+ "6002026": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 832,
+  "output_tokens": 97,
+  "seconds": 1.8,
+  "at": "2026-10-09T12:11:26+00:00"
+ },
+ "2091749": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3326,
+  "output_tokens": 199,
+  "seconds": 2.6,
+  "at": "2026-10-09T12:11:29+00:00"
+ },
+ "6819736": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1206,
+  "output_tokens": 137,
+  "seconds": 1.8,
+  "at": "2026-10-09T12:11:30+00:00"
+ },
+ "6078106": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3257,
+  "output_tokens": 198,
+  "seconds": 2.9,
+  "at": "2026-10-09T12:11:33+00:00"
+ },
+ "6711019": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1973,
+  "output_tokens": 152,
+  "seconds": 1.8,
+  "at": "2026-10-09T12:11:35+00:00"
+ },
+ "6839079": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1876,
+  "output_tokens": 153,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:11:38+00:00"
+ },
+ "5042960": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2531,
+  "output_tokens": 149,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:11:40+00:00"
+ },
+ "7284481": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2246,
+  "output_tokens": 168,
+  "seconds": 2.6,
+  "at": "2026-10-09T12:11:43+00:00"
+ },
+ "5364463": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1858,
+  "output_tokens": 166,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:11:45+00:00"
+ },
+ "6046407": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1851,
+  "output_tokens": 140,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:11:47+00:00"
+ },
+ "7238240": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2655,
+  "output_tokens": 167,
+  "seconds": 2.7,
+  "at": "2026-10-09T12:11:50+00:00"
+ },
+ "3347848": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3280,
+  "output_tokens": 148,
+  "seconds": 2.1,
+  "at": "2026-10-09T12:11:52+00:00"
+ },
+ "6768863": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2280,
+  "output_tokens": 146,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:11:55+00:00"
+ },
+ "4886035": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2192,
+  "output_tokens": 122,
+  "seconds": 2.6,
+  "at": "2026-10-09T12:11:57+00:00"
+ },
+ "2741233": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3597,
+  "output_tokens": 275,
+  "seconds": 2.9,
+  "at": "2026-10-09T12:12:00+00:00"
+ },
+ "5327113": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2205,
+  "output_tokens": 178,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:12:03+00:00"
+ },
+ "6105243": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3246,
+  "output_tokens": 189,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:12:05+00:00"
+ },
+ "4466918": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 823,
+  "output_tokens": 143,
+  "seconds": 2.1,
+  "at": "2026-10-09T12:12:07+00:00"
+ },
+ "4723317": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1916,
+  "output_tokens": 137,
+  "seconds": 2.0,
+  "at": "2026-10-09T12:12:09+00:00"
+ },
+ "6928389": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1215,
+  "output_tokens": 156,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:12:11+00:00"
+ },
+ "3983703": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2973,
+  "output_tokens": 248,
+  "seconds": 3.1,
+  "at": "2026-10-09T12:12:14+00:00"
+ },
+ "6794268": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2552,
+  "output_tokens": 169,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:12:17+00:00"
+ },
+ "6744497": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2222,
+  "output_tokens": 132,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:12:19+00:00"
+ },
+ "3409664": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2524,
+  "output_tokens": 155,
+  "seconds": 2.9,
+  "at": "2026-10-09T12:12:22+00:00"
+ },
+ "4394971": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2584,
+  "output_tokens": 267,
+  "seconds": 3.5,
+  "at": "2026-10-09T12:12:25+00:00"
+ },
+ "5629616": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3265,
+  "output_tokens": 178,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:12:28+00:00"
+ },
+ "6945906": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2235,
+  "output_tokens": 153,
+  "seconds": 1.9,
+  "at": "2026-10-09T12:12:29+00:00"
+ },
+ "5427399": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3227,
+  "output_tokens": 244,
+  "seconds": 3.2,
+  "at": "2026-10-09T12:12:33+00:00"
+ },
+ "4377720": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1918,
+  "output_tokens": 140,
+  "seconds": 2.2,
+  "at": "2026-10-09T12:12:35+00:00"
+ },
+ "4463982": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1866,
+  "output_tokens": 150,
+  "seconds": 1.9,
+  "at": "2026-10-09T12:12:37+00:00"
+ },
+ "3185069": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 839,
+  "output_tokens": 101,
+  "seconds": 1.7,
+  "at": "2026-10-09T12:12:38+00:00"
+ },
+ "6337137": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3306,
+  "output_tokens": 281,
+  "seconds": 3.1,
+  "at": "2026-10-09T12:12:42+00:00"
+ },
+ "6271398": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2286,
+  "output_tokens": 134,
+  "seconds": 2.4,
+  "at": "2026-10-09T12:12:44+00:00"
+ },
+ "5839602": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2241,
+  "output_tokens": 191,
+  "seconds": 2.8,
+  "at": "2026-10-09T12:12:47+00:00"
+ },
+ "7329742": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3264,
+  "output_tokens": 313,
+  "seconds": 3.6,
+  "at": "2026-10-09T12:12:50+00:00"
+ },
+ "3568935": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2181,
+  "output_tokens": 256,
+  "seconds": 3.2,
+  "at": "2026-10-09T12:12:53+00:00"
+ },
+ "3531673": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3617,
+  "output_tokens": 193,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:12:56+00:00"
+ },
+ "7157395": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3229,
+  "output_tokens": 309,
+  "seconds": 3.8,
+  "at": "2026-10-09T12:13:00+00:00"
+ },
+ "4454243": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1936,
+  "output_tokens": 144,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:13:02+00:00"
+ },
+ "6711021": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2321,
+  "output_tokens": 140,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:13:04+00:00"
+ },
+ "3417694": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3247,
+  "output_tokens": 231,
+  "seconds": 3.3,
+  "at": "2026-10-09T12:13:08+00:00"
+ },
+ "4489783": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2889,
+  "output_tokens": 156,
+  "seconds": 2.5,
+  "at": "2026-10-09T12:13:10+00:00"
+ },
+ "6842604": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2287,
+  "output_tokens": 162,
+  "seconds": 3.0,
+  "at": "2026-10-09T12:13:13+00:00"
+ },
+ "6747997": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1905,
+  "output_tokens": 247,
+  "seconds": 3.0,
+  "at": "2026-10-09T12:13:16+00:00"
+ },
+ "2682873": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3226,
+  "output_tokens": 154,
+  "seconds": 2.1,
+  "at": "2026-10-09T12:13:18+00:00"
+ },
+ "4328804": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 816,
+  "output_tokens": 131,
+  "seconds": 1.8,
+  "at": "2026-10-09T12:13:20+00:00"
+ },
+ "7231149": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2328,
+  "output_tokens": 132,
+  "seconds": 1.9,
+  "at": "2026-10-09T12:13:22+00:00"
+ },
+ "6371070": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2199,
+  "output_tokens": 172,
+  "seconds": 2.9,
+  "at": "2026-10-09T12:13:25+00:00"
+ },
+ "5520375": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1899,
+  "output_tokens": 149,
+  "seconds": 1.9,
+  "at": "2026-10-09T12:13:27+00:00"
+ },
+ "2440110": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3254,
+  "output_tokens": 172,
+  "seconds": 2.6,
+  "at": "2026-10-09T12:13:30+00:00"
+ },
+ "6618043": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2298,
+  "output_tokens": 155,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:13:32+00:00"
+ },
+ "7276893": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2914,
+  "output_tokens": 144,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:13:34+00:00"
+ },
+ "6967884": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2540,
+  "output_tokens": 151,
+  "seconds": 2.4,
+  "at": "2026-10-09T12:13:37+00:00"
+ },
+ "6967885": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2194,
+  "output_tokens": 127,
+  "seconds": 2.0,
+  "at": "2026-10-09T12:13:39+00:00"
+ },
+ "7049568": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3238,
+  "output_tokens": 177,
+  "seconds": 2.8,
+  "at": "2026-10-09T12:13:41+00:00"
+ },
+ "5916278": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2605,
+  "output_tokens": 162,
+  "seconds": 2.7,
+  "at": "2026-10-09T12:13:44+00:00"
+ },
+ "5288155": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2898,
+  "output_tokens": 303,
+  "seconds": 3.4,
+  "at": "2026-10-09T12:13:48+00:00"
+ },
+ "7074663": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2910,
+  "output_tokens": 177,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:13:50+00:00"
+ },
+ "5179870": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 2264,
+  "output_tokens": 136,
+  "seconds": 1.9,
+  "at": "2026-10-09T12:13:52+00:00"
+ },
+ "6467153": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1850,
+  "output_tokens": 130,
+  "seconds": 2.1,
+  "at": "2026-10-09T12:13:54+00:00"
+ },
+ "4289228": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 1189,
+  "output_tokens": 132,
+  "seconds": 2.3,
+  "at": "2026-10-09T12:13:56+00:00"
+ },
+ "4753881": {
+  "model": "gpt-5.4-mini-2026-03-17",
+  "input_tokens": 3591,
+  "output_tokens": 137,
+  "seconds": 2.7,
+  "at": "2026-10-09T12:13:59+00:00"
+ }
+}

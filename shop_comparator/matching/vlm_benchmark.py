@@ -19,9 +19,9 @@ Backends
            one call at a time and stops after two failures in a row.
 Labels
   code_same      the KREAM product is the unique model-code match            -> same
-  reviewed_same  a reviewer confirmed the pair (model codes differ or absent) -> same
+  reviewed_same  an AI-assisted review confirmed the pair (no person verified it)   -> same
   other_model    another search result with a different model code           -> different
-  reviewed_not   a reviewer rejected the pair                                 -> different
+  reviewed_not   an AI-assisted review rejected the pair (no person verified it)    -> different
 """
 import json
 import os

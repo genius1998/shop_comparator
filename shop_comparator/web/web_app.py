@@ -215,7 +215,8 @@ def create_app(manager=None, monitors=None, auto=None):
     def index():
         return render_template("index.html", csrf=csrf, categories=pipeline.CATEGORIES,
                                rankings={k: v[0] for k, v in pipeline.RANKINGS.items()},
-                               deadlines=DEADLINES, monitors=monitoring.KINDS, price_note=cmp.PRICE_NOTE)
+                               deadlines=DEADLINES, monitors=monitoring.KINDS, price_note=cmp.PRICE_NOTE,
+                               demo=os.getenv("SHOP_DEMO_LABEL") or "")
 
     @app.get("/favicon.ico")
     def favicon():

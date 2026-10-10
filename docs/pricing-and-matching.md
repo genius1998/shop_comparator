@@ -94,7 +94,8 @@ GUI는 `size_converter.normalize_size`로 숫자만 뽑아 비교했기 때문�
 | 매칭 상태 | 조건 | 가격 수집에 사용 |
 |---|---|---|
 | 모델번호 일치 | 무신사 품번(또는 상품명 속 모델번호)과 KREAM 모델번호가 같은 후보가 하나뿐 (`match_method=model_code`) | 예 |
-| 이미지 검토 | 저장한 썸네일을 나란히 비교해 사람이 판정 (`match_method=image_review`) | 예 |
+| 이미지 검토 | 저장한 썸네일을 나란히 비교한 AI 보조 검토로 등록 (`match_method=image_review`, 사람 미검수) | 예(검수 권장) |
+| 검수 승인 | 웹의 VLM 검토 탭에서 사람이 승인 (`match_method=human_review`) | 예 |
 | 직접 지정 | 매칭 탭 또는 수집 입력에서 KREAM URL을 지정 (`match_method=manual`, 신뢰도 1.0) | 예 |
 | 자동 검증 | `kream_crawler.search_product` 결과가 `product_matcher.select_best_kream_match` 검증을 통과 (`match_verified=1`) | 예 |
 | 미검증 | GUI 시절 CSV·캐시에서 온 ID로 검증 기록이 없음 | 아니오(매칭 탭에서 [선택 승인]하거나 다시 검색) |

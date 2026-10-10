@@ -1,0 +1,2432 @@
+{
+ "products": 246,
+ "cases": 267,
+ "case_counts": {
+  "answer/model_code": 153,
+  "none/model_code_removed": 93,
+  "answer/ai_review": 14,
+  "rejected/ai_review": 6,
+  "none/ai_review": 1
+ },
+ "split": {
+  "dev": 113,
+  "eval": 154,
+  "dev_ids": 100,
+  "dev_families": 69,
+  "moved_to_dev_by_family": 24
+ },
+ "methods": {
+  "A0": {
+   "name": "기존 규칙(품번 일치, 없으면 첫 결과)",
+   "all": {
+    "cases": 267,
+    "evaluated": 267,
+    "right_pick": 125,
+    "wrong_pick": 138,
+    "right_none": 0,
+    "missed": 0,
+    "human": 0,
+    "unavailable": 0,
+    "unknown": 4,
+    "precision": {
+     "value": 0.4753,
+     "num": 125,
+     "den": 263,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.7485,
+     "num": 125,
+     "den": 167,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.5247,
+     "num": 138,
+     "den": 263,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 1.0,
+     "num": 94,
+     "den": 94,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 0.985,
+     "num": 263,
+     "den": 267,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.0,
+     "num": 0,
+     "den": 267,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "eval": {
+    "cases": 154,
+    "evaluated": 154,
+    "right_pick": 61,
+    "wrong_pick": 91,
+    "right_none": 0,
+    "missed": 0,
+    "human": 0,
+    "unavailable": 0,
+    "unknown": 2,
+    "precision": {
+     "value": 0.4013,
+     "num": 61,
+     "den": 152,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.7349,
+     "num": 61,
+     "den": 83,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.5987,
+     "num": 91,
+     "den": 152,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 1.0,
+     "num": 68,
+     "den": 68,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 0.987,
+     "num": 152,
+     "den": 154,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.0,
+     "num": 0,
+     "den": 154,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "dev": {
+    "cases": 113,
+    "evaluated": 113,
+    "right_pick": 64,
+    "wrong_pick": 47,
+    "right_none": 0,
+    "missed": 0,
+    "human": 0,
+    "unavailable": 0,
+    "unknown": 2,
+    "precision": {
+     "value": 0.5766,
+     "num": 64,
+     "den": 111,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.7619,
+     "num": 64,
+     "den": 84,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.4234,
+     "num": 47,
+     "den": 111,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 1.0,
+     "num": 26,
+     "den": 26,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 0.9823,
+     "num": 111,
+     "den": 113,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.0,
+     "num": 0,
+     "den": 113,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "by_label": {
+    "answer/model_code": {
+     "cases": 153,
+     "evaluated": 153,
+     "right_pick": 120,
+     "wrong_pick": 33,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 0.7843,
+      "num": 120,
+      "den": 153,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": 0.7843,
+      "num": 120,
+      "den": 153,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 0.2157,
+      "num": 33,
+      "den": 153,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 153,
+      "den": 153,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 153,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "none/model_code_removed": {
+     "cases": 93,
+     "evaluated": 93,
+     "right_pick": 0,
+     "wrong_pick": 93,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 0.0,
+      "num": 0,
+      "den": 93,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 1.0,
+      "num": 93,
+      "den": 93,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": 1.0,
+      "num": 93,
+      "den": 93,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 93,
+      "den": 93,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 93,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "answer/ai_review": {
+     "cases": 14,
+     "evaluated": 14,
+     "right_pick": 5,
+     "wrong_pick": 9,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 0.3571,
+      "num": 5,
+      "den": 14,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": 0.3571,
+      "num": 5,
+      "den": 14,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 0.6429,
+      "num": 9,
+      "den": 14,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 14,
+      "den": 14,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 14,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "rejected/ai_review": {
+     "cases": 6,
+     "evaluated": 6,
+     "right_pick": 0,
+     "wrong_pick": 2,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 4,
+     "precision": {
+      "value": 0.0,
+      "num": 0,
+      "den": 2,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 1.0,
+      "num": 2,
+      "den": 2,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 0.3333,
+      "num": 2,
+      "den": 6,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 6,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "none/ai_review": {
+     "cases": 1,
+     "evaluated": 1,
+     "right_pick": 0,
+     "wrong_pick": 1,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 1.0,
+      "num": 1,
+      "den": 1,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": 1.0,
+      "num": 1,
+      "den": 1,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 1,
+      "den": 1,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    }
+   }
+  },
+  "A": {
+   "name": "모델번호·문자열 규칙",
+   "all": {
+    "cases": 267,
+    "evaluated": 267,
+    "right_pick": 153,
+    "wrong_pick": 0,
+    "right_none": 0,
+    "missed": 0,
+    "human": 114,
+    "unavailable": 0,
+    "unknown": 0,
+    "precision": {
+     "value": 1.0,
+     "num": 153,
+     "den": 153,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.9162,
+     "num": 153,
+     "den": 167,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0,
+     "num": 0,
+     "den": 153,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 0.0,
+     "num": 0,
+     "den": 94,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 0.573,
+     "num": 153,
+     "den": 267,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.427,
+     "num": 114,
+     "den": 267,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "eval": {
+    "cases": 154,
+    "evaluated": 154,
+    "right_pick": 77,
+    "wrong_pick": 0,
+    "right_none": 0,
+    "missed": 0,
+    "human": 77,
+    "unavailable": 0,
+    "unknown": 0,
+    "precision": {
+     "value": 1.0,
+     "num": 77,
+     "den": 77,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.9277,
+     "num": 77,
+     "den": 83,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0,
+     "num": 0,
+     "den": 77,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 0.0,
+     "num": 0,
+     "den": 68,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 0.5,
+     "num": 77,
+     "den": 154,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.5,
+     "num": 77,
+     "den": 154,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "dev": {
+    "cases": 113,
+    "evaluated": 113,
+    "right_pick": 76,
+    "wrong_pick": 0,
+    "right_none": 0,
+    "missed": 0,
+    "human": 37,
+    "unavailable": 0,
+    "unknown": 0,
+    "precision": {
+     "value": 1.0,
+     "num": 76,
+     "den": 76,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.9048,
+     "num": 76,
+     "den": 84,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0,
+     "num": 0,
+     "den": 76,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 0.0,
+     "num": 0,
+     "den": 26,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 0.6726,
+     "num": 76,
+     "den": 113,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.3274,
+     "num": 37,
+     "den": 113,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "by_label": {
+    "answer/model_code": {
+     "cases": 153,
+     "evaluated": 153,
+     "right_pick": 153,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 1.0,
+      "num": 153,
+      "den": 153,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": 1.0,
+      "num": 153,
+      "den": 153,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 0.0,
+      "num": 0,
+      "den": 153,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 153,
+      "den": 153,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 153,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "none/model_code_removed": {
+     "cases": 93,
+     "evaluated": 93,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 93,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": 0.0,
+      "num": 0,
+      "den": 93,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 0.0,
+      "num": 0,
+      "den": 93,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 1.0,
+      "num": 93,
+      "den": 93,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "answer/ai_review": {
+     "cases": 14,
+     "evaluated": 14,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 14,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": 0.0,
+      "num": 0,
+      "den": 14,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 0.0,
+      "num": 0,
+      "den": 14,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 1.0,
+      "num": 14,
+      "den": 14,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "rejected/ai_review": {
+     "cases": 6,
+     "evaluated": 6,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 6,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 0.0,
+      "num": 0,
+      "den": 6,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 1.0,
+      "num": 6,
+      "den": 6,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "none/ai_review": {
+     "cases": 1,
+     "evaluated": 1,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 1,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 1.0,
+      "num": 1,
+      "den": 1,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    }
+   }
+  },
+  "B": {
+   "name": "텍스트 점수(상품명·브랜드·모델번호)",
+   "all": {
+    "cases": 267,
+    "evaluated": 267,
+    "right_pick": 32,
+    "wrong_pick": 1,
+    "right_none": 78,
+    "missed": 7,
+    "human": 146,
+    "unavailable": 0,
+    "unknown": 3,
+    "precision": {
+     "value": 0.9697,
+     "num": 32,
+     "den": 33,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.1916,
+     "num": 32,
+     "den": 167,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0303,
+     "num": 1,
+     "den": 33,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 0.0106,
+     "num": 1,
+     "den": 94,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 0.4419,
+     "num": 118,
+     "den": 267,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.5468,
+     "num": 146,
+     "den": 267,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "eval": {
+    "cases": 154,
+    "evaluated": 154,
+    "right_pick": 12,
+    "wrong_pick": 1,
+    "right_none": 54,
+    "missed": 3,
+    "human": 82,
+    "unavailable": 0,
+    "unknown": 2,
+    "precision": {
+     "value": 0.9231,
+     "num": 12,
+     "den": 13,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.1446,
+     "num": 12,
+     "den": 83,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0769,
+     "num": 1,
+     "den": 13,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 0.0147,
+     "num": 1,
+     "den": 68,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 0.4545,
+     "num": 70,
+     "den": 154,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.5325,
+     "num": 82,
+     "den": 154,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "dev": {
+    "cases": 113,
+    "evaluated": 113,
+    "right_pick": 20,
+    "wrong_pick": 0,
+    "right_none": 24,
+    "missed": 4,
+    "human": 64,
+    "unavailable": 0,
+    "unknown": 1,
+    "precision": {
+     "value": 1.0,
+     "num": 20,
+     "den": 20,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.2381,
+     "num": 20,
+     "den": 84,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0,
+     "num": 0,
+     "den": 20,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 0.0,
+     "num": 0,
+     "den": 26,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 0.4248,
+     "num": 48,
+     "den": 113,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.5664,
+     "num": 64,
+     "den": 113,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "by_label": {
+    "answer/model_code": {
+     "cases": 153,
+     "evaluated": 153,
+     "right_pick": 32,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 3,
+     "human": 118,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 1.0,
+      "num": 32,
+      "den": 32,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": 0.2092,
+      "num": 32,
+      "den": 153,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 0.0,
+      "num": 0,
+      "den": 32,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 0.2288,
+      "num": 35,
+      "den": 153,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.7712,
+      "num": 118,
+      "den": 153,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "none/model_code_removed": {
+     "cases": 93,
+     "evaluated": 93,
+     "right_pick": 0,
+     "wrong_pick": 1,
+     "right_none": 78,
+     "missed": 0,
+     "human": 14,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 1.0,
+      "num": 1,
+      "den": 1,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": 0.0108,
+      "num": 1,
+      "den": 93,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 0.8495,
+      "num": 79,
+      "den": 93,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.1505,
+      "num": 14,
+      "den": 93,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "answer/ai_review": {
+     "cases": 14,
+     "evaluated": 14,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 4,
+     "human": 10,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": 0.0,
+      "num": 0,
+      "den": 14,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 0.2857,
+      "num": 4,
+      "den": 14,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.7143,
+      "num": 10,
+      "den": 14,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "rejected/ai_review": {
+     "cases": 6,
+     "evaluated": 6,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 3,
+     "unavailable": 0,
+     "unknown": 3,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 0.0,
+      "num": 0,
+      "den": 6,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.5,
+      "num": 3,
+      "den": 6,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "none/ai_review": {
+     "cases": 1,
+     "evaluated": 1,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 1,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 1.0,
+      "num": 1,
+      "den": 1,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    }
+   }
+  },
+  "C": {
+   "name": "VLM(이미지+상품 정보, gpt-5.4-mini 저장 결과)",
+   "all": {
+    "cases": 267,
+    "evaluated": 174,
+    "right_pick": 162,
+    "wrong_pick": 9,
+    "right_none": 1,
+    "missed": 2,
+    "human": 0,
+    "unavailable": 93,
+    "unknown": 0,
+    "precision": {
+     "value": 0.9474,
+     "num": 162,
+     "den": 171,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.9701,
+     "num": 162,
+     "den": 167,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0526,
+     "num": 9,
+     "den": 171,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 0.0,
+     "num": 0,
+     "den": 1,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 1.0,
+     "num": 174,
+     "den": 174,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.0,
+     "num": 0,
+     "den": 174,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "eval": {
+    "cases": 154,
+    "evaluated": 86,
+    "right_pick": 81,
+    "wrong_pick": 4,
+    "right_none": 0,
+    "missed": 1,
+    "human": 0,
+    "unavailable": 68,
+    "unknown": 0,
+    "precision": {
+     "value": 0.9529,
+     "num": 81,
+     "den": 85,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.9759,
+     "num": 81,
+     "den": 83,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0471,
+     "num": 4,
+     "den": 85,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": null,
+     "num": 0,
+     "den": 0,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 1.0,
+     "num": 86,
+     "den": 86,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.0,
+     "num": 0,
+     "den": 86,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "dev": {
+    "cases": 113,
+    "evaluated": 88,
+    "right_pick": 81,
+    "wrong_pick": 5,
+    "right_none": 1,
+    "missed": 1,
+    "human": 0,
+    "unavailable": 25,
+    "unknown": 0,
+    "precision": {
+     "value": 0.9419,
+     "num": 81,
+     "den": 86,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 0.9643,
+     "num": 81,
+     "den": 84,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0581,
+     "num": 5,
+     "den": 86,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 0.0,
+     "num": 0,
+     "den": 1,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 1.0,
+     "num": 88,
+     "den": 88,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.0,
+     "num": 0,
+     "den": 88,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "by_label": {
+    "answer/model_code": {
+     "cases": 153,
+     "evaluated": 153,
+     "right_pick": 148,
+     "wrong_pick": 3,
+     "right_none": 0,
+     "missed": 2,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 0.9801,
+      "num": 148,
+      "den": 151,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": 0.9673,
+      "num": 148,
+      "den": 153,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 0.0199,
+      "num": 3,
+      "den": 151,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 153,
+      "den": 153,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 153,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "none/model_code_removed": {
+     "cases": 93,
+     "evaluated": 0,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 93,
+     "unknown": 0,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "answer/ai_review": {
+     "cases": 14,
+     "evaluated": 14,
+     "right_pick": 14,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 1.0,
+      "num": 14,
+      "den": 14,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": 1.0,
+      "num": 14,
+      "den": 14,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 0.0,
+      "num": 0,
+      "den": 14,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 14,
+      "den": 14,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 14,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "rejected/ai_review": {
+     "cases": 6,
+     "evaluated": 6,
+     "right_pick": 0,
+     "wrong_pick": 6,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 0.0,
+      "num": 0,
+      "den": 6,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 1.0,
+      "num": 6,
+      "den": 6,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 6,
+      "den": 6,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 6,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "none/ai_review": {
+     "cases": 1,
+     "evaluated": 1,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 1,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 1,
+      "den": 1,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    }
+   }
+  },
+  "D": {
+   "name": "규칙 + VLM",
+   "all": {
+    "cases": 267,
+    "evaluated": 174,
+    "right_pick": 167,
+    "wrong_pick": 6,
+    "right_none": 1,
+    "missed": 0,
+    "human": 0,
+    "unavailable": 93,
+    "unknown": 0,
+    "precision": {
+     "value": 0.9653,
+     "num": 167,
+     "den": 173,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 1.0,
+     "num": 167,
+     "den": 167,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0347,
+     "num": 6,
+     "den": 173,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 0.0,
+     "num": 0,
+     "den": 1,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 1.0,
+     "num": 174,
+     "den": 174,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.0,
+     "num": 0,
+     "den": 174,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "eval": {
+    "cases": 154,
+    "evaluated": 86,
+    "right_pick": 83,
+    "wrong_pick": 3,
+    "right_none": 0,
+    "missed": 0,
+    "human": 0,
+    "unavailable": 68,
+    "unknown": 0,
+    "precision": {
+     "value": 0.9651,
+     "num": 83,
+     "den": 86,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 1.0,
+     "num": 83,
+     "den": 83,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0349,
+     "num": 3,
+     "den": 86,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": null,
+     "num": 0,
+     "den": 0,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 1.0,
+     "num": 86,
+     "den": 86,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.0,
+     "num": 0,
+     "den": 86,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "dev": {
+    "cases": 113,
+    "evaluated": 88,
+    "right_pick": 84,
+    "wrong_pick": 3,
+    "right_none": 1,
+    "missed": 0,
+    "human": 0,
+    "unavailable": 25,
+    "unknown": 0,
+    "precision": {
+     "value": 0.9655,
+     "num": 84,
+     "den": 87,
+     "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "recall": {
+     "value": 1.0,
+     "num": 84,
+     "den": 84,
+     "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+    },
+    "false_match": {
+     "value": 0.0345,
+     "num": 3,
+     "den": 87,
+     "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+    },
+    "false_match_on_none": {
+     "value": 0.0,
+     "num": 0,
+     "den": 1,
+     "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+    },
+    "decided": {
+     "value": 1.0,
+     "num": 88,
+     "den": 88,
+     "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+    },
+    "to_human": {
+     "value": 0.0,
+     "num": 0,
+     "den": 88,
+     "formula": "사람에게 넘긴 수 / 평가 대상"
+    }
+   },
+   "by_label": {
+    "answer/model_code": {
+     "cases": 153,
+     "evaluated": 153,
+     "right_pick": 153,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 1.0,
+      "num": 153,
+      "den": 153,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": 1.0,
+      "num": 153,
+      "den": 153,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 0.0,
+      "num": 0,
+      "den": 153,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 153,
+      "den": 153,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 153,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "none/model_code_removed": {
+     "cases": 93,
+     "evaluated": 0,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 93,
+     "unknown": 0,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "answer/ai_review": {
+     "cases": 14,
+     "evaluated": 14,
+     "right_pick": 14,
+     "wrong_pick": 0,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 1.0,
+      "num": 14,
+      "den": 14,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": 1.0,
+      "num": 14,
+      "den": 14,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 0.0,
+      "num": 0,
+      "den": 14,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 14,
+      "den": 14,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 14,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "rejected/ai_review": {
+     "cases": 6,
+     "evaluated": 6,
+     "right_pick": 0,
+     "wrong_pick": 6,
+     "right_none": 0,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": 0.0,
+      "num": 0,
+      "den": 6,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": 1.0,
+      "num": 6,
+      "den": 6,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 6,
+      "den": 6,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 6,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    },
+    "none/ai_review": {
+     "cases": 1,
+     "evaluated": 1,
+     "right_pick": 0,
+     "wrong_pick": 0,
+     "right_none": 1,
+     "missed": 0,
+     "human": 0,
+     "unavailable": 0,
+     "unknown": 0,
+     "precision": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "recall": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "맞은 동일 판정 / 정답이 있는 평가 대상"
+     },
+     "false_match": {
+      "value": null,
+      "num": 0,
+      "den": 0,
+      "formula": "틀린 동일 판정 / 정오를 아는 동일 판정"
+     },
+     "false_match_on_none": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "동일 상품이 없는데 고른 수 / 동일 상품이 없는 평가 대상"
+     },
+     "decided": {
+      "value": 1.0,
+      "num": 1,
+      "den": 1,
+      "formula": "(동일 판정 + 없음 판정) / 평가 대상"
+     },
+     "to_human": {
+      "value": 0.0,
+      "num": 0,
+      "den": 1,
+      "formula": "사람에게 넘긴 수 / 평가 대상"
+     }
+    }
+   }
+  },
+  "B-LLM": {
+   "name": "언어 모델의 텍스트 판단(상품명·브랜드·모델번호만)",
+   "status": "미실행",
+   "reason": "유료 호출이 필요하다. 호출 한도를 받은 뒤 실행한다."
+  }
+ },
+ "examples": {
+  "A0": [
+   {
+    "goodsNo": "5619910",
+    "name": "NBRJGF010G / WINTER Breeze / SD2205GR (GRAY)",
+    "serial": "NBRJGF010G_15",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "673355",
+    "answer": [
+     "pick",
+     "775768"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "5619910",
+    "name": "NBRJGF010G / WINTER Breeze / SD2205GR (GRAY)",
+    "serial": "NBRJGF010G_15",
+    "kind": "none",
+    "source": "model_code_removed",
+    "truth": "",
+    "answer": [
+     "pick",
+     "775768"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "7466121",
+    "name": "NBRJGF010F / WINTER Breeze / SD2205BR (BROWN)",
+    "serial": "NBRJGF010F_85",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "1122847",
+    "answer": [
+     "pick",
+     "775768"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "7466121",
+    "name": "NBRJGF010F / WINTER Breeze / SD2205BR (BROWN)",
+    "serial": "NBRJGF010F_85",
+    "kind": "none",
+    "source": "model_code_removed",
+    "truth": "",
+    "answer": [
+     "pick",
+     "775768"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "7466120",
+    "name": "NBRJGF010B / WINTER Breeze / SD2205BO (BLACK)",
+    "serial": "NBRJGF010B_19",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "1122846",
+    "answer": [
+     "pick",
+     "775768"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "7466120",
+    "name": "NBRJGF010B / WINTER Breeze / SD2205BO (BLACK)",
+    "serial": "NBRJGF010B_19",
+    "kind": "none",
+    "source": "model_code_removed",
+    "truth": "",
+    "answer": [
+     "pick",
+     "775768"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "5599231",
+    "name": "NBRJGF010A / WINTER Breeze / SD2205BE (BEIGE)",
+    "serial": "NBRJGF010A_35",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "639120",
+    "answer": [
+     "pick",
+     "775768"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "5599231",
+    "name": "NBRJGF010A / WINTER Breeze / SD2205BE (BEIGE)",
+    "serial": "NBRJGF010A_35",
+    "kind": "none",
+    "source": "model_code_removed",
+    "truth": "",
+    "answer": [
+     "pick",
+     "775768"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "4678344",
+    "name": "NBPDGF733B / U740BM2 (BLACK)",
+    "serial": "NBPDGF733B_19",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "418841",
+    "answer": [
+     "pick",
+     "44101"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "4678344",
+    "name": "NBPDGF733B / U740BM2 (BLACK)",
+    "serial": "NBPDGF733B_19",
+    "kind": "none",
+    "source": "model_code_removed",
+    "truth": "",
+    "answer": [
+     "pick",
+     "44101"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "3901126",
+    "name": "NBPFGF733K / W480SK5 (BLACK)",
+    "serial": "NBPFGF733K_19",
+    "kind": "none",
+    "source": "model_code_removed",
+    "truth": "",
+    "answer": [
+     "pick",
+     "44101"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "4751231",
+    "name": "NBPDGF703S / M1906REH (SILVER)",
+    "serial": "NBPDGF703S_91",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "226053",
+    "answer": [
+     "pick",
+     "44101"
+    ],
+    "result": "wrong_pick"
+   }
+  ],
+  "A": [],
+  "B": [
+   {
+    "goodsNo": "4207634",
+    "name": "하이드로 블립온 트루 블랙",
+    "serial": "BA006BK",
+    "kind": "answer",
+    "source": "ai_review",
+    "truth": "1090164",
+    "answer": [
+     "none",
+     ""
+    ],
+    "result": "missed"
+   },
+   {
+    "goodsNo": "3157671",
+    "name": "클럽 C 85 GL - 트리플 블랙 / 100000153",
+    "serial": "RXSOXXCVUBK",
+    "kind": "answer",
+    "source": "ai_review",
+    "truth": "220750",
+    "answer": [
+     "none",
+     ""
+    ],
+    "result": "missed"
+   },
+   {
+    "goodsNo": "816033",
+    "name": "올드스쿨 플랫폼 - 블랙:화이트 / VN0A3B3UY281",
+    "serial": "VN0A3B3UY281",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "46265",
+    "answer": [
+     "none",
+     ""
+    ],
+    "result": "missed"
+   },
+   {
+    "goodsNo": "636821",
+    "name": "남성용 소가죽 페니로퍼 HS-906_BLACK",
+    "serial": "HRT-906-BK",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "194609",
+    "answer": [
+     "none",
+     ""
+    ],
+    "result": "missed"
+   },
+   {
+    "goodsNo": "6852386",
+    "name": "재스퍼 여성 스니커즈 DARK EARTH/BIRCH",
+    "serial": "KNSO6F301W2",
+    "kind": "answer",
+    "source": "ai_review",
+    "truth": "1031447",
+    "answer": [
+     "none",
+     ""
+    ],
+    "result": "missed"
+   },
+   {
+    "goodsNo": "6928389",
+    "name": "젤 님버스 10.1 - 블랙:퓨어 실버 / 1203A820-001",
+    "serial": "1203A820-001",
+    "kind": "none",
+    "source": "model_code_removed",
+    "truth": "",
+    "answer": [
+     "pick",
+     "531964"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "4394971",
+    "name": "Slouchy Long Boots_Washed Black",
+    "serial": "NT3BDFWBO051BK",
+    "kind": "answer",
+    "source": "ai_review",
+    "truth": "347658",
+    "answer": [
+     "none",
+     ""
+    ],
+    "result": "missed"
+   },
+   {
+    "goodsNo": "3531673",
+    "name": "[삭형x로맨틱무브] 세미 스퀘어토 키높이 첼시부츠 R23M351 (블랙)",
+    "serial": "3M351-BK0",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "381638",
+    "answer": [
+     "none",
+     ""
+    ],
+    "result": "missed"
+   }
+  ],
+  "C": [
+   {
+    "goodsNo": "7044931",
+    "name": "[+4.5cm] YANG - 313(p) / LEATHER",
+    "serial": "BFPNKSN02",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "808126",
+    "answer": [
+     "pick",
+     "808126"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "7407733",
+    "name": "문 슈 OG M - 블랙:세이프티 오렌지:세일 / IX3952-001",
+    "serial": "IX3952-001",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "1115271",
+    "answer": [
+     "none",
+     ""
+    ],
+    "result": "missed"
+   },
+   {
+    "goodsNo": "5042975",
+    "name": "아디제로 EVO SL M - 블랙:화이트 / JP7149",
+    "serial": "JP7149",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "389369",
+    "answer": [
+     "pick",
+     "898555"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "6636852",
+    "name": "[ONRU x kinchi] RUN-841 드럼워싱 홀스레더 컴포트 슈즈",
+    "serial": "BEONDB11",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "263074",
+    "answer": [
+     "pick",
+     "263074"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "5987818",
+    "name": "스탠 스미스 LO 발레 JQ6939",
+    "serial": "JQ6939",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "560343",
+    "answer": [
+     "pick",
+     "1101929"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "6111436",
+    "name": "(남성) 왈라비 GTX - 메이플 스웨이드 / 26179252",
+    "serial": "26179252",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "84745",
+    "answer": [
+     "pick",
+     "84745"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "4313969",
+    "name": "남성 프리미엄 베이직 부츠 위트브라운_TB1180942311",
+    "serial": "TB1180942311",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "18871",
+    "answer": [
+     "pick",
+     "18871"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "6965588",
+    "name": "ZANE X-STRAP SNEAKERS(SUEDE) - 5 colors",
+    "serial": "RF1SHBG3SK006",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "1090645",
+    "answer": [
+     "none",
+     ""
+    ],
+    "result": "missed"
+   },
+   {
+    "goodsNo": "6879519",
+    "name": "글리오 LX 에스프레소(FS263OD03X078217)",
+    "serial": "1100FS263OD03X078217",
+    "kind": "answer",
+    "source": "model_code",
+    "truth": "1009606",
+    "answer": [
+     "pick",
+     "1011918"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "7249959",
+    "name": "TYPE2 - 808(a)",
+    "serial": "BFKCDB08",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "430579",
+    "answer": [
+     "pick",
+     "430579"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "4397345",
+    "name": "남성 클래식 6인치 워터프루프 워커부츠 블랙_TB1190390011",
+    "serial": "TB1190390011",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "173149",
+    "answer": [
+     "pick",
+     "173149"
+    ],
+    "result": "wrong_pick"
+   }
+  ],
+  "D": [
+   {
+    "goodsNo": "7044931",
+    "name": "[+4.5cm] YANG - 313(p) / LEATHER",
+    "serial": "BFPNKSN02",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "808126",
+    "answer": [
+     "pick",
+     "808126"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "6636852",
+    "name": "[ONRU x kinchi] RUN-841 드럼워싱 홀스레더 컴포트 슈즈",
+    "serial": "BEONDB11",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "263074",
+    "answer": [
+     "pick",
+     "263074"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "6111436",
+    "name": "(남성) 왈라비 GTX - 메이플 스웨이드 / 26179252",
+    "serial": "26179252",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "84745",
+    "answer": [
+     "pick",
+     "84745"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "4313969",
+    "name": "남성 프리미엄 베이직 부츠 위트브라운_TB1180942311",
+    "serial": "TB1180942311",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "18871",
+    "answer": [
+     "pick",
+     "18871"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "7249959",
+    "name": "TYPE2 - 808(a)",
+    "serial": "BFKCDB08",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "430579",
+    "answer": [
+     "pick",
+     "430579"
+    ],
+    "result": "wrong_pick"
+   },
+   {
+    "goodsNo": "4397345",
+    "name": "남성 클래식 6인치 워터프루프 워커부츠 블랙_TB1190390011",
+    "serial": "TB1190390011",
+    "kind": "rejected",
+    "source": "ai_review",
+    "truth": "173149",
+    "answer": [
+     "pick",
+     "173149"
+    ],
+    "result": "wrong_pick"
+   }
+  ]
+ },
+ "vlm_usage": {
+  "calls": 246,
+  "model": "gpt-5.4-mini-2026-03-17",
+  "seconds_median": 2.75,
+  "seconds_p95": 4.0,
+  "input_tokens": 504773,
+  "output_tokens": 43949,
+  "cost_usd": 0.5764,
+  "cost_krw_per_product": 3.28
+ }
+}
