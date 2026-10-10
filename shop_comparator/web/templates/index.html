@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf }}"><title>Shop Comparator · 무신사 × KREAM 가격 비교</title>
+  <link rel="stylesheet" href="/static/app.css"><script src="/static/app.js" defer></script>
+</head>
+<body>
+<header>
+  <a href="/" class="logo">SC<span>SHOP COMPARATOR</span></a>
+  <div class="sessions" id="session-badges"></div>
+  <span class="local">● 이 PC 전용</span>
+</header>
+<nav id="tabs" role="tablist">
+  <button role="tab" data-tab="login" class="on">로그인</button>
+  <button role="tab" data-tab="collect">수집</button>
+  <button role="tab" data-tab="products">상품·비교</button>
+  <button role="tab" data-tab="match">매칭</button>
+  <button role="tab" data-tab="monitor">모니터링·자동화</button>
+  <button role="tab" data-tab="export">내보내기·설정</button>
+  <button role="tab" data-tab="logs">로그</button>
+</nav>
+<section id="jobbar" aria-live="polite"></section>
+<div id="message" role="alert" hidden></div>
+<main>
+
+<!-- ───────────── 로그인 ───────────── -->
+<section class="tab on" id="tab-login">
+  <p class="lead">쇼핑몰마다 따로 로그인합니다. 입력한 계정으로 이 PC의 Chrome이 실제 로그인을 수행하고, 회원 전용 조회가 성공해야 "로그인됨"으로 표시됩니다.</p>
+  <div class="cards three">
+    {% for site, label, id_label in [('musinsa','무신사','아이디 또는 이메일'),('kream','KREAM','이메일'),('poizon','POIZON (Seller)','아이디(이메일)')] %}
+    <form class="card login-card" data-site="{{ site }}" autocomplete="off">
+      <h2>{{ label }} <span class="badge" data-state>확인 안 됨</span></h2>
+      <p class="hint" data-detail></p>
+      <label>{{ id_label }}<input name="account" type="text" autocomplete="off" spellcheck="false"></label>
+      <label>비밀번호<input name="password" type="password" autocomplete="new-password"></label>
+      <label class="check"><input name="remember" type="checkbox"> 서버 실행 중 재로그인용으로 메모리에만 보관</label>
+      <div class="row">
+        <button class="primary" type="submit">{{ label.split(' ')[0] }} 로그인</button>
+        {% if site != 'poizon' %}
+        <button type="button" data-manual>창에서 직접 로그인</button>
+        <button type="button" data-check>세션 확인</button>
+        {% endif %}
+        <button type="button" data-env hidden>.env 계정으로 로그인</button>
+        <button type="button" data-forget hidden>보관 계정 삭제</button>
+      </div>
+      <p class="hint" data-guide></p>
+    </form>
+    {% endfor %}
+  </div>
+  <ul class="notes">
+    <li><code>.env</code>에 <code>MUSINSA_ID</code>/<code>MUSINSA_PASSWORD</code>, <code>KREAM_ID</code>/<code>KREAM_PASSWORD</code>가 있으면 [.env 계정으로 로그인] 버튼이 나타납니다. 값은 화면이나 응답으로 보내지 않습니다.</li>
+    <li>비밀번호는 디스크·로그·응답에 저장하지 않습니다. 체크하지 않으면 로그인 요청 한 번에만 사용합니다.</li>
+    <li>추가 인증(CAPTCHA, 본인확인)이 뜨면 열린 Chrome 창에서 직접 완료해 주세요. 완료되면 자동으로 이어집니다(최대 5분).</li>
+    <li>로그인 정보는 쇼핑몰별 전용 Chrome 프로필(<code>browser_profiles/</code>)에 남아 서버를 다시 켜도 유지됩니다.</li>
+    <li>KREAM은 헤드리스 브라우저에 HTTP 500을 반환하므로 KREAM 작업 중에는 최소화된 Chrome 창이 열립니다.</li>
+    <li>무신사 사이즈·재고와 KREAM 매칭·가격은 로그인 없이 수집됩니다. 무신사 회원가는 무신사 로그인, 거래량 필터는 KREAM 로그인이 필요합니다.</li>
+  </ul>
+</section>
+
+<!-- ───────────── 수집 ───────────── -->
+<section class="tab" id="tab-collect">
+  <div class="split">
+    <form class="card" id="collect-form">
+      <h2>1. 수집 대상</h2>
+      <label>수집 방식
+        <select id="mode">
+          <option value="products">상품 직접 입력</option>
+          <option value="ranking">랭킹</option>
+          <option value="category">카테고리</option>
+          <option value="brand">브랜드</option>
+          <option value="current">현재 상품 목록 전체 갱신</option>
+        </select></label>
+      <div data-mode="products">
+        <label>상품 URL 또는 번호<textarea id="products-input" rows="5" placeholder="무신사 URL [KREAM URL]&#10;한 줄에 한 상품씩 입력"></textarea></label>
+        <p class="hint">KREAM URL을 함께 쓰면 그 상품으로 직접 지정합니다. 생략하면 [KREAM 매칭]에서 자동 검색합니다.</p>
+      </div>
+      <div data-mode="ranking" hidden>
+        <fieldset><legend>랭킹</legend>
+          {% for code, label in rankings.items() %}<label class="check"><input type="checkbox" name="rankings" value="{{ code }}"> {{ label }}</label>{% endfor %}
+        </fieldset>
+      </div>
+      <div data-mode="category" hidden>
+        <fieldset><legend>카테고리 (각각 인기순 상위 N개)</legend>
+          {% for code, label in categories.items() %}<label class="check"><input type="checkbox" name="categories" value="{{ code }}"> {{ label }}</label>{% endfor %}
+        </fieldset>
+      </div>
+      <div data-mode="brand" hidden>
+        <label>브랜드 검색<input id="brand-search" type="search" placeholder="브랜드 이름"></label>
+        <div class="brandbox" id="brand-list"></div>
+        <p class="hint" id="brand-hint"></p>
+      </div>
+      <div data-mode="ranking category brand" hidden>
+        <label><span id="limit-label">상품 수 (TopN)</span><input id="limit" type="number" min="1" max="1000" value="100"></label>
+      </div>
+      <label>회원가 조회 방식
+        <select id="price-mode">
+          <option value="grouped">재고 있는 사이즈 중 옵션 추가금이 같으면 대표 1개만 조회 (기본, 빠름)</option>
+          <option value="per_option">재고 있는 사이즈를 각각 조회 (느림)</option>
+          <option value="none">사이즈·재고만 수집 (회원가 미조회, 로그인 불필요)</option>
+        </select></label>
+      <label class="check"><input id="replace-list" type="checkbox"> 기존 목록의 다른 상품은 숨기기 (데이터는 보존)</label>
+      <p class="notice">회원가는 각 사이즈를 무신사 "바로구매" 장바구니에 담고 주문서 금액을 읽어 계산합니다. 주문 확정·결제는 하지 않습니다.</p>
+    </form>
+    <div class="card">
+      <h2>2. 실행</h2>
+      <p class="hint">각 작업은 따로 실행되고 따로 중단할 수 있습니다. 무신사 작업과 KREAM 작업은 동시에 돌릴 수 있습니다.</p>
+      <label>KREAM 매칭·가격·비교·필터·POIZON의 대상
+        <select id="scope">
+          <option value="last">방금 무신사에서 수집한 상품만</option>
+          <option value="all">상품 목록 전체</option>
+        </select></label>
+      <p class="hint" id="scope-hint"></p>
+      <div class="actions">
+        <button class="primary" data-job="musinsa" data-form>무신사만 수집<small>상품·사이즈·재고·회원가</small></button>
+        <button data-job="match">KREAM 매칭<small>수집된 무신사 상품 검색·검증</small></button>
+        <button data-job="kream">KREAM 가격 수집<small>매칭 안 된 상품은 먼저 검색 후 가격 수집</small></button>
+        <button data-job="compare">가격 비교<small>저장된 양쪽 결과로 계산</small></button>
+        <button class="accent" data-job="full" data-form>전체 순차 실행<small>무신사 → 매칭 → KREAM → 비교</small></button>
+      </div>
+      <h3>KREAM 거래량 필터</h3>
+      <div class="row">
+        <label>최소 거래건수<input id="min-total" type="number" min="0" value="0"></label>
+        <label>최소 한달 거래수<input id="min-monthly" type="number" min="0" value="0"></label>
+        <button data-job="filter">거래량 필터 실행</button>
+      </div>
+      <p class="hint">KREAM 로그인이 필요합니다. 기준 미달 상품은 목록에서 숨깁니다(상품·비교 탭에서 복원 가능).</p>
+      <h3>POIZON (Seller)</h3>
+      <div class="row">
+        <button data-job="poizon">POIZON 가격 수집</button>
+        <button data-job="full_poizon" data-form>무신사+POIZON 순차 실행</button>
+      </div>
+      <p class="hint">POIZON 계정은 로그인 탭에 입력한 값을 사용합니다.</p>
+      <p class="hint" id="prereq"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── 상품·비교 ───────────── -->
+<section class="tab" id="tab-products">
+  <div class="metrics">
+    <div><span>상품</span><strong id="m-products">0</strong></div>
+    <div><span>사이즈 행</span><strong id="m-rows">0</strong></div>
+    <div><span>비교 완료</span><strong id="m-compared">0</strong></div>
+    <div><span>확인 필요</span><strong id="m-attention">0</strong></div>
+  </div>
+  <div class="toolbar">
+    <input id="product-search" type="search" placeholder="상품명·브랜드·번호·사이즈 검색">
+    <select id="status-filter"><option value="">상태 전체</option></select>
+    <label class="check"><input id="show-all" type="checkbox"> 이전에 저장된 상품도 표시</label>
+    <label class="check"><input id="show-hidden" type="checkbox"> 숨긴 상품 표시</label>
+    <label class="check"><input id="show-kream-only" type="checkbox"> KREAM에만 있는 사이즈 표시</label>
+    <span class="grow"></span>
+    <span id="selected-count" class="hint">선택 0개</span>
+    <button data-selected="musinsa">선택 무신사 갱신</button>
+    <button data-selected="match">선택 매칭</button>
+    <button data-selected="kream">선택 KREAM 갱신</button>
+    <button data-selected="hide">목록에서 제외</button>
+    <button data-selected="restore" hidden>복원</button>
+  </div>
+  <p class="hint" id="view-hint"></p>
+  <p class="hint">{{ price_note }} 가격 차이 = KREAM 즉시구매가 − 무신사 회원가.</p>
+  <div class="table-wrap">
+    <table id="product-table">
+      <thead><tr><th><input type="checkbox" id="select-all" aria-label="전체 선택"></th><th>랭킹</th><th>상품</th><th>사이즈</th><th>무신사 회원가</th><th>KREAM 즉시구매</th><th>KREAM 즉시판매</th><th>가격 차이</th><th>POIZON</th><th>상태</th></tr></thead>
+      <tbody id="product-rows"></tbody>
+    </table>
+    <div class="empty" id="product-empty"><h3>저장된 상품이 없습니다</h3><p>수집 탭에서 [무신사만 수집]을 실행하면 여기에 표시됩니다.</p></div>
+  </div>
+  <aside id="detail" hidden><button id="detail-close" aria-label="닫기">×</button><div id="detail-body"></div></aside>
+</section>
+
+<!-- ───────────── 매칭 ───────────── -->
+<section class="tab" id="tab-match">
+  <p class="lead">무신사 상품과 KREAM 상품의 연결 상태입니다. 자동 매칭은 모델번호·브랜드·상품명 검증을 통과한 경우만 "자동 검증"이 됩니다. 미검증 매칭은 가격 수집에 쓰지 않습니다.</p>
+  <div class="toolbar">
+    <input id="match-search" type="search" placeholder="상품명·번호 검색">
+    <select id="match-filter"><option value="">전체</option><option>직접 지정</option><option>모델번호 일치</option><option>이미지 검토</option><option>자동 검증</option><option>미검증</option><option>매칭 없음</option></select>
+    <span class="grow"></span>
+    <button data-match="approve">선택 승인</button>
+    <button data-match="clear">선택 매칭 해제</button>
+    <button data-match="unblacklist">선택 검색 제외 해제</button>
+    <button data-match="search">선택 다시 검색</button>
+  </div>
+  <div class="table-wrap"><table><thead><tr><th></th><th>무신사 상품</th><th>품번</th><th>KREAM 상품</th><th>매칭 상태</th><th>신뢰도·근거</th><th>직접 지정</th></tr></thead><tbody id="match-rows"></tbody></table></div>
+</section>
+
+<!-- ───────────── 모니터링 ───────────── -->
+<section class="tab" id="tab-monitor">
+  <div class="card">
+    <h2>이벤트 트리거 자동화 <span class="badge" id="auto-status">대기</span></h2>
+    <p class="hint">낮 모드: 무신사 가격을 주기적으로 확인하고 가격이 내려간 상품만 KREAM과 비교합니다. 밤 모드(0~9시): 전체 상품의 무신사·KREAM 가격을 갱신합니다. 주기는 최소 30초입니다.</p>
+    <div class="row">
+      <label>낮 감시 주기(초)<input id="auto-day" type="number" min="30" value="300"></label>
+      <label>밤 전체 갱신 주기(초)<input id="auto-night" type="number" min="30" value="1800"></label>
+      <label>감시 대상
+        <select id="auto-seed"><option value="">현재 상품 목록</option><option value="ranking">수집 탭의 랭킹 선택으로 새로 수집</option><option value="category">수집 탭의 카테고리 선택으로 새로 수집</option><option value="brand">수집 탭의 브랜드 선택으로 새로 수집</option></select></label>
+    </div>
+    <div class="row">
+      <button class="primary" data-auto="auto">자동 감지 시작</button>
+      <button data-auto="day_event">낮 모드 시작</button>
+      <button data-auto="night_full">밤 모드 시작</button>
+      <button data-auto="stop">자동 이벤트 모드 중지</button>
+    </div>
+  </div>
+  {% for kind, meta in monitors.items() %}
+  <div class="card monitor" data-kind="{{ kind }}">
+    <h2>{{ meta.label }} 모니터링 <span class="badge" data-running>중지</span></h2>
+    <div class="row">
+      <label>상품 ID<input data-id type="text" inputmode="numeric" placeholder="무신사 상품번호"></label>
+      <button data-add>추가</button>
+      <button data-add-current>현재 상품 목록 추가</button>
+      <button data-remove>선택 삭제</button>
+      <label>주기(초)<input data-interval type="number" min="1" value="{{ meta.interval }}"></label>
+      <button class="primary" data-start>모니터링 시작</button>
+      <button data-stop>모니터링 중지</button>
+    </div>
+    <div class="table-wrap small"><table><thead><tr><th></th><th>상품 ID</th><th>브랜드</th><th>상품명</th><th>상태</th><th>{{ {'restock':'재고 사이즈','price':'최초가 → 현재가','limit':'구매 제한'}[kind] }}</th><th>갱신</th></tr></thead><tbody data-rows></tbody></table></div>
+  </div>
+  {% endfor %}
+</section>
+
+<!-- ───────────── 내보내기·설정 ───────────── -->
+<section class="tab" id="tab-export">
+  <div class="cards two">
+    <div class="card">
+      <h2>결과 다운로드</h2>
+      <div class="actions">
+        <a class="button" href="/api/export/comparison.xlsx" data-download>비교 엑셀 (.xlsx)<small>사이즈별 전체 열 + 기준 시트</small></a>
+        <a class="button" href="/api/export/comparison.csv" data-download>비교 CSV<small>엑셀과 같은 열</small></a>
+        <a class="button" href="/api/export/gui.csv?source=kream" data-download>GUI 형식 CSV (KREAM)<small>musinsa_kream_comparison.csv</small></a>
+        <a class="button" href="/api/export/gui.csv?source=poizon" data-download>GUI 형식 CSV (POIZON)<small>musinsa_poizon_comparison.csv</small></a>
+      </div>
+      <label class="check"><input id="export-selected" type="checkbox"> 상품·비교 탭에서 선택한 상품만</label>
+      <h3>KREAM 입찰 엑셀</h3>
+      <form id="bid-form" class="row">
+        <label>마진율(%)<input name="margin" type="number" step="0.1" value="10.0"></label>
+        <label>수량<input name="quantity" type="number" min="1" value="1"></label>
+        <label>입찰기한<select name="deadline">{% for d in deadlines %}<option>{{ d }}</option>{% endfor %}</select></label>
+        <button class="primary" type="submit">엑셀 파일 생성</button>
+      </form>
+      <p class="hint">판매 희망가 = 사이즈별 무신사 회원가 × (1 + 마진율), 1,000원 단위 올림. 템플릿 k-c46vwlba.xlsx를 사용합니다.</p>
+    </div>
+    <div class="card">
+      <h2>디스코드 알림 설정</h2>
+      <form id="settings-form">
+        <label>웹훅 URL <span class="hint" id="webhook-state"></span><input name="webhook_url" type="password" autocomplete="off" placeholder="https://discord.com/api/webhooks/..."></label>
+        <label>알림 기준 (이 차액이 알림 마진 이상인 사이즈를 알림)<select name="alert_basis" id="alert-basis"></select></label>
+        <label>알림 마진(원)<input name="alert_margin" type="number" min="0" value="0"></label>
+        <div class="row"><button class="primary" type="submit">저장</button><button type="button" id="webhook-test">테스트 알림</button><button type="button" id="webhook-clear">웹훅 삭제</button></div>
+      </form>
+      <p class="hint">웹훅 URL은 이 PC의 DB에만 저장하고 화면과 응답에는 끝 6자만 표시합니다. KREAM 가격 수집을 할 때, 선택한 기준의 차액이 알림 마진 이상인 사이즈마다 디스코드로 알립니다.</p>
+      <h2>작업 이력</h2>
+      <div class="table-wrap small"><table><thead><tr><th>시작</th><th>작업</th><th>결과</th><th>요약</th></tr></thead><tbody id="history-rows"></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── 로그 ───────────── -->
+<section class="tab" id="tab-logs">
+  <div class="toolbar">
+    <select id="log-job"><option value="">작업 전체</option></select>
+    <select id="log-shop"><option value="">쇼핑몰 전체</option><option value="musinsa">무신사</option><option value="kream">KREAM</option><option value="poizon">POIZON</option></select>
+    <select id="log-level"><option value="">수준 전체</option><option value="error">오류</option><option value="warning">경고</option><option value="info">정보</option></select>
+    <input id="log-search" type="search" placeholder="메시지·상품번호 검색">
+    <span class="grow"></span><span class="hint" id="log-file"></span>
+  </div>
+  <div class="table-wrap logs"><table><thead><tr><th>시각</th><th>수준</th><th>작업</th><th>쇼핑몰</th><th>상품</th><th>단계</th><th>오류 종류</th><th>메시지</th></tr></thead><tbody id="log-rows"></tbody></table></div>
+</section>
+</main>
+</body></html>
