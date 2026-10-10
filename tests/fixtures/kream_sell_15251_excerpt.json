@@ -1,0 +1,81 @@
+{
+ "content": {
+  "items": [
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "instant_sell",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "300"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "107,000"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "instant_sell",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "305"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "110,000"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "bid_sell",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "310"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "판매 입찰하기"
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,450 @@
+{
+ "content": {
+  "items": [
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "bid_buy",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "215"
+       ],
+       "delivery_method": [
+        "normal"
+       ],
+       "cart_type": [
+        "c2c"
+       ],
+       "checkout_type": [
+        "bid"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "구매 입찰하기"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "instant_buy",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "215"
+       ],
+       "price": [
+        "120000"
+       ],
+       "delivery_method": [
+        "overseas"
+       ],
+       "cart_type": [
+        "c2c"
+       ],
+       "checkout_type": [
+        "instant_buy"
+       ],
+       "quality": [
+        "1"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "즉시 구매하기"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "add_to_cart",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "220"
+       ],
+       "delivery_method": [
+        "immediate"
+       ],
+       "price": [
+        "85000"
+       ],
+       "quality": [
+        "3"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "장바구니 담기"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "instant_buy",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "220"
+       ],
+       "price": [
+        "85000"
+       ],
+       "delivery_method": [
+        "immediate"
+       ],
+       "cart_type": [
+        "c2c"
+       ],
+       "checkout_type": [
+        "instant_buy"
+       ],
+       "quality": [
+        "3"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "즉시 구매하기"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "add_to_cart",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "220"
+       ],
+       "delivery_method": [
+        "normal"
+       ],
+       "price": [
+        "76000"
+       ],
+       "quality": [
+        "1"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "장바구니 담기"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "buy",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "220"
+       ],
+       "price": [
+        "76000"
+       ],
+       "delivery_method": [
+        "normal"
+       ],
+       "cart_type": [
+        "c2c"
+       ],
+       "checkout_type": [
+        "bid"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "즉시 구매 / 구매 입찰"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "instant_buy",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "220"
+       ],
+       "price": [
+        "116000"
+       ],
+       "delivery_method": [
+        "overseas"
+       ],
+       "cart_type": [
+        "c2c"
+       ],
+       "checkout_type": [
+        "instant_buy"
+       ],
+       "quality": [
+        "1"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "즉시 구매하기"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "add_to_cart",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "260"
+       ],
+       "delivery_method": [
+        "immediate"
+       ],
+       "price": [
+        "121000"
+       ],
+       "quality": [
+        "3"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "장바구니 담기"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "instant_buy",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "260"
+       ],
+       "price": [
+        "121000"
+       ],
+       "delivery_method": [
+        "immediate"
+       ],
+       "cart_type": [
+        "c2c"
+       ],
+       "checkout_type": [
+        "instant_buy"
+       ],
+       "quality": [
+        "3"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "즉시 구매하기"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "add_to_cart",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "260"
+       ],
+       "delivery_method": [
+        "normal"
+       ],
+       "price": [
+        "118000"
+       ],
+       "quality": [
+        "1"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "장바구니 담기"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "buy",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "260"
+       ],
+       "price": [
+        "118000"
+       ],
+       "delivery_method": [
+        "normal"
+       ],
+       "cart_type": [
+        "c2c"
+       ],
+       "checkout_type": [
+        "bid"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "즉시 구매 / 구매 입찰"
+       }
+      ]
+     }
+    }
+   },
+   {
+    "actions": [
+     {
+      "type": "named_action",
+      "value": "instant_buy",
+      "parameters": {
+       "product_id": [
+        "15251"
+       ],
+       "option_key": [
+        "260"
+       ],
+       "price": [
+        "129000"
+       ],
+       "delivery_method": [
+        "overseas"
+       ],
+       "cart_type": [
+        "c2c"
+       ],
+       "checkout_type": [
+        "instant_buy"
+       ],
+       "quality": [
+        "1"
+       ]
+      }
+     }
+    ],
+    "title_item": {
+     "text_element": {
+      "variations": [
+       {
+        "text": "즉시 구매하기"
+       }
+      ]
+     }
+    }
+   }
+  ]
+ }
+}

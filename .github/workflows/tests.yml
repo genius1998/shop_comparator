@@ -1,0 +1,22 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Mock-data tests (no shop is contacted)
+        run: python -m unittest discover -s tests
+      - name: Matching evaluation on the frozen dataset
+        run: python -m shop_comparator.matching.evaluate
+        env:
+          PYTHONIOENCODING: utf-8
