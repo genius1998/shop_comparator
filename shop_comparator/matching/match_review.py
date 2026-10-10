@@ -343,7 +343,7 @@ def price_level(musinsa_price, kream_buy, monthly):
     """0 none, 1 KREAM is dearer and the product sells, 2 KREAM is at least 110% as well."""
     if not musinsa_price or not kream_buy or (monthly or 0) < HOT_MONTHLY or kream_buy <= musinsa_price:
         return 0
-    return 2 if kream_buy >= musinsa_price * HOT_RATIO else 1
+    return 2 if kream_buy * 100 >= musinsa_price * round(HOT_RATIO * 100) else 1   # integers: 100000 * 1.1 is not exact
 
 
 def price_summary(size_rows, monthly):
