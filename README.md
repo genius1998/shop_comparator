@@ -36,7 +36,7 @@
 | 상품 매칭 | 모델번호 대조 → 이미지 판정(VLM) → 사람이 엑셀로 확인 |
 | 저장 | SQLite. 새로고침·서버 재시작 후에도 결과 유지 |
 | 코드 구조 | `shop_comparator/` 패키지 7개 (web, services, matching, shops, storage, core, desktop) |
-| 테스트 | 모의 데이터 테스트 101개 (쇼핑몰 접속 없음), GitHub Actions에서 실행 |
+| 테스트 | 모의 데이터 테스트 103개 (쇼핑몰 접속 없음), GitHub Actions에서 실행 |
 
 ### 주요 기능
 
@@ -208,7 +208,7 @@ VLM(`gpt-5.4-mini`) 자체의 정확도
 | 작업 제어 | 버튼 하나가 전체 과정을 실행 | 단계별 작업, 쇼핑몰별 동시 실행, 작업별 중단, 진행률, 이력 |
 | 로그 | `print`와 텍스트 창 | JSON Lines 파일(회전), 작업 ID·쇼핑몰·상품번호 필터, 민감정보 마스킹 |
 | 입찰가 계산 | 부동소수점 (90,000 × 1.1 → 100,000) | Decimal (99,000) |
-| 테스트 | 14개 | 101개 + CI |
+| 테스트 | 14개 | 103개 + CI |
 | 문서 | 없음 | 설계·검증·문제 해결·평가 문서 12개 |
 
 기존 GUI는 `shop_comparator/desktop/`에 내용을 그대로 두었고 `python main.py --desktop`으로 실행된다.
@@ -289,7 +289,7 @@ shop_comparator/
 │  ├─ crawl_errors.py          오류 종류 정의
 │  └─ config.py, utils.py, webhook.py
 └─ desktop/                    기존 Tkinter 프로그램 (gui.py 등)
-tests/                         모의 데이터 테스트 101개
+tests/                         모의 데이터 테스트 103개
 docs/                          설계·검증·문제 해결 문서
 docs/evaluation/               매칭 평가 데이터, 확인 라벨, VLM 벤치마크 쌍과 판정
 scripts/                       보조 스크립트
@@ -466,7 +466,7 @@ scripts/                       보조 스크립트
 |---|---|
 | 비교 엑셀·CSV | 사이즈별 전체 열(판매가, 쿠폰, 할인 내역, 회원가, 출처, 시세, 차이, 매칭, 조회 시각, 양쪽 URL)과 기준 시트 |
 | 조건 충족 엑셀 (`match_review opportunities`) | 최근 30일 체결 N건 이상 + KREAM이 M원 이상 높은 사이즈. 상품 확인 시트에 이미지 포함 |
-| 매칭 확인 엑셀 (`match_review export`) | 상품별 이미지·ID·모델번호·VLM 판정 |
+| 매칭 확인 엑셀 (`match_review export`) | 상품별 이미지·ID·모델번호·VLM 판정과 가격 요약. KREAM이 더 비싸고 최근 30일 체결 10건 이상이면 노랑, 110% 이상이면 주황으로 강조 |
 | GUI 형식 CSV | 기존 프로그램과 같은 열 |
 | KREAM 입찰 엑셀 | 판매 희망가 = 사이즈별 회원가 × (1 + 마진율), 1,000원 올림. 템플릿 사용, 1,000행마다 분할 |
 
@@ -590,7 +590,7 @@ scripts/                       보조 스크립트
 .\.venv\Scripts\python.exe -m unittest discover -s tests
 ```
 
-101개가 통과한다. 모두 모의 데이터를 쓰고 쇼핑몰에 접속하지 않는다. 테스트는 임시 SQLite를 쓰며 실제 로그인 함수, 브라우저 생성, `.env` 계정 접근, 사용자 CSV 경로를 차단한다. GitHub Actions가 push마다 테스트와 매칭 평가를 실행한다.
+103개가 통과한다. 모두 모의 데이터를 쓰고 쇼핑몰에 접속하지 않는다. 테스트는 임시 SQLite를 쓰며 실제 로그인 함수, 브라우저 생성, `.env` 계정 접근, 사용자 CSV 경로를 차단한다. GitHub Actions가 push마다 테스트와 매칭 평가를 실행한다.
 
 | 파일 | 수 | 내용 |
 |---|---|---|
@@ -598,7 +598,7 @@ scripts/                       보조 스크립트
 | `test_pipeline.py` | 25 | 수집 단계, 부분 실패 보존, 재시도·중단 규칙, KREAM 파서(실제 응답 발췌), 알림 기준 |
 | `test_web_workflow.py` | 15 | 옵션별 가격, 403은 품절이 아님, 브라우저 어댑터, CSRF |
 | `test_product_matcher.py` 등 기존 | 14 | 기존 판별기, 회원가 계산식, 매칭 캐시 |
-| `test_matching_eval.py` | 7 | 기존 매칭 규칙 재현, 평가 집계, 로컬 VLM 백엔드 |
+| `test_matching_eval.py` | 9 | 기존 매칭 규칙 재현, 평가 집계, 로컬 VLM 백엔드, 엑셀 가격 강조 규칙 |
 | `test_vlm_benchmark.py` | 8 | 벤치마크 쌍 선정, 채점, 원격 모델 응답 처리, 연속 실패 시 중단 |
 
 요구사항별로 고정한 규칙 예

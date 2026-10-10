@@ -11,7 +11,7 @@
 | [collection-strategy.md](collection-strategy.md) | 직접 HTTP·브라우저 내 API·화면 조작·HTML 파싱 중 무엇을 왜 골랐는지, 2026-10-09 재현 결과 |
 | [matching-evaluation.md](matching-evaluation.md) | 기존 매칭 규칙의 문제, 모델번호 대조·VLM·사람 확인의 결과 비교, 로컬 Qwen3-VL-8B·gpt-5.4-mini·gpt-5.4-nano 벤치마크(정확도·비용·장단점), 평가 방법과 한계 |
 | [troubleshooting.md](troubleshooting.md) | 실제로 발생한 문제 25건. 증상, 재현 조건, 관측 근거, 원인, 수정, 검증, 남은 한계 |
-| [testing.md](testing.md) | 모의 데이터 테스트 101개의 구성과 요구사항별 대응, 격리 방법 |
+| [testing.md](testing.md) | 모의 데이터 테스트 103개의 구성과 요구사항별 대응, 격리 방법 |
 | [live-verification.md](live-verification.md) | 실제 무신사·KREAM을 상대로 한 실행 기록(작업 ID, 가격, 비교표)과 미검증 항목 |
 | [logging.md](logging.md) | 중앙 로그의 필드, 저장 위치와 회전 정책, 웹 로그 탭, 마스킹, 민감정보를 제거한 예시, 문제 추적 순서 |
 | [limitations.md](limitations.md) | 검증하지 못한 것, 동작상의 제한, 쇼핑몰 변경에 취약한 지점, 정리 과제 |

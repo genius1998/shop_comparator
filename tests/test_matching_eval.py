@@ -72,6 +72,31 @@ class ReportTests(unittest.TestCase):
         self.assertIn("기존 규칙", evaluate.render(report))
 
 
+class PriceHighlightTests(unittest.TestCase):
+    def test_highlight_needs_a_higher_kream_price_and_enough_sales(self):
+        from shop_comparator.matching.match_review import price_level
+        self.assertEqual(price_level(100000, 105000, 10), 1)     # KREAM dearer, sells
+        self.assertEqual(price_level(100000, 110000, 10), 2)     # 110% or more
+        self.assertEqual(price_level(100000, 120000, 9), 0)      # too few sales
+        self.assertEqual(price_level(100000, 100000, 50), 0)     # not dearer
+        self.assertEqual(price_level(100000, None, 50), 0)       # no instant-buy price is never a guess
+        self.assertEqual(price_level(100000, 120000, None), 0)   # sales not collected
+
+    def test_product_summary_uses_only_sizes_priced_on_both_sides(self):
+        from shop_comparator.matching.match_review import price_summary
+        rows = [{"size": "250", "musinsaPrice": 100000, "kreamBuy": 95000},
+                {"size": "260", "musinsaPrice": 100000, "kreamBuy": 112000},
+                {"size": "270", "musinsaPrice": 100000, "kreamBuy": None},
+                {"size": "280", "musinsaPrice": None, "kreamBuy": 150000}]
+        summary = price_summary(rows, monthly=30)
+        self.assertEqual((summary["musinsa"], summary["kream"]), (100000, "95,000~112,000"))
+        self.assertEqual((summary["size"], summary["difference"], summary["dearer"], summary["compared"], summary["level"]),
+                         ("260", 12000, 1, 2, 2))
+        self.assertAlmostEqual(summary["ratio"], 1.12)
+        self.assertEqual(price_summary(rows, monthly=3)["level"], 0)
+        self.assertEqual(price_summary([], monthly=30)["level"], 0)
+
+
 class LocalVisionModelTests(TempDbTestCase):
     ENTRY = {"goodsNo": "1", "brand": "나이키", "name": "에어포스", "serial": "CW2288-111", "musinsaImage": "images/1/musinsa.jpg",
              "candidates": [{"kreamId": "12831", "brand": "Nike", "name": "에어포스 1", "image": "images/1/kream_12831.jpg", "model": "CW2288-111"}]}

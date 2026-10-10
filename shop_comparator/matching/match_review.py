@@ -335,6 +335,34 @@ def fill_match_images(goods_nos=None, log=print):
     return saved
 
 
+HOT_MONTHLY = 10      # KREAM sales in the last 30 days needed for a highlight
+HOT_RATIO = 1.10      # KREAM instant-buy price / Musinsa member price for the strong highlight
+
+
+def price_level(musinsa_price, kream_buy, monthly):
+    """0 none, 1 KREAM is dearer and the product sells, 2 KREAM is at least 110% as well."""
+    if not musinsa_price or not kream_buy or (monthly or 0) < HOT_MONTHLY or kream_buy <= musinsa_price:
+        return 0
+    return 2 if kream_buy >= musinsa_price * HOT_RATIO else 1
+
+
+def price_summary(size_rows, monthly):
+    """Product-level numbers for the check sheet, from its comparable size rows."""
+    pairs = [(r["musinsaPrice"], r["kreamBuy"], r) for r in size_rows if r.get("musinsaPrice") and r.get("kreamBuy")]
+    musinsa = sorted({r["musinsaPrice"] for r in size_rows if r.get("musinsaPrice")})
+    out = {"musinsa": "", "kream": "", "ratio": None, "difference": None, "size": "", "dearer": None, "compared": len(pairs), "level": 0}
+    if musinsa:
+        out["musinsa"] = musinsa[0] if len(musinsa) == 1 else f"{musinsa[0]:,}~{musinsa[-1]:,}"
+    if not pairs:
+        return out
+    buys = sorted(k for _, k, _ in pairs)
+    out["kream"] = buys[0] if buys[0] == buys[-1] else f"{buys[0]:,}~{buys[-1]:,}"
+    price, buy, best = max(pairs, key=lambda item: item[1] / item[0])
+    out.update(ratio=buy / price, difference=buy - price, size=best.get("size") or best.get("kreamSize") or "",
+               dearer=sum(1 for m, k, _ in pairs if k > m), level=max(price_level(m, k, monthly) for m, k, _ in pairs))
+    return out
+
+
 def export_xlsx(goods_nos=None, path=None):
     """Excel for checking matches by eye.
 
@@ -374,7 +402,10 @@ def export_xlsx(goods_nos=None, path=None):
     wb = Workbook()
     ws = wb.active
     ws.title = "매칭 확인"
-    head = ["번호", "매칭 상태", "무신사 이미지", "KREAM 이미지", "무신사 상품ID", "KREAM 상품ID", "무신사 브랜드", "무신사 상품명",
+    from openpyxl.utils import get_column_letter
+    PRICE_HEAD = ["무신사 회원가", "KREAM 즉시구매가", "KREAM÷무신사(최대)", "최대 차이(원)", "최대 차이 사이즈",
+                  "KREAM이 더 비싼 사이즈 수", "비교한 사이즈 수", "최근 30일 체결"]
+    head = ["번호", "매칭 상태", "무신사 이미지", "KREAM 이미지", "무신사 상품ID", "KREAM 상품ID", *PRICE_HEAD, "무신사 브랜드", "무신사 상품명",
             "KREAM 상품명", "무신사 품번", "KREAM 모델번호", "모델번호 대조", "매칭 방식", "신뢰도", "매칭 근거", "이미지 판정(참고)",
             "무신사 URL", "KREAM URL", "다른 KREAM 후보(번호:모델번호)", "직접 확인 결과(O/X)", "메모",
             "VLM 판정", "VLM이 고른 KREAM ID", "VLM 신뢰도", "VLM 사유", "대조 결과"]
@@ -383,7 +414,12 @@ def export_xlsx(goods_nos=None, path=None):
         cell.font = Font(color="FFFFFF", bold=True)
         cell.fill = PatternFill("solid", fgColor="163A35")
         cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+    col = {name: get_column_letter(i) for i, name in enumerate(head, 1)}
+    soft, strong = PatternFill("solid", fgColor="FFD966"), PatternFill("solid", fgColor="F4511E")
     order = sorted(goods_nos, key=lambda g: (not cmp.match_info(matches.get(str(g)))["usable"], goods_nos.index(g)))
+    size_rows = {}
+    for size_row in cmp.build([g for g in order if cmp.match_info(matches.get(str(g)))["usable"]], include_kream_only=False):
+        size_rows.setdefault(size_row["goodsNo"], []).append(size_row)
     for index, goods_no in enumerate(order, 1):
         goods_no = str(goods_no)
         product, entry = products.get(goods_no, {}), data.get(goods_no, {})
@@ -420,8 +456,12 @@ def export_xlsx(goods_nos=None, path=None):
         state = info["status"] if usable else ("후보 있음·확정 못 함" if not info["kreamId"] else "예전 매칭(근거 없음, 사용 안 함)")
         if state == "자동 검증":
             state = "자동 판별기(미확인)"
+        monthly = product.get("kream_monthly_transactions") if usable else None
+        price = price_summary(size_rows.get(goods_no, []), monthly)
         ws.append([index, state, "", "",
-                   goods_no, kream_id, product.get("brandName") or "", product.get("goodsName") or "", kream_name,
+                   goods_no, kream_id, price["musinsa"], price["kream"], price["ratio"], price["difference"], price["size"],
+                   price["dearer"], price["compared"] if usable else None, monthly,
+                   product.get("brandName") or "", product.get("goodsName") or "", kream_name,
                    product.get("serial_number") or "", candidate.get("model") or "",
                    {"exact": "일치", "near": "거의 일치"}.get(kind, "모델번호 없음/불일치" if kream_id else ""),
                    label.get(info["method"], info["method"]) if usable else "", info["confidence"] if usable else None,
@@ -434,7 +474,7 @@ def export_xlsx(goods_nos=None, path=None):
             cell.alignment = Alignment(vertical="center", wrap_text=True)
             if isinstance(cell.value, str):
                 cell.data_type = "s"
-        for column, key in (("Q", "무신사 URL"), ("R", "KREAM URL")):
+        for column in (col["무신사 URL"], col["KREAM URL"]):
             cell = ws[f"{column}{row}"]
             if cell.value:
                 cell.hyperlink = cell.value
@@ -443,8 +483,16 @@ def export_xlsx(goods_nos=None, path=None):
             for cell in ws[row]:
                 cell.fill = PatternFill("solid", fgColor="F3F3F3")
         if fill:
-            for column in ("B", "V", "W", "X", "Y", "Z"):
-                ws[f"{column}{row}"].fill = fill
+            for name in ("매칭 상태", "VLM 판정", "VLM이 고른 KREAM ID", "VLM 신뢰도", "VLM 사유", "대조 결과"):
+                ws[f"{col[name]}{row}"].fill = fill
+        ws[f"{col['KREAM÷무신사(최대)']}{row}"].number_format = "0.0%"
+        for name in ("무신사 회원가", "KREAM 즉시구매가", "최대 차이(원)"):
+            ws[f"{col[name]}{row}"].number_format = "#,##0;[Red]-#,##0"
+        if price["level"]:
+            for name in ["무신사 상품ID", "KREAM 상품ID", *PRICE_HEAD]:
+                cell = ws[f"{col[name]}{row}"]
+                cell.fill = strong if price["level"] == 2 else soft
+                cell.font = Font(bold=True, color="FFFFFF" if price["level"] == 2 else "000000")
         shown_kream = kream_id or (v_id if v.get("decision") == "same" else "")
         for column, rel in (("C", f"images/{goods_no}/musinsa.jpg"), ("D", f"images/{goods_no}/kream_{shown_kream}.jpg" if shown_kream else None)):
             full = os.path.join(ROOT, rel) if rel else None
@@ -455,28 +503,38 @@ def export_xlsx(goods_nos=None, path=None):
                 picture.save(buffer, "PNG")
                 buffer.seek(0)
                 ws.add_image(XlImage(buffer), f"{column}{row}")
-    widths = {"A": 6, "B": 14, "C": 17, "D": 17, "E": 13, "F": 13, "G": 14, "H": 38, "I": 34, "J": 18, "K": 24, "L": 14, "M": 14,
-              "N": 8, "O": 40, "P": 34, "Q": 30, "R": 30, "S": 40, "T": 14, "U": 24, "V": 10, "W": 14, "X": 10, "Y": 50, "Z": 34}
-    for column, width in widths.items():
-        ws.column_dimensions[column].width = width
-    ws.freeze_panes = "E2"
-    ws.auto_filter.ref = f"A1:Z{ws.max_row}"
+    widths = [6, 14, 17, 17, 13, 13, 15, 18, 12, 12, 10, 11, 10, 10, 14, 38, 34, 18, 24, 14, 14,
+              8, 40, 34, 30, 30, 40, 14, 24, 10, 14, 10, 50, 34]
+    for index, width in enumerate(widths, 1):
+        ws.column_dimensions[get_column_letter(index)].width = width
+    ws.freeze_panes = "G2"
+    ws.auto_filter.ref = f"A1:{get_column_letter(len(head))}{ws.max_row}"
 
     sizes = wb.create_sheet("사이즈별")
     columns = [("goodsNo", "무신사 상품ID"), ("kreamId", "KREAM 상품ID"), ("goodsName", "무신사 상품명"), ("size", "무신사 사이즈"),
                ("kreamSize", "KREAM 사이즈"), ("sizeKey", "정규화 사이즈"), ("musinsaPrice", "무신사 회원가"), ("kreamBuy", "KREAM 즉시구매가"),
                ("kreamBuyDelivery", "배송 유형"), ("kreamSell", "KREAM 즉시판매가"), ("difference", "차이(KREAM-무신사)"),
-               ("status", "상태"), ("matchStatus", "상품 매칭")]
+               ("ratio", "KREAM÷무신사"), ("monthly", "최근 30일 체결"), ("status", "상태"), ("matchStatus", "상품 매칭")]
     sizes.append([title for _, title in columns])
     for cell in sizes[1]:
         cell.font = Font(color="FFFFFF", bold=True)
         cell.fill = PatternFill("solid", fgColor="163A35")
     for row in cmp.build([g for g in order if cmp.match_info(matches.get(str(g)))["usable"]], include_kream_only=True):
+        monthly = (products.get(row["goodsNo"]) or {}).get("kream_monthly_transactions")
+        row = {**row, "monthly": monthly,
+               "ratio": row["kreamBuy"] / row["musinsaPrice"] if row.get("kreamBuy") and row.get("musinsaPrice") else None}
         sizes.append([row.get(key) for key, _ in columns])
+        level = price_level(row.get("musinsaPrice"), row.get("kreamBuy"), monthly)
         for cell in sizes[sizes.max_row]:
             if isinstance(cell.value, str):
                 cell.data_type = "s"
-    for index, width in enumerate([13, 13, 40, 12, 12, 12, 14, 16, 12, 16, 16, 22, 14], 1):
+            if level:
+                cell.fill = strong if level == 2 else soft
+                cell.font = Font(bold=level == 2, color="FFFFFF" if level == 2 else "000000")
+        sizes[f"L{sizes.max_row}"].number_format = "0.0%"
+        for column in ("G", "H", "J", "K"):
+            sizes[f"{column}{sizes.max_row}"].number_format = "#,##0;[Red]-#,##0"
+    for index, width in enumerate([13, 13, 40, 12, 12, 12, 14, 16, 12, 16, 16, 13, 13, 22, 14], 1):
         sizes.column_dimensions[chr(64 + index)].width = width
     sizes.freeze_panes = "A2"
     sizes.auto_filter.ref = sizes.dimensions
@@ -487,6 +545,8 @@ def export_xlsx(goods_nos=None, path=None):
         ["VLM 열", "gpt-5.4-mini가 저장된 이미지로 판정한 결과(참고용, 매칭 등록에는 반영하지 않음). 초록 = 등록된 매칭과 일치, 빨강 = 엇갈림 또는 모델번호 충돌, 노랑 = 미매칭 상품에 대한 VLM 제안(KREAM 이미지 칸에 제안 후보 표시)."],
         ["자동 판별기(미확인)", "프로그램의 기존 자동 매칭(상품명 규칙 + OpenAI 판별)이 등록한 것. 모델번호 대조를 거치지 않았으므로 직접 확인 권장."],
         ["후보 있음·확정 못 함", "KREAM 검색 결과는 있으나 같은 상품이라고 확정할 근거(모델번호 일치 등)가 없는 상품."],
+        ["가격 열", "무신사 회원가와 KREAM 즉시구매가를 같은 사이즈끼리 비교한 값입니다. 'KREAM÷무신사(최대)'는 사이즈 중 가장 큰 비율이고, 사이즈별 값은 '사이즈별' 시트에 있습니다. KREAM 수수료·배송비는 반영하지 않았습니다."],
+        ["가격 강조", f"노랑 = KREAM 즉시구매가가 무신사 회원가보다 높고 최근 30일 체결이 {HOT_MONTHLY}건 이상. 주황(흰 글씨) = 같은 조건에서 KREAM이 무신사의 {int(HOT_RATIO * 100)}% 이상. 체결 건수가 비어 있으면 강조하지 않습니다(거래량 필터를 실행해야 채워집니다)."],
         ["회색 행", "매칭되지 않은 상품. '다른 KREAM 후보' 열에 검색으로 나온 후보와 모델번호가 있습니다."],
         ["확인 방법", "이미지 두 칸과 품번·모델번호 두 칸을 비교하고, 필요하면 URL 두 개를 열어 보세요. 결과를 '직접 확인 결과' 열에 O/X로 적을 수 있습니다."],
         ["잘못된 매칭", "웹의 매칭 탭에서 해당 상품을 선택해 [선택 매칭 해제] 하거나 올바른 KREAM 주소로 [지정] 하세요."],
