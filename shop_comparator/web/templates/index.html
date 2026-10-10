@@ -18,6 +18,7 @@
   <button role="tab" data-tab="products">상품·비교</button>
   <button role="tab" data-tab="match">매칭</button>
   <button role="tab" data-tab="review">VLM 검토</button>
+  <button role="tab" data-tab="gold">정답 검수</button>
   <button role="tab" data-tab="monitor">모니터링·자동화</button>
   <button role="tab" data-tab="export">내보내기·설정</button>
   <button role="tab" data-tab="logs">로그</button>
@@ -208,7 +209,8 @@
       <option value="approved">승인함</option><option value="rejected">거절함</option><option value="held">보류함</option>
       <option value="no_suggestion">VLM 제안 없음</option><option value="">전체</option>
     </select>
-    <input id="review-search" type="search" placeholder="상품명·번호 검색">
+    <input id="review-search" type="search" placeholder="상품명·번호 검색 (번호 여러 개 붙여넣기 가능)">
+    <label class="check"><input id="review-all" type="checkbox"> 저장된 상품 전체에서</label>
     <label class="check" title="AI 제안을 가리고 사람만의 검토 시간을 재는 용도입니다."><input id="review-manual" type="checkbox"> AI 제안 숨기기 (수동 검토 시간 측정)</label>
     <span class="grow"></span>
     <span class="hint" id="review-count"></span>
@@ -216,6 +218,35 @@
   <p class="hint">검토 시간은 카드를 펼친 순간부터 승인·거절·보류를 누를 때까지 잽니다. 신뢰도는 모델이 스스로 출력한 값이며 검증된 정답 확률이 아닙니다.</p>
   <div id="review-list"></div>
   <div class="empty" id="review-empty" hidden><h3>표시할 상품이 없습니다</h3><p>위에서 [저장된 판정 불러오기]를 누르거나 표시 조건을 바꿔 보세요.</p></div>
+</section>
+
+<!-- ───────────── 정답 검수 (평가용) ───────────── -->
+<section class="tab" id="tab-gold">
+  <p class="lead">평가에 쓸 정답을 사람이 직접 만드는 화면입니다. 실제 수집 데이터에서 고정한 사례를 한 건씩 보여 줍니다. <strong>AI 판정, 신뢰도, 추천 후보, 기존 규칙의 결론, 현재 매칭은 이 화면에 나오지 않습니다.</strong> 후보 순서도 검색 순서가 아닙니다.</p>
+  <div class="toolbar">
+    <label>검수자 (별칭) <input id="gold-reviewer" type="text" maxlength="40" placeholder="예: reviewer-a" autocomplete="off"></label>
+    <span class="badge" id="gold-progress">사람 정답 0건</span>
+    <span class="badge warn" id="gold-automation" hidden>자동화 조작 모드: 이 기록은 사람 정답으로 세지 않습니다</span>
+    <span class="grow"></span>
+    <button id="gold-prev">← 이전</button><button id="gold-next">다음 →</button><button id="gold-todo">미완료 사례로</button>
+    <a class="button" href="/api/export/gold-labels.csv" data-download>정답 CSV</a>
+    <a class="button" href="/api/export/review-timing.csv" data-download>검토 시간 CSV</a>
+  </div>
+  <p class="hint">본명이나 연락처 대신 별칭을 쓰세요. 사례를 연 순간부터 저장할 때까지의 시간과, 다른 탭·창으로 나가 있던 시간이 함께 기록됩니다. 저장하면 다음 미완료 사례로 넘어갑니다.</p>
+  <div id="gold-case"></div>
+  <div class="empty" id="gold-empty" hidden><h3>평가 사례가 없습니다</h3><p><code>python -m shop_comparator.matching.gold build</code>로 사례를 먼저 만들어 주세요.</p></div>
+  <div class="card" id="gold-report-card">
+    <h2>평가 결과 <span class="badge" id="gold-report-status">사람 검수 대기</span></h2>
+    <p class="hint" id="gold-report-message"></p>
+    <div class="table-wrap small"><table><thead><tr><th>방법</th><th>실행</th><th>미실행</th><th>정밀도</th><th>잘못 고름</th><th>정답 후보 찾음</th><th>보류</th><th>없음 사례에서 잘못 고름</th></tr></thead><tbody id="gold-report-rows"></tbody></table></div>
+    <p class="hint" id="gold-report-note"></p>
+    <button id="gold-report-refresh">평가 다시 계산</button>
+  </div>
+  <div class="card">
+    <h2>검토 시간 기록 <span class="hint">최근 30건</span></h2>
+    <p class="hint">정답 작성(gold)과 운영 검토(ops)를 구분합니다. origin이 automation인 행은 스크립트가 조작한 기록이며 사람의 측정값이 아닙니다.</p>
+    <div class="table-wrap small"><table><thead><tr><th>구분</th><th>사례</th><th>모드</th><th>origin</th><th>검수자</th><th>결정</th><th>시작(UTC)</th><th>종료(UTC)</th><th>소요(초)</th><th>이탈(초)</th><th>이탈 횟수</th></tr></thead><tbody id="gold-timing-rows"></tbody></table></div>
+  </div>
 </section>
 
 <!-- ───────────── 모니터링 ───────────── -->

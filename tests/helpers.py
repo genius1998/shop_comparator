@@ -76,6 +76,12 @@ class TempDbTestCase(unittest.TestCase):
                       mock.patch.object(match_review, "save_image", return_value=False)):
             guard.start()
             self.addCleanup(guard.stop)
+        # Evaluation labels and timing records go to a temp folder, and a test never counts as a person.
+        from shop_comparator.matching import gold
+        for guard in (mock.patch.object(gold, "GOLD_DIR", str(Path(self._tmp.name) / "gold")),
+                      mock.patch.dict(os.environ, {"SHOP_AUTOMATION": "1"})):
+            guard.start()
+            self.addCleanup(guard.stop)
         self.addCleanup(self._tmp.cleanup)
         self.addCleanup(close_all)
         self.addCleanup(patcher.stop)

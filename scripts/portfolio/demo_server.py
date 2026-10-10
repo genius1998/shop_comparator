@@ -34,6 +34,7 @@ def main():
         if key.startswith(("MUSINSA_", "KREAM_", "POIZON_", "OPENAI_")):
             del os.environ[key]
     os.environ["SHOP_SKIP_DOTENV"] = "1"
+    os.environ["SHOP_AUTOMATION"] = "1"          # whatever a script clicks here is recorded as automation, never as a person
     os.environ["SHOP_DEMO_LABEL"] = LABEL
 
     from shop_comparator.core.crawl_errors import CrawlError

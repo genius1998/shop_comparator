@@ -27,6 +27,7 @@ FEATURED = [
     "7044931",   # different brand suggested as "same" (known wrong suggestion)
     "5042975",   # model-code rule and VLM pick different candidates
     "7407733",   # model-code match that the VLM calls "different"
+    "6931948",   # registered earlier by the language model; a different colourway (known wrong match)
 ]
 REOPENED = {}      # nothing is unmatched for the demo: matches registered by a model already wait for review
 
@@ -92,6 +93,12 @@ def main():
         folder = os.path.join(src, "match_review", "images", g)
         if os.path.isdir(folder):
             shutil.copytree(folder, os.path.join(out, "match_review", "images", g))
+    gold_source = os.path.join(src, "evaluation_data", "gold")
+    if os.path.isdir(gold_source):          # the frozen evaluation cases, without anyone's labels
+        os.makedirs(os.path.join(out, "evaluation_data", "gold"))
+        for name in ("cases.json", "method_outputs.json"):
+            shutil.copyfile(os.path.join(gold_source, name), os.path.join(out, "evaluation_data", "gold", name))
+        shutil.copytree(os.path.join(gold_source, "images"), os.path.join(out, "evaluation_data", "gold", "images"))
     info = {"builtAt": stamp, "source": "2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정",
             "products": len(batch), "batch": batch, "featured": [g for g in FEATURED if g in batch], "reopened": REOPENED,
             "removed": ["cookies", "site_sessions", "webhook·alert 설정", "job_runs", "monitor_items"],

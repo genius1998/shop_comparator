@@ -61,6 +61,11 @@
    "hash": "#eval"
   },
   {
+   "node": "gold",
+   "title": "정답 검수 (평가용): 사람이 만드는 정답",
+   "hash": "#gold"
+  },
+  {
    "node": "planned",
    "title": "계획 단계: 자동 승인과 자동화 (미구현)",
    "hash": "#planned"

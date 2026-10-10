@@ -1,0 +1,358 @@
+{
+ "ranAt": "2026-10-10T17:40:16+0900",
+ "server": "http://127.0.0.1:8798",
+ "database": "integration_check/musinsa_data.sqlite (운영 DB의 사본)",
+ "replayed": "KREAM 검색 결과(과거에 저장된 선택·방식·근거)와 KREAM 시세. 쇼핑몰과 모델을 호출하지 않았다.",
+ "automation": "승인·거절·직접 지정은 이 스크립트가 HTTP로 보낸 것이다. 사람 검수가 아니다.",
+ "roles": {
+  "suggest_approve": {
+   "goodsNo": "3276429",
+   "kreamId": "263074"
+  },
+  "suggest_reject": {
+   "goodsNo": "3972398",
+   "kreamId": "334293"
+  },
+  "legacy_keep": {
+   "goodsNo": "4046672",
+   "kreamId": "398609"
+  },
+  "legacy_approve": {
+   "goodsNo": "4201382",
+   "kreamId": "342774"
+  },
+  "legacy_reject": {
+   "goodsNo": "4226785",
+   "kreamId": "13100"
+  },
+  "gui": {
+   "goodsNo": "4463944",
+   "kreamId": "58296"
+  },
+  "rule": {
+   "goodsNo": "5909285",
+   "kreamId": "903036"
+  },
+  "model_code": {
+   "goodsNo": "1163169",
+   "kreamId": "15251"
+  },
+  "manual": {
+   "goodsNo": "1590039",
+   "kreamId": "382895"
+  }
+ },
+ "calls": {
+  "search": 3,
+  "quotes": 0
+ },
+ "appCounts": {
+  "matched": 157,
+  "products": 371,
+  "variants": 3776
+ },
+ "reviewMetrics": {
+  "products": 9,
+  "aiUnreviewed": 2,
+  "needsReview": 2,
+  "approved": 2,
+  "rejected": 2,
+  "decisions": 4
+ },
+ "automationReviewRecords": 4,
+ "humanReviewRecords": 0,
+ "passed": 21,
+ "failed": 0,
+ "notRun": 0,
+ "checks": [
+  {
+   "check": "AI 제안 생성: 매칭 작업이 모델의 선택을 등록하지 않고 제안으로 저장",
+   "pass": true,
+   "expected": [
+    2,
+    null
+   ],
+   "observed": [
+    2,
+    null
+   ],
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "AI 제안 생성: 제안 1건, 출처 matcher:openai",
+   "pass": true,
+   "expected": [
+    [
+     "matcher:openai",
+     "same",
+     "263074"
+    ]
+   ],
+   "observed": [
+    [
+     "matcher:openai",
+     "same",
+     "263074"
+    ]
+   ],
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "승인 전: 매칭 없음, 가격 비교에 KREAM 가격 0개",
+   "pass": true,
+   "expected": [
+    "매칭 없음",
+    false,
+    0
+   ],
+   "observed": [
+    "매칭 없음",
+    false,
+    0
+   ],
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "승인 전: 가격 수집 작업도 이 상품의 KREAM 시세를 요청하지 않음",
+   "pass": true,
+   "expected": [
+    false,
+    null
+   ],
+   "observed": [
+    false,
+    null
+   ],
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "반복 실행: 검색(모델 호출 경로) 재호출 0회, 제안 중복 없음",
+   "pass": true,
+   "expected": [
+    0,
+    2,
+    1
+   ],
+   "observed": [
+    0,
+    2,
+    1
+   ],
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "반복 실행: 가격 수집의 누락 매칭 검색 경로도 재호출 0회",
+   "pass": true,
+   "expected": [
+    0,
+    1
+   ],
+   "observed": [
+    0,
+    1
+   ],
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "승인 요청 성공",
+   "pass": true,
+   "expected": 200,
+   "observed": 200,
+   "data": "자동화 조작"
+  },
+  {
+   "check": "승인 후: 검수 승인, 가격 비교에 KREAM 가격 반영",
+   "pass": true,
+   "expected": [
+    "검수 승인",
+    "user",
+    true,
+    true
+   ],
+   "observed": [
+    "검수 승인",
+    "user",
+    true,
+    true
+   ],
+   "data": "저장 결과 재생 + 자동화 조작"
+  },
+  {
+   "check": "제안 거절 후: 가격 비교 제외",
+   "pass": true,
+   "expected": [
+    false,
+    0
+   ],
+   "observed": [
+    false,
+    0
+   ],
+   "data": "저장 결과 재생 + 자동화 조작"
+  },
+  {
+   "check": "제안 거절 후: 검수 화면 상태 rejected",
+   "pass": true,
+   "expected": "rejected",
+   "observed": "rejected",
+   "data": "자동화 조작"
+  },
+  {
+   "check": "기존 AI 등록: 미검수로 분류, 행은 그대로, 가격 비교 제외",
+   "pass": true,
+   "expected": [
+    "AI 등록(미검수)",
+    "ai_unreviewed",
+    false,
+    "398609",
+    0
+   ],
+   "observed": [
+    "AI 등록(미검수)",
+    "ai_unreviewed",
+    false,
+    "398609",
+    0
+   ],
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "기존 AI 등록: 가격 수집 작업이 시세를 요청하지 않음",
+   "pass": true,
+   "expected": false,
+   "observed": false,
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "기존 AI 등록 승인 후: 반영, 원래 출처 openai 보존",
+   "pass": true,
+   "expected": [
+    "검수 승인",
+    true,
+    "openai",
+    true
+   ],
+   "observed": [
+    "검수 승인",
+    true,
+    "openai",
+    true
+   ],
+   "data": "저장 결과 재생 + 자동화 조작"
+  },
+  {
+   "check": "기존 AI 등록 거절 후: 제외, 행과 출처는 보존",
+   "pass": true,
+   "expected": [
+    "검수 거절",
+    false,
+    0,
+    "rejected",
+    "openai"
+   ],
+   "observed": [
+    "검수 거절",
+    false,
+    0,
+    "rejected",
+    "openai"
+   ],
+   "data": "저장 결과 재생 + 자동화 조작"
+  },
+  {
+   "check": "규칙 매칭(모델번호 일치): 출처 model_code 그대로, 사용",
+   "pass": true,
+   "expected": [
+    "모델번호 일치",
+    "rule",
+    "model_code",
+    true
+   ],
+   "observed": [
+    "모델번호 일치",
+    "rule",
+    "model_code",
+    true
+   ],
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "규칙 매칭(local): 저장된 규칙 판정을 재생하면 바로 등록, 출처 local",
+   "pass": true,
+   "expected": [
+    1,
+    "규칙 확정",
+    "rule",
+    "local",
+    true
+   ],
+   "observed": [
+    1,
+    "규칙 확정",
+    "rule",
+    "local",
+    true
+   ],
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "직접 지정: 출처 manual, 사용",
+   "pass": true,
+   "expected": [
+    "직접 지정",
+    "user",
+    "manual",
+    true
+   ],
+   "observed": [
+    "직접 지정",
+    "user",
+    "manual",
+    true
+   ],
+   "data": "자동화 조작"
+  },
+  {
+   "check": "출처 구분: 사람 승인은 human_review로 따로 표시",
+   "pass": true,
+   "expected": [
+    "user",
+    "human_review"
+   ],
+   "observed": [
+    "user",
+    "human_review"
+   ],
+   "data": "자동화 조작"
+  },
+  {
+   "check": "GUI에서 들어온 AI 매칭: 웹에서는 미검수, 가격 비교 제외",
+   "pass": true,
+   "expected": [
+    "AI 등록(미검수)",
+    false,
+    0
+   ],
+   "observed": [
+    "AI 등록(미검수)",
+    false,
+    0
+   ],
+   "data": "저장 결과 재생"
+  },
+  {
+   "check": "운영 DB 파일이 바뀌지 않음 (SHA-256 전후 비교)",
+   "pass": true,
+   "expected": true,
+   "observed": true,
+   "data": "실제 파일"
+  },
+  {
+   "check": "사람 검수 기록 0건 (자동화 기록은 사람 검수로 세지 않음)",
+   "pass": true,
+   "expected": 0,
+   "observed": 0,
+   "data": "실제 파일"
+  }
+ ]
+}

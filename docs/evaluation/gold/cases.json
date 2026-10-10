@@ -1,0 +1,6225 @@
+{
+ "seed": 20261010,
+ "builtAt": "2026-10-10T08:33:39+00:00",
+ "strata": {
+  "code_single": "모델번호가 일치하는 후보가 하나인 상품",
+  "conflict": "색상·모델 충돌이 의심되는 상품 (같은 모델번호 후보 여러 개, 규칙과 VLM 불일치, 같은 계열의 다른 모델번호 후보)",
+  "similar": "모델번호로 확정하지 못했고 닮은 후보가 있는 상품 (규칙 local 등록, 모델 등록, VLM 동일 제안)",
+  "maybe_none": "같은 상품이 없을 가능성이 있는 상품 (VLM 다름·불확실)"
+ },
+ "strataCounts": {
+  "conflict": 15,
+  "similar": 15,
+  "maybe_none": 15,
+  "code_single": 15
+ },
+ "selectionNote": "표본 선정 기준일 뿐이며 정답이 아니다. 기존 규칙·VLM의 결론을 기준으로 골랐으므로 무작위 표본이 아니다.",
+ "cases": [
+  {
+   "caseId": "G001",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "5277377",
+    "brand": "나이키",
+    "name": "보메로 플러스 W - 블랙:메탈릭 다크 그레이:쿨 그레이:다크 스모크 그레이 / HV8154-001",
+    "model": "HV8154-001",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260"
+    ],
+    "image": "G001/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5277377"
+   },
+   "candidates": [
+    {
+     "kreamId": "573211",
+     "name": "(W) 나이키 보메로 플러스 블랙 메탈릭 다크 그레이",
+     "brand": "",
+     "model": "HV8154-001",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G001/kream_573211.jpg",
+     "url": "https://kream.co.kr/products/573211"
+    },
+    {
+     "kreamId": "895021",
+     "name": "나이키 보메로 플러스 화이트 블랙",
+     "brand": "",
+     "model": "II7181-102",
+     "options": null,
+     "image": "G001/kream_895021.jpg",
+     "url": "https://kream.co.kr/products/895021"
+    },
+    {
+     "kreamId": "610305",
+     "name": "나이키 보메로 플러스 화이트 포톤 더스트",
+     "brand": "",
+     "model": "HV8150-102",
+     "options": null,
+     "image": "G001/kream_610305.jpg",
+     "url": "https://kream.co.kr/products/610305"
+    },
+    {
+     "kreamId": "602680",
+     "name": "나이키 보메로 플러스 블랙 메탈릭 다크 그레이",
+     "brand": "",
+     "model": "HV8150-003",
+     "options": null,
+     "image": "G001/kream_602680.jpg",
+     "url": "https://kream.co.kr/products/602680"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "09eef48b3b806910c201cf8618c3371bcd2eb3cee60a752caa0f66a410bce9c3",
+    "kream_573211.jpg": "4e5a497647f370cf44050cd5a1108c4aa6d73130d6463894661671a79da9b0c9",
+    "kream_602680.jpg": "b1c46d7f87d8570a5ee463bf132eddbb9ecff43682f197d25b24db021bd3184c",
+    "kream_610305.jpg": "09150045a9a182abb76534b8599ea97d13d79684ad9277a9940045af9da95676",
+    "kream_895021.jpg": "2d952d61b4d059d2d5823219e032f070eda3c9736a7f3c7f51988e631c05344a"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:42:04+00:00",
+    "frozenAt": "2026-10-10T08:33:23+00:00"
+   },
+   "hash": "7c2eae3e4f7d743a"
+  },
+  {
+   "caseId": "G002",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "6711021",
+    "brand": "푸마",
+    "name": "디비에이트 나이트로 엘리트 4 푸마 x 하이록스 여성용 - 인텐스 민트:라이트 라벤더 / 314157-01",
+    "model": "314157-01",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275"
+    ],
+    "image": "G002/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6711021"
+   },
+   "candidates": [
+    {
+     "kreamId": "811375",
+     "name": "푸마 디비에이트 나이트로 4 와이드 블랙 플랫 다크 그레이",
+     "brand": "",
+     "model": "312901-02",
+     "options": null,
+     "image": "G002/kream_811375.jpg",
+     "url": "https://kream.co.kr/products/811375"
+    },
+    {
+     "kreamId": "960524",
+     "name": "푸마 디비에이트 나이트로 4 울트라 레드 푸마 실버",
+     "brand": "",
+     "model": "312123-19",
+     "options": null,
+     "image": "G002/kream_960524.jpg",
+     "url": "https://kream.co.kr/products/960524"
+    },
+    {
+     "kreamId": "973833",
+     "name": "(W) 푸마 x 하이록스 디비에이트 나이트로 엘리트 4 인텐스 민트 라이트 라벤더",
+     "brand": "",
+     "model": "314157-01",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G002/kream_973833.jpg",
+     "url": "https://kream.co.kr/products/973833"
+    },
+    {
+     "kreamId": "677308",
+     "name": "푸마 디비에이트 나이트로 엘리트 트레일 LS 블랙 실버",
+     "brand": "",
+     "model": "313532-02",
+     "options": null,
+     "image": "G002/kream_677308.jpg",
+     "url": "https://kream.co.kr/products/677308"
+    },
+    {
+     "kreamId": "982157",
+     "name": "푸마 디비에이트 나이트로 4 슬레이트 스카이 무디 그레이",
+     "brand": "",
+     "model": "312123-30",
+     "options": null,
+     "image": "G002/kream_982157.jpg",
+     "url": "https://kream.co.kr/products/982157"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "948b29d554cde71e5b4d5deb76f29cbf485235f23893ce93db9a9472eada3db0",
+    "kream_973833.jpg": "532c533af3c161e8f47fcf9570180619e7a2b5f25d45796016699ddac77a5db5",
+    "kream_811375.jpg": "6446c0a8889b464dadf00b6c35d796962b63da0c2008fb7d4c930c5e246b039e",
+    "kream_960524.jpg": "33260b344fce2678f9b12bff3d9f41c879e9b7bbffa3e1f016f32a53672f01ee",
+    "kream_982157.jpg": "704a5e2e2db058c581f571f24e24f28ae83f5f1325ac92cd52488b167f1f736d",
+    "kream_677308.jpg": "37bb1f9b7483e9f366524a7d5fcecb50f95e1cc3c5e683a1a4f91161bcb21f3f"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:49:16+00:00",
+    "frozenAt": "2026-10-10T08:33:23+00:00"
+   },
+   "hash": "1173aeb5b5e1820e"
+  },
+  {
+   "caseId": "G003",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "7356386",
+    "brand": "모노리스",
+    "name": "[허율x모노리스] DRAPE (BLACK)",
+    "model": "R26M951BSB",
+    "options": [
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290"
+    ],
+    "image": "G003/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/7356386"
+   },
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G003/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "brand": "",
+     "model": "R25M200",
+     "options": null,
+     "image": "G003/kream_808126.jpg",
+     "url": "https://kream.co.kr/products/808126"
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "brand": "HARUTA",
+     "model": "",
+     "options": [
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "300"
+     ],
+     "image": "G003/kream_305356.jpg",
+     "url": "https://kream.co.kr/products/305356"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G003/kream_288433.jpg",
+     "url": "https://kream.co.kr/products/288433"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "edd4ae020ac272676b580fbf9b589baafea0b67af9f0a17539dfee68b301c801",
+    "kream_808126.jpg": "1883aa9da37f695b26b0f153f3d2c1a4567c01b01b35e8f867d53eb50891930b",
+    "kream_288433.jpg": "324bd4fc960ff8dce2681c1c7e805ccb637d32f51071ca723fe420d5ab9aee18",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_305356.jpg": "a6cc282805c84b823165a2b65bccdf21d4f468a237d7c730915b0ab17354ac2a"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:09:02+00:00",
+    "frozenAt": "2026-10-10T08:33:24+00:00"
+   },
+   "hash": "8024fc75e01f8e73"
+  },
+  {
+   "caseId": "G004",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "4028712",
+    "brand": "오클리",
+    "name": "(공용) 라이트 브리드 스니커 - 트리플 블랙 / FOF10058802Y",
+    "model": "FOF10058802Y",
+    "options": [
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300"
+    ],
+    "image": "G004/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4028712"
+   },
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G004/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "303517",
+     "name": "Oakley",
+     "brand": "",
+     "model": "FOF100588-02Y",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300"
+     ],
+     "image": "G004/kream_303517.jpg",
+     "url": "https://kream.co.kr/products/303517"
+    },
+    {
+     "kreamId": "92376",
+     "name": "Merrell",
+     "brand": "",
+     "model": "J004565",
+     "options": null,
+     "image": "G004/kream_92376.jpg",
+     "url": "https://kream.co.kr/products/92376"
+    },
+    {
+     "kreamId": "697962",
+     "name": "Customellow",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G004/kream_697962.jpg",
+     "url": "https://kream.co.kr/products/697962"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "d3961058679ba935a9b7dbd4f8efdef96ac4efe11c7808ebbdb63bb5e43688a4",
+    "kream_303517.jpg": "49e1f5f4fb5a8afbc6ab5db720cfa6c024924f6f85e902c284c5e43a9af8e173",
+    "kream_92376.jpg": "fe37ee0624b55539b19eb96a95d5e68a87dd854cf878b8463f947182449e0fe5",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_697962.jpg": "e03c48a3b8980e00ed8c2ee41daa4bc945b0d24239d72824e40bcd86bda91d13"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:38:02+00:00",
+    "frozenAt": "2026-10-10T08:33:24+00:00"
+   },
+   "hash": "bc4ac73d8982cbb7"
+  },
+  {
+   "caseId": "G005",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "5334806",
+    "brand": "어그",
+    "name": "[WOMEN] 타스만 II - 체스넛 / 1174470-CHE",
+    "model": "1174470-CHE",
+    "options": [
+     "220",
+     "230",
+     "240",
+     "250"
+    ],
+    "image": "G005/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5334806"
+   },
+   "candidates": [
+    {
+     "kreamId": "589356",
+     "name": "(W) 어그 타스만 2 체스트넛",
+     "brand": "UGG",
+     "model": "",
+     "options": [
+      "US 10W",
+      "US 11W",
+      "US 12W",
+      "US 5W",
+      "US 6W",
+      "US 7W",
+      "US 8W",
+      "US 9W"
+     ],
+     "image": "G005/kream_589356.jpg",
+     "url": "https://kream.co.kr/products/589356"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "69d731322fc3f3fc207000687aa4742ecfef1d09bc24d65e5a426e06b5180517",
+    "kream_589356.jpg": "113e82d74ad18c005ce3c2dcfe6cf0b4fe7b0005ac433d50bee3452ab1f48acc"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-10T04:36:16+00:00",
+    "frozenAt": "2026-10-10T08:33:24+00:00"
+   },
+   "hash": "668b234169466b2b"
+  },
+  {
+   "caseId": "G006",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "3972398",
+    "brand": "락포트",
+    "name": "모던 프렙 페니 MODERN PREP PENNY / BLACK(RM0072)",
+    "model": "RM0072",
+    "options": [
+     "245W",
+     "250W",
+     "255W",
+     "260W",
+     "265W",
+     "270W",
+     "275W",
+     "280W",
+     "285W"
+    ],
+    "image": "G006/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/3972398"
+   },
+   "candidates": [
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "brand": "",
+     "model": "CJ2598",
+     "options": [
+      "US 10",
+      "US 10.5",
+      "US 11",
+      "US 11.5",
+      "US 12",
+      "US 13",
+      "US 14",
+      "US 6.5",
+      "US 7",
+      "US 7.5",
+      "US 8",
+      "US 8.5",
+      "US 9",
+      "US 9.5"
+     ],
+     "image": "G006/kream_334293.jpg",
+     "url": "https://kream.co.kr/products/334293"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G006/kream_288433.jpg",
+     "url": "https://kream.co.kr/products/288433"
+    },
+    {
+     "kreamId": "771690",
+     "name": "Rockport",
+     "brand": "",
+     "model": "V80547",
+     "options": null,
+     "image": "G006/kream_771690.jpg",
+     "url": "https://kream.co.kr/products/771690"
+    },
+    {
+     "kreamId": "334334",
+     "name": "Rockport",
+     "brand": "",
+     "model": "V80548",
+     "options": null,
+     "image": "G006/kream_334334.jpg",
+     "url": "https://kream.co.kr/products/334334"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "brand": "",
+     "model": "R25M200",
+     "options": null,
+     "image": "G006/kream_808126.jpg",
+     "url": "https://kream.co.kr/products/808126"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G006/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "brand": "HARUTA",
+     "model": "",
+     "options": [
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "300"
+     ],
+     "image": "G006/kream_305356.jpg",
+     "url": "https://kream.co.kr/products/305356"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "3b716a4e56c52e3934b8658410d281d395b28e4e6d0219a4917bcf616314d8ca",
+    "kream_808126.jpg": "1883aa9da37f695b26b0f153f3d2c1a4567c01b01b35e8f867d53eb50891930b",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_288433.jpg": "324bd4fc960ff8dce2681c1c7e805ccb637d32f51071ca723fe420d5ab9aee18",
+    "kream_305356.jpg": "a6cc282805c84b823165a2b65bccdf21d4f468a237d7c730915b0ab17354ac2a",
+    "kream_334293.jpg": "ff05f0cf81c146b00c8ec6f28ae3fa70c1c0233b214c74357cbbc06212d8f0ee",
+    "kream_771690.jpg": "32b8f5dcf5cf78b9125726eee69eca785e6fa634c71b6806ed6eed98799b1330",
+    "kream_334334.jpg": "7ee53384f878c0c1f860920ab82bf3e1d2720f88b70e362b976aeefccc7776ca"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:15:37+00:00",
+    "frozenAt": "2026-10-10T08:33:24+00:00"
+   },
+   "hash": "a9aa3e624e245413"
+  },
+  {
+   "caseId": "G007",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "5279986",
+    "brand": "로맨틱무브",
+    "name": "[삭형x로맨틱무브] 유팁 키높이 더비 R25M400 (워싱블랙)",
+    "model": "R25M400WBK",
+    "options": [
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290"
+    ],
+    "image": "G007/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5279986"
+   },
+   "candidates": [
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "brand": "",
+     "model": "CI1360",
+     "options": null,
+     "image": "G007/kream_334352.jpg",
+     "url": "https://kream.co.kr/products/334352"
+    },
+    {
+     "kreamId": "864124",
+     "name": "요위 우토 블랙 매트",
+     "brand": "YOWE",
+     "model": "",
+     "options": null,
+     "image": "G007/kream_864124.jpg",
+     "url": "https://kream.co.kr/products/864124"
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "brand": "HARUTA",
+     "model": "",
+     "options": [
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "300"
+     ],
+     "image": "G007/kream_305356.jpg",
+     "url": "https://kream.co.kr/products/305356"
+    },
+    {
+     "kreamId": "288378",
+     "name": "조셉트 제이콥 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G007/kream_288378.jpg",
+     "url": "https://kream.co.kr/products/288378"
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "brand": "",
+     "model": "CJ2598",
+     "options": [
+      "US 10",
+      "US 10.5",
+      "US 11",
+      "US 11.5",
+      "US 12",
+      "US 13",
+      "US 14",
+      "US 6.5",
+      "US 7",
+      "US 7.5",
+      "US 8",
+      "US 8.5",
+      "US 9",
+      "US 9.5"
+     ],
+     "image": "G007/kream_334293.jpg",
+     "url": "https://kream.co.kr/products/334293"
+    },
+    {
+     "kreamId": "697962",
+     "name": "Customellow",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G007/kream_697962.jpg",
+     "url": "https://kream.co.kr/products/697962"
+    },
+    {
+     "kreamId": "866417",
+     "name": "요위 우온 블랙 매트",
+     "brand": "YOWE",
+     "model": "",
+     "options": null,
+     "image": "G007/kream_866417.jpg",
+     "url": "https://kream.co.kr/products/866417"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G007/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "brand": "",
+     "model": "R25M200",
+     "options": null,
+     "image": "G007/kream_808126.jpg",
+     "url": "https://kream.co.kr/products/808126"
+    },
+    {
+     "kreamId": "996475",
+     "name": "조셉트 마론 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G007/kream_996475.jpg",
+     "url": "https://kream.co.kr/products/996475"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "739976b75a2847f7402c69d71c6fd2e4d67757474921854b9c5987e23c4e492c",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_697962.jpg": "e03c48a3b8980e00ed8c2ee41daa4bc945b0d24239d72824e40bcd86bda91d13",
+    "kream_334293.jpg": "ff05f0cf81c146b00c8ec6f28ae3fa70c1c0233b214c74357cbbc06212d8f0ee",
+    "kream_334352.jpg": "52fcd84ddcc320b8d51889c002adc604b87b6d579a4577931c5507c37e017c6b",
+    "kream_288378.jpg": "644e8a6bbe7fc2fde9a9d061b2abf6347cc6d96b7e4c5256c641db3509c57736",
+    "kream_305356.jpg": "a6cc282805c84b823165a2b65bccdf21d4f468a237d7c730915b0ab17354ac2a",
+    "kream_996475.jpg": "df9a8b02e4fbf37e2789a9e93ac65699e03045b848885c56b2dd6ff3db1bb6eb",
+    "kream_808126.jpg": "1883aa9da37f695b26b0f153f3d2c1a4567c01b01b35e8f867d53eb50891930b",
+    "kream_864124.jpg": "8686ddb7f39f71f039e98cb4b0578ff33853acc6ba6c9ef437e4ce1701363f6b",
+    "kream_866417.jpg": "72b8d6a11c4baab9424de523355c25e555f37b3b56a5f2d14d062edd73fea8db"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:39:46+00:00",
+    "frozenAt": "2026-10-10T08:33:25+00:00"
+   },
+   "hash": "3e32c2b6ed2cb23a"
+  },
+  {
+   "caseId": "G008",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "2682873",
+    "brand": "오니츠카타이거",
+    "name": "멕시코 66 VIN SD 1183C015_200",
+    "model": "1183C015_200",
+    "options": [
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "300"
+    ],
+    "image": "G008/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/2682873"
+   },
+   "candidates": [
+    {
+     "kreamId": "554564",
+     "name": "Onitsuka Tiger",
+     "brand": "",
+     "model": "1183C015-204",
+     "options": null,
+     "image": "G008/kream_554564.jpg",
+     "url": "https://kream.co.kr/products/554564"
+    },
+    {
+     "kreamId": "813575",
+     "name": "Onitsuka Tiger",
+     "brand": "",
+     "model": "1183B566-022",
+     "options": null,
+     "image": "G008/kream_813575.jpg",
+     "url": "https://kream.co.kr/products/813575"
+    },
+    {
+     "kreamId": "91060",
+     "name": "Onitsuka Tiger",
+     "brand": "",
+     "model": "1183C015-200",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "252.5",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "282.5",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G008/kream_91060.jpg",
+     "url": "https://kream.co.kr/products/91060"
+    },
+    {
+     "kreamId": "91054",
+     "name": "Onitsuka Tiger",
+     "brand": "",
+     "model": "1183C015-101",
+     "options": null,
+     "image": "G008/kream_91054.jpg",
+     "url": "https://kream.co.kr/products/91054"
+    },
+    {
+     "kreamId": "344225",
+     "name": "Onitsuka Tiger",
+     "brand": "",
+     "model": "1183C015-202",
+     "options": null,
+     "image": "G008/kream_344225.jpg",
+     "url": "https://kream.co.kr/products/344225"
+    },
+    {
+     "kreamId": "216487",
+     "name": "Onitsuka Tiger",
+     "brand": "",
+     "model": "1183B391-251",
+     "options": null,
+     "image": "G008/kream_216487.jpg",
+     "url": "https://kream.co.kr/products/216487"
+    },
+    {
+     "kreamId": "1079153",
+     "name": "Onitsuka Tiger",
+     "brand": "",
+     "model": "1183C102-205",
+     "options": null,
+     "image": "G008/kream_1079153.jpg",
+     "url": "https://kream.co.kr/products/1079153"
+    },
+    {
+     "kreamId": "811279",
+     "name": "Onitsuka Tiger",
+     "brand": "",
+     "model": "1183C555-250",
+     "options": null,
+     "image": "G008/kream_811279.jpg",
+     "url": "https://kream.co.kr/products/811279"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "72b0ca51f3dd0213c9705a20c5e39273e630ad69df45f86c096b25f775cec6de",
+    "kream_91060.jpg": "d7cfac69bf135f60b54a0191f867d4c7f29312b7b5b98302f725d772f95aa16b",
+    "kream_344225.jpg": "806630561096b3521deb539800bf1b5a646159411d6b3cee2fa168cdf84ce0ba",
+    "kream_91054.jpg": "11414654154e97b02b94adabfba4160d337c7d96c2e5758a22eacba84b321b1e",
+    "kream_554564.jpg": "1f41ff9929123e8ebdb4b6f0eebfcb411bac6adb4c4e735e84fb69bb1268f85d",
+    "kream_813575.jpg": "2ee43f8b23fa7f1d2ff6f203a77f2ca6c2e4105d5a3f59a3d5ed3f780c1ebc33",
+    "kream_1079153.jpg": "be3c93d1227d7a7e72ed7e5e404feb27f1c19bebd17b78ce96b6786288c7f7d0",
+    "kream_216487.jpg": "f1580a2bd57bd19a184638ded7d993e6cf4b0156cf54b358a0e15b1dc70da64f",
+    "kream_811279.jpg": "67b39e25cf8a888b76cd52fc0b2df7887722bf52d3a91ce409862160b2c4dd38"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:50:00+00:00",
+    "frozenAt": "2026-10-10T08:33:25+00:00"
+   },
+   "hash": "22ac86e34a78213c"
+  },
+  {
+   "caseId": "G009",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "7318373",
+    "brand": "아식스",
+    "name": "하이퍼싱크 코리아 익스클루시브 HYPERSYNCS KOREA EXCLUSIVE - 트러플 그레이:트러플 그레이 / 1203B376-020",
+    "model": "1203B376-020",
+    "options": [
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "290"
+    ],
+    "image": "G009/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/7318373"
+   },
+   "candidates": [
+    {
+     "kreamId": "1117423",
+     "name": "아식스 하이퍼싱크 트러플 그레이 - 한국 한정",
+     "brand": "",
+     "model": "1203B376-020",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "252.5",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "282.5",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G009/kream_1117423.jpg",
+     "url": "https://kream.co.kr/products/1117423"
+    },
+    {
+     "kreamId": "1119064",
+     "name": "New Balance",
+     "brand": "뉴발란스 미니머스 MT100 차콜",
+     "model": "MT10O6L5",
+     "options": null,
+     "image": "G009/kream_1119064.jpg",
+     "url": "https://kream.co.kr/products/1119064"
+    },
+    {
+     "kreamId": "1117424",
+     "name": "아식스 하이퍼싱크 크림 콘크리트 - 한국 한정",
+     "brand": "",
+     "model": "1203B376-100",
+     "options": null,
+     "image": "G009/kream_1117424.jpg",
+     "url": "https://kream.co.kr/products/1117424"
+    },
+    {
+     "kreamId": "800767",
+     "name": "아식스 하이퍼싱크 그래파이트 그레이 블랙",
+     "brand": "",
+     "model": "1203A879-021",
+     "options": null,
+     "image": "G009/kream_800767.jpg",
+     "url": "https://kream.co.kr/products/800767"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "072ea9935b458a51aadfffcea94fae89e83d8d32f4d2966461d17ef3be4192be",
+    "kream_1117423.jpg": "d44298e1d36693e1d4ff004b712a1c7e9cb864d48137c7ea957de96020a44a18",
+    "kream_1119064.jpg": "f8e5358a3aeed404112e417f807ec77ae831a31902fb003de05e21220eb035d0",
+    "kream_1117424.jpg": "791b8f4f58bc347f499fb38a943d540e61ad5e02f274148836ef1a5274a33a95",
+    "kream_800767.jpg": "12ad37f2381ab1fe228d2ee333730f7db8872171ea20eda1398b6a1db985e76f"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:33:50+00:00",
+    "frozenAt": "2026-10-10T08:33:25+00:00"
+   },
+   "hash": "9892427604c10381"
+  },
+  {
+   "caseId": "G010",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "4821471",
+    "brand": "네거티브쓰리",
+    "name": "Slouchy Long Boots_Washed Beige",
+    "model": "NT3BESSBO001BE",
+    "options": [
+     "230",
+     "240",
+     "250"
+    ],
+    "image": "G010/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4821471"
+   },
+   "candidates": [
+    {
+     "kreamId": "456840",
+     "name": "네거티브쓰리 슬라우치 롱 부츠 위시드 베이지",
+     "brand": "NEGATIVETHREE",
+     "model": "",
+     "options": [
+      "230",
+      "240",
+      "250"
+     ],
+     "image": "G010/kream_456840.jpg",
+     "url": "https://kream.co.kr/products/456840"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "ece8ffb0c27d72f415f2599b0675226261973df8a2ec060b59f1b83faa1edc33",
+    "kream_456840.jpg": "e1a61c28fc6f14c19fead36004a397055bb41a88875fd1f5663c45242e849ce2"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-10T04:36:25+00:00",
+    "frozenAt": "2026-10-10T08:33:26+00:00"
+   },
+   "hash": "3231955a02f3e624"
+  },
+  {
+   "caseId": "G011",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "3976350",
+    "brand": "나이키",
+    "name": "에어 포스 1 07 M - 화이트 / CW2288-111",
+    "model": "CW2288-111",
+    "options": [
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "305",
+     "310"
+    ],
+    "image": "G011/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/3976350"
+   },
+   "candidates": [
+    {
+     "kreamId": "480753",
+     "name": "나이키 에어 포스 1 '07 LV8 블랙 검 라이트 브라운",
+     "brand": "",
+     "model": "IB6388-001",
+     "options": null,
+     "image": "G011/kream_480753.jpg",
+     "url": "https://kream.co.kr/products/480753"
+    },
+    {
+     "kreamId": "32867",
+     "name": "나이키 에어포스 1 '07 화이트 검 라이트 브라운",
+     "brand": "",
+     "model": "DJ2739-100",
+     "options": null,
+     "image": "G011/kream_32867.jpg",
+     "url": "https://kream.co.kr/products/32867"
+    },
+    {
+     "kreamId": "893327",
+     "name": "나이키 에어포스 1 로우 '07 프리미엄 화이트 화이트",
+     "brand": "",
+     "model": "IV2857-100",
+     "options": null,
+     "image": "G011/kream_893327.jpg",
+     "url": "https://kream.co.kr/products/893327"
+    },
+    {
+     "kreamId": "156663",
+     "name": "나이키 x 트래비스 스캇 에어포스 1 '07 로우 캑터스 잭 유토피아 에디션 화이트",
+     "brand": "",
+     "model": "CW2288-111",
+     "options": null,
+     "image": "G011/kream_156663.jpg",
+     "url": "https://kream.co.kr/products/156663"
+    },
+    {
+     "kreamId": "12831",
+     "name": "나이키 에어포스 1 '07 로우 화이트",
+     "brand": "",
+     "model": "315122-111/CW2288-111",
+     "options": [
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "320",
+      "330"
+     ],
+     "image": "G011/kream_12831.jpg",
+     "url": "https://kream.co.kr/products/12831"
+    },
+    {
+     "kreamId": "600340",
+     "name": "나이키 에어포스 1 '07 LV8 화이트 검 미디움 브라운",
+     "brand": "",
+     "model": "HQ1967-100",
+     "options": null,
+     "image": "G011/kream_600340.jpg",
+     "url": "https://kream.co.kr/products/600340"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "2bdaa7bb118ab7b5f164ca358f208a3e0a29a73112551ba20549edbc767c9449",
+    "kream_12831.jpg": "e6924632a377d9f2de4e6891884bc47891da8611dabf1533037522f2d60947cd",
+    "kream_156663.jpg": "cea1e206c1458fa5c19c5e44e02d2d30ed06ad0dc032fdfe72f9be36a57f6037",
+    "kream_480753.jpg": "23fab1c51d2a0f08dd631db4d3067111c11b1ed442ce9991300b81e07eb03274",
+    "kream_32867.jpg": "f326f9bda531096e64515234608dcafbcace5f8f71b3d415865314ed0ab51528",
+    "kream_893327.jpg": "f4e693fa035032cdeaa5cf7ee71336a5bb3b82036be0e96db9b34306522d6d5b",
+    "kream_600340.jpg": "b4447d054c9950169baae13aa0fff3260b61b05c9e63b1872f8c5915166de44a"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:04:25+00:00",
+    "frozenAt": "2026-10-10T08:33:26+00:00"
+   },
+   "hash": "22c2a49b93e38e64"
+  },
+  {
+   "caseId": "G012",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "5042975",
+    "brand": "아디다스",
+    "name": "아디제로 EVO SL M - 블랙:화이트 / JP7149",
+    "model": "JP7149",
+    "options": [
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "305",
+     "310"
+    ],
+    "image": "G012/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5042975"
+   },
+   "candidates": [
+    {
+     "kreamId": "389369",
+     "name": "Adidas",
+     "brand": "",
+     "model": "JP7149",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G012/kream_389369.jpg",
+     "url": "https://kream.co.kr/products/389369"
+    },
+    {
+     "kreamId": "894499",
+     "name": "Seller Week",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G012/kream_894499.jpg",
+     "url": "https://kream.co.kr/products/894499"
+    },
+    {
+     "kreamId": "898555",
+     "name": "Seller Week",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G012/kream_898555.jpg",
+     "url": "https://kream.co.kr/products/898555"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "544b8b1c634167cf132bb8f256c8c1d69f9caceda28d0fb6e35a712d4d9db8a5",
+    "kream_389369.jpg": "d3d889518e1285bf212d7885e176921031186124b6b2bd3a8d289006e82445c6",
+    "kream_898555.jpg": "312f51f97d742a9033f30a027dacbb0c6080eb078e221879892568426a6844ad",
+    "kream_894499.jpg": "e79862e92c811a4ebac27c5b59cf0cd36c0c6588f25d4e785ac364c9635052a8"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T06:52:25+00:00",
+    "frozenAt": "2026-10-10T08:33:26+00:00"
+   },
+   "hash": "89c8aebe9ddbe614"
+  },
+  {
+   "caseId": "G013",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "4207634",
+    "brand": "액트플러스",
+    "name": "하이드로 블립온 트루 블랙",
+    "model": "BA006BK",
+    "options": [
+     "220mm",
+     "230mm",
+     "240mm",
+     "250mm",
+     "260mm",
+     "270mm",
+     "280mm",
+     "290mm"
+    ],
+    "image": "G013/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4207634"
+   },
+   "candidates": [
+    {
+     "kreamId": "1090164",
+     "name": "액트플러스 하이드로 블립온 트루블랙",
+     "brand": "ACTPLUS",
+     "model": "",
+     "options": [
+      "220",
+      "230",
+      "240",
+      "250",
+      "260",
+      "270",
+      "280",
+      "290"
+     ],
+     "image": "G013/kream_1090164.jpg",
+     "url": "https://kream.co.kr/products/1090164"
+    },
+    {
+     "kreamId": "1098392",
+     "name": "액트플러스 얼라인플러스 슬라이드 네추럴 샌드",
+     "brand": "ACTPLUS",
+     "model": "",
+     "options": null,
+     "image": "G013/kream_1098392.jpg",
+     "url": "https://kream.co.kr/products/1098392"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "0a108b67a07d4fb037ab3bc07869249f36e34b23a193e0b18677c3560061d8ea",
+    "kream_1090164.jpg": "9e3b120c2079340ddbb64d9f1f012297639f859e119c7ab1b409e6b42acbc59d",
+    "kream_1098392.jpg": "bc5ad6c0ece790f8b033f06df7e5967da347d5e282aa27198ddabeb2a5b44813"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:04:59+00:00",
+    "frozenAt": "2026-10-10T08:33:26+00:00"
+   },
+   "hash": "1141e56e329d2997"
+  },
+  {
+   "caseId": "G014",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "6337137",
+    "brand": "푸마",
+    "name": "캐치 솔레일 발레리나 SD PUMA CATCH SOLEIL BALLERINASD (40631001)",
+    "model": "40631001",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275"
+    ],
+    "image": "G014/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6337137"
+   },
+   "candidates": [
+    {
+     "kreamId": "552107",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "40717001",
+     "options": null,
+     "image": "G014/kream_552107.jpg",
+     "url": "https://kream.co.kr/products/552107"
+    },
+    {
+     "kreamId": "569990",
+     "name": "Puma V-S1 블랙",
+     "brand": "",
+     "model": "402951-08",
+     "options": null,
+     "image": "G014/kream_569990.jpg",
+     "url": "https://kream.co.kr/products/569990"
+    },
+    {
+     "kreamId": "336131",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "31816001",
+     "options": null,
+     "image": "G014/kream_336131.jpg",
+     "url": "https://kream.co.kr/products/336131"
+    },
+    {
+     "kreamId": "771961",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "25584001",
+     "options": null,
+     "image": "G014/kream_771961.jpg",
+     "url": "https://kream.co.kr/products/771961"
+    },
+    {
+     "kreamId": "1032796",
+     "name": "(W) 푸마 벨라 미나 스웨이드 스니커즈 블랙",
+     "brand": "",
+     "model": "407671-04",
+     "options": null,
+     "image": "G014/kream_1032796.jpg",
+     "url": "https://kream.co.kr/products/1032796"
+    },
+    {
+     "kreamId": "535722",
+     "name": "90,000원",
+     "brand": "(W) 푸마 스피드캣 발레 사틴 블랙",
+     "model": "404383-01",
+     "options": null,
+     "image": "G014/kream_535722.jpg",
+     "url": "https://kream.co.kr/products/535722"
+    },
+    {
+     "kreamId": "770341",
+     "name": "Dr. Martens",
+     "brand": "닥터마틴 1461 WDS 벡스 블랙",
+     "model": "43033001",
+     "options": null,
+     "image": "G014/kream_770341.jpg",
+     "url": "https://kream.co.kr/products/770341"
+    },
+    {
+     "kreamId": "742001",
+     "name": "(W) 푸마 캐치 솔레일 SD 블랙 화이트",
+     "brand": "",
+     "model": "403955-03",
+     "options": null,
+     "image": "G014/kream_742001.jpg",
+     "url": "https://kream.co.kr/products/742001"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "3194362f656d17e56f8a99bcf4de07295fa653c573f607802d918bce325dac9a",
+    "kream_336131.jpg": "a3db2efad057c802ee0fe07c9e24bd4b4f5d7e13ea085f134004e771ae2fd6fa",
+    "kream_770341.jpg": "764c0a1d9a2e73f71951fe00533bff0261358fef3945cfceb3777bd96ddc8411",
+    "kream_771961.jpg": "9f0e5feb2b55a83ce1bc91ab2e85b0a8c50a73f17679835d413c1fc2515c46e5",
+    "kream_552107.jpg": "81ce700e4b7a41194c33311dd2a7462fa58f456768053c1daf06986e1ad51312",
+    "kream_569990.jpg": "3ba42c034bb519227fd95acb90ae2527fa71dd4db9001b83425305ba187c19a8",
+    "kream_742001.jpg": "051b4bb5c4922606119a3d690bd573e589ca968c983eeb0f9b68157c8fed6c6b",
+    "kream_1032796.jpg": "20176525280ba65eeaba3e527fdaed1cf4250c90b59d3e8c208672436eb26bd9",
+    "kream_535722.jpg": "6dabc5287ae2f404d98333cabc0e89db16ad563907d9812f971caec6c05f9fbc"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:48:15+00:00",
+    "frozenAt": "2026-10-10T08:33:27+00:00"
+   },
+   "hash": "2a38403a45d8cd2e"
+  },
+  {
+   "caseId": "G015",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "6931948",
+    "brand": "푸마",
+    "name": "디비에이트 퓨어 나이트로 - 푸마 블랙:플랫 다크 그레이:푸마 실버 / 313904-16",
+    "model": "313904-16",
+    "options": [
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300"
+    ],
+    "image": "G015/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6931948"
+   },
+   "candidates": [
+    {
+     "kreamId": "875277",
+     "name": "푸마 디비에이트 나이트로 4 발틱 씨 블루 프레쉬 워터",
+     "brand": "",
+     "model": "312123-08",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G015/kream_875277.jpg",
+     "url": "https://kream.co.kr/products/875277"
+    },
+    {
+     "kreamId": "811375",
+     "name": "푸마 디비에이트 나이트로 4 와이드 블랙 플랫 다크 그레이",
+     "brand": "",
+     "model": "312901-02",
+     "options": null,
+     "image": "G015/kream_811375.jpg",
+     "url": "https://kream.co.kr/products/811375"
+    },
+    {
+     "kreamId": "1018256",
+     "name": "푸마 벨로시티 나이트로 5 와이드 블랙 플랫 다크 그레이",
+     "brand": "",
+     "model": "313690-01",
+     "options": null,
+     "image": "G015/kream_1018256.jpg",
+     "url": "https://kream.co.kr/products/1018256"
+    },
+    {
+     "kreamId": "973781",
+     "name": "푸마 디비에이트 퓨어 나이트로 블랙 플랫 다크 그레이",
+     "brand": "",
+     "model": "313904-02",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G015/kream_973781.jpg",
+     "url": "https://kream.co.kr/products/973781"
+    },
+    {
+     "kreamId": "930860",
+     "name": "푸마 디비에이트 퓨어 나이트로 푸마 화이트 울트라 레드",
+     "brand": "",
+     "model": "313904-06",
+     "options": null,
+     "image": "G015/kream_930860.jpg",
+     "url": "https://kream.co.kr/products/930860"
+    },
+    {
+     "kreamId": "1018202",
+     "name": "푸마 벨로시티 나이트로 5 화이트 울트라 레드",
+     "brand": "",
+     "model": "312944-05",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G015/kream_1018202.jpg",
+     "url": "https://kream.co.kr/products/1018202"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "1606c55dba375e280c1642d779961b1432ffefbdb0aa8d62bca0e0f6b3e5adc5",
+    "kream_1018256.jpg": "3861fa326993c45a62b66acb2d2dbfbe82066c536233fdf7d95df5dc9f8aed8d",
+    "kream_811375.jpg": "6446c0a8889b464dadf00b6c35d796962b63da0c2008fb7d4c930c5e246b039e",
+    "kream_875277.jpg": "e42fcd92209e76fdab31ca078818f4ac029fe2b9a17df1c765314cb55bd0fc58",
+    "kream_1018202.jpg": "bdc62180e2ddc784a893c1667ef25eb450eace53ae95ae0c4f0ff4ce8bdd25da",
+    "kream_930860.jpg": "a9a4e737932d2d36b96875ee1d60cddce8cd44b8dcd1ade0a7e5e753aa4dd6e6",
+    "kream_973781.jpg": "232d4fce676d53569ce6292686c132ac82e8694af227dea9c9dbeb25f376307b"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:03:10+00:00",
+    "frozenAt": "2026-10-10T08:33:27+00:00"
+   },
+   "hash": "74a071b1bb58ff0a"
+  },
+  {
+   "caseId": "G016",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "4046672",
+    "brand": "르무통",
+    "name": "르무통 메이트 발 편한 메리노울 운동화",
+    "model": "5010982846",
+    "options": [
+     "220MM",
+     "220MM",
+     "220MM",
+     "220MM",
+     "220MM",
+     "220mm",
+     "220mm",
+     "220mm",
+     "220mm",
+     "225MM",
+     "225MM",
+     "225MM",
+     "225MM",
+     "225MM",
+     "225mm",
+     "225mm",
+     "225mm",
+     "225mm",
+     "230mm",
+     "230mm",
+     "230mm",
+     "230mm",
+     "230mm",
+     "230mm",
+     "230mm",
+     "230mm",
+     "230mm",
+     "235mm",
+     "235mm",
+     "235mm",
+     "235mm",
+     "235mm",
+     "235mm",
+     "235mm",
+     "235mm",
+     "235mm",
+     "240mm",
+     "240mm",
+     "240mm",
+     "240mm",
+     "240mm",
+     "240mm",
+     "240mm",
+     "240mm",
+     "240mm",
+     "245mm",
+     "245mm",
+     "245mm",
+     "245mm",
+     "245mm",
+     "245mm",
+     "245mm",
+     "245mm",
+     "245mm",
+     "250mm",
+     "250mm",
+     "250mm",
+     "250mm",
+     "250mm",
+     "250mm",
+     "250mm",
+     "250mm",
+     "250mm",
+     "255mm",
+     "255mm",
+     "255mm",
+     "255mm",
+     "255mm",
+     "255mm",
+     "255mm",
+     "255mm",
+     "255mm",
+     "260mm",
+     "260mm",
+     "260mm",
+     "260mm",
+     "260mm",
+     "265mm",
+     "265mm",
+     "265mm",
+     "265mm",
+     "265mm",
+     "270mm",
+     "270mm",
+     "270mm",
+     "270mm",
+     "270mm",
+     "275mm",
+     "275mm",
+     "275mm",
+     "275mm",
+     "275mm",
+     "280mm",
+     "280mm",
+     "280mm",
+     "280mm",
+     "280mm"
+    ],
+    "image": "G016/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4046672"
+   },
+   "candidates": [
+    {
+     "kreamId": "398609",
+     "name": "LeMouton",
+     "brand": "",
+     "model": "",
+     "options": [
+      "220mm",
+      "225mm",
+      "230mm",
+      "235mm",
+      "240mm",
+      "245mm",
+      "250mm",
+      "255mm",
+      "260mm",
+      "265mm",
+      "270mm",
+      "275mm",
+      "280mm"
+     ],
+     "image": "G016/kream_398609.jpg",
+     "url": "https://kream.co.kr/products/398609"
+    },
+    {
+     "kreamId": "398606",
+     "name": "LeMouton",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G016/kream_398606.jpg",
+     "url": "https://kream.co.kr/products/398606"
+    },
+    {
+     "kreamId": "398607",
+     "name": "LeMouton",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G016/kream_398607.jpg",
+     "url": "https://kream.co.kr/products/398607"
+    },
+    {
+     "kreamId": "1012816",
+     "name": "라코스테 스몰 크로코델 레더 코인 퍼스 블랙",
+     "brand": "LACOSTE",
+     "model": "NF5120EE-000",
+     "options": null,
+     "image": "G016/kream_1012816.jpg",
+     "url": "https://kream.co.kr/products/1012816"
+    },
+    {
+     "kreamId": "404245",
+     "name": "LeMouton",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G016/kream_404245.jpg",
+     "url": "https://kream.co.kr/products/404245"
+    },
+    {
+     "kreamId": "1012860",
+     "name": "라코스테 크로코델 레더 빌폴드 블랙",
+     "brand": "LACOSTE",
+     "model": "NF5119EE-000",
+     "options": null,
+     "image": "G016/kream_1012860.jpg",
+     "url": "https://kream.co.kr/products/1012860"
+    },
+    {
+     "kreamId": "483155",
+     "name": "Ferragamo",
+     "brand": "",
+     "model": "661572-780091",
+     "options": null,
+     "image": "G016/kream_483155.jpg",
+     "url": "https://kream.co.kr/products/483155"
+    },
+    {
+     "kreamId": "1055879",
+     "name": "라코스테 샨타코 스몰 월렛 블랙",
+     "brand": "LACOSTE",
+     "model": "NH2824C-56N-000",
+     "options": null,
+     "image": "G016/kream_1055879.jpg",
+     "url": "https://kream.co.kr/products/1055879"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "eb8f73c1a56145179e8d2cafb1509ea0d4094a2d0ee9c8f3b9f281ee02986542",
+    "kream_483155.jpg": "f59396855cf899717cb275a2126a3470b1d4b149ab4fa1795dfa581a210752d2",
+    "kream_1012860.jpg": "17ccacc81b630c37f7c5812c30f57485e1592e35ed0f8a8d3ad4f3d5cd5347de",
+    "kream_1055879.jpg": "76364e9fd2b086145bc22b2074e0714e71ee512f2c7f91d6f7ecab8745e12fd7",
+    "kream_1012816.jpg": "451cddcd3d3d6aa32d56f2d0bf3c0c84f637d0257eb081e99b42b5dd4896f2c4",
+    "kream_398609.jpg": "e58737cff0e579dcd011ee28a4cc2aa93e3742838270a1c1024d4bf144c8967e",
+    "kream_398606.jpg": "0edef6f60ff3b9456d5d62c870e672f75947fe601fc9c74f8fa9982e19d9e29c",
+    "kream_398607.jpg": "69a0a83ca5eef04f4fce08be2d030aca8f2daa66de376f8142ab074944978fd1",
+    "kream_404245.jpg": "7ffce4dcd5ee98d65374ddf4b7404edefab66a4a6bfb51b98405623b25339613"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:42:45+00:00",
+    "frozenAt": "2026-10-10T08:33:27+00:00"
+   },
+   "hash": "803fd6d9e8467daf"
+  },
+  {
+   "caseId": "G017",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "5520375",
+    "brand": "나이키",
+    "name": "에어 맥스 페노메나 W - 블랙:스모크 그레이:핑크 폼:메탈릭 골드 / IM8814-001",
+    "model": "IM8814-001",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290"
+    ],
+    "image": "G017/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5520375"
+   },
+   "candidates": [
+    {
+     "kreamId": "946069",
+     "name": "나이키 에어 맥스 고아돔 로우 SP 블랙",
+     "brand": "",
+     "model": "IR2173-001",
+     "options": null,
+     "image": "G017/kream_946069.jpg",
+     "url": "https://kream.co.kr/products/946069"
+    },
+    {
+     "kreamId": "600371",
+     "name": "Pemont",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G017/kream_600371.jpg",
+     "url": "https://kream.co.kr/products/600371"
+    },
+    {
+     "kreamId": "150413",
+     "name": "Paraboot",
+     "brand": "",
+     "model": "780001/781001",
+     "options": null,
+     "image": "G017/kream_150413.jpg",
+     "url": "https://kream.co.kr/products/150413"
+    },
+    {
+     "kreamId": "632470",
+     "name": "(W) 나이키 에어맥스 페노메나 블랙 스모크 그레이",
+     "brand": "",
+     "model": "IM8814-001",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G017/kream_632470.jpg",
+     "url": "https://kream.co.kr/products/632470"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "07bc2999d1c5a8cddcd1afa5de1674bc4df4c6e01e9b9137033e98277da85bf9",
+    "kream_632470.jpg": "726ada2f2a70e667bcf2d7a40d2350b0ec149249df7d74284318531ab4601eca",
+    "kream_946069.jpg": "263d48e6b4defcf2a2e47c1d51ba0f1d89c98ccb69368887f3c78209354c0f2f",
+    "kream_150413.jpg": "d6dcf7d7afd11cf8a9e417437928606468ac3fcd94b87d54892c5340f1d84457",
+    "kream_600371.jpg": "5f169ead87af2dff1dbd4f43bf79907a24b770051b13216c95f66dab7f741737"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:50:30+00:00",
+    "frozenAt": "2026-10-10T08:33:27+00:00"
+   },
+   "hash": "6d6caabb4ebf2560"
+  },
+  {
+   "caseId": "G018",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "4463013",
+    "brand": "나이키",
+    "name": "샥스 TL W - 블랙:맥스 오렌지 / AR3566-002",
+    "model": "AR3566-002",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290"
+    ],
+    "image": "G018/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4463013"
+   },
+   "candidates": [
+    {
+     "kreamId": "21441",
+     "name": "(W) 나이키 샥스 TL 블랙 앤 맥스 오렌지",
+     "brand": "",
+     "model": "AR3566-002",
+     "options": [
+      "W215",
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G018/kream_21441.jpg",
+     "url": "https://kream.co.kr/products/21441"
+    },
+    {
+     "kreamId": "958087",
+     "name": "Seller Week",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G018/kream_958087.jpg",
+     "url": "https://kream.co.kr/products/958087"
+    },
+    {
+     "kreamId": "917625",
+     "name": "Seller Week",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G018/kream_917625.jpg",
+     "url": "https://kream.co.kr/products/917625"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "c6734ab26b28e7f8dde2db694453d59d5894be56b20065ad427378530a018519",
+    "kream_21441.jpg": "f82d7b546d8efc9fe74a915500fdb5a7a22f913373c66cab203b48242e57c3bd",
+    "kream_958087.jpg": "b3d122c2894c109739d372de5b14ab8dea1f4e90df5d1aee83879c42cbe155c4",
+    "kream_917625.jpg": "1636112f6bf608596582397e5b44c9960357ff54d24f7f395313fd6b037f4779"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:41:12+00:00",
+    "frozenAt": "2026-10-10T08:33:28+00:00"
+   },
+   "hash": "1ff02404a4f7ceee"
+  },
+  {
+   "caseId": "G019",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "6747992",
+    "brand": "스케쳐스",
+    "name": "남성 고워크 아치핏 엔조이(슬립인스)_SP0MWCGY131",
+    "model": "SP0MWCGY131",
+    "options": [
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280"
+    ],
+    "image": "G019/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6747992"
+   },
+   "candidates": [
+    {
+     "kreamId": "262268",
+     "name": "Skechers",
+     "brand": "",
+     "model": "216600-BBK",
+     "options": null,
+     "image": "G019/kream_262268.jpg",
+     "url": "https://kream.co.kr/products/262268"
+    },
+    {
+     "kreamId": "552684",
+     "name": "Skechers",
+     "brand": "",
+     "model": "220581-BBK",
+     "options": null,
+     "image": "G019/kream_552684.jpg",
+     "url": "https://kream.co.kr/products/552684"
+    },
+    {
+     "kreamId": "262276",
+     "name": "Skechers",
+     "brand": "",
+     "model": "216641-BBK",
+     "options": null,
+     "image": "G019/kream_262276.jpg",
+     "url": "https://kream.co.kr/products/262276"
+    },
+    {
+     "kreamId": "262393",
+     "name": "Skechers",
+     "brand": "",
+     "model": "220840-BKCC",
+     "options": null,
+     "image": "G019/kream_262393.jpg",
+     "url": "https://kream.co.kr/products/262393"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "bf95ae5cae937953cf3e8d79080524041e13514f840dfcf80e2485d0dd9dbea2",
+    "kream_552684.jpg": "1a2617a23ae59356c6ff5ca0c6b632dbfa54756ed9c76dd0a14502b30e0964ab",
+    "kream_262393.jpg": "c7182a246f942340bc3ff08d36e4ffd8228ea371805e4cfdd309a5930c03d090",
+    "kream_262268.jpg": "573c7fc888b29eb42bc067f6f19c8e970d48b67ed0ff9fc72eab2cd22ba9d0de",
+    "kream_262276.jpg": "f334a2a45d2a196765167f873f5f203bd7479e70fd8ca3c3be5151ea8a1ff671"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:12:02+00:00",
+    "frozenAt": "2026-10-10T08:33:28+00:00"
+   },
+   "hash": "b459445573762c4f"
+  },
+  {
+   "caseId": "G020",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "5379027",
+    "brand": "나이키",
+    "name": "에어 포스 1 07 M - 카카오 와우:코코넛 밀크:빈티지 그린:세일 / FZ3592-259",
+    "model": "FZ3592-259",
+    "options": [
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "305",
+     "310"
+    ],
+    "image": "G020/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5379027"
+   },
+   "candidates": [
+    {
+     "kreamId": "218059",
+     "name": "나이키 에어포스 1 '07 카카오 와우 코코넛 밀크",
+     "brand": "",
+     "model": "FZ3592-259",
+     "options": [
+      "225",
+      "230",
+      "235(US 4.5)",
+      "235(US 5)",
+      "240(US 5.5)",
+      "240(US 6)",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "320"
+     ],
+     "image": "G020/kream_218059.jpg",
+     "url": "https://kream.co.kr/products/218059"
+    },
+    {
+     "kreamId": "179981",
+     "name": "(W) 나이키 에어포스 1 '07 카카오 와우",
+     "brand": "",
+     "model": "FQ8901-259",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290",
+      "W295",
+      "W300",
+      "W305",
+      "W310",
+      "W315"
+     ],
+     "image": "G020/kream_179981.jpg",
+     "url": "https://kream.co.kr/products/179981"
+    },
+    {
+     "kreamId": "966349",
+     "name": "나이키 에어포스 1 '07 LV8 데님 앤트러사이트 미디움 애쉬",
+     "brand": "",
+     "model": "IR0951-003",
+     "options": null,
+     "image": "G020/kream_966349.jpg",
+     "url": "https://kream.co.kr/products/966349"
+    },
+    {
+     "kreamId": "907463",
+     "name": "나이키 에어포스 1 '07 LV8 바로크 브라운",
+     "brand": "",
+     "model": "IU2363-200",
+     "options": null,
+     "image": "G020/kream_907463.jpg",
+     "url": "https://kream.co.kr/products/907463"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "f29d5e14fd3f1c7c4b778d51be9144eadf3efd9eb9f8f456c311707f32edc5a9",
+    "kream_218059.jpg": "7cb3ec5489ada9adad16493a0213957519a51911f78db4f208135f2eb427115a",
+    "kream_179981.jpg": "c753ae2ebc87b64b6991ec4dd2ff6d7cb19c7007fb1326cba38eccd685f18c60",
+    "kream_966349.jpg": "3292963bfc8bb84b69708496a89a08904ab2f95b32415cdecbefea823f545630",
+    "kream_907463.jpg": "e8f08af96696c39aa5597d1bd2d37f603161412de1f61434df44318e1132991a"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:38:37+00:00",
+    "frozenAt": "2026-10-10T08:33:28+00:00"
+   },
+   "hash": "87c12ffd0394f43f"
+  },
+  {
+   "caseId": "G021",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "7238240",
+    "brand": "휠라",
+    "name": "하레핀 98/26 PRM(FS263OD03X082218)",
+    "model": "1100FS263OD03X082218",
+    "options": [
+     "230",
+     "240",
+     "250",
+     "260",
+     "270",
+     "280",
+     "290"
+    ],
+    "image": "G021/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/7238240"
+   },
+   "candidates": [
+    {
+     "kreamId": "343618",
+     "name": "휠라 에샤페 초코",
+     "brand": "FILA",
+     "model": "1XM02361G200/1XM02361H200",
+     "options": null,
+     "image": "G021/kream_343618.jpg",
+     "url": "https://kream.co.kr/products/343618"
+    },
+    {
+     "kreamId": "464559",
+     "name": "휠라 판테라 99/25 블랙 실버",
+     "brand": "FILA",
+     "model": "1RM02946H010",
+     "options": null,
+     "image": "G021/kream_464559.jpg",
+     "url": "https://kream.co.kr/products/464559"
+    },
+    {
+     "kreamId": "1076057",
+     "name": "[5% 적립] 휠라 하레핀 98/26 PRM 브라운",
+     "brand": "FILA",
+     "model": "",
+     "options": null,
+     "image": "G021/kream_1076057.jpg",
+     "url": "https://kream.co.kr/products/1076057"
+    },
+    {
+     "kreamId": "1065791",
+     "name": "휠라 하레핀 98/26 PRM 브라운",
+     "brand": "FILA",
+     "model": "FS263OD03X082218",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G021/kream_1065791.jpg",
+     "url": "https://kream.co.kr/products/1065791"
+    },
+    {
+     "kreamId": "813652",
+     "name": "휠라 하레핀 1998 화이트 블랙",
+     "brand": "FILA",
+     "model": "FS261OD03X095100",
+     "options": null,
+     "image": "G021/kream_813652.jpg",
+     "url": "https://kream.co.kr/products/813652"
+    },
+    {
+     "kreamId": "1009606",
+     "name": "(W) 휠라 글리오 LX 에스프레소",
+     "brand": "FILA",
+     "model": "FS263OD03X078217",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G021/kream_1009606.jpg",
+     "url": "https://kream.co.kr/products/1009606"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "19e0e402089a62ca092df736b82b665ba918df302819767a4de2aab6f0034f72",
+    "kream_1076057.jpg": "dc3407f0560130b2e177a859f73f4fa2533a66601789c68ffebf194cd0f6ad1a",
+    "kream_1065791.jpg": "148dc323ddd0f514685eda6e22a89786f448bb79cc8c0b326e827618bde12cf2",
+    "kream_464559.jpg": "ff00eb172d7957bc83e7ca70661079485e71fc6771cca2f40d37cb22fd6202a9",
+    "kream_1009606.jpg": "ee0ec0328989452092f0f2b243ec2189e2791c7fed2664e4883b4b0af2ef9544",
+    "kream_343618.jpg": "7b416853a3f234eab9bdfbd0c9b7fd1b0780bc48e90919f8626ae829571ee714",
+    "kream_813652.jpg": "cb9cbeecefaf3089087754bcbece8a09ff1ad9047548382f426cfc872f3ac1ce"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:45:32+00:00",
+    "frozenAt": "2026-10-10T08:33:28+00:00"
+   },
+   "hash": "ae80b4ef806e0801"
+  },
+  {
+   "caseId": "G022",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "7407733",
+    "brand": "나이키",
+    "name": "문 슈 OG M - 블랙:세이프티 오렌지:세일 / IX3952-001",
+    "model": "IX3952-001",
+    "options": [
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "305",
+     "310"
+    ],
+    "image": "G022/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/7407733"
+   },
+   "candidates": [
+    {
+     "kreamId": "1115271",
+     "name": "(W) 나이키 문 슈 OG 블랙 세이프티 오렌지",
+     "brand": "",
+     "model": "IX3952-001",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290"
+     ],
+     "image": "G022/kream_1115271.jpg",
+     "url": "https://kream.co.kr/products/1115271"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "85ca7caa50105d9836fbe7dae934ac5fa808575231817fca670803c57d4cba1f",
+    "kream_1115271.jpg": "96457e5e75d6fd0cc276b76a6371a5ffd90169cf7c1f03e0cafe11237cf45f6d"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T06:52:14+00:00",
+    "frozenAt": "2026-10-10T08:33:29+00:00"
+   },
+   "hash": "7bffd73d74b950a1"
+  },
+  {
+   "caseId": "G023",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "4201382",
+    "brand": "킨치",
+    "name": "BRUTAL - 649 (a) VIBRAM",
+    "model": "KNCH649",
+    "options": [
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300"
+    ],
+    "image": "G023/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4201382"
+   },
+   "candidates": [
+    {
+     "kreamId": "497466",
+     "name": "Adidas",
+     "brand": "",
+     "model": "JN7153",
+     "options": null,
+     "image": "G023/kream_497466.jpg",
+     "url": "https://kream.co.kr/products/497466"
+    },
+    {
+     "kreamId": "342774",
+     "name": "Kinchi",
+     "brand": "",
+     "model": "",
+     "options": [
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300"
+     ],
+     "image": "G023/kream_342774.jpg",
+     "url": "https://kream.co.kr/products/342774"
+    },
+    {
+     "kreamId": "993741",
+     "name": "Kinchi",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G023/kream_993741.jpg",
+     "url": "https://kream.co.kr/products/993741"
+    },
+    {
+     "kreamId": "904890",
+     "name": "Reebok",
+     "brand": "",
+     "model": "100268281",
+     "options": null,
+     "image": "G023/kream_904890.jpg",
+     "url": "https://kream.co.kr/products/904890"
+    },
+    {
+     "kreamId": "497465",
+     "name": "Adidas",
+     "brand": "",
+     "model": "JN7153",
+     "options": null,
+     "image": "G023/kream_497465.jpg",
+     "url": "https://kream.co.kr/products/497465"
+    },
+    {
+     "kreamId": "586943",
+     "name": "Adidas",
+     "brand": "",
+     "model": "JQ6789",
+     "options": null,
+     "image": "G023/kream_586943.jpg",
+     "url": "https://kream.co.kr/products/586943"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "70526c1ecc09c1e2c0fe5370ff507c21379e9a3e057b4a4f9a204beb197a0351",
+    "kream_497465.jpg": "ca6fa801a5d1c5323cdd8004396fc7579515ad738f27bcb613d637c6966536b5",
+    "kream_586943.jpg": "f275fdebcc46a20bfc3895c2e14b9c08ef7b66f413268cc2878353f9e33bed07",
+    "kream_904890.jpg": "7ec93a2d136bb3381a8d4afa8700144b804b76dc736c716e93f0d1451216b889",
+    "kream_497466.jpg": "ca6fa801a5d1c5323cdd8004396fc7579515ad738f27bcb613d637c6966536b5",
+    "kream_342774.jpg": "4b3a9ececb6a72cb1b5181bdc3173769ac95c0eb8778cf9eb05f7a9178e3f12e",
+    "kream_993741.jpg": "9519097b347ff9e28ed7ad6447e9ff5a57ab07093eca7668aba87627f1252180"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:05:07+00:00",
+    "frozenAt": "2026-10-10T08:33:29+00:00"
+   },
+   "hash": "5aff9bd9fa893a2d"
+  },
+  {
+   "caseId": "G024",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "6618043",
+    "brand": "나이키",
+    "name": "보메로 18 SE W - 팬텀:그레이 포그:메탈릭 실버:서밋 화이트 / IM8330-001",
+    "model": "IM8330-001",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260"
+    ],
+    "image": "G024/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6618043"
+   },
+   "candidates": [
+    {
+     "kreamId": "543232",
+     "name": "(W) 나이키 보메로 18 화이트 포톤 더스트",
+     "brand": "",
+     "model": "HM6804-104",
+     "options": null,
+     "image": "G024/kream_543232.jpg",
+     "url": "https://kream.co.kr/products/543232"
+    },
+    {
+     "kreamId": "501037",
+     "name": "나이키 보메로 18 블랙 다크 스모크 그레이",
+     "brand": "",
+     "model": "HM6803-005",
+     "options": [
+      "225",
+      "230",
+      "235(US 4.5)",
+      "235(US 5)",
+      "240(US 5.5)",
+      "240(US 6)",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "320"
+     ],
+     "image": "G024/kream_501037.jpg",
+     "url": "https://kream.co.kr/products/501037"
+    },
+    {
+     "kreamId": "561179",
+     "name": "(W) 나이키 보메로 18 블랙 다크 스모크 그레이",
+     "brand": "5K",
+     "model": "HM6804-004",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290"
+     ],
+     "image": "G024/kream_561179.jpg",
+     "url": "https://kream.co.kr/products/561179"
+    },
+    {
+     "kreamId": "966348",
+     "name": "(W) 나이키 보메로 18 SE 팬텀 서밋 화이트",
+     "brand": "",
+     "model": "IM8330-001",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G024/kream_966348.jpg",
+     "url": "https://kream.co.kr/products/966348"
+    },
+    {
+     "kreamId": "456380",
+     "name": "나이키 보메로 18 서밋 화이트 코코넛 밀크",
+     "brand": "5K",
+     "model": "HM6803-101",
+     "options": null,
+     "image": "G024/kream_456380.jpg",
+     "url": "https://kream.co.kr/products/456380"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "88b5d6ca918d7bb3e1175470ca718560664374ac2fbb8d69a07e504e22da6ee5",
+    "kream_966348.jpg": "3a419faf6a5254240248c4b56667a5afdb2bf3b2404326213a3b5947d4e8ac38",
+    "kream_501037.jpg": "663300baf0fa5f090c109f9308536f44c58edc20e896b70708ba35648fa78610",
+    "kream_561179.jpg": "4f7947ac22d69dd61f6ee5b8c7f89a33a69808a59154bec192f97efc0e5e785d",
+    "kream_456380.jpg": "ef4738c2c976835e027e5bdec6d35ca5936655eb8489796c8f67bdb4913f7463",
+    "kream_543232.jpg": "2fe27651f68c7a899c7f73539827860acfa0074bfdd35e9e42818b8d162617c3"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:50:44+00:00",
+    "frozenAt": "2026-10-10T08:33:29+00:00"
+   },
+   "hash": "5999c3c494e4b2d8"
+  },
+  {
+   "caseId": "G025",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "4996203",
+    "brand": "오니츠카타이거",
+    "name": "토쿠텐 1183C431_020",
+    "model": "1183C431_020",
+    "options": [
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290"
+    ],
+    "image": "G025/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4996203"
+   },
+   "candidates": [
+    {
+     "kreamId": "385777",
+     "name": "Onitsuka Tiger",
+     "brand": "",
+     "model": "",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "252.5",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "282.5",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G025/kream_385777.jpg",
+     "url": "https://kream.co.kr/products/385777"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "ac5e61984abd309f651f935fec2aa20c43c7371d94aa91f56757ec2fc8a1da30",
+    "kream_385777.jpg": "640b711969e52da4f8769a6e5120f12a7e9ce5a906fb8ce0db81e12aef783b69"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-10T04:36:38+00:00",
+    "frozenAt": "2026-10-10T08:33:29+00:00"
+   },
+   "hash": "95ff8f4aa3f67346"
+  },
+  {
+   "caseId": "G026",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "6701045",
+    "brand": "디퍼슈",
+    "name": "로에른 롱부츠 7.5CM [블랙]",
+    "model": "P00000ZO",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250"
+    ],
+    "image": "G026/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6701045"
+   },
+   "candidates": [
+    {
+     "kreamId": "692259",
+     "name": "Haleine",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G026/kream_692259.jpg",
+     "url": "https://kream.co.kr/products/692259"
+    },
+    {
+     "kreamId": "96681",
+     "name": "Hunter",
+     "brand": "",
+     "model": "MFS9016RMA-BLK",
+     "options": null,
+     "image": "G026/kream_96681.jpg",
+     "url": "https://kream.co.kr/products/96681"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "brand": "",
+     "model": "R25M200",
+     "options": null,
+     "image": "G026/kream_808126.jpg",
+     "url": "https://kream.co.kr/products/808126"
+    },
+    {
+     "kreamId": "1096023",
+     "name": "티엔지티 x 로맨틱무브 세미 스퀘어 토 스웨이드 첼시 부츠 블랙",
+     "brand": "TNGT",
+     "model": "",
+     "options": null,
+     "image": "G026/kream_1096023.jpg",
+     "url": "https://kream.co.kr/products/1096023"
+    },
+    {
+     "kreamId": "563999",
+     "name": "무센트  라칸 사이드 라인 스트링 와이드 팬츠 남녀공용 블랙",
+     "brand": "MUCENT",
+     "model": "",
+     "options": null,
+     "image": "G026/kream_563999.jpg",
+     "url": "https://kream.co.kr/products/563999"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "434f9d9db23bfcb031a7ccfcf64ae4e93109fbd1d9d86b7f7949900bbc61af9e",
+    "kream_563999.jpg": "58e8e28821f13f7ffc0999da3218a3b813197df5ea5a7e85ce8229079d1bd66b",
+    "kream_808126.jpg": "1883aa9da37f695b26b0f153f3d2c1a4567c01b01b35e8f867d53eb50891930b",
+    "kream_692259.jpg": "54eec6759344449cb2155a519f4422bda1607f6cbb8a9cb37b73f57b6e1d7cf2",
+    "kream_96681.jpg": "a7b0e606f61a843c61516c4fb229428fca27cd79a395e7d8e291402224264e69",
+    "kream_1096023.jpg": "161ee24dbdee41cfdf4b1f9eb57a79190298f9e1e85b15f9479044524275eb75"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:34:20+00:00",
+    "frozenAt": "2026-10-10T08:33:30+00:00"
+   },
+   "hash": "374e06e8de09dc17"
+  },
+  {
+   "caseId": "G027",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "6015024",
+    "brand": "크록스",
+    "name": "에코 시티 어드벤쳐 클로그 - 카키 / 213115-260",
+    "model": "213115-260",
+    "options": [
+     "220/M3W5",
+     "230/M4W6",
+     "240/M5W7",
+     "250/M6W8",
+     "260/M7W9",
+     "265/M8W10",
+     "270/M9W11",
+     "280/M10W12",
+     "290/M11",
+     "300/M12"
+    ],
+    "image": "G027/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6015024"
+   },
+   "candidates": [
+    {
+     "kreamId": "864884",
+     "name": "크록스 에코 시티 어드벤쳐 클로그 카키",
+     "brand": "",
+     "model": "",
+     "options": [
+      "220(US 3)",
+      "230(US 4)",
+      "240(US 5)",
+      "250(US 6)",
+      "260(US 7)",
+      "265(US 8)",
+      "270(US 9)",
+      "280(US 10)",
+      "290(US 11)",
+      "300(US 12)",
+      "310(US 13)"
+     ],
+     "image": "G027/kream_864884.jpg",
+     "url": "https://kream.co.kr/products/864884"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "8798f0beadfb6ec53a022bb821b4613d6b6a28e4bae6a9dcb2de44a986c04f4f",
+    "kream_864884.jpg": "0b2249d6539c31c75bd9a780bd35a68c91cd570e8745f532bc34fcd41835ea6f"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-10T04:36:51+00:00",
+    "frozenAt": "2026-10-10T08:33:30+00:00"
+   },
+   "hash": "72c69856ca30a04f"
+  },
+  {
+   "caseId": "G028",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "5987818",
+    "brand": "아디다스",
+    "name": "스탠 스미스 LO 발레 JQ6939",
+    "model": "JQ6939",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "305",
+     "310",
+     "315",
+     "320"
+    ],
+    "image": "G028/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5987818"
+   },
+   "candidates": [
+    {
+     "kreamId": "1101929",
+     "name": "Seller Week",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G028/kream_1101929.jpg",
+     "url": "https://kream.co.kr/products/1101929"
+    },
+    {
+     "kreamId": "560343",
+     "name": "Adidas",
+     "brand": "",
+     "model": "JQ6939",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G028/kream_560343.jpg",
+     "url": "https://kream.co.kr/products/560343"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "29ebc9bd037fa548be6595e4766eb3224fd17d508407e5b5a3d2fc08d9510a88",
+    "kream_560343.jpg": "c53628308ca9bd2637401f32c2b47d2029430bf974b2a807590ba66311073b6b",
+    "kream_1101929.jpg": "250e0612ee7d3f6c90db2c63df00d94c9a137075015ab12ed47bd3ab1dcdb092"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T06:54:36+00:00",
+    "frozenAt": "2026-10-10T08:33:30+00:00"
+   },
+   "hash": "b731888bb31b2f02"
+  },
+  {
+   "caseId": "G029",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "706935",
+    "brand": "닥터마틴",
+    "name": "1461 3홀 빈티지브라운 / 11838201",
+    "model": "11838201",
+    "options": [
+     "220",
+     "230",
+     "240",
+     "250",
+     "260",
+     "270",
+     "280",
+     "290",
+     "300"
+    ],
+    "image": "G029/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/706935"
+   },
+   "candidates": [
+    {
+     "kreamId": "532285",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "11838600",
+     "options": null,
+     "image": "G029/kream_532285.jpg",
+     "url": "https://kream.co.kr/products/532285"
+    },
+    {
+     "kreamId": "1002156",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "11838601",
+     "options": null,
+     "image": "G029/kream_1002156.jpg",
+     "url": "https://kream.co.kr/products/1002156"
+    },
+    {
+     "kreamId": "770329",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "42397200",
+     "options": null,
+     "image": "G029/kream_770329.jpg",
+     "url": "https://kream.co.kr/products/770329"
+    },
+    {
+     "kreamId": "310551",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "11838201",
+     "options": [
+      "220(UK 3)",
+      "230(UK 4)",
+      "240(UK 5)",
+      "250(UK 6)",
+      "255(UK 6.5)",
+      "260(UK 7)",
+      "270(UK 8)",
+      "280(UK 9)",
+      "285(UK 9.5)",
+      "290(UK 10)",
+      "300(UK 11)",
+      "310(UK 12)"
+     ],
+     "image": "G029/kream_310551.jpg",
+     "url": "https://kream.co.kr/products/310551"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "e65c5c61cc39ad7b947dd2e17b07aadc625a7c806e6cd5732977ac75c7c002a2",
+    "kream_310551.jpg": "01f9dafddbee2faf7fe68c714c3afb8ee0ee749c1f364850e565341c809e78df",
+    "kream_1002156.jpg": "89c4386c3838338d90861186af7af645eae172c5a9369be387a942fcda219990",
+    "kream_770329.jpg": "79659c80b67368e7b622041b35a2d873609c8ca92ab1c9b6281083a640a9455d",
+    "kream_532285.jpg": "63f0ab4983360c15a764a0aa14cefeff3d63772b475af7a81f2ffd3ee622c7ac"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:43:53+00:00",
+    "frozenAt": "2026-10-10T08:33:30+00:00"
+   },
+   "hash": "b3707a4f3938b296"
+  },
+  {
+   "caseId": "G030",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "6382400",
+    "brand": "노버크",
+    "name": "플렉스 라이트 로퍼",
+    "model": "NOVERQ",
+    "options": [
+     "250",
+     "260",
+     "270",
+     "280"
+    ],
+    "image": "G030/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6382400"
+   },
+   "candidates": [
+    {
+     "kreamId": "687616",
+     "name": "조셉트 벨 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G030/kream_687616.jpg",
+     "url": "https://kream.co.kr/products/687616"
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "brand": "",
+     "model": "CJ2598",
+     "options": [
+      "US 10",
+      "US 10.5",
+      "US 11",
+      "US 11.5",
+      "US 12",
+      "US 13",
+      "US 14",
+      "US 6.5",
+      "US 7",
+      "US 7.5",
+      "US 8",
+      "US 8.5",
+      "US 9",
+      "US 9.5"
+     ],
+     "image": "G030/kream_334293.jpg",
+     "url": "https://kream.co.kr/products/334293"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G030/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "288371",
+     "name": "조셉트 사이먼 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G030/kream_288371.jpg",
+     "url": "https://kream.co.kr/products/288371"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "2ed77497843eb01e28a80936e40de39a4797fc1d73b06d6659eddf54f2df3d96",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_687616.jpg": "d15ebea06623cbece7f44d6c41129743e6ff567306d3891df3f0044b5048e487",
+    "kream_288371.jpg": "f7212d0e097f74cb58bed0a04355ca25e30d265ce142c356e8acafcdd60f26db",
+    "kream_334293.jpg": "ff05f0cf81c146b00c8ec6f28ae3fa70c1c0233b214c74357cbbc06212d8f0ee"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:42:15+00:00",
+    "frozenAt": "2026-10-10T08:33:30+00:00"
+   },
+   "hash": "cf8488e743a31dfb"
+  },
+  {
+   "caseId": "G031",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "7249959",
+    "brand": "킨치",
+    "name": "TYPE2 - 808(a)",
+    "model": "BFKCDB08",
+    "options": [
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300"
+    ],
+    "image": "G031/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/7249959"
+   },
+   "candidates": [
+    {
+     "kreamId": "219037",
+     "name": "Kinchi",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G031/kream_219037.jpg",
+     "url": "https://kream.co.kr/products/219037"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G031/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "858583",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76444",
+     "options": null,
+     "image": "G031/kream_858583.jpg",
+     "url": "https://kream.co.kr/products/858583"
+    },
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "brand": "",
+     "model": "CI1360",
+     "options": null,
+     "image": "G031/kream_334352.jpg",
+     "url": "https://kream.co.kr/products/334352"
+    },
+    {
+     "kreamId": "430579",
+     "name": "조셉트 시메온 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G031/kream_430579.jpg",
+     "url": "https://kream.co.kr/products/430579"
+    },
+    {
+     "kreamId": "1046787",
+     "name": "Rockport",
+     "brand": "",
+     "model": "CI2360",
+     "options": null,
+     "image": "G031/kream_1046787.jpg",
+     "url": "https://kream.co.kr/products/1046787"
+    },
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "brand": "",
+     "model": "",
+     "options": [
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300"
+     ],
+     "image": "G031/kream_263074.jpg",
+     "url": "https://kream.co.kr/products/263074"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "79f2add20a98d30eaf04b6e69956c35d119915f363536485695d79d8e9067ada",
+    "kream_1046787.jpg": "d2cb1f3107686e50a206361da649d2a51bf3be12f8fff819b5bc2cb23421cad3",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_334352.jpg": "52fcd84ddcc320b8d51889c002adc604b87b6d579a4577931c5507c37e017c6b",
+    "kream_858583.jpg": "12eda997e8b12552891a0c61cafb68eb0139365c90d27d0b24719e5241f5c605",
+    "kream_263074.jpg": "f362fd5657b65f2a8a249ab8c0432b4532ab8496a441b19b4fd369db6b2d2463",
+    "kream_430579.jpg": "98d3c71467e5db054baa5c2dd9ab930ba14583d2a79c98ed1f3195092aaa7c16",
+    "kream_219037.jpg": "26fa7fc8dab6b9cc0dfc7aae8539432fe58c7b621743632bfc4dfa0cce90c794"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:43:31+00:00",
+    "frozenAt": "2026-10-10T08:33:31+00:00"
+   },
+   "hash": "093cd15705cb8f5c"
+  },
+  {
+   "caseId": "G032",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "7329742",
+    "brand": "솔레뜨",
+    "name": "Rumble High sneakers BLACK",
+    "model": "5011530813",
+    "options": [
+     "230",
+     "240",
+     "250"
+    ],
+    "image": "G032/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/7329742"
+   },
+   "candidates": [
+    {
+     "kreamId": "508201",
+     "name": "Converse",
+     "brand": "",
+     "model": "A15020C",
+     "options": null,
+     "image": "G032/kream_508201.jpg",
+     "url": "https://kream.co.kr/products/508201"
+    },
+    {
+     "kreamId": "103867",
+     "name": "Balenciaga",
+     "brand": "",
+     "model": "688752W3RC11090",
+     "options": null,
+     "image": "G032/kream_103867.jpg",
+     "url": "https://kream.co.kr/products/103867"
+    },
+    {
+     "kreamId": "272683",
+     "name": "카시나 x 팀버랜드 3 아이 웨지 비브람 다크 그린",
+     "brand": "KASINA",
+     "model": "",
+     "options": null,
+     "image": "G032/kream_272683.jpg",
+     "url": "https://kream.co.kr/products/272683"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "brand": "",
+     "model": "R25M200",
+     "options": null,
+     "image": "G032/kream_808126.jpg",
+     "url": "https://kream.co.kr/products/808126"
+    },
+    {
+     "kreamId": "808680",
+     "name": "GU x 언더커버 하이 탑 스니커즈 블랙",
+     "brand": "GU",
+     "model": "360224-09",
+     "options": null,
+     "image": "G032/kream_808680.jpg",
+     "url": "https://kream.co.kr/products/808680"
+    },
+    {
+     "kreamId": "378301",
+     "name": "자라 볼류메트릭 베이스 로퍼 블랙",
+     "brand": "",
+     "model": "2630/320/800",
+     "options": null,
+     "image": "G032/kream_378301.jpg",
+     "url": "https://kream.co.kr/products/378301"
+    },
+    {
+     "kreamId": "935744",
+     "name": "Paraboot",
+     "brand": "",
+     "model": "781031",
+     "options": null,
+     "image": "G032/kream_935744.jpg",
+     "url": "https://kream.co.kr/products/935744"
+    },
+    {
+     "kreamId": "523679",
+     "name": "Romantic Move",
+     "brand": "",
+     "model": "R24M018",
+     "options": null,
+     "image": "G032/kream_523679.jpg",
+     "url": "https://kream.co.kr/products/523679"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "c760645bdcd1b57ef4d5eda1aa3d703aa439cf96662ba352575737247d16b01b",
+    "kream_935744.jpg": "2a9bf93f98ed412a966fae53b13cdd59f03a7cd87368f72699a86d1cca2be0fc",
+    "kream_272683.jpg": "a3806fb1aa27ef5db936449dbe578544b8177ae28d9b043a22d2ce1ab3231644",
+    "kream_508201.jpg": "31606d3902553be290c1f2275bf589491c7459b24f8875343781f74b0a273ebd",
+    "kream_378301.jpg": "1e4a6eb78562f75af600d9a6954f3adecf5243cd004484d6ce230dc307b756db",
+    "kream_808680.jpg": "32eb1ac636e92deb7158fb66dc91f4885fe568d135d1abe1f3607e7e551f0e90",
+    "kream_103867.jpg": "510716499791f1ef27846814f4259e5008e06fc797fa4470e1e7c67abec7ee70",
+    "kream_808126.jpg": "1883aa9da37f695b26b0f153f3d2c1a4567c01b01b35e8f867d53eb50891930b",
+    "kream_523679.jpg": "655fbb4e61ba881b0c035693f44d72c1d843eb3cb3ccfd9dc41dd431e2bf49f7"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:48:37+00:00",
+    "frozenAt": "2026-10-10T08:33:31+00:00"
+   },
+   "hash": "7e87384caf8a6d99"
+  },
+  {
+   "caseId": "G033",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "595038",
+    "brand": "닥터마틴",
+    "name": "1461 3홀 블랙 나파 / 11838001",
+    "model": "11838001",
+    "options": [
+     "220",
+     "230",
+     "240",
+     "250",
+     "260",
+     "270",
+     "280",
+     "290",
+     "300"
+    ],
+    "image": "G033/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/595038"
+   },
+   "candidates": [
+    {
+     "kreamId": "118748",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "11838001",
+     "options": [
+      "220(UK 3)",
+      "230(UK 4)",
+      "240(UK 5)",
+      "250(UK 6)",
+      "255(UK 6.5)",
+      "260(UK 7)",
+      "270(UK 8)",
+      "280(UK 9)",
+      "285(UK 9.5)",
+      "290(UK 10)",
+      "300(UK 11)",
+      "310(UK 12)"
+     ],
+     "image": "G033/kream_118748.jpg",
+     "url": "https://kream.co.kr/products/118748"
+    },
+    {
+     "kreamId": "310551",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "11838201",
+     "options": [
+      "220(UK 3)",
+      "230(UK 4)",
+      "240(UK 5)",
+      "250(UK 6)",
+      "255(UK 6.5)",
+      "260(UK 7)",
+      "270(UK 8)",
+      "280(UK 9)",
+      "285(UK 9.5)",
+      "290(UK 10)",
+      "300(UK 11)",
+      "310(UK 12)"
+     ],
+     "image": "G033/kream_310551.jpg",
+     "url": "https://kream.co.kr/products/310551"
+    },
+    {
+     "kreamId": "118745",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "11838002",
+     "options": [
+      "220(UK 3)",
+      "230(UK 4)",
+      "240(UK 5)",
+      "250(UK 6)",
+      "255(UK 6.5)",
+      "260(UK 7)",
+      "270(UK 8)",
+      "280(UK 9)",
+      "285(UK 9.5)",
+      "290(UK 10)",
+      "300(UK 11)",
+      "310(UK 12)"
+     ],
+     "image": "G033/kream_118745.jpg",
+     "url": "https://kream.co.kr/products/118745"
+    },
+    {
+     "kreamId": "118744",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "14345001",
+     "options": null,
+     "image": "G033/kream_118744.jpg",
+     "url": "https://kream.co.kr/products/118744"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "b90804e9877e888b06b8240d4a708b1b795116f7c36deaee6e4e5800ac16418f",
+    "kream_118748.jpg": "ea1c478608a600a1e6044a376302b43981612d1abbb7198b257c5606c8eaeef7",
+    "kream_118745.jpg": "f0a3c5310b9979777a30a88f5fc34a2ba10d972523f3e9a06230a176c49fa4cd",
+    "kream_310551.jpg": "01f9dafddbee2faf7fe68c714c3afb8ee0ee749c1f364850e565341c809e78df",
+    "kream_118744.jpg": "ca778d208b4e01d2adad633edee0224a1ef76a732a1832c4e913015599c62c5d"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:35:05+00:00",
+    "frozenAt": "2026-10-10T08:33:31+00:00"
+   },
+   "hash": "6b87da3eb50f75c3"
+  },
+  {
+   "caseId": "G034",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "4226785",
+    "brand": "나이키",
+    "name": "에어 포스 1 07 W - 화이트 / DD8959-100",
+    "model": "DD8959-100",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260"
+    ],
+    "image": "G034/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4226785"
+   },
+   "candidates": [
+    {
+     "kreamId": "231023",
+     "name": "(W) 나이키 에어포스 1 '07 에센셜 TRK3 세일",
+     "brand": "",
+     "model": "HF1058-133",
+     "options": null,
+     "image": "G034/kream_231023.jpg",
+     "url": "https://kream.co.kr/products/231023"
+    },
+    {
+     "kreamId": "25931",
+     "name": "(W) 나이키 에어포스 1 로우 '07 LX 크롬 럭스",
+     "brand": "",
+     "model": "CT1990-100",
+     "options": null,
+     "image": "G034/kream_25931.jpg",
+     "url": "https://kream.co.kr/products/25931"
+    },
+    {
+     "kreamId": "13100",
+     "name": "(W) 나이키 에어포스 1 '07 로우 화이트",
+     "brand": "",
+     "model": "315115-112/DD8959-100",
+     "options": [
+      "W215",
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G034/kream_13100.jpg",
+     "url": "https://kream.co.kr/products/13100"
+    },
+    {
+     "kreamId": "184932",
+     "name": "(W) 나이키 x 트래비스 스캇 에어포스 1 '07 로우 캑터스 잭 유토피아 에디션 화이트",
+     "brand": "",
+     "model": "DD8959-100",
+     "options": null,
+     "image": "G034/kream_184932.jpg",
+     "url": "https://kream.co.kr/products/184932"
+    },
+    {
+     "kreamId": "684106",
+     "name": "(W) 나이키 에어포스 1 '07 LV8 블랙 화이트",
+     "brand": "",
+     "model": "IM7809-010",
+     "options": null,
+     "image": "G034/kream_684106.jpg",
+     "url": "https://kream.co.kr/products/684106"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "ff79d87f3bcf28ac67bbf512dadc4d8d16af1e08fc1c452966e20cd6deed656f",
+    "kream_13100.jpg": "ff110d703250dbcc1a31b8c4c3a1aa5ca71488e42dde9defe707800ec6f26805",
+    "kream_184932.jpg": "b2f79910e8a30dcea4e6244c2ef4b97845ff6e52503c1fb5a853fb760de17f54",
+    "kream_684106.jpg": "338c535e9b80733070a959e39a443d481e022cbdb270beb4a729960cc53e18f4",
+    "kream_231023.jpg": "122126c2763115a014c06d94633e9605d6b9cdd717f2271efb2977dd345e9992",
+    "kream_25931.jpg": "a514410a3143d0ba68c44071abcaaba8c90c36ea0b37f6755642f958e650c541"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:38:08+00:00",
+    "frozenAt": "2026-10-10T08:33:31+00:00"
+   },
+   "hash": "0b81b0d1837fe2b4"
+  },
+  {
+   "caseId": "G035",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "4778565",
+    "brand": "살로몬",
+    "name": "XT-6_L41086600",
+    "model": "S260109SX611",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "305",
+     "310"
+    ],
+    "image": "G035/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4778565"
+   },
+   "candidates": [
+    {
+     "kreamId": "1043979",
+     "name": "Salomon",
+     "brand": "살로몬 XT-6 고어텍스 블랙",
+     "model": "L45416900",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G035/kream_1043979.jpg",
+     "url": "https://kream.co.kr/products/1043979"
+    },
+    {
+     "kreamId": "944831",
+     "name": "Paul Smith",
+     "brand": "",
+     "model": "M1A-4832-USTRGS-79",
+     "options": null,
+     "image": "G035/kream_944831.jpg",
+     "url": "https://kream.co.kr/products/944831"
+    },
+    {
+     "kreamId": "834471",
+     "name": "Prada Vintage",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G035/kream_834471.jpg",
+     "url": "https://kream.co.kr/products/834471"
+    },
+    {
+     "kreamId": "557965",
+     "name": "Salomon",
+     "brand": "",
+     "model": "L47873800",
+     "options": null,
+     "image": "G035/kream_557965.jpg",
+     "url": "https://kream.co.kr/products/557965"
+    },
+    {
+     "kreamId": "25673",
+     "name": "Salomon",
+     "brand": "살로몬 XT-6 ADV 블랙",
+     "model": "L41086600",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G035/kream_25673.jpg",
+     "url": "https://kream.co.kr/products/25673"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G035/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "1001773",
+     "name": "라코스테 백코트 스니커즈 블랙",
+     "brand": "LACOSTE",
+     "model": "747CMA0005-454",
+     "options": null,
+     "image": "G035/kream_1001773.jpg",
+     "url": "https://kream.co.kr/products/1001773"
+    },
+    {
+     "kreamId": "1094781",
+     "name": "Seller Week",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G035/kream_1094781.jpg",
+     "url": "https://kream.co.kr/products/1094781"
+    },
+    {
+     "kreamId": "227028",
+     "name": "Salomon",
+     "brand": "살로몬 XT-6 고어텍스 블랙 실버",
+     "model": "L47450600",
+     "options": null,
+     "image": "G035/kream_227028.jpg",
+     "url": "https://kream.co.kr/products/227028"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "c1070ab2acb23ebe287d0ebad6e965e203559dee6e29ff0eb76335e723f28672",
+    "kream_944831.jpg": "73bc9cbc56ebfa693969ffc38a5dff354a7f2d4c8b224b4da05b85fbe9e8cc5f",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_834471.jpg": "8c81ec1a192a66d5cd8a4882a9b0cee3111e64b92179e1e0d19983905ae9fe17",
+    "kream_1001773.jpg": "3c01b80e2ee1dc4a6c742ca8ba39eca42f2fb14779279cc77f220c128c0060ce",
+    "kream_25673.jpg": "352856b527ca34af46c0eada25366de47fab9df059f4afed13edeb4433434571",
+    "kream_1094781.jpg": "1f8aa54693bbb5110895b2d246070f0c12aa15449721fffc3dc984df48152638",
+    "kream_1043979.jpg": "36978ec85e5b229d2e4b5da0f33107a150479d03936f0564fea60198aa0866fc",
+    "kream_227028.jpg": "05b5f317e0fdd7b2b87c402f9cc5110fe8da9076e7cf95687e5d43c45ddf1af2",
+    "kream_557965.jpg": "24ef4e0b0deb57e197334cc2c9bb8ecb26d0c12e9129970a62b251ba56e6c750"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:36:11+00:00",
+    "frozenAt": "2026-10-10T08:33:32+00:00"
+   },
+   "hash": "cb9eaee35f89845d"
+  },
+  {
+   "caseId": "G036",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "6551543",
+    "brand": "푸마",
+    "name": "디비에이트 퓨어 나이트로 여성- 화이트:울트라 레드 / 313905-05",
+    "model": "313905-05",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255"
+    ],
+    "image": "G036/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6551543"
+   },
+   "candidates": [
+    {
+     "kreamId": "931057",
+     "name": "(W) 푸마 디비에이트 퓨어 나이트로 푸마 화이트 울트라 레드",
+     "brand": "",
+     "model": "",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G036/kream_931057.jpg",
+     "url": "https://kream.co.kr/products/931057"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "280c96ea3bbe6e3b7432157f98993ee64e30346a016427d48b25eea08bcdef09",
+    "kream_931057.jpg": "c60c0fb0561d9872f6626d095dce4950b85775e6b5d9582b351d21d85cb1a2ca"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-10T04:36:28+00:00",
+    "frozenAt": "2026-10-10T08:33:32+00:00"
+   },
+   "hash": "520a7fcad6650103"
+  },
+  {
+   "caseId": "G037",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "6183054",
+    "brand": "푸마",
+    "name": "매그니파이 나이트로 3 - 화이트:에메랄드 아이스 / 311046-19",
+    "model": "311046-19",
+    "options": [
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300"
+    ],
+    "image": "G037/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6183054"
+   },
+   "candidates": [
+    {
+     "kreamId": "597930",
+     "name": "푸마 포에버런 나이트로 2 와이드 화이트 실버",
+     "brand": "",
+     "model": "311050-02",
+     "options": null,
+     "image": "G037/kream_597930.jpg",
+     "url": "https://kream.co.kr/products/597930"
+    },
+    {
+     "kreamId": "588373",
+     "name": "푸마 매그니파이 나이트로 3 화이트 웜 화이트",
+     "brand": "",
+     "model": "311046-02",
+     "options": null,
+     "image": "G037/kream_588373.jpg",
+     "url": "https://kream.co.kr/products/588373"
+    },
+    {
+     "kreamId": "550056",
+     "name": "나이키 스트럭처 26 블랙 아이언 그레이",
+     "brand": "",
+     "model": "HJ1102-001",
+     "options": null,
+     "image": "G037/kream_550056.jpg",
+     "url": "https://kream.co.kr/products/550056"
+    },
+    {
+     "kreamId": "1018256",
+     "name": "푸마 벨로시티 나이트로 5 와이드 블랙 플랫 다크 그레이",
+     "brand": "",
+     "model": "313690-01",
+     "options": null,
+     "image": "G037/kream_1018256.jpg",
+     "url": "https://kream.co.kr/products/1018256"
+    },
+    {
+     "kreamId": "1090763",
+     "name": "푸마 포에버런 나이트로 3 와이드 블랙 플랫 다크 그레이",
+     "brand": "",
+     "model": "313702-01",
+     "options": null,
+     "image": "G037/kream_1090763.jpg",
+     "url": "https://kream.co.kr/products/1090763"
+    },
+    {
+     "kreamId": "1018202",
+     "name": "푸마 벨로시티 나이트로 5 화이트 울트라 레드",
+     "brand": "",
+     "model": "312944-05",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G037/kream_1018202.jpg",
+     "url": "https://kream.co.kr/products/1018202"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "8bcb5f103cf689b59c48947933a69a036f62b92b3900923f419d3567a16a45bd",
+    "kream_1018256.jpg": "3861fa326993c45a62b66acb2d2dbfbe82066c536233fdf7d95df5dc9f8aed8d",
+    "kream_1018202.jpg": "bdc62180e2ddc784a893c1667ef25eb450eace53ae95ae0c4f0ff4ce8bdd25da",
+    "kream_597930.jpg": "613eea1bb0a9f35a02f1d70d0f0074085c4f0eab3eb2d7237e0f16a7f3f6cd24",
+    "kream_550056.jpg": "0d195c97796fac1515e783a9b02658193bfabcfc4673f534b670a2cd80ebfeaa",
+    "kream_588373.jpg": "357e9f177e9954234d6ea2d98166c048aa29b68fbab115fa91ab76a78b2c27d7",
+    "kream_1090763.jpg": "92237ded73206674dce8f3e4fc9304c1a8f262b183fbf89793705410f271211e"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:10:07+00:00",
+    "frozenAt": "2026-10-10T08:33:32+00:00"
+   },
+   "hash": "b4b70b248a45eab1"
+  },
+  {
+   "caseId": "G038",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "5916278",
+    "brand": "닥터마틴",
+    "name": "버즈 발레리나 레이스 업 - 블랙 / 42842001",
+    "model": "42842001",
+    "options": [
+     "220",
+     "230",
+     "240",
+     "250",
+     "260"
+    ],
+    "image": "G038/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5916278"
+   },
+   "candidates": [
+    {
+     "kreamId": "469008",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "41060001",
+     "options": null,
+     "image": "G038/kream_469008.jpg",
+     "url": "https://kream.co.kr/products/469008"
+    },
+    {
+     "kreamId": "922846",
+     "name": "Athe Vanessabruno Acc",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G038/kream_922846.jpg",
+     "url": "https://kream.co.kr/products/922846"
+    },
+    {
+     "kreamId": "851873",
+     "name": "아포아 아크 플랫슈즈 블랙",
+     "brand": "APOA",
+     "model": "",
+     "options": null,
+     "image": "G038/kream_851873.jpg",
+     "url": "https://kream.co.kr/products/851873"
+    },
+    {
+     "kreamId": "14404",
+     "name": "나이키 에어 베이퍼맥스 플라이니트 2 블랙 화이트",
+     "brand": "",
+     "model": "942842-001",
+     "options": null,
+     "image": "G038/kream_14404.jpg",
+     "url": "https://kream.co.kr/products/14404"
+    },
+    {
+     "kreamId": "800266",
+     "name": "Dr. Martens",
+     "brand": "(W) 닥터마틴 버즈 발레리나 블랙",
+     "model": "42842001",
+     "options": [
+      "220(UK 3)",
+      "230(UK 4)",
+      "240(UK 5)",
+      "250(UK 6)",
+      "255(UK 6.5)",
+      "260(UK 7)",
+      "270(UK 8)",
+      "280(UK 9)",
+      "285(UK 9.5)",
+      "290(UK 10)",
+      "300(UK 11)",
+      "310(UK 12)"
+     ],
+     "image": "G038/kream_800266.jpg",
+     "url": "https://kream.co.kr/products/800266"
+    },
+    {
+     "kreamId": "1040058",
+     "name": "(W) 자라 스포티 발레리나 슈즈 블랙",
+     "brand": "",
+     "model": "5240/810/800 / 5241/811/800",
+     "options": null,
+     "image": "G038/kream_1040058.jpg",
+     "url": "https://kream.co.kr/products/1040058"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "75a056228eb239243b7397d778e8b3ec6f569d4012c8c680dbb0b976afb8c246",
+    "kream_800266.jpg": "35318f9adb581e075d23b63b8eeefc8669592adb4c93859d1c7d70b38cdd0286",
+    "kream_14404.jpg": "5aada4c9efd663c1ac04c1dc50c5c7aefe64f65660dcd838930fb65c9a73119f",
+    "kream_851873.jpg": "a16f0b50f89393313f8565f5c959cc106804aa9eff14fc0ffc164c1375183589",
+    "kream_469008.jpg": "94504269132ad1113d2f542884e26a8cafe9ce65af3608e5baf09d9ff65c5c68",
+    "kream_1040058.jpg": "832b10ea3f8cbf67ab52c67d3ab0b7ca8ce344e270c045dd6919e76fd10f79a7",
+    "kream_922846.jpg": "f3bf622e1e8647472235b0a61c2c6e94e126410098513f723b6833678f924ffe"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:51:30+00:00",
+    "frozenAt": "2026-10-10T08:33:33+00:00"
+   },
+   "hash": "cab40bae55006d6d"
+  },
+  {
+   "caseId": "G039",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "6967885",
+    "brand": "뉴발란스",
+    "name": "NBPDGF712W / U5098Y0 (WHITE)",
+    "model": "NBPDGF712W_10",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300"
+    ],
+    "image": "G039/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6967885"
+   },
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "brand": "",
+     "model": "MT410CK5",
+     "options": null,
+     "image": "G039/kream_44101.jpg",
+     "url": "https://kream.co.kr/products/44101"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "brand": "",
+     "model": "U740BM2",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G039/kream_418841.jpg",
+     "url": "https://kream.co.kr/products/418841"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "brand": "",
+     "model": "W480SK5",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G039/kream_109117.jpg",
+     "url": "https://kream.co.kr/products/109117"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "brand": "",
+     "model": "U740BO2",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G039/kream_496016.jpg",
+     "url": "https://kream.co.kr/products/496016"
+    },
+    {
+     "kreamId": "1030298",
+     "name": "New Balance",
+     "brand": "",
+     "model": "U5098Y0",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G039/kream_1030298.jpg",
+     "url": "https://kream.co.kr/products/1030298"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "c9ff8365d888bf85c7a1aa75407f4f94f36dacf8249c39459e4123f839edbf13",
+    "kream_44101.jpg": "0be96433c71d6de4fa017ef0713b28efc7906920b964c69cc053a8bd4806f165",
+    "kream_109117.jpg": "bf6115ab59c55293aced4a500119368149468ef77f36195e7c79c0958b40d2ae",
+    "kream_418841.jpg": "eb156d6c2d7fbee452df73fc09fa01ae9a03150b67ec3bdd78527af3c3c26ebf",
+    "kream_496016.jpg": "d76c4b65ba1d53e41e74d666c2bc425b5d5c870915a94fdb4a83b8085cf39bca",
+    "kream_1030298.jpg": "784b2ecfff884bd8f9f8e5f7b7c2fdfad5b0b6f77e5a50588dea4177e02bd6b0"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:51:09+00:00",
+    "frozenAt": "2026-10-10T08:33:33+00:00"
+   },
+   "hash": "a9f445763dc832fc"
+  },
+  {
+   "caseId": "G040",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "499300",
+    "brand": "닥터마틴",
+    "name": "아드리안 스무스 블랙 / 14573001",
+    "model": "14573001",
+    "options": [
+     "220",
+     "230",
+     "240",
+     "250",
+     "260",
+     "270",
+     "280",
+     "290",
+     "300"
+    ],
+    "image": "G040/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/499300"
+   },
+   "candidates": [
+    {
+     "kreamId": "396021",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "",
+     "options": [
+      "220(UK 3)",
+      "230(UK 4)",
+      "240(UK 5)",
+      "250(UK 6)",
+      "255(UK 6.5)",
+      "260(UK 7)",
+      "270(UK 8)",
+      "280(UK 9)",
+      "285(UK 9.5)",
+      "290(UK 10)",
+      "300(UK 11)",
+      "310(UK 12)"
+     ],
+     "image": "G040/kream_396021.jpg",
+     "url": "https://kream.co.kr/products/396021"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "1928a9876d0be05951fcded6a5e7d98d99b45d203596a15977569c8e8bbcd479",
+    "kream_396021.jpg": "fc91ee59fa41f8f72c8c436191581a414a60dda923994611ae0a8e0d732d76b1"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-10T04:36:15+00:00",
+    "frozenAt": "2026-10-10T08:33:33+00:00"
+   },
+   "hash": "89933f176d99e382"
+  },
+  {
+   "caseId": "G041",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "3645257",
+    "brand": "뉴발란스",
+    "name": "NBPDGF703T / M1906RCH (BLACK)",
+    "model": "NBPDGF703T_19",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300"
+    ],
+    "image": "G041/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/3645257"
+   },
+   "candidates": [
+    {
+     "kreamId": "186600",
+     "name": "New Balance",
+     "brand": "뉴발란스 1906R 블랙 실버 메탈릭",
+     "model": "M1906RCH",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G041/kream_186600.jpg",
+     "url": "https://kream.co.kr/products/186600"
+    },
+    {
+     "kreamId": "892306",
+     "name": "Seller Week",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G041/kream_892306.jpg",
+     "url": "https://kream.co.kr/products/892306"
+    },
+    {
+     "kreamId": "615791",
+     "name": "New Balance",
+     "brand": "",
+     "model": "U1906RNB",
+     "options": null,
+     "image": "G041/kream_615791.jpg",
+     "url": "https://kream.co.kr/products/615791"
+    },
+    {
+     "kreamId": "891884",
+     "name": "Seller Week",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G041/kream_891884.jpg",
+     "url": "https://kream.co.kr/products/891884"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "brand": "",
+     "model": "U740BM2",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G041/kream_418841.jpg",
+     "url": "https://kream.co.kr/products/418841"
+    },
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "brand": "",
+     "model": "MT410CK5",
+     "options": null,
+     "image": "G041/kream_44101.jpg",
+     "url": "https://kream.co.kr/products/44101"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "brand": "",
+     "model": "W480SK5",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G041/kream_109117.jpg",
+     "url": "https://kream.co.kr/products/109117"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "10ec82bd0da696d93fc07122e189cdfdc35ee4bfaf480d300e9e1b313e1a6415",
+    "kream_44101.jpg": "0be96433c71d6de4fa017ef0713b28efc7906920b964c69cc053a8bd4806f165",
+    "kream_615791.jpg": "6bb32b2403d209e789e074200ac4967f35da05b4bca4cb7cd03a4a537897494d",
+    "kream_418841.jpg": "eb156d6c2d7fbee452df73fc09fa01ae9a03150b67ec3bdd78527af3c3c26ebf",
+    "kream_186600.jpg": "54f23a8814613ed0938df2bcbccbe27aeb3ff0f72ea9e7d85093a23b0877d077",
+    "kream_109117.jpg": "bf6115ab59c55293aced4a500119368149468ef77f36195e7c79c0958b40d2ae",
+    "kream_892306.jpg": "3383d72f3210108418a05f208df203760b2972f422c65a190ce55adad5919798",
+    "kream_891884.jpg": "b88eb658061935696ebec6c6c79d199ebd6e05e8a17dc76e6917001d430a3872"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:42:23+00:00",
+    "frozenAt": "2026-10-10T08:33:34+00:00"
+   },
+   "hash": "168d2f02c3290bcf"
+  },
+  {
+   "caseId": "G042",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "5077217",
+    "brand": "나이키",
+    "name": "보메로 18 M - 블랙:다크 스모크 그레이:라이트 스모크 그레이:블랙 / HM6803-005",
+    "model": "HM6803-005",
+    "options": [
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "305",
+     "310"
+    ],
+    "image": "G042/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5077217"
+   },
+   "candidates": [
+    {
+     "kreamId": "501037",
+     "name": "나이키 보메로 18 블랙 다크 스모크 그레이",
+     "brand": "",
+     "model": "HM6803-005",
+     "options": [
+      "225",
+      "230",
+      "235(US 4.5)",
+      "235(US 5)",
+      "240(US 5.5)",
+      "240(US 6)",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "320"
+     ],
+     "image": "G042/kream_501037.jpg",
+     "url": "https://kream.co.kr/products/501037"
+    },
+    {
+     "kreamId": "975471",
+     "name": "Seller Week",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G042/kream_975471.jpg",
+     "url": "https://kream.co.kr/products/975471"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "7f3e3067cdad5ce60bec3ae69b9fcb0f38b98e5c4b1d622ed955693f57fdfe01",
+    "kream_501037.jpg": "663300baf0fa5f090c109f9308536f44c58edc20e896b70708ba35648fa78610",
+    "kream_975471.jpg": "6a85143013a8824f7aea799ceb15a7fa03c38c47cac4411398db02ae9d342c3f"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T06:50:55+00:00",
+    "frozenAt": "2026-10-10T08:33:34+00:00"
+   },
+   "hash": "dbaa5c1ee3bf1fd8"
+  },
+  {
+   "caseId": "G043",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "5839602",
+    "brand": "스케쳐스",
+    "name": "여성 고런 컨시스턴트 2.0_SP0WRCGX143",
+    "model": "SP0WRCGX143",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255"
+    ],
+    "image": "G043/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5839602"
+   },
+   "candidates": [
+    {
+     "kreamId": "552684",
+     "name": "Skechers",
+     "brand": "",
+     "model": "220581-BBK",
+     "options": null,
+     "image": "G043/kream_552684.jpg",
+     "url": "https://kream.co.kr/products/552684"
+    },
+    {
+     "kreamId": "262268",
+     "name": "Skechers",
+     "brand": "",
+     "model": "216600-BBK",
+     "options": null,
+     "image": "G043/kream_262268.jpg",
+     "url": "https://kream.co.kr/products/262268"
+    },
+    {
+     "kreamId": "262393",
+     "name": "Skechers",
+     "brand": "",
+     "model": "220840-BKCC",
+     "options": null,
+     "image": "G043/kream_262393.jpg",
+     "url": "https://kream.co.kr/products/262393"
+    },
+    {
+     "kreamId": "634477",
+     "name": "Skechers",
+     "brand": "",
+     "model": "216784-BBK",
+     "options": null,
+     "image": "G043/kream_634477.jpg",
+     "url": "https://kream.co.kr/products/634477"
+    },
+    {
+     "kreamId": "262276",
+     "name": "Skechers",
+     "brand": "",
+     "model": "216641-BBK",
+     "options": null,
+     "image": "G043/kream_262276.jpg",
+     "url": "https://kream.co.kr/products/262276"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "f38ca62b69f1dc4617f87d77ad1d8b9d55cbb0a21c40459261ee290d5e55cd72",
+    "kream_262393.jpg": "c7182a246f942340bc3ff08d36e4ffd8228ea371805e4cfdd309a5930c03d090",
+    "kream_552684.jpg": "1a2617a23ae59356c6ff5ca0c6b632dbfa54756ed9c76dd0a14502b30e0964ab",
+    "kream_262276.jpg": "f334a2a45d2a196765167f873f5f203bd7479e70fd8ca3c3be5151ea8a1ff671",
+    "kream_262268.jpg": "573c7fc888b29eb42bc067f6f19c8e970d48b67ed0ff9fc72eab2cd22ba9d0de",
+    "kream_634477.jpg": "a0aef08a371a8ef518cd50b19f94883c12f545698075b5f1a18c53ba21070905"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:48:30+00:00",
+    "frozenAt": "2026-10-10T08:33:34+00:00"
+   },
+   "hash": "dc7c39d5ad1c723e"
+  },
+  {
+   "caseId": "G044",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "6879519",
+    "brand": "휠라",
+    "name": "글리오 LX 에스프레소(FS263OD03X078217)",
+    "model": "1100FS263OD03X078217",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260"
+    ],
+    "image": "G044/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6879519"
+   },
+   "candidates": [
+    {
+     "kreamId": "343618",
+     "name": "휠라 에샤페 초코",
+     "brand": "FILA",
+     "model": "1XM02361G200/1XM02361H200",
+     "options": null,
+     "image": "G044/kream_343618.jpg",
+     "url": "https://kream.co.kr/products/343618"
+    },
+    {
+     "kreamId": "247965",
+     "name": "휠라 에샤페 MS 실버 문",
+     "brand": "FILA",
+     "model": "1XM02348G063/1XM02348H063/FS261OD03X040063",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290"
+     ],
+     "image": "G044/kream_247965.jpg",
+     "url": "https://kream.co.kr/products/247965"
+    },
+    {
+     "kreamId": "1011918",
+     "name": "[5% 적립] 휠라 글리오 LX 에스프레소",
+     "brand": "FILA",
+     "model": "",
+     "options": null,
+     "image": "G044/kream_1011918.jpg",
+     "url": "https://kream.co.kr/products/1011918"
+    },
+    {
+     "kreamId": "1009606",
+     "name": "(W) 휠라 글리오 LX 에스프레소",
+     "brand": "FILA",
+     "model": "FS263OD03X078217",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G044/kream_1009606.jpg",
+     "url": "https://kream.co.kr/products/1009606"
+    },
+    {
+     "kreamId": "581260",
+     "name": "휠라 에샤페 LX 블랙",
+     "brand": "FILA",
+     "model": "FS253OD03X012001/FS261OD03X087001",
+     "options": null,
+     "image": "G044/kream_581260.jpg",
+     "url": "https://kream.co.kr/products/581260"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "d003ee0b9ddffbaedaff152bba8dc5ebb3a42c64569bad3b3b8cc39c72e92213",
+    "kream_1011918.jpg": "57d43d381bd3adf80487db2ece1aeb7009380acd656fcb22e3d8c4bf2bf1150d",
+    "kream_1009606.jpg": "ee0ec0328989452092f0f2b243ec2189e2791c7fed2664e4883b4b0af2ef9544",
+    "kream_343618.jpg": "7b416853a3f234eab9bdfbd0c9b7fd1b0780bc48e90919f8626ae829571ee714",
+    "kream_247965.jpg": "d3663e4d19a0dc7fa5cb94b5418467e4eee172e2c4a89c69dbce8f12c81fb80c",
+    "kream_581260.jpg": "ea0476adbd2b300a1f2f642e01338fb42cbb3adf3a163ef309c4869b2ce8bf21"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:39:58+00:00",
+    "frozenAt": "2026-10-10T08:33:34+00:00"
+   },
+   "hash": "5ba5fd9b6b922216"
+  },
+  {
+   "caseId": "G045",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "5909285",
+    "brand": "크록스",
+    "name": "여성 바야 플랫폼 클로그 BK (26SWCL208186)",
+    "model": "26SWCL208186_Z001",
+    "options": [
+     "W6(230)",
+     "W7(240)",
+     "W8(250)"
+    ],
+    "image": "G045/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5909285"
+   },
+   "candidates": [
+    {
+     "kreamId": "903036",
+     "name": "크록스 바야 플랫폼 클로그 블랙 26SWCL208186",
+     "brand": "",
+     "model": "",
+     "options": [
+      "Z001/230",
+      "Z001/240",
+      "Z001/250"
+     ],
+     "image": "G045/kream_903036.jpg",
+     "url": "https://kream.co.kr/products/903036"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "3dd222eb9899bec8aff41c6f3360a59b4638fbef3ce7aacec832269493dc1970",
+    "kream_903036.jpg": "74b3432d3ec9ea4d8387784c94e248a7eb9d06e5c84e13bb2238fa82100c4ef7"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-10T04:36:54+00:00",
+    "frozenAt": "2026-10-10T08:33:34+00:00"
+   },
+   "hash": "69787b1865769a00"
+  },
+  {
+   "caseId": "G046",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "2741233",
+    "brand": "리복",
+    "name": "클럽 C 85 빈티지 - 크림 / DV6434",
+    "model": "RXSOXXCVUE1",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "310"
+    ],
+    "image": "G046/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/2741233"
+   },
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G046/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "1108357",
+     "name": "Reebok",
+     "brand": "",
+     "model": "RESO6F014CR",
+     "options": null,
+     "image": "G046/kream_1108357.jpg",
+     "url": "https://kream.co.kr/products/1108357"
+    },
+    {
+     "kreamId": "678621",
+     "name": "Reebok",
+     "brand": "",
+     "model": "ID9262/100033000",
+     "options": null,
+     "image": "G046/kream_678621.jpg",
+     "url": "https://kream.co.kr/products/678621"
+    },
+    {
+     "kreamId": "697962",
+     "name": "Customellow",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G046/kream_697962.jpg",
+     "url": "https://kream.co.kr/products/697962"
+    },
+    {
+     "kreamId": "866745",
+     "name": "Reebok",
+     "brand": "",
+     "model": "100000317",
+     "options": null,
+     "image": "G046/kream_866745.jpg",
+     "url": "https://kream.co.kr/products/866745"
+    },
+    {
+     "kreamId": "1120895",
+     "name": "Reebok",
+     "brand": "",
+     "model": "DV6434/RESO6ECP1E2",
+     "options": null,
+     "image": "G046/kream_1120895.jpg",
+     "url": "https://kream.co.kr/products/1120895"
+    },
+    {
+     "kreamId": "985762",
+     "name": "자라 레더 로퍼 블랙",
+     "brand": "",
+     "model": "2653/720/800",
+     "options": null,
+     "image": "G046/kream_985762.jpg",
+     "url": "https://kream.co.kr/products/985762"
+    },
+    {
+     "kreamId": "53196",
+     "name": "Reebok",
+     "brand": "",
+     "model": "DV6434/100000317",
+     "options": null,
+     "image": "G046/kream_53196.jpg",
+     "url": "https://kream.co.kr/products/53196"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G046/kream_288433.jpg",
+     "url": "https://kream.co.kr/products/288433"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "b56d667724e94e0522a6b8a4dc98f0053b764038eb71287ed505f8a93e79ac21",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_288433.jpg": "324bd4fc960ff8dce2681c1c7e805ccb637d32f51071ca723fe420d5ab9aee18",
+    "kream_697962.jpg": "e03c48a3b8980e00ed8c2ee41daa4bc945b0d24239d72824e40bcd86bda91d13",
+    "kream_985762.jpg": "0591c0eb6e8f1cf89f8e164a8bad9d41f2fdd99f9795be6990a27d9081d8a8ce",
+    "kream_53196.jpg": "427eb0c6fa79f1cf419823cbbad2709a7848e21f47f484b3db3a63b6f425db3f",
+    "kream_1120895.jpg": "d2d83404f90f8b909edc2bce60c4c589ff28bb6e09888d4f139694deb84e1e10",
+    "kream_866745.jpg": "6ca907415c5ef3c0a41e280bac853bb6c417ae74a597d0836a1335c8b5ae94df",
+    "kream_1108357.jpg": "8d50cffe8a5466ca525cd8ae2f2c7ac366713cf8fffd8f11dd8b58e420affc15",
+    "kream_678621.jpg": "2b4cbc6637a168a5c1b97c16d29d712aaaa0e7a847d5c5ab31a4044dd327d07d"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:46:06+00:00",
+    "frozenAt": "2026-10-10T08:33:35+00:00"
+   },
+   "hash": "05e482df33272cd7"
+  },
+  {
+   "caseId": "G047",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "7181158",
+    "brand": "머렐",
+    "name": "[MEN] MOAB 3 MID GTX_BRACKEN",
+    "model": "M26A1-MMG004BCN",
+    "options": [
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "300"
+    ],
+    "image": "G047/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/7181158"
+   },
+   "candidates": [
+    {
+     "kreamId": "770547",
+     "name": "Merrell",
+     "brand": "",
+     "model": "J500239",
+     "options": null,
+     "image": "G047/kream_770547.jpg",
+     "url": "https://kream.co.kr/products/770547"
+    },
+    {
+     "kreamId": "639031",
+     "name": "Merrell",
+     "brand": "",
+     "model": "J60801",
+     "options": null,
+     "image": "G047/kream_639031.jpg",
+     "url": "https://kream.co.kr/products/639031"
+    },
+    {
+     "kreamId": "967999",
+     "name": "Merrell",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G047/kream_967999.jpg",
+     "url": "https://kream.co.kr/products/967999"
+    },
+    {
+     "kreamId": "244351",
+     "name": "Merrell",
+     "brand": "머렐 헛 목 2 레저 SE 블랙",
+     "model": "J067917",
+     "options": null,
+     "image": "G047/kream_244351.jpg",
+     "url": "https://kream.co.kr/products/244351"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "0d9f878f2d2b415e412e451c396046098c75133da1cb65a2c35f1af3deaefa8a",
+    "kream_770547.jpg": "aff63952276855c459553c760766677550cefe656398bd6887b8f87e844ad153",
+    "kream_244351.jpg": "38152dfdbe21c8574e31eda2184b0e7c8c4eac53567cab7e64cc9d20d79905da",
+    "kream_967999.jpg": "f35febe3ac28a86b541bc5b1e5eda879a2c462974914275d6a7d45c5cf5e5b4f",
+    "kream_639031.jpg": "d86ced78069a9a5c95f49f21891bceed5b7c32734aa75b41bbf6ebb7885e3670"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:42:10+00:00",
+    "frozenAt": "2026-10-10T08:33:35+00:00"
+   },
+   "hash": "c033d8642ce3e7ce"
+  },
+  {
+   "caseId": "G048",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "4313969",
+    "brand": "팀버랜드",
+    "name": "남성 프리미엄 베이직 부츠 위트브라운_TB1180942311",
+    "model": "TB1180942311",
+    "options": [
+     "050(230)",
+     "055(235)",
+     "060(240)",
+     "065(245)",
+     "070(250)",
+     "075(255)",
+     "080(260)",
+     "085(265)",
+     "090(270)",
+     "095(275)",
+     "100(280)",
+     "105(285)",
+     "110(290)",
+     "115(295)",
+     "120(300)"
+    ],
+    "image": "G048/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4313969"
+   },
+   "candidates": [
+    {
+     "kreamId": "280739",
+     "name": "Timberland",
+     "brand": "",
+     "model": "TB010061713/TB110061713",
+     "options": null,
+     "image": "G048/kream_280739.jpg",
+     "url": "https://kream.co.kr/products/280739"
+    },
+    {
+     "kreamId": "826442",
+     "name": "Timberland",
+     "brand": "",
+     "model": "TB1A1P3L231",
+     "options": null,
+     "image": "G048/kream_826442.jpg",
+     "url": "https://kream.co.kr/products/826442"
+    },
+    {
+     "kreamId": "404973",
+     "name": "Timberland",
+     "brand": "",
+     "model": "TB1A27TP231",
+     "options": null,
+     "image": "G048/kream_404973.jpg",
+     "url": "https://kream.co.kr/products/404973"
+    },
+    {
+     "kreamId": "18871",
+     "name": "Timberland",
+     "brand": "",
+     "model": "TB010061713/TB110061713",
+     "options": null,
+     "image": "G048/kream_18871.jpg",
+     "url": "https://kream.co.kr/products/18871"
+    },
+    {
+     "kreamId": "305612",
+     "name": "Timberland",
+     "brand": "",
+     "model": "TB030003214",
+     "options": null,
+     "image": "G048/kream_305612.jpg",
+     "url": "https://kream.co.kr/products/305612"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "6563fcb4184027c626cc98a1cd60817f511ee919d04e72f6083f396d6639dc57",
+    "kream_18871.jpg": "69f2d257429b264da716f877a428edae81a058c53827fbc7541c707adb249dc2",
+    "kream_280739.jpg": "69f2d257429b264da716f877a428edae81a058c53827fbc7541c707adb249dc2",
+    "kream_404973.jpg": "1d6c1884b97bdef04426e7a85dec0aacbe13e63ddf3f8846e20a554a6a7fe62a",
+    "kream_305612.jpg": "d68abb766eb5dbf122b95ed4a9705f1aabb97f559b073e5756c98d252e655cc7",
+    "kream_826442.jpg": "6158eb26cadf9f6fcc83989f3c1b25895c2a7cee9c59f85111e1bc041e0b51ee"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:34:36+00:00",
+    "frozenAt": "2026-10-10T08:33:35+00:00"
+   },
+   "hash": "b949bf8738107520"
+  },
+  {
+   "caseId": "G049",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "6653232",
+    "brand": "아디다스",
+    "name": "테렉스 프리하이커 SL 클라이마쿨  - 카본 / KJ0183",
+    "model": "KJ0183",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "305",
+     "310",
+     "320",
+     "330"
+    ],
+    "image": "G049/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6653232"
+   },
+   "candidates": [
+    {
+     "kreamId": "983079",
+     "name": "Adidas",
+     "brand": "",
+     "model": "KJ0180",
+     "options": null,
+     "image": "G049/kream_983079.jpg",
+     "url": "https://kream.co.kr/products/983079"
+    },
+    {
+     "kreamId": "971179",
+     "name": "Adidas",
+     "brand": "",
+     "model": "KJ0183",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G049/kream_971179.jpg",
+     "url": "https://kream.co.kr/products/971179"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "721c25c82df311adc96a467430a2fcd803ed7e3662310aad394264864a2e2ceb",
+    "kream_971179.jpg": "be09d914a4b59f14a45ff751def2d2677e2ed049ea9bc9530c8aff5044c7f529",
+    "kream_983079.jpg": "e4b94be94b63d8b5a89999345ae0ac2aa3941da43a81e5322d145d790f4f6216"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:37:07+00:00",
+    "frozenAt": "2026-10-10T08:33:36+00:00"
+   },
+   "hash": "65c092112d4f69ec"
+  },
+  {
+   "caseId": "G050",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "7157395",
+    "brand": "파스코로젠",
+    "name": "JC1317 Versatile hybrid dress shoe 58.10",
+    "model": "JC1317",
+    "options": [
+     "250",
+     "260",
+     "270",
+     "280"
+    ],
+    "image": "G050/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/7157395"
+   },
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G050/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G050/kream_288433.jpg",
+     "url": "https://kream.co.kr/products/288433"
+    },
+    {
+     "kreamId": "453530",
+     "name": "Adidas",
+     "brand": "",
+     "model": "JC6717",
+     "options": null,
+     "image": "G050/kream_453530.jpg",
+     "url": "https://kream.co.kr/products/453530"
+    },
+    {
+     "kreamId": "641130",
+     "name": "Adidas",
+     "brand": "",
+     "model": "KC2605",
+     "options": null,
+     "image": "G050/kream_641130.jpg",
+     "url": "https://kream.co.kr/products/641130"
+    },
+    {
+     "kreamId": "453528",
+     "name": "Adidas",
+     "brand": "",
+     "model": "JC6717",
+     "options": null,
+     "image": "G050/kream_453528.jpg",
+     "url": "https://kream.co.kr/products/453528"
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "brand": "",
+     "model": "CJ2598",
+     "options": [
+      "US 10",
+      "US 10.5",
+      "US 11",
+      "US 11.5",
+      "US 12",
+      "US 13",
+      "US 14",
+      "US 6.5",
+      "US 7",
+      "US 7.5",
+      "US 8",
+      "US 8.5",
+      "US 9",
+      "US 9.5"
+     ],
+     "image": "G050/kream_334293.jpg",
+     "url": "https://kream.co.kr/products/334293"
+    },
+    {
+     "kreamId": "800655",
+     "name": "Adidas",
+     "brand": "",
+     "model": "KE1366",
+     "options": null,
+     "image": "G050/kream_800655.jpg",
+     "url": "https://kream.co.kr/products/800655"
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "brand": "HARUTA",
+     "model": "",
+     "options": [
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "300"
+     ],
+     "image": "G050/kream_305356.jpg",
+     "url": "https://kream.co.kr/products/305356"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "4b21fc096d846769b2e311eb52d69089867a18a52f644c11d97621526353ad7f",
+    "kream_800655.jpg": "8635c0f21980d93429ce68dbe029a4ea3113b29dabc3555fe3bab98a8a203eb6",
+    "kream_641130.jpg": "877e2734307c836f719576b6d0ce9307ea0cbb77dc175d7ba1229784799f4de1",
+    "kream_453528.jpg": "64dedcb5ecb907f962ca99f81cf99d7d12c14dff3ebf006ac3af423d1806ba89",
+    "kream_453530.jpg": "64dedcb5ecb907f962ca99f81cf99d7d12c14dff3ebf006ac3af423d1806ba89",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_334293.jpg": "ff05f0cf81c146b00c8ec6f28ae3fa70c1c0233b214c74357cbbc06212d8f0ee",
+    "kream_288433.jpg": "324bd4fc960ff8dce2681c1c7e805ccb637d32f51071ca723fe420d5ab9aee18",
+    "kream_305356.jpg": "a6cc282805c84b823165a2b65bccdf21d4f468a237d7c730915b0ab17354ac2a"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:49:03+00:00",
+    "frozenAt": "2026-10-10T08:33:36+00:00"
+   },
+   "hash": "079c24f691da2155"
+  },
+  {
+   "caseId": "G051",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "4662556",
+    "brand": "뉴발란스",
+    "name": "NBP7GF709G / ML2002RC (GRAY)",
+    "model": "NBP7GF709G_15",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300"
+    ],
+    "image": "G051/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4662556"
+   },
+   "candidates": [
+    {
+     "kreamId": "692902",
+     "name": "Seller Week",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G051/kream_692902.jpg",
+     "url": "https://kream.co.kr/products/692902"
+    },
+    {
+     "kreamId": "625568",
+     "name": "New Balance",
+     "brand": "뉴발란스 2002R 브라운 블랙",
+     "model": "U2002RAB",
+     "options": null,
+     "image": "G051/kream_625568.jpg",
+     "url": "https://kream.co.kr/products/625568"
+    },
+    {
+     "kreamId": "422886",
+     "name": "New Balance",
+     "brand": "뉴발란스 2002R 블랙",
+     "model": "U2002RBL",
+     "options": null,
+     "image": "G051/kream_422886.jpg",
+     "url": "https://kream.co.kr/products/422886"
+    },
+    {
+     "kreamId": "24794",
+     "name": "New Balance",
+     "brand": "",
+     "model": "CM878XL",
+     "options": null,
+     "image": "G051/kream_24794.jpg",
+     "url": "https://kream.co.kr/products/24794"
+    },
+    {
+     "kreamId": "25785",
+     "name": "New Balance",
+     "brand": "뉴발란스 2002R 그레이",
+     "model": "ML2002RC",
+     "options": [
+      "220",
+      "225",
+      "230",
+      "235",
+      "240",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "315",
+      "320"
+     ],
+     "image": "G051/kream_25785.jpg",
+     "url": "https://kream.co.kr/products/25785"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "99a0704aec726e1dbc15dca1a7e6375ce6336cce123be93fec3cda772dbe455f",
+    "kream_25785.jpg": "f82c543117b5712ca1be724f8b7f706d89b23f2ea25a47d8f0a60d692bec1802",
+    "kream_625568.jpg": "48828bff45583aa1e1dab05c0ed54fbb7e58ac7f36f3a7999851614abd86c261",
+    "kream_24794.jpg": "31864afa4f4bffda8bbbd74fa4ff8377c8c997525ac3318895e224c268d5dd99",
+    "kream_422886.jpg": "516be820a40fa620e44be8d583a3e198228cfc8d891f93bb2640eb1211cc11cb",
+    "kream_692902.jpg": "1f13b604afb05d232c1862b0742df2fec7c542fd7df628a4d99a8d6c279fdd6b"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:34:02+00:00",
+    "frozenAt": "2026-10-10T08:33:36+00:00"
+   },
+   "hash": "9b474947f3e15e48"
+  },
+  {
+   "caseId": "G052",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "7284481",
+    "brand": "나이키",
+    "name": "에어 조던 1 브루클린 로우 W - 스완:메탈릭 실버:블랙 / IQ4927-100",
+    "model": "IQ4927-100",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260"
+    ],
+    "image": "G052/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/7284481"
+   },
+   "candidates": [
+    {
+     "kreamId": "1103819",
+     "name": "Jordan",
+     "brand": "",
+     "model": "IQ4927-001",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G052/kream_1103819.jpg",
+     "url": "https://kream.co.kr/products/1103819"
+    },
+    {
+     "kreamId": "624875",
+     "name": "Jordan",
+     "brand": "",
+     "model": "HF3184-002",
+     "options": null,
+     "image": "G052/kream_624875.jpg",
+     "url": "https://kream.co.kr/products/624875"
+    },
+    {
+     "kreamId": "624563",
+     "name": "Jordan",
+     "brand": "(W) 조던 1 브루클린 로우 블랙",
+     "model": "HF3184-001",
+     "options": null,
+     "image": "G052/kream_624563.jpg",
+     "url": "https://kream.co.kr/products/624563"
+    },
+    {
+     "kreamId": "1048677",
+     "name": "나이키 에어포스 1 로우 럭스 블랙 메탈릭 실버",
+     "brand": "",
+     "model": "JA3822-010",
+     "options": null,
+     "image": "G052/kream_1048677.jpg",
+     "url": "https://kream.co.kr/products/1048677"
+    },
+    {
+     "kreamId": "1103818",
+     "name": "Jordan",
+     "brand": "",
+     "model": "IQ4927-100",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290"
+     ],
+     "image": "G052/kream_1103818.jpg",
+     "url": "https://kream.co.kr/products/1103818"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "df9eca0065c70344ecd5583d03e47604cb58a46aea6305ce8a3cfe7005d81072",
+    "kream_1103818.jpg": "c9a3351d099eb5b838359e499cf7d170ed119d335e5cf07ac055e9e0cdc8e3c9",
+    "kream_624563.jpg": "457e17e6b30103a9b009fa848c8d6021aff571b55e55c61c602094782b6f1980",
+    "kream_624875.jpg": "caa4a8945d2bdf936e29dc093ded37cc8d354934ea275c2ca24c1f28f9dc5792",
+    "kream_1103819.jpg": "e07d03643dc474638acf33f0c98cba83c7cc9957aee7099b9c6357c55880c35e",
+    "kream_1048677.jpg": "3b5c63d6a80ba9175ea3c17713f75f0c88024f391ba12fc6d397965cabceadc0"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:45:12+00:00",
+    "frozenAt": "2026-10-10T08:33:37+00:00"
+   },
+   "hash": "d17aece6c172e782"
+  },
+  {
+   "caseId": "G053",
+   "stratum": "code_single",
+   "musinsa": {
+    "goodsNo": "4409448",
+    "brand": "아디다스",
+    "name": "도쿄 - 베이지:블랙 / JI0182",
+    "model": "JI0182",
+    "options": [
+     "220",
+     "225",
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "305",
+     "310"
+    ],
+    "image": "G053/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/4409448"
+   },
+   "candidates": [
+    {
+     "kreamId": "348733",
+     "name": "Adidas",
+     "brand": "",
+     "model": "JI0182",
+     "options": [
+      "W220",
+      "W225",
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260",
+      "W265",
+      "W270",
+      "W275",
+      "W280",
+      "W285",
+      "W290",
+      "W295",
+      "W300",
+      "W305",
+      "W310"
+     ],
+     "image": "G053/kream_348733.jpg",
+     "url": "https://kream.co.kr/products/348733"
+    },
+    {
+     "kreamId": "425071",
+     "name": "아식스 x 논네이티브 젤 예티 도쿄 하이 머쉬룸 월넛 블랙",
+     "brand": "",
+     "model": "1203A705-020",
+     "options": null,
+     "image": "G053/kream_425071.jpg",
+     "url": "https://kream.co.kr/products/425071"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "f32da224bc16c0fdadcc2f97baebf3fb31fc4ab1e331738f836ad9b08ef0f7cf",
+    "kream_348733.jpg": "3cb588f721357b6d9ffdd85f165a90c3e11636c795f2364acaf7a16a2d360470",
+    "kream_425071.jpg": "f2b99418b3152524cf3dec263a065248f1dc2a468efb46e463dae23c1ae3baae"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:37:02+00:00",
+    "frozenAt": "2026-10-10T08:33:37+00:00"
+   },
+   "hash": "4121290f5f6d276c"
+  },
+  {
+   "caseId": "G054",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "5378047",
+    "brand": "기호",
+    "name": "레이븐 폴더블 버클 부츠 그레이",
+    "model": "K25-SH031",
+    "options": [
+     "230",
+     "235",
+     "240",
+     "245",
+     "250",
+     "255"
+    ],
+    "image": "G054/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5378047"
+   },
+   "candidates": [
+    {
+     "kreamId": "380797",
+     "name": "Astorflex",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G054/kream_380797.jpg",
+     "url": "https://kream.co.kr/products/380797"
+    },
+    {
+     "kreamId": "692259",
+     "name": "Haleine",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G054/kream_692259.jpg",
+     "url": "https://kream.co.kr/products/692259"
+    },
+    {
+     "kreamId": "464667",
+     "name": "C.P. Company",
+     "brand": "",
+     "model": "18CMSH128A110143G999",
+     "options": null,
+     "image": "G054/kream_464667.jpg",
+     "url": "https://kream.co.kr/products/464667"
+    },
+    {
+     "kreamId": "420179",
+     "name": "투스페이스 갓필드 오트밀",
+     "brand": "TWOSPC.",
+     "model": "",
+     "options": null,
+     "image": "G054/kream_420179.jpg",
+     "url": "https://kream.co.kr/products/420179"
+    },
+    {
+     "kreamId": "380796",
+     "name": "Astorflex",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G054/kream_380796.jpg",
+     "url": "https://kream.co.kr/products/380796"
+    },
+    {
+     "kreamId": "718742",
+     "name": "Carhartt WIP",
+     "brand": "",
+     "model": "I029958-2F9-XX",
+     "options": null,
+     "image": "G054/kream_718742.jpg",
+     "url": "https://kream.co.kr/products/718742"
+    },
+    {
+     "kreamId": "679573",
+     "name": "Carhartt WIP",
+     "brand": "",
+     "model": "I036263-01-01",
+     "options": null,
+     "image": "G054/kream_679573.jpg",
+     "url": "https://kream.co.kr/products/679573"
+    },
+    {
+     "kreamId": "507957",
+     "name": "C.P. Company",
+     "brand": "",
+     "model": "18CMSH249A005328G999",
+     "options": null,
+     "image": "G054/kream_507957.jpg",
+     "url": "https://kream.co.kr/products/507957"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "9d74c7ae215d86c9871d63e87973e742d494210265148f160fe49c952d15dcd5",
+    "kream_679573.jpg": "ea904ac657b04a0e2d93378170c08b0db73e59e0e34a0b980feff8fc4fe51f4d",
+    "kream_507957.jpg": "ad1ac5801818555562d1638800bac69cd611b7df5954f285711896a4e53a4167",
+    "kream_718742.jpg": "2e9fb8eb1d563d92f4ac20af708a4904b9b6361902723248eebbf6d5ad6e3398",
+    "kream_464667.jpg": "06a530709fe7b1b42f4c729fc4c46b813bcfe2b144a36c22469330ae87145e05",
+    "kream_380797.jpg": "3fe306be26e298bfe8a9fdd2c26f08cfab72219bf030fed289ea1d859135e1e2",
+    "kream_380796.jpg": "99887ecfd95074b3afed8d6306e26ff0fb3faf7e16acbfbbbf0978c593ccb7c7",
+    "kream_420179.jpg": "6205fd2081ec4c08e3c35a3a95c94c74e58d2cf9b67b281d2b275046ba148248",
+    "kream_692259.jpg": "54eec6759344449cb2155a519f4422bda1607f6cbb8a9cb37b73f57b6e1d7cf2"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:07:51+00:00",
+    "frozenAt": "2026-10-10T08:33:37+00:00"
+   },
+   "hash": "3495675cece6d6f4"
+  },
+  {
+   "caseId": "G055",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "6965588",
+    "brand": "락피쉬웨더웨어",
+    "name": "ZANE X-STRAP SNEAKERS(SUEDE) - 5 colors",
+    "model": "RF1SHBG3SK006",
+    "options": [
+     "230",
+     "230",
+     "230",
+     "230",
+     "230",
+     "235",
+     "235",
+     "235",
+     "235",
+     "235",
+     "240",
+     "240",
+     "240",
+     "240",
+     "240",
+     "245",
+     "245",
+     "245",
+     "245",
+     "245",
+     "250",
+     "250",
+     "250",
+     "250",
+     "250"
+    ],
+    "image": "G055/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6965588"
+   },
+   "candidates": [
+    {
+     "kreamId": "1090645",
+     "name": "Rockfishweatherwear",
+     "brand": "",
+     "model": "RF1SHBG3SK006TG",
+     "options": [
+      "W230",
+      "W235",
+      "W240",
+      "W245",
+      "W250",
+      "W255",
+      "W260"
+     ],
+     "image": "G055/kream_1090645.jpg",
+     "url": "https://kream.co.kr/products/1090645"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "583b680436535e7134a07d001d8df2c67ec32ca1d952cca6082e4a156145ea4b",
+    "kream_1090645.jpg": "f82cdf22560d0135ca33cb3250364a3111c7199d022d5f215ffc7dfc78babea2"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:39:29+00:00",
+    "frozenAt": "2026-10-10T08:33:37+00:00"
+   },
+   "hash": "00659378f8f87e2c"
+  },
+  {
+   "caseId": "G056",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "5029004",
+    "brand": "킨치",
+    "name": "[GOODYEAR WELTED] CLOAFER - C07 / BROWN",
+    "model": "BEKCLF03-BR",
+    "options": [
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300"
+    ],
+    "image": "G056/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5029004"
+   },
+   "candidates": [
+    {
+     "kreamId": "775744",
+     "name": "70,000원",
+     "brand": "(W) 자라 소프트 개더드 로퍼 블랙",
+     "model": "2515/610/800 / 2515/611/800",
+     "options": null,
+     "image": "G056/kream_775744.jpg",
+     "url": "https://kream.co.kr/products/775744"
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "brand": "",
+     "model": "CJ2598",
+     "options": [
+      "US 10",
+      "US 10.5",
+      "US 11",
+      "US 11.5",
+      "US 12",
+      "US 13",
+      "US 14",
+      "US 6.5",
+      "US 7",
+      "US 7.5",
+      "US 8",
+      "US 8.5",
+      "US 9",
+      "US 9.5"
+     ],
+     "image": "G056/kream_334293.jpg",
+     "url": "https://kream.co.kr/products/334293"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G056/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "1046787",
+     "name": "Rockport",
+     "brand": "",
+     "model": "CI2360",
+     "options": null,
+     "image": "G056/kream_1046787.jpg",
+     "url": "https://kream.co.kr/products/1046787"
+    },
+    {
+     "kreamId": "396021",
+     "name": "Dr. Martens",
+     "brand": "",
+     "model": "14573001",
+     "options": [
+      "220(UK 3)",
+      "230(UK 4)",
+      "240(UK 5)",
+      "250(UK 6)",
+      "255(UK 6.5)",
+      "260(UK 7)",
+      "270(UK 8)",
+      "280(UK 9)",
+      "285(UK 9.5)",
+      "290(UK 10)",
+      "300(UK 11)",
+      "310(UK 12)"
+     ],
+     "image": "G056/kream_396021.jpg",
+     "url": "https://kream.co.kr/products/396021"
+    },
+    {
+     "kreamId": "858439",
+     "name": "Rockport",
+     "brand": "",
+     "model": "CJ2594",
+     "options": null,
+     "image": "G056/kream_858439.jpg",
+     "url": "https://kream.co.kr/products/858439"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "06bc6b3a20cad4fd47f6b14a8b37b926c9ae52c4f8c64b4348bd43d0d27f6710",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_858439.jpg": "377ddd589ad8826be4a4c3949d89585ff64420c22870d6148c17719b924b296a",
+    "kream_1046787.jpg": "d2cb1f3107686e50a206361da649d2a51bf3be12f8fff819b5bc2cb23421cad3",
+    "kream_334293.jpg": "ff05f0cf81c146b00c8ec6f28ae3fa70c1c0233b214c74357cbbc06212d8f0ee",
+    "kream_775744.jpg": "49e9a90fb66abe3ab721abc08f3212b78f0dc71d3471c642fb03e83cede1fe48",
+    "kream_396021.jpg": "fc91ee59fa41f8f72c8c436191581a414a60dda923994611ae0a8e0d732d76b1"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:38:15+00:00",
+    "frozenAt": "2026-10-10T08:33:38+00:00"
+   },
+   "hash": "04d1d0db99939adc"
+  },
+  {
+   "caseId": "G057",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "5444818",
+    "brand": "네거티브쓰리",
+    "name": "Slouchy Long Strap Boots_Dusty Grey",
+    "model": "NT3BEFWBO001GR",
+    "options": [
+     "230",
+     "240",
+     "250"
+    ],
+    "image": "G057/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5444818"
+   },
+   "candidates": [
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G057/kream_288433.jpg",
+     "url": "https://kream.co.kr/products/288433"
+    },
+    {
+     "kreamId": "288448",
+     "name": "조셉트 상하이 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G057/kream_288448.jpg",
+     "url": "https://kream.co.kr/products/288448"
+    },
+    {
+     "kreamId": "282040",
+     "name": "브라운 뉴 시리즈5 52-N1000s 블랙",
+     "brand": "BRAUN",
+     "model": "",
+     "options": null,
+     "image": "G057/kream_282040.jpg",
+     "url": "https://kream.co.kr/products/282040"
+    },
+    {
+     "kreamId": "288371",
+     "name": "조셉트 사이먼 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G057/kream_288371.jpg",
+     "url": "https://kream.co.kr/products/288371"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "df4e064527b7ea1d48cf63ffc3dc9d695f4e308072aff17c2bcbcf049c7aaa52",
+    "kream_288433.jpg": "324bd4fc960ff8dce2681c1c7e805ccb637d32f51071ca723fe420d5ab9aee18",
+    "kream_282040.jpg": "6b1302e86ccd6537a5a49b5bd4f7f92f5def0e4494e60f60bb79b96bc13f7883",
+    "kream_288448.jpg": "5c0dc35b4164674842ab58ad78dea997742c0281b5fc9c393c37b1f252b60973",
+    "kream_288371.jpg": "f7212d0e097f74cb58bed0a04355ca25e30d265ce142c356e8acafcdd60f26db"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:08:13+00:00",
+    "frozenAt": "2026-10-10T08:33:38+00:00"
+   },
+   "hash": "4e84dd1c269f7ce0"
+  },
+  {
+   "caseId": "G058",
+   "stratum": "maybe_none",
+   "musinsa": {
+    "goodsNo": "7049568",
+    "brand": "네거티브쓰리",
+    "name": "NO.2 Folded lace-up long boots_Vintage Brown",
+    "model": "NT3BFFWBO001BR",
+    "options": [
+     "230",
+     "240",
+     "250"
+    ],
+    "image": "G058/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/7049568"
+   },
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "brand": "",
+     "model": "M76443",
+     "options": null,
+     "image": "G058/kream_387727.jpg",
+     "url": "https://kream.co.kr/products/387727"
+    },
+    {
+     "kreamId": "126267",
+     "name": "Hunter",
+     "brand": "",
+     "model": "MFS9000RMA-BLK",
+     "options": null,
+     "image": "G058/kream_126267.jpg",
+     "url": "https://kream.co.kr/products/126267"
+    },
+    {
+     "kreamId": "564214",
+     "name": "Paul Smith",
+     "brand": "",
+     "model": "M1A-4832-TSTRGS-79",
+     "options": null,
+     "image": "G058/kream_564214.jpg",
+     "url": "https://kream.co.kr/products/564214"
+    },
+    {
+     "kreamId": "84751",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "261-55527",
+     "options": null,
+     "image": "G058/kream_84751.jpg",
+     "url": "https://kream.co.kr/products/84751"
+    },
+    {
+     "kreamId": "776314",
+     "name": "조셉트 고반 블랙",
+     "brand": "JOSEPHT",
+     "model": "",
+     "options": null,
+     "image": "G058/kream_776314.jpg",
+     "url": "https://kream.co.kr/products/776314"
+    },
+    {
+     "kreamId": "106087",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "261-55517",
+     "options": null,
+     "image": "G058/kream_106087.jpg",
+     "url": "https://kream.co.kr/products/106087"
+    },
+    {
+     "kreamId": "597590",
+     "name": "Fossil",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G058/kream_597590.jpg",
+     "url": "https://kream.co.kr/products/597590"
+    },
+    {
+     "kreamId": "692259",
+     "name": "Haleine",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G058/kream_692259.jpg",
+     "url": "https://kream.co.kr/products/692259"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "a87cc2869365e23db192719f59107e3c8c274331916dff659e13c7bd82024f7d",
+    "kream_597590.jpg": "c149321afcf721ee70a7a9ff60c7ef14de0e1340df38535acf89e6d02754540b",
+    "kream_564214.jpg": "221fc6e10d66bc491e92d87cff906d97f83d3cdfe04bad8d1e18d137f0598402",
+    "kream_387727.jpg": "911224a70f17cf33e788e6ab553b9d4207e2fae1c78ac5e8a6238fac4114396c",
+    "kream_776314.jpg": "5fc526b2fbdb4a0c213001d41982f3c52c7e85c7cf9b6254289513593d9dc9ee",
+    "kream_84751.jpg": "8ac436f090c5e99fa4fbde23ac6f0c5d26e1cafbbe390e4add93e30f7226541c",
+    "kream_692259.jpg": "54eec6759344449cb2155a519f4422bda1607f6cbb8a9cb37b73f57b6e1d7cf2",
+    "kream_106087.jpg": "e52a7389c449134f06d07f5305329cdcb59300e39eef626f7ceb718aced621d6",
+    "kream_126267.jpg": "c7927c4d3103d95c52f1884f6f4d09106d160c4b9358a32bd898cad082774867"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:51:19+00:00",
+    "frozenAt": "2026-10-10T08:33:38+00:00"
+   },
+   "hash": "410cda338b5698ae"
+  },
+  {
+   "caseId": "G059",
+   "stratum": "similar",
+   "musinsa": {
+    "goodsNo": "6111436",
+    "brand": "클락스 오리지널스",
+    "name": "(남성) 왈라비 GTX - 메이플 스웨이드 / 26179252",
+    "model": "26179252",
+    "options": [
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290"
+    ],
+    "image": "G059/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/6111436"
+   },
+   "candidates": [
+    {
+     "kreamId": "416297",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "261-79251",
+     "options": null,
+     "image": "G059/kream_416297.jpg",
+     "url": "https://kream.co.kr/products/416297"
+    },
+    {
+     "kreamId": "508339",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "261-49450",
+     "options": null,
+     "image": "G059/kream_508339.jpg",
+     "url": "https://kream.co.kr/products/508339"
+    },
+    {
+     "kreamId": "84748",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "261-55519 / 88315",
+     "options": null,
+     "image": "G059/kream_84748.jpg",
+     "url": "https://kream.co.kr/products/84748"
+    },
+    {
+     "kreamId": "84745",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "261-55515 / 88318",
+     "options": null,
+     "image": "G059/kream_84745.jpg",
+     "url": "https://kream.co.kr/products/84745"
+    },
+    {
+     "kreamId": "109542",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "261-72074/79252",
+     "options": null,
+     "image": "G059/kream_109542.jpg",
+     "url": "https://kream.co.kr/products/109542"
+    },
+    {
+     "kreamId": "436923",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "261-68545",
+     "options": null,
+     "image": "G059/kream_436923.jpg",
+     "url": "https://kream.co.kr/products/436923"
+    },
+    {
+     "kreamId": "821066",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "",
+     "options": null,
+     "image": "G059/kream_821066.jpg",
+     "url": "https://kream.co.kr/products/821066"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "76747fcbc0c26f96266eef24eb5ab5492652564ec3827372f20f8dcec8e7e07f",
+    "kream_416297.jpg": "b11316983d7f2abce6b539fb2ab1e57fbcea80bff40e9511c6365c168e3f9726",
+    "kream_109542.jpg": "c36e988bd96993eeec52c0d1f42cd44a0a3bd59430cb0b8489658b400045b8c2",
+    "kream_84745.jpg": "071006cc3b3606ae6d90bc4746b8b9dbb7c526368f204934e00eacbad8647e48",
+    "kream_84748.jpg": "59a95e2f0b4eed4165bf2dfaac4e199785cb46aaf41a7f054720a7465adfecbf",
+    "kream_821066.jpg": "0f1be581e11d4761ce8cca8d686d87cb4bff394ca9994d77883d2e02869ecce6",
+    "kream_436923.jpg": "cbca242948f60b088ff0a1a30af2b91fc1edf7ab2f1819510c23e8fb9737d21e",
+    "kream_508339.jpg": "587e9bdc5935d9fdf85e8fa87588b1a4d7d194e248fc051584d391115bdd4d67"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T10:15:03+00:00",
+    "frozenAt": "2026-10-10T08:33:39+00:00"
+   },
+   "hash": "96d49f047f78569f"
+  },
+  {
+   "caseId": "G060",
+   "stratum": "conflict",
+   "musinsa": {
+    "goodsNo": "5705621",
+    "brand": "나이키",
+    "name": "에어 포스 1 GTX Vibram M - 오프 누아르:스피드 옐로우:블랙 / HV5953-001",
+    "model": "HV5953-001",
+    "options": [
+     "240",
+     "245",
+     "250",
+     "255",
+     "260",
+     "265",
+     "270",
+     "275",
+     "280",
+     "285",
+     "290",
+     "295",
+     "300",
+     "305",
+     "310"
+    ],
+    "image": "G060/musinsa.jpg",
+    "url": "https://www.musinsa.com/products/5705621"
+   },
+   "candidates": [
+    {
+     "kreamId": "416297",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "261-79251",
+     "options": null,
+     "image": "G060/kream_416297.jpg",
+     "url": "https://kream.co.kr/products/416297"
+    },
+    {
+     "kreamId": "109542",
+     "name": "Clarks Originals",
+     "brand": "",
+     "model": "261-72074/79252",
+     "options": null,
+     "image": "G060/kream_109542.jpg",
+     "url": "https://kream.co.kr/products/109542"
+    },
+    {
+     "kreamId": "632282",
+     "name": "나이키 에어포스 1 로우 고어텍스 비브람 오프 누아르 앤 블랙",
+     "brand": "",
+     "model": "HV5953-001",
+     "options": [
+      "225",
+      "230",
+      "235(US 4.5)",
+      "235(US 5)",
+      "240(US 5.5)",
+      "240(US 6)",
+      "245",
+      "250",
+      "255",
+      "260",
+      "265",
+      "270",
+      "275",
+      "280",
+      "285",
+      "290",
+      "295",
+      "300",
+      "305",
+      "310",
+      "320"
+     ],
+     "image": "G060/kream_632282.jpg",
+     "url": "https://kream.co.kr/products/632282"
+    },
+    {
+     "kreamId": "632304",
+     "name": "나이키 에어포스 1 로우 고어텍스 비브람 서밋 화이트",
+     "brand": "",
+     "model": "HV5953-100",
+     "options": null,
+     "image": "G060/kream_632304.jpg",
+     "url": "https://kream.co.kr/products/632304"
+    }
+   ],
+   "imageHashes": {
+    "musinsa.jpg": "49ec83debf95bfc4cc0c47056b3af1d3f5a16b262652b5ec7764583fd79b62e3",
+    "kream_632282.jpg": "b67db5d40e7e2f80590385d0c329055ffd86f38cb077aa801b5dc5167607c17e",
+    "kream_109542.jpg": "c36e988bd96993eeec52c0d1f42cd44a0a3bd59430cb0b8489658b400045b8c2",
+    "kream_632304.jpg": "b7c02c497db6b5e4e380cfe139361d8dc83d487f25f504e5fcdf8fd903cd3327",
+    "kream_416297.jpg": "b11316983d7f2abce6b539fb2ab1e57fbcea80bff40e9511c6365c168e3f9726"
+   },
+   "source": {
+    "collected": "2026-10-09 무신사 신발 랭킹 수집분 (match_review/candidates.json)",
+    "candidatesCollectedAt": "2026-10-09T11:35:54+00:00",
+    "frozenAt": "2026-10-10T08:33:39+00:00"
+   },
+   "hash": "0ee27511927b93b6"
+  }
+ ]
+}

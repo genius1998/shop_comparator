@@ -3,7 +3,7 @@
  "captureTool": "Playwright (설치된 Google Chrome, 헤드리스), 1440x1000 @1.25배 / 모바일 390x844 @2배",
  "app": "scripts/portfolio/demo_server.py 로 띄운 데모 서버 (127.0.0.1:8799)",
  "demoDatabase": {
-  "builtAt": "2026-10-10T08:15:04+00:00",
+  "builtAt": "2026-10-10T08:46:46+00:00",
   "source": "2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정",
   "products": 40,
   "reopened": {},
@@ -30,6 +30,14 @@
   "automation": "저장된 실데이터 재생 + 캡처 스크립트가 누른 동작 (사람의 검수·측정이 아님)",
   "page": "설명 페이지 자체의 화면 (데이터 없음)"
  },
+ "categories": {
+  "실제 실행": "이 묶음에는 없음. 쇼핑몰과 모델을 실제로 호출한 화면은 캡처하지 않았다.",
+  "저장 결과 재생": "저장된 실데이터 재생·네트워크 미호출",
+  "모의 장애": "테스트 장애 주입 (저장된 실데이터 재생 위에서 시간 초과를 주입, 실제 쇼핑몰 미접속)",
+  "자동화 조작": "저장된 실데이터 재생 + 캡처 스크립트가 누른 동작 (사람의 검수·측정이 아님)",
+  "설명 페이지 화면": "설명 페이지 자체의 화면 (데이터 없음)"
+ },
+ "humanReviewEvidence": "없음. 승인·거절·정답 저장이 보이는 화면은 모두 자동화 조작이며 사람 검수의 증거가 아니다.",
  "notRealOperation": [
   "승인·거절은 캡처 스크립트가 누른 것이며 사람의 검수가 아니다.",
   "검토 시간, 작업 소요 시간은 사람의 업무 시간이나 실제 수집 시간이 아니다.",
@@ -100,6 +108,11 @@
     "hash": "#eval"
    },
    {
+    "node": "gold",
+    "title": "정답 검수 (평가용): 사람이 만드는 정답",
+    "hash": "#gold"
+   },
+   {
     "node": "planned",
     "title": "계획 단계: 자동 승인과 자동화 (미구현)",
     "hash": "#planned"
@@ -120,10 +133,11 @@
    "dataSource": "데모 DB의 40개 상품 (2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 무신사 회원가와 KREAM 즉시구매가·즉시판매가를 같은 사이즈끼리 비교한 화면.",
-   "capturedAt": "2026-10-10T17:15:09+0900",
+   "capturedAt": "2026-10-10T17:46:51+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "ddb58715864b177b"
+   "sha256_16": "02e9394178242811"
   },
   {
    "file": "assets/01b-products-zoom.png",
@@ -132,7 +146,8 @@
    "dataSource": "데모 DB의 40개 상품 (2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 한 상품의 사이즈 행. 가격 차이 = KREAM 즉시구매가 − 무신사 회원가이며 수수료·배송비는 반영하지 않았다.",
-   "capturedAt": "2026-10-10T17:15:09+0900",
+   "capturedAt": "2026-10-10T17:46:52+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
    "sha256_16": "6b71a33eb2718ce5"
@@ -144,10 +159,11 @@
    "dataSource": "데모 DB의 40개 상품 (2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 아직 판정을 불러오기 전이라 검수 대기가 0이다.",
-   "capturedAt": "2026-10-10T17:15:11+0900",
+   "capturedAt": "2026-10-10T17:46:53+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "055df752dfd3f36e"
+   "sha256_16": "2ae1d5356f1681a3"
   },
   {
    "file": "assets/02-vlm-progress.png",
@@ -156,10 +172,11 @@
    "dataSource": "데모 DB의 40개 상품 (2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 저장된 gpt-5.4-mini 판정을 불러오는 작업. 진행 표시가 보이도록 데모 서버가 상품당 0.25초 지연을 넣었다. 모델을 새로 호출하지 않았다.",
-   "capturedAt": "2026-10-10T17:15:16+0900",
+   "capturedAt": "2026-10-10T17:46:58+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "631c81e8e1aad09f"
+   "sha256_16": "6570c77b3cc93568"
   },
   {
    "file": "assets/02c-review-queue.png",
@@ -167,11 +184,12 @@
    "feature": "vlm-review",
    "dataSource": "데모 DB의 40개 상품 (2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정)",
    "kind": "replay",
-   "detail": "저장된 실데이터 재생·네트워크 미호출. 판정 요약: {\"apiCalls\": 0, \"different\": 9, \"mode\": \"저장된 판정 재생(네트워크 미호출)\", \"ok\": 40, \"same\": 29, \"uncertain\": 2}",
-   "capturedAt": "2026-10-10T17:15:26+0900",
+   "detail": "저장된 실데이터 재생·네트워크 미호출. 판정 요약: {\"apiCalls\": 0, \"different\": 10, \"mode\": \"저장된 판정 재생(네트워크 미호출)\", \"ok\": 40, \"same\": 29, \"uncertain\": 1}",
+   "capturedAt": "2026-10-10T17:47:06+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "dcab31a84e7da5d1"
+   "sha256_16": "1b8c82a2c740fc4f"
   },
   {
    "file": "assets/03-review-card.png",
@@ -180,10 +198,11 @@
    "dataSource": "무신사 3976350 (에어포스 1 '07 화이트)과 KREAM 후보",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 같은 모델번호를 일반판과 협업판이 함께 써서 규칙으로 확정하지 못한 상품. VLM 판정은 2026-10-09에 저장된 것이다.",
-   "capturedAt": "2026-10-10T17:15:28+0900",
+   "capturedAt": "2026-10-10T17:47:07+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "8d84d7ceb361adfa"
+   "sha256_16": "2603319b7c558e8e"
   },
   {
    "file": "assets/04-review-decision.png",
@@ -192,7 +211,8 @@
    "dataSource": "무신사 3976350",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 판정, 모델명, 실행 시각, 사유, 모델 출력 신뢰도(확률 아님 표시), 충돌 안내, 후보 선택, 승인·거절·보류 버튼.",
-   "capturedAt": "2026-10-10T17:15:28+0900",
+   "capturedAt": "2026-10-10T17:47:07+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
    "sha256_16": "6055b7a6560c5007"
@@ -204,10 +224,11 @@
    "dataSource": "무신사 5042975 (아디제로 EVO SL)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 모델번호 규칙이 확정한 후보와 VLM이 고른 후보가 다르다. 같은 모델의 다른 색상을 고른 사례.",
-   "capturedAt": "2026-10-10T17:15:30+0900",
+   "capturedAt": "2026-10-10T17:47:08+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "cb5c8a4a4ac354f4"
+   "sha256_16": "e9a78762784867c8"
   },
   {
    "file": "assets/06-wrong-suggestion.png",
@@ -216,10 +237,50 @@
    "dataSource": "무신사 4313969 (팀버랜드)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. VLM이 모델번호 계열이 다른 상품을 '동일'로 판정한 저장 결과. 충돌 안내에 모델번호 불일치가 표시된다.",
-   "capturedAt": "2026-10-10T17:15:31+0900",
+   "capturedAt": "2026-10-10T17:47:09+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "67c0dc9682bd8b2e"
+   "sha256_16": "38e5c4029cc8b122"
+  },
+  {
+   "file": "assets/17-before-approval.png",
+   "title": "승인 전: AI가 등록했던 매칭은 가격 비교에서 제외",
+   "feature": "price-compare",
+   "dataSource": "무신사 3976350 ↔ KREAM 12831",
+   "kind": "replay",
+   "detail": "저장된 실데이터 재생·네트워크 미호출. 매칭 상태가 'AI 등록(미검수)'이고 KREAM 가격 칸이 비어 있다. 이 매칭은 예전에 AI 보조 이미지 검토로 등록된 것이다.",
+   "capturedAt": "2026-10-10T17:47:12+0900",
+   "category": "저장 결과 재생",
+   "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
+   "exists": true,
+   "sha256_16": "30410d009e885873"
+  },
+  {
+   "file": "assets/18-legacy-ai-card.png",
+   "title": "기존 AI 등록의 미검수 표시",
+   "feature": "human-review",
+   "dataSource": "무신사 6931948 ↔ KREAM 973781 (언어 모델이 등록, 색상이 다른 상품)",
+   "kind": "replay",
+   "detail": "저장된 실데이터 재생·네트워크 미호출. 출처와 등록 당시 근거, 모델 출력값(확률 아님)이 보이고 승인 전에는 가격 비교에 쓰지 않는다는 표시가 있다.",
+   "capturedAt": "2026-10-10T17:47:14+0900",
+   "category": "저장 결과 재생",
+   "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
+   "exists": true,
+   "sha256_16": "29d2c3f293ac16f0"
+  },
+  {
+   "file": "assets/19-after-reject.png",
+   "title": "거절 후: 가격 비교에서 제외된 상태",
+   "feature": "price-compare",
+   "dataSource": "무신사 6931948",
+   "kind": "automation",
+   "detail": "거절은 캡처 스크립트가 눌렀다(사람 검수 아님). 매칭 상태가 '검수 거절'로 남고 KREAM 가격 칸이 비어 있다. 행과 출처는 지워지지 않는다.",
+   "capturedAt": "2026-10-10T17:47:15+0900",
+   "category": "자동화 조작",
+   "kindLabel": "저장된 실데이터 재생 + 캡처 스크립트가 누른 동작 (사람의 검수·측정이 아님)",
+   "exists": true,
+   "sha256_16": "0408abf98b89ff1f"
   },
   {
    "file": "assets/07a-approved-card.png",
@@ -228,10 +289,11 @@
    "dataSource": "무신사 3976350",
    "kind": "automation",
    "detail": "캡처 스크립트가 데모 DB에서 승인 버튼을 누른 결과. 사람의 실제 검수가 아니며 검토 시간도 사람의 업무 시간이 아니다.",
-   "capturedAt": "2026-10-10T17:15:35+0900",
+   "capturedAt": "2026-10-10T17:47:19+0900",
+   "category": "자동화 조작",
    "kindLabel": "저장된 실데이터 재생 + 캡처 스크립트가 누른 동작 (사람의 검수·측정이 아님)",
    "exists": true,
-   "sha256_16": "8a5e1d3174e4c6eb"
+   "sha256_16": "660a762ad7413589"
   },
   {
    "file": "assets/08-review-metrics.png",
@@ -240,10 +302,11 @@
    "dataSource": "데모 DB의 40개 상품 (2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정)",
    "kind": "automation",
    "detail": "대상, 규칙 확정, VLM 판정, 검수 대기, 승인·거절·보류. 승인 1건·거절 1건은 캡처 스크립트가 누른 것이다(사람 측정 아님).",
-   "capturedAt": "2026-10-10T17:15:36+0900",
+   "capturedAt": "2026-10-10T17:47:19+0900",
+   "category": "자동화 조작",
    "kindLabel": "저장된 실데이터 재생 + 캡처 스크립트가 누른 동작 (사람의 검수·측정이 아님)",
    "exists": true,
-   "sha256_16": "ce60d72349baca28"
+   "sha256_16": "f89e4a0db45042af"
   },
   {
    "file": "assets/07-approved-in-comparison.png",
@@ -252,10 +315,11 @@
    "dataSource": "무신사 3976350 ↔ KREAM 12831",
    "kind": "automation",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 승인 뒤 매칭 상태가 '검수 승인'으로 바뀌고 저장돼 있던 KREAM 사이즈별 시세와 비교된다. 승인은 캡처 스크립트가 눌렀다.",
-   "capturedAt": "2026-10-10T17:15:39+0900",
+   "capturedAt": "2026-10-10T17:47:20+0900",
+   "category": "자동화 조작",
    "kindLabel": "저장된 실데이터 재생 + 캡처 스크립트가 누른 동작 (사람의 검수·측정이 아님)",
    "exists": true,
-   "sha256_16": "46b4cfa603aeb5e6"
+   "sha256_16": "e3766f23b97c7a3d"
   },
   {
    "file": "assets/09-failed-job.png",
@@ -264,22 +328,24 @@
    "dataSource": "데모 DB의 모델번호 매칭 상품 10개",
    "kind": "fault-injection",
    "detail": "테스트 장애 주입: 상품 3개의 KREAM 가격 조회가 시간 초과되도록 했다(실제 쇼핑몰 미접속, 저장된 시세 재생). 작업은 '일부 실패'로 끝났고 완료·실패·미처리 건수와 [실패·미처리만 다시 실행] 버튼이 보인다.",
-   "capturedAt": "2026-10-10T17:15:49+0900",
+   "capturedAt": "2026-10-10T17:47:28+0900",
+   "category": "모의 장애",
    "kindLabel": "테스트 장애 주입 (저장된 실데이터 재생 위에서 시간 초과를 주입, 실제 쇼핑몰 미접속)",
    "exists": true,
-   "sha256_16": "9c393f062bfc7ebd"
+   "sha256_16": "7ebfbc5a46d792b3"
   },
   {
    "file": "assets/10-resumed.png",
    "title": "실패·미처리 항목만 다시 실행한 결과",
    "feature": "recovery",
-   "dataSource": "앞 작업 3445f59e39의 남은 항목",
+   "dataSource": "앞 작업 b333f7f5a4의 남은 항목",
    "kind": "fault-injection",
    "detail": "테스트 장애 주입 해제 후 재실행. 이미 끝난 상품은 다시 조회하지 않았다(저장된 시세 재생).",
-   "capturedAt": "2026-10-10T17:15:52+0900",
+   "capturedAt": "2026-10-10T17:47:30+0900",
+   "category": "모의 장애",
    "kindLabel": "테스트 장애 주입 (저장된 실데이터 재생 위에서 시간 초과를 주입, 실제 쇼핑몰 미접속)",
    "exists": true,
-   "sha256_16": "78f019f87cbbf6d9"
+   "sha256_16": "a2000469d7718624"
   },
   {
    "file": "assets/11-logs.png",
@@ -288,10 +354,11 @@
    "dataSource": "위 작업들의 로그",
    "kind": "fault-injection",
    "detail": "테스트 장애 주입으로 생긴 오류 기록이 작업 ID·상품번호와 함께 남는다.",
-   "capturedAt": "2026-10-10T17:15:53+0900",
+   "capturedAt": "2026-10-10T17:47:31+0900",
+   "category": "모의 장애",
    "kindLabel": "테스트 장애 주입 (저장된 실데이터 재생 위에서 시간 초과를 주입, 실제 쇼핑몰 미접속)",
    "exists": true,
-   "sha256_16": "6cf5a77746b96966"
+   "sha256_16": "ef7d6df45741771d"
   },
   {
    "file": "assets/12-export.png",
@@ -300,10 +367,63 @@
    "dataSource": "데모 DB의 40개 상품 (2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 실제로 내려받은 price_check.xlsx의 첫 시트를 표로 옮겨 그린 미리보기(엑셀 프로그램 화면이 아님). 노랑·주황은 강조 규칙.",
-   "capturedAt": "2026-10-10T17:16:02+0900",
+   "capturedAt": "2026-10-10T17:47:40+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
    "sha256_16": "21755e4409c0eb46"
+  },
+  {
+   "file": "assets/20-gold-blind.png",
+   "title": "AI 결론을 숨긴 정답 검수 화면",
+   "feature": "gold",
+   "dataSource": "고정한 평가 사례 60건 중 첫 사례 (2026-10-09 실제 수집분)",
+   "kind": "replay",
+   "detail": "저장된 실데이터 재생·네트워크 미호출. 원본과 후보의 이미지·상품명·모델번호·옵션만 보인다. VLM 판정, 신뢰도, 추천 후보, 규칙의 결론, 현재 매칭은 화면에 없다.",
+   "capturedAt": "2026-10-10T17:47:42+0900",
+   "category": "저장 결과 재생",
+   "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
+   "exists": true,
+   "sha256_16": "e92dd60a16b87962"
+  },
+  {
+   "file": "assets/21-gold-report-waiting.png",
+   "title": "평가 결과: 실행 범위와 사람 검수 대기",
+   "feature": "evaluation",
+   "dataSource": "고정한 평가 사례 60건과 저장된 방법별 답",
+   "kind": "replay",
+   "detail": "저장된 실데이터 재생·네트워크 미호출. 사람 정답이 0건이라 성능 칸은 모두 '사람 검수 대기'다. 실행·미실행 수는 정답과 무관하게 저장된 결과로 답할 수 있는 사례 수다.",
+   "capturedAt": "2026-10-10T17:47:43+0900",
+   "category": "저장 결과 재생",
+   "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
+   "exists": true,
+   "sha256_16": "595b38a4a84b02ad"
+  },
+  {
+   "file": "assets/22-timing-log.png",
+   "title": "검토 시간 기록 화면",
+   "feature": "measurement",
+   "dataSource": "이 캡처 실행 중에 생긴 기록",
+   "kind": "automation",
+   "detail": "모든 행의 origin이 automation이다. 캡처 스크립트가 누른 기록이며 사람의 검토 시간이 아니다. 정답 작성(gold)과 운영 검토(ops), 모드, 시작·종료, 소요, 탭 이탈 시간이 구분된다.",
+   "capturedAt": "2026-10-10T17:47:45+0900",
+   "category": "자동화 조작",
+   "kindLabel": "저장된 실데이터 재생 + 캡처 스크립트가 누른 동작 (사람의 검수·측정이 아님)",
+   "exists": true,
+   "sha256_16": "0d597fca103b05ed"
+  },
+  {
+   "file": "assets/23-gold-progress.png",
+   "title": "자동화 기록은 사람 정답으로 세지 않음",
+   "feature": "gold",
+   "dataSource": "위 저장 직후의 진행 표시",
+   "kind": "automation",
+   "detail": "캡처 스크립트가 한 건을 저장한 뒤에도 '사람 정답 0건'이며 자동화 기록은 따로 센다.",
+   "capturedAt": "2026-10-10T17:47:45+0900",
+   "category": "자동화 조작",
+   "kindLabel": "저장된 실데이터 재생 + 캡처 스크립트가 누른 동작 (사람의 검수·측정이 아님)",
+   "exists": true,
+   "sha256_16": "0e57e5dd788d11ab"
   },
   {
    "file": "assets/14-collect.png",
@@ -312,10 +432,11 @@
    "dataSource": "데모 DB의 40개 상품 (2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 화면 구성 확인용이며 이 화면에서 수집이나 알림을 실행하지 않았다.",
-   "capturedAt": "2026-10-10T17:16:03+0900",
+   "capturedAt": "2026-10-10T17:47:46+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "f7a536eeb7744871"
+   "sha256_16": "3ec47a27246c519f"
   },
   {
    "file": "assets/15-match.png",
@@ -324,10 +445,11 @@
    "dataSource": "데모 DB의 40개 상품 (2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 화면 구성 확인용이며 이 화면에서 수집이나 알림을 실행하지 않았다.",
-   "capturedAt": "2026-10-10T17:16:05+0900",
+   "capturedAt": "2026-10-10T17:47:49+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "dd1b7dd62f3c7293"
+   "sha256_16": "dc449816ea167dce"
   },
   {
    "file": "assets/16-monitor.png",
@@ -336,10 +458,11 @@
    "dataSource": "데모 DB의 40개 상품 (2026-10-09 실제 수집분(무신사 신발 랭킹)과 저장된 gpt-5.4-mini 판정)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 화면 구성 확인용이며 이 화면에서 수집이나 알림을 실행하지 않았다.",
-   "capturedAt": "2026-10-10T17:16:06+0900",
+   "capturedAt": "2026-10-10T17:47:50+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "11eb77e0b2113a71"
+   "sha256_16": "e3e02dea88697f50"
   },
   {
    "file": "assets/13-review-mobile.png",
@@ -348,10 +471,11 @@
    "dataSource": "무신사 3157671 (리복 클럽 C 85)",
    "kind": "replay",
    "detail": "저장된 실데이터 재생·네트워크 미호출. 390px 폭.",
-   "capturedAt": "2026-10-10T17:16:10+0900",
+   "capturedAt": "2026-10-10T17:47:53+0900",
+   "category": "저장 결과 재생",
    "kindLabel": "저장된 실데이터 재생·네트워크 미호출",
    "exists": true,
-   "sha256_16": "697b16404bfd2117"
+   "sha256_16": "f50e08eecc365741"
   },
   {
    "file": "assets/page-desktop.png",
@@ -359,10 +483,11 @@
    "feature": "portfolio-page",
    "dataSource": "docs/portfolio/index.html",
    "kind": "page",
+   "category": "설명 페이지 화면",
    "kindLabel": "설명 페이지 자체의 화면 (데이터 없음)",
    "detail": "Playwright로 연 정적 페이지.",
    "exists": true,
-   "sha256_16": "d4e762e45a7bb853"
+   "sha256_16": "17c458c1cbf9cf60"
   },
   {
    "file": "assets/page-panel-vlm.png",
@@ -370,10 +495,11 @@
    "feature": "portfolio-page",
    "dataSource": "docs/portfolio/index.html",
    "kind": "page",
+   "category": "설명 페이지 화면",
    "kindLabel": "설명 페이지 자체의 화면 (데이터 없음)",
    "detail": "Playwright로 연 정적 페이지.",
    "exists": true,
-   "sha256_16": "1624178993224dc8"
+   "sha256_16": "ea71a42c34b5bd53"
   },
   {
    "file": "assets/page-panel-storage.png",
@@ -381,10 +507,11 @@
    "feature": "portfolio-page",
    "dataSource": "docs/portfolio/index.html",
    "kind": "page",
+   "category": "설명 페이지 화면",
    "kindLabel": "설명 페이지 자체의 화면 (데이터 없음)",
    "detail": "Playwright로 연 정적 페이지.",
    "exists": true,
-   "sha256_16": "58fadc8025a945b5"
+   "sha256_16": "02fd3b6d21aa661a"
   },
   {
    "file": "assets/page-mobile.png",
@@ -392,10 +519,11 @@
    "feature": "portfolio-page",
    "dataSource": "docs/portfolio/index.html",
    "kind": "page",
+   "category": "설명 페이지 화면",
    "kindLabel": "설명 페이지 자체의 화면 (데이터 없음)",
    "detail": "Playwright로 연 정적 페이지.",
    "exists": true,
-   "sha256_16": "97113d169990a9d3"
+   "sha256_16": "cd929612fe454d6c"
   },
   {
    "file": "assets/page-mobile-panel.png",
@@ -403,6 +531,7 @@
    "feature": "portfolio-page",
    "dataSource": "docs/portfolio/index.html",
    "kind": "page",
+   "category": "설명 페이지 화면",
    "kindLabel": "설명 페이지 자체의 화면 (데이터 없음)",
    "detail": "Playwright로 연 정적 페이지.",
    "exists": true,

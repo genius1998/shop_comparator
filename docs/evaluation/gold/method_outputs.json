@@ -1,0 +1,1261 @@
+{
+ "G001": {
+  "goodsNo": "5277377",
+  "searchOrder": [
+   "573211",
+   "602680",
+   "610305",
+   "895021"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "573211",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:10:37+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "573211"
+  }
+ },
+ "G002": {
+  "goodsNo": "6711021",
+  "searchOrder": [
+   "973833",
+   "811375",
+   "960524",
+   "982157",
+   "677308"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "973833",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:13:04+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "973833"
+  }
+ },
+ "G003": {
+  "goodsNo": "7356386",
+  "searchOrder": [
+   "808126",
+   "288433",
+   "387727",
+   "305356"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:27:14+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G004": {
+  "goodsNo": "4028712",
+  "searchOrder": [
+   "303517",
+   "92376",
+   "387727",
+   "697962"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "303517",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:09:16+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "303517"
+  }
+ },
+ "G005": {
+  "goodsNo": "5334806",
+  "searchOrder": [
+   "589356"
+  ],
+  "vlm": null,
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "589356"
+  }
+ },
+ "G006": {
+  "goodsNo": "3972398",
+  "searchOrder": [
+   "808126",
+   "387727",
+   "288433",
+   "305356",
+   "334293",
+   "771690",
+   "334334"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "771690",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:28:30+00:00",
+   "confidence": 0.76
+  },
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "334293"
+  }
+ },
+ "G007": {
+  "goodsNo": "5279986",
+  "searchOrder": [
+   "387727",
+   "697962",
+   "334293",
+   "334352",
+   "288378",
+   "305356",
+   "996475",
+   "808126",
+   "864124",
+   "866417"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:09:50+00:00",
+   "confidence": 0.96
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G008": {
+  "goodsNo": "2682873",
+  "searchOrder": [
+   "91060",
+   "344225",
+   "91054",
+   "554564",
+   "813575",
+   "1079153",
+   "216487",
+   "811279"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "91060",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:13:18+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "91060"
+  }
+ },
+ "G009": {
+  "goodsNo": "7318373",
+  "searchOrder": [
+   "1117423",
+   "1119064",
+   "1117424",
+   "800767"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "1117423",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:07:58+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "1117423"
+  }
+ },
+ "G010": {
+  "goodsNo": "4821471",
+  "searchOrder": [
+   "456840"
+  ],
+  "vlm": null,
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "456840"
+  }
+ },
+ "G011": {
+  "goodsNo": "3976350",
+  "searchOrder": [
+   "12831",
+   "156663",
+   "480753",
+   "32867",
+   "893327",
+   "600340"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "12831",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:24:27+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "image_review",
+   "kreamId": "12831"
+  }
+ },
+ "G012": {
+  "goodsNo": "5042975",
+  "searchOrder": [
+   "389369",
+   "898555",
+   "894499"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "898555",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T09:58:53+00:00",
+   "confidence": 0.89
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "389369"
+  }
+ },
+ "G013": {
+  "goodsNo": "4207634",
+  "searchOrder": [
+   "1090164",
+   "1098392"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "1090164",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:24:31+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "image_review",
+   "kreamId": "1090164"
+  }
+ },
+ "G014": {
+  "goodsNo": "6337137",
+  "searchOrder": [
+   "336131",
+   "770341",
+   "771961",
+   "552107",
+   "569990",
+   "742001",
+   "1032796",
+   "535722"
+  ],
+  "vlm": {
+   "decision": "uncertain",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:12:42+00:00",
+   "confidence": 0.86
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G015": {
+  "goodsNo": "6931948",
+  "searchOrder": [
+   "1018256",
+   "811375",
+   "875277",
+   "1018202",
+   "930860",
+   "973781"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:24:13+00:00",
+   "confidence": 0.93
+  },
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "973781"
+  }
+ },
+ "G016": {
+  "goodsNo": "4046672",
+  "searchOrder": [
+   "483155",
+   "1012860",
+   "1055879",
+   "1012816",
+   "398609",
+   "398606",
+   "398607",
+   "404245"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "398606",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:10:52+00:00",
+   "confidence": 0.97
+  },
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "398609"
+  }
+ },
+ "G017": {
+  "goodsNo": "5520375",
+  "searchOrder": [
+   "632470",
+   "946069",
+   "150413",
+   "600371"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "632470",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:13:27+00:00",
+   "confidence": 0.98
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "632470"
+  }
+ },
+ "G018": {
+  "goodsNo": "4463013",
+  "searchOrder": [
+   "21441",
+   "958087",
+   "917625"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "21441",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:10:19+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "21441"
+  }
+ },
+ "G019": {
+  "goodsNo": "6747992",
+  "searchOrder": [
+   "552684",
+   "262393",
+   "262268",
+   "262276"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "262276",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:27:39+00:00",
+   "confidence": 0.94
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G020": {
+  "goodsNo": "5379027",
+  "searchOrder": [
+   "218059",
+   "179981",
+   "966349",
+   "907463"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "218059",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:09:28+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "218059"
+  }
+ },
+ "G021": {
+  "goodsNo": "7238240",
+  "searchOrder": [
+   "1076057",
+   "1065791",
+   "464559",
+   "1009606",
+   "343618",
+   "813652"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "1065791",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:11:50+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "1065791"
+  }
+ },
+ "G022": {
+  "goodsNo": "7407733",
+  "searchOrder": [
+   "1115271"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T09:58:46+00:00",
+   "confidence": 0.95
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "1115271"
+  }
+ },
+ "G023": {
+  "goodsNo": "4201382",
+  "searchOrder": [
+   "497465",
+   "586943",
+   "904890",
+   "497466",
+   "342774",
+   "993741"
+  ],
+  "vlm": {
+   "decision": "uncertain",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:24:35+00:00",
+   "confidence": 0.68
+  },
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "342774"
+  }
+ },
+ "G024": {
+  "goodsNo": "6618043",
+  "searchOrder": [
+   "966348",
+   "501037",
+   "561179",
+   "456380",
+   "543232"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "966348",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:13:32+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "966348"
+  }
+ },
+ "G025": {
+  "goodsNo": "4996203",
+  "searchOrder": [
+   "385777"
+  ],
+  "vlm": null,
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "385777"
+  }
+ },
+ "G026": {
+  "goodsNo": "6701045",
+  "searchOrder": [
+   "563999",
+   "808126",
+   "692259",
+   "96681",
+   "1096023"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:08:10+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G027": {
+  "goodsNo": "6015024",
+  "searchOrder": [
+   "864884"
+  ],
+  "vlm": null,
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "864884"
+  }
+ },
+ "G028": {
+  "goodsNo": "5987818",
+  "searchOrder": [
+   "560343",
+   "1101929"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "1101929",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:00:17+00:00",
+   "confidence": 0.87
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "560343"
+  }
+ },
+ "G029": {
+  "goodsNo": "706935",
+  "searchOrder": [
+   "310551",
+   "1002156",
+   "770329",
+   "532285"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "310551",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:11:15+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "310551"
+  }
+ },
+ "G030": {
+  "goodsNo": "6382400",
+  "searchOrder": [
+   "387727",
+   "687616",
+   "288371",
+   "334293"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:10:42+00:00",
+   "confidence": 0.95
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G031": {
+  "goodsNo": "7249959",
+  "searchOrder": [
+   "1046787",
+   "387727",
+   "334352",
+   "858583",
+   "263074",
+   "430579",
+   "219037"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "430579",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:11:08+00:00",
+   "confidence": 0.88
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G032": {
+  "goodsNo": "7329742",
+  "searchOrder": [
+   "935744",
+   "272683",
+   "508201",
+   "378301",
+   "808680",
+   "103867",
+   "808126",
+   "523679"
+  ],
+  "vlm": {
+   "decision": "uncertain",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:12:50+00:00",
+   "confidence": 0.41
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G033": {
+  "goodsNo": "595038",
+  "searchOrder": [
+   "118748",
+   "118745",
+   "310551",
+   "118744"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "118748",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:08:27+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "118748"
+  }
+ },
+ "G034": {
+  "goodsNo": "4226785",
+  "searchOrder": [
+   "13100",
+   "184932",
+   "684106",
+   "231023",
+   "25931"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "13100",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:09:18+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "13100"
+  }
+ },
+ "G035": {
+  "goodsNo": "4778565",
+  "searchOrder": [
+   "944831",
+   "387727",
+   "834471",
+   "1001773",
+   "25673",
+   "1094781",
+   "1043979",
+   "227028",
+   "557965"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "25673",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:08:50+00:00",
+   "confidence": 0.98
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "25673"
+  }
+ },
+ "G036": {
+  "goodsNo": "6551543",
+  "searchOrder": [
+   "931057"
+  ],
+  "vlm": null,
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "931057"
+  }
+ },
+ "G037": {
+  "goodsNo": "6183054",
+  "searchOrder": [
+   "1018256",
+   "1018202",
+   "597930",
+   "550056",
+   "588373",
+   "1090763"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:27:28+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G038": {
+  "goodsNo": "5916278",
+  "searchOrder": [
+   "800266",
+   "14404",
+   "851873",
+   "469008",
+   "1040058",
+   "922846"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "800266",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:13:44+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "800266"
+  }
+ },
+ "G039": {
+  "goodsNo": "6967885",
+  "searchOrder": [
+   "44101",
+   "109117",
+   "418841",
+   "496016",
+   "1030298"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "1030298",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:13:39+00:00",
+   "confidence": 0.98
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "1030298"
+  }
+ },
+ "G040": {
+  "goodsNo": "499300",
+  "searchOrder": [
+   "396021"
+  ],
+  "vlm": null,
+  "registered": {
+   "kind": "ai_unreviewed",
+   "method": "openai",
+   "kreamId": "396021"
+  }
+ },
+ "G041": {
+  "goodsNo": "3645257",
+  "searchOrder": [
+   "44101",
+   "615791",
+   "418841",
+   "186600",
+   "109117",
+   "892306",
+   "891884"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "186600",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:10:44+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "186600"
+  }
+ },
+ "G042": {
+  "goodsNo": "5077217",
+  "searchOrder": [
+   "501037",
+   "975471"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "501037",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T09:58:07+00:00",
+   "confidence": 0.98
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "501037"
+  }
+ },
+ "G043": {
+  "goodsNo": "5839602",
+  "searchOrder": [
+   "262393",
+   "552684",
+   "262276",
+   "262268",
+   "634477"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:12:47+00:00",
+   "confidence": 0.98
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G044": {
+  "goodsNo": "6879519",
+  "searchOrder": [
+   "1011918",
+   "1009606",
+   "343618",
+   "247965",
+   "581260"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "1011918",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:09:54+00:00",
+   "confidence": 0.88
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "1009606"
+  }
+ },
+ "G045": {
+  "goodsNo": "5909285",
+  "searchOrder": [
+   "903036"
+  ],
+  "vlm": null,
+  "registered": {
+   "kind": "rule",
+   "method": "local",
+   "kreamId": "903036"
+  }
+ },
+ "G046": {
+  "goodsNo": "2741233",
+  "searchOrder": [
+   "387727",
+   "288433",
+   "697962",
+   "985762",
+   "53196",
+   "1120895",
+   "866745",
+   "1108357",
+   "678621"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "53196",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:12:00+00:00",
+   "confidence": 0.95
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G047": {
+  "goodsNo": "7181158",
+  "searchOrder": [
+   "770547",
+   "244351",
+   "967999",
+   "639031"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:10:39+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G048": {
+  "goodsNo": "4313969",
+  "searchOrder": [
+   "18871",
+   "280739",
+   "404973",
+   "305612",
+   "826442"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "18871",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:08:17+00:00",
+   "confidence": 0.86
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G049": {
+  "goodsNo": "6653232",
+  "searchOrder": [
+   "971179",
+   "983079"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "971179",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:09:07+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "971179"
+  }
+ },
+ "G050": {
+  "goodsNo": "7157395",
+  "searchOrder": [
+   "800655",
+   "641130",
+   "453528",
+   "453530",
+   "387727",
+   "334293",
+   "288433",
+   "305356"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:13:00+00:00",
+   "confidence": 0.94
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G051": {
+  "goodsNo": "4662556",
+  "searchOrder": [
+   "25785",
+   "625568",
+   "24794",
+   "422886",
+   "692902"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "25785",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:08:03+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "25785"
+  }
+ },
+ "G052": {
+  "goodsNo": "7284481",
+  "searchOrder": [
+   "1103818",
+   "624563",
+   "624875",
+   "1103819",
+   "1048677"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "1103818",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:11:43+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "1103818"
+  }
+ },
+ "G053": {
+  "goodsNo": "4409448",
+  "searchOrder": [
+   "348733",
+   "425071"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "348733",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:09:05+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "348733"
+  }
+ },
+ "G054": {
+  "goodsNo": "5378047",
+  "searchOrder": [
+   "679573",
+   "507957",
+   "718742",
+   "464667",
+   "380797",
+   "380796",
+   "420179",
+   "692259"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:27:02+00:00",
+   "confidence": 0.98
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G055": {
+  "goodsNo": "6965588",
+  "searchOrder": [
+   "1090645"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:09:43+00:00",
+   "confidence": 0.98
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "1090645"
+  }
+ },
+ "G056": {
+  "goodsNo": "5029004",
+  "searchOrder": [
+   "387727",
+   "858439",
+   "1046787",
+   "334293",
+   "775744",
+   "396021"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:09:21+00:00",
+   "confidence": 0.98
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G057": {
+  "goodsNo": "5444818",
+  "searchOrder": [
+   "288433",
+   "282040",
+   "288448",
+   "288371"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:27:05+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G058": {
+  "goodsNo": "7049568",
+  "searchOrder": [
+   "597590",
+   "564214",
+   "387727",
+   "776314",
+   "84751",
+   "692259",
+   "106087",
+   "126267"
+  ],
+  "vlm": {
+   "decision": "different",
+   "kreamId": "",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:13:41+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G059": {
+  "goodsNo": "6111436",
+  "searchOrder": [
+   "416297",
+   "109542",
+   "84745",
+   "84748",
+   "821066",
+   "436923",
+   "508339"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "84745",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T10:28:19+00:00",
+   "confidence": 0.94
+  },
+  "registered": {
+   "kind": "none",
+   "method": "",
+   "kreamId": ""
+  }
+ },
+ "G060": {
+  "goodsNo": "5705621",
+  "searchOrder": [
+   "632282",
+   "109542",
+   "632304",
+   "416297"
+  ],
+  "vlm": {
+   "decision": "same",
+   "kreamId": "632282",
+   "model": "gpt-5.4-mini-2026-03-17",
+   "at": "2026-10-09T12:08:44+00:00",
+   "confidence": 0.99
+  },
+  "registered": {
+   "kind": "rule",
+   "method": "model_code",
+   "kreamId": "632282"
+  }
+ }
+}

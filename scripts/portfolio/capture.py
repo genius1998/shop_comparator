@@ -174,7 +174,34 @@ def capture_app():
             card.get_by_role("button", name="거절 (같은 상품 없음)").click()
             page.wait_for_timeout(900)
 
-            # 7. approve, then see it in the price comparison
+            # 7. before approval: a match a model registered earlier is shown but not used for prices
+            page.goto(BASE + "/#products")
+            page.wait_for_selector("#product-rows tr")
+            page.fill("#product-search", "3976350")
+            page.wait_for_timeout(500)
+            page.screenshot(path=os.path.join(ASSETS, "17-before-approval.png"), clip={"x": 0, "y": 0, "width": 1440, "height": 700})
+            note("17-before-approval", "승인 전: AI가 등록했던 매칭은 가격 비교에서 제외", "price-compare", "무신사 3976350 ↔ KREAM 12831",
+                 f"{REPLAY}. 매칭 상태가 'AI 등록(미검수)'이고 KREAM 가격 칸이 비어 있다. 이 매칭은 예전에 AI 보조 이미지 검토로 등록된 것이다.")
+            page.goto(BASE + "/#review")
+            page.wait_for_selector("#review-list details")
+            card = open_card("6931948")
+            card.screenshot(path=os.path.join(ASSETS, "18-legacy-ai-card.png"))
+            note("18-legacy-ai-card", "기존 AI 등록의 미검수 표시", "human-review", "무신사 6931948 ↔ KREAM 973781 (언어 모델이 등록, 색상이 다른 상품)",
+                 f"{REPLAY}. 출처와 등록 당시 근거, 모델 출력값(확률 아님)이 보이고 승인 전에는 가격 비교에 쓰지 않는다는 표시가 있다.")
+            card.locator("input[type=text]").fill("품번이 다름(313904-16 / 313904-02)")
+            card.get_by_role("button", name="거절 (같은 상품 없음)").click()
+            page.wait_for_timeout(900)
+            page.goto(BASE + "/#products")
+            page.wait_for_selector("#product-rows tr")
+            page.fill("#product-search", "6931948")
+            page.wait_for_timeout(500)
+            page.screenshot(path=os.path.join(ASSETS, "19-after-reject.png"), clip={"x": 0, "y": 0, "width": 1440, "height": 700})
+            note("19-after-reject", "거절 후: 가격 비교에서 제외된 상태", "price-compare", "무신사 6931948",
+                 "거절은 캡처 스크립트가 눌렀다(사람 검수 아님). 매칭 상태가 '검수 거절'로 남고 KREAM 가격 칸이 비어 있다. 행과 출처는 지워지지 않는다.", kind="automation")
+            page.goto(BASE + "/#review")
+            page.wait_for_selector("#review-list details")
+
+            # approve, then see it in the price comparison
             card = open_card("3976350")
             card.get_by_role("button", name="승인 (선택한 후보)").click()
             page.wait_for_timeout(900)
@@ -232,6 +259,35 @@ def capture_app():
             os.remove(preview)
             note("12-export", "사이즈별 가격 비교 엑셀 내보내기 결과", "export", data,
                  f"{REPLAY}. 실제로 내려받은 price_check.xlsx의 첫 시트를 표로 옮겨 그린 미리보기(엑셀 프로그램 화면이 아님). 노랑·주황은 강조 규칙.")
+
+            # ground-truth labelling: what the reviewer sees, the evaluation status, the timing log
+            page.goto(BASE + "/#gold")
+            page.wait_for_selector("#gold-case .gold-card")
+            page.fill("#gold-reviewer", "capture-script")
+            page.dispatch_event("#gold-reviewer", "change")
+            page.wait_for_selector("#gold-case .gold-card")
+            page.wait_for_timeout(900)
+            page.screenshot(path=os.path.join(ASSETS, "20-gold-blind.png"))
+            note("20-gold-blind", "AI 결론을 숨긴 정답 검수 화면", "gold", "고정한 평가 사례 60건 중 첫 사례 (2026-10-09 실제 수집분)",
+                 f"{REPLAY}. 원본과 후보의 이미지·상품명·모델번호·옵션만 보인다. VLM 판정, 신뢰도, 추천 후보, 규칙의 결론, 현재 매칭은 화면에 없다.")
+            page.locator("#gold-report-card").scroll_into_view_if_needed()
+            page.wait_for_timeout(500)
+            page.locator("#gold-report-card").screenshot(path=os.path.join(ASSETS, "21-gold-report-waiting.png"))
+            note("21-gold-report-waiting", "평가 결과: 실행 범위와 사람 검수 대기", "evaluation", "고정한 평가 사례 60건과 저장된 방법별 답",
+                 f"{REPLAY}. 사람 정답이 0건이라 성능 칸은 모두 '사람 검수 대기'다. 실행·미실행 수는 정답과 무관하게 저장된 결과로 답할 수 있는 사례 수다.")
+            page.locator("#gold-case .candidate .pick").first.click()
+            page.wait_for_selector("#gold-case .candidate.chosen")
+            page.get_by_role("button", name="선택한 후보가 같은 상품 · 저장").click()
+            page.wait_for_timeout(1200)
+            page.locator("#gold-timing-rows").locator("xpath=ancestor::div[contains(@class,'card')][1]").scroll_into_view_if_needed()
+            page.wait_for_timeout(500)
+            page.locator("#gold-timing-rows").locator("xpath=ancestor::div[contains(@class,'card')][1]").screenshot(path=os.path.join(ASSETS, "22-timing-log.png"))
+            note("22-timing-log", "검토 시간 기록 화면", "measurement", "이 캡처 실행 중에 생긴 기록",
+                 "모든 행의 origin이 automation이다. 캡처 스크립트가 누른 기록이며 사람의 검토 시간이 아니다. 정답 작성(gold)과 운영 검토(ops), 모드, 시작·종료, 소요, 탭 이탈 시간이 구분된다.",
+                 kind="automation")
+            page.locator("#gold-progress").screenshot(path=os.path.join(ASSETS, "23-gold-progress.png"))
+            note("23-gold-progress", "자동화 기록은 사람 정답으로 세지 않음", "gold", "위 저장 직후의 진행 표시",
+                 "캡처 스크립트가 한 건을 저장한 뒤에도 '사람 정답 0건'이며 자동화 기록은 따로 센다.", kind="automation")
 
             # other tabs referenced by the diagram
             for name, tab, selector, title, feature in (

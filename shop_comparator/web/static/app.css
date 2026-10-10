@@ -111,4 +111,10 @@ header .badge.good,header .badge.warn,header .badge.bad{color:#fff}
 .toolbar .sep { width: 1px; align-self: stretch; background: #d9e0de; }
 input.narrow { width: 90px; }
 @media (max-width: 760px) { .review-body { grid-template-columns: 1fr; } .review-source { max-width: 240px; } }
+body.blind #jobbar { display: none; }
+.candidate .pick { font: inherit; margin-top: 2px; }
+.gold-card { padding-top: 6px; }
+.gold-head { display: flex; gap: 10px; align-items: center; padding: 8px 14px 0; }
+.gold-card textarea { width: 100%; font: inherit; margin-bottom: 8px; }
+tr.muted-row td { color: #8a9692; }
 .demo-banner { background: #fff2cc; color: #5c4500; border-bottom: 1px solid #e6d28a; padding: 6px 16px; font-size: 13px; font-weight: 600; }

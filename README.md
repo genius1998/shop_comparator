@@ -31,12 +31,12 @@
 | 목적 | 무신사 회원가와 KREAM 시세를 같은 상품·같은 사이즈 단위로 비교 |
 | 형태 | 로컬 단일 사용자 웹 앱 (Flask, `http://127.0.0.1:8765`) |
 | 언어·도구 | Python 3.12, Flask, SQLite, Selenium(Chrome), Playwright, pandas, openpyxl, Pillow, OpenAI Responses API, Ollama(선택) |
-| 프런트엔드 | 프레임워크 없는 HTML/CSS/JavaScript, 탭 8개, CSP `default-src 'self'` |
+| 프런트엔드 | 프레임워크 없는 HTML/CSS/JavaScript, 탭 9개, CSP `default-src 'self'` |
 | 수집 방식 | 쇼핑몰이 자기 화면에서 쓰는 JSON API를 쇼핑몰 페이지가 열린 Chrome 안에서 호출 |
 | 상품 매칭 | 모델번호 대조 → 이미지 판정(VLM) → 사람이 웹 검수 화면에서 승인·거절·보류 |
 | 저장 | SQLite. 새로고침·서버 재시작 후에도 결과 유지 |
 | 코드 구조 | `shop_comparator/` 패키지 7개 (web, services, matching, shops, storage, core, desktop) |
-| 테스트 | 모의 데이터 테스트 130개 (쇼핑몰 접속 없음), GitHub Actions에서 실행 |
+| 테스트 | 모의 데이터 테스트 140개 (쇼핑몰 접속 없음), GitHub Actions에서 실행 |
 
 ### 주요 기능
 
@@ -236,6 +236,26 @@ VLM(`gpt-5.4-mini`) 자체의 정확도
 
 상세: [docs/method-evaluation.md](docs/method-evaluation.md)
 
+### 3.9 검증 근거 준비: 사람 정답, 통합 확인, 시간 측정
+
+지금까지의 평가 정답은 모델번호 규칙과 AI 보조 검토에서 왔다. 독립적인 정답이 아니다. 그래서 기능을 늘리지 않고 검증할 수 있는 근거를 만드는 준비를 했다. **사람이 만든 정답과 사람의 검토 시간 측정은 아직 0건이다.**
+
+| 준비한 것 | 내용 | 상태 |
+|---|---|---|
+| 정답 검수 모드 | 실제 수집분에서 고정한 60개 사례를 한 건씩 보여 준다. VLM 판정, 신뢰도, 추천 후보, 규칙의 결론, 현재 매칭을 숨긴다. 검수자·시각·근거·입력 해시를 저장하고 사람 라벨과 스크립트 기록을 `origin`으로 구분한다 | 구현, 로컬 확인. **사람 정답 0건** |
+| 사람 정답 기준 평가 | 기존 방식, 모델번호 규칙, 텍스트 점수 규칙(LLM 아님), 저장된 VLM 판정, 규칙+VLM을 채점한다. 지표마다 분자·분모·계산식, 실행·미실행 수, 공통 실행 집합 비교 | 구현. 지금은 "사람 검수 대기"를 출력 |
+| 검수 정책의 통합 확인 | 로컬 Flask 서버와 실제 SQLite로 21개 항목(승인 전 제외, 승인 후 반영, 거절 후 제외, 기존 AI 등록 미검수, 반복 실행 시 재호출·중복 없음, 출처 보존, GUI 경유 AI 매칭 제외) | 21개 통과. 저장 결과 재생, 승인·거절은 자동화 조작 |
+| 검토 시간 측정 환경 | 시작·종료·소요·탭 이탈 기록, 수동/AI 보조/정답 작성 구분, CSV, 서로 다른 사례를 난이도 맞춰 배정하는 계획 생성 | 구현. **측정 0건** |
+
+```powershell
+.\.venv\Scripts\python.exe -m shop_comparator.matching.gold status     # 사람 정답 건수
+.\.venv\Scripts\python.exe -m shop_comparator.matching.gold_eval       # 사람 정답 기준 평가
+.\.venv\Scripts\python.exe scripts\verify_review_policy.py            # 검수 정책 통합 확인
+.\.venv\Scripts\python.exe scripts\match_counts.py                    # 매칭 수의 집계 기준
+```
+
+정답 검수는 `http://127.0.0.1:8765/#gold` 에서 한다. 상세: [docs/gold-evaluation.md](docs/gold-evaluation.md), [docs/policy-integration-check.md](docs/policy-integration-check.md), [docs/review-measurement.md](docs/review-measurement.md), [docs/verification-status.md](docs/verification-status.md).
+
 ### 3.8 구조와 증거를 한 페이지로
 
 [docs/portfolio/index.html](docs/portfolio/index.html)은 시스템 구조를 클릭 가능한 그림으로 보여 주고, 기능마다 입력·처리·출력, 실행 화면, 소스 위치, 한계를 연다. 화면은 운영 DB와 분리한 데모 DB에서 저장된 실데이터를 재생해 찍었다. 재현 방법은 [docs/portfolio/README.md](docs/portfolio/README.md).
@@ -257,7 +277,7 @@ VLM(`gpt-5.4-mini`) 자체의 정확도
 | 작업 제어 | 버튼 하나가 전체 과정을 실행 | 단계별 작업, 쇼핑몰별 동시 실행, 작업별 중단, 진행률, 이력, 실패·미처리 항목만 재실행 |
 | 로그 | `print`와 텍스트 창 | JSON Lines 파일(회전), 작업 ID·쇼핑몰·상품번호 필터, 민감정보 마스킹 |
 | 입찰가 계산 | 부동소수점 (90,000 × 1.1 → 100,000) | Decimal (99,000) |
-| 테스트 | 14개 | 130개 + CI |
+| 테스트 | 14개 | 140개 + CI |
 | 문서 | 없음 | 설계·검증·문제 해결·평가 문서 12개 |
 
 기존 GUI는 `shop_comparator/desktop/`에 내용을 그대로 두었고 `python main.py --desktop`으로 실행된다.
@@ -324,6 +344,8 @@ shop_comparator/
 │  ├─ evaluate.py              기존 규칙 대비 성능 평가 (CLI)
 │  ├─ vlm_benchmark.py         VLM 모델 비교: 이미지 쌍 구성, 실행, 채점 (CLI)
 │  ├─ method_eval.py           방법 비교: 규칙·텍스트·VLM·결합, 1:N과 "동일 상품 없음" (CLI)
+│  ├─ gold.py                  사람이 만드는 평가 정답: 사례 고정, 라벨·검토 시간 저장 (운영 DB와 분리)
+│  ├─ gold_eval.py             사람 정답 기준 평가 (CLI)
 │  └─ product_matcher.py       기존 자동 판별기 (규칙 + OpenAI)
 ├─ shops/
 │  ├─ browser_transport.py     쇼핑몰 Chrome 페이지 안에서 API를 호출하는 requests 호환 어댑터
@@ -340,12 +362,15 @@ shop_comparator/
 │  ├─ crawl_errors.py          오류 종류 정의
 │  └─ config.py, utils.py, webhook.py
 └─ desktop/                    기존 Tkinter 프로그램 (gui.py 등)
-tests/                         모의 데이터 테스트 130개
+tests/                         모의 데이터 테스트 140개
 docs/                          설계·검증·문제 해결 문서
 docs/evaluation/               매칭 평가 데이터, 확인 라벨, VLM 벤치마크 쌍과 판정
 docs/portfolio/                클릭 가능한 시스템 다이어그램, 실행 화면 캡처, 증빙 목록, 인계 문서
 scripts/                       보조 스크립트
 scripts/portfolio/             데모 DB 생성, 데모 서버, 캡처 스크립트
+scripts/verify_review_policy.py  검수 정책 로컬 통합 확인
+scripts/match_counts.py        매칭 수의 집계 기준
+scripts/measurement_plan.py    검토 시간 측정 계획
 .github/workflows/tests.yml    CI
 ```
 
@@ -653,7 +678,7 @@ scripts/portfolio/             데모 DB 생성, 데모 서버, 캡처 스크립
 .\.venv\Scripts\python.exe -m unittest discover -s tests
 ```
 
-130개가 통과한다. 모두 모의 데이터를 쓰고 쇼핑몰에 접속하지 않는다. 테스트는 임시 SQLite를 쓰며 실제 로그인 함수, 브라우저 생성, `.env` 계정 접근, 사용자 CSV 경로를 차단한다. GitHub Actions가 push마다 테스트와 매칭 평가를 실행한다.
+140개가 통과한다. 모두 모의 데이터를 쓰고 쇼핑몰에 접속하지 않는다. 테스트는 임시 SQLite를 쓰며 실제 로그인 함수, 브라우저 생성, `.env` 계정 접근, 사용자 CSV 경로를 차단한다. GitHub Actions가 push마다 테스트와 매칭 평가를 실행한다.
 
 | 파일 | 수 | 내용 |
 |---|---|---|
@@ -665,6 +690,7 @@ scripts/portfolio/             데모 DB 생성, 데모 서버, 캡처 스크립
 | `test_vlm_benchmark.py` | 8 | 벤치마크 쌍 선정, 채점, 원격 모델 응답 처리, 연속 실패 시 중단 |
 | `test_vlm_review.py` | 19 | VLM 제안 검증(후보 밖 ID·형식 오류·오래된 판정·이미지 누락), 승인·거절·보류, 호출 한도, 중단 후 재실행, 가격 수집 시간 초과 복구, 모델 판단은 제안으로만 저장(승인 전 제외·승인 후 반영·거절 후 제외, 모든 작업 경로) |
 | `test_method_eval.py` | 7 | 방법 비교(A0·A·B·C·D) 사례 구성, 채점, 개발용·평가용 분리 |
+| `test_gold.py` | 10 | 정답 검수 화면에 방법의 답이 나가지 않음, 사람 라벨과 자동화 기록의 구분, 사람 정답 없이는 수치를 내지 않음, 미실행을 틀림과 섞지 않음, 검토 시간 기록 |
 
 요구사항별로 고정한 규칙 예
 
@@ -763,7 +789,7 @@ git에 올리지 않는 파일: `.env`, `cookies*.json`, `musinsa_data.sqlite`, 
 
 ### 실제로 확인하지 못한 것 (코드와 모의 테스트만 있음)
 
-- **사람의 검수**: 아직 아무도 검수 화면으로 승인·거절하지 않았다. 검토 시간 측정값도 없다
+- **사람의 검수**: 아직 아무도 검수 화면으로 승인·거절하지 않았다. 사람이 만든 평가 정답 0건, 검토 시간 측정 0건
 - 웹에서의 실시간 VLM 호출(유료): 모의 테스트만 했다. 실제 판정 246건은 명령줄로 실행해 저장한 것이다
 - 실제 쇼핑몰 장애 상황에서의 실패분 재실행: 테스트용 어댑터로만 검증했다
 - 텍스트만 주는 언어 모델 비교(B-LLM), "동일 상품 없음" 사례에 대한 VLM 판정
@@ -800,6 +826,9 @@ git에 올리지 않는 파일: `.env`, `cookies*.json`, `musinsa_data.sqlite`, 
 |---|---|
 | [docs/portfolio/index.html](docs/portfolio/index.html) | 클릭 가능한 시스템 다이어그램과 기능별 실행 화면·소스 위치·한계 |
 | [docs/matching-evaluation.md](docs/matching-evaluation.md) | 기존 매칭 규칙의 문제, 118 → 153 → 167의 뜻, 3개 모델 벤치마크, 평가 방법과 한계 |
+| [docs/gold-evaluation.md](docs/gold-evaluation.md) | 사람이 정답을 만드는 검수 모드, 화면이 숨기는 것, 60개 사례의 구성과 편향, 검수 후 실행할 평가 |
+| [docs/policy-integration-check.md](docs/policy-integration-check.md) | 검수 정책의 로컬 통합 확인 21개 항목, 매칭 수 183 → 155와 AI 등록 46건의 집계 기준 |
+| [docs/verification-status.md](docs/verification-status.md) | 기능별 검증 단계(구현 / 모의 테스트 / 로컬 통합 / 실제 운영 / 사람 검수 / 미실행), 아직 입증되지 않은 주장 |
 | [docs/method-evaluation.md](docs/method-evaluation.md) | 규칙·텍스트·VLM·결합 방법의 1:N 비교, "동일 상품 없음" 평가, 라벨 출처, 개발용·평가용 분리, 미실행 실험 |
 | [docs/review-measurement.md](docs/review-measurement.md) | 검수 업무량 집계와 수동 대비 AI 보조 검토 시간을 재는 절차, 실제 측정이 필요한 항목 |
 | [docs/troubleshooting.md](docs/troubleshooting.md) | 문제 26건의 증상·재현 조건·근거·원인·수정·검증·남은 한계 |

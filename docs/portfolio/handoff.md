@@ -210,3 +210,93 @@ VLM 호출 기록 246건(`gpt-5.4-mini-2026-03-17`): 응답 시간 중앙값 2.7
 - 이번 변경은 모의 테스트로만 확인했다. 실제 쇼핑몰 검색과 실제 모델 호출로 이 경로를 실행하지 않았다.
 - 이벤트 자동화 경로는 `match_products`를 공유하므로 같은 정책이 적용되지만, 자동화 자체의 장시간 동작은 이전부터 미검증이다.
 - 데스크톱 GUI(`desktop/gui.py`)는 자체 등록 경로를 그대로 쓴다. 웹과 같은 DB를 쓰므로 GUI로 매칭하면 모델의 선택이 등록될 수 있다. 그 행도 웹에서는 "AI 등록(미검수)"로 분류된다.
+
+---
+
+## 추가 2 (2026-10-10): 검증 근거 준비 — 사람 정답, 통합 확인, 시간 측정
+
+목표는 기능 추가가 아니라, 품질과 AI 도입 효과를 검증할 수 있는 근거를 만드는 준비다. 유료 API 호출, 주문·결제, 운영 DB 수정 없이 진행했다(운영 DB는 읽기 전용으로만 열었고, 통합 확인 전후의 SHA-256이 같다).
+
+### 1) 변경 사항
+
+| 파일 | 내용 |
+|---|---|
+| `shop_comparator/matching/gold.py` (신규) | 평가 사례 고정(`build`), 화면에 보낼 데이터(`public_case`), 라벨 저장(`add_label`), 사람/자동화 구분(`origin_now`), 검토 시간(`add_timing`), 상태(`status`). 저장 위치는 `evaluation_data/gold/` |
+| `shop_comparator/matching/gold_eval.py` (신규) | 사람 정답 기준 평가(`evaluate`, `score`). 사람 정답이 없으면 "사람 검수 대기"만 출력 |
+| `shop_comparator/web/web_app.py` | `/api/gold`, `/api/gold/<사례>`, `/api/gold/image/...`, `/api/gold/report`, `/api/export/gold-labels.csv`, `/api/export/review-timing.csv`. 운영 검토 결정에 시간 기록 추가 |
+| `shop_comparator/web/static/app.js`, `templates/index.html`, `static/app.css` | **정답 검수** 탭, 평가 결과 표, 검토 시간 기록 표, 탭 이탈 측정. 검토 탭에서 상품번호 여러 개로 묶음 선택 |
+| `scripts/verify_review_policy.py` (신규) | 검수 정책 로컬 통합 확인 |
+| `scripts/match_counts.py` (신규) | 매칭 수의 집계 기준 |
+| `scripts/measurement_plan.py` (신규) | 검토 시간 측정 계획 |
+| `tests/test_gold.py` (신규) | 10개 |
+| `docs/gold-evaluation.md`, `policy-integration-check.md`, `verification-status.md` (신규), `review-measurement.md` (절차 보강) | |
+| `docs/evaluation/gold/cases.json`, `method_outputs.json`, `docs/evaluation/integration/*.json` | 고정한 사례 정의, 통합 확인 결과, 집계 결과 |
+
+정답 검수 화면을 만들다가 고친 버그: 검수자 칸에 별칭을 적은 뒤 처음 누른 후보 선택이 사라졌다(입력 칸이 포커스를 잃으며 화면을 다시 그림). 선택과 타이머를 유지하도록 고쳤다.
+
+### 2) 테스트와 로컬 통합 확인 결과
+
+| 명령 | 결과 | 구분 |
+|---|---|---|
+| `python -m unittest discover -s tests` | 140개 통과 | 모의 테스트 |
+| `python scripts/verify_review_policy.py --save` | 21개 항목 통과, 실패 0 | 로컬 통합 확인 (저장 결과 재생, 승인·거절은 자동화 조작) |
+| `python -m shop_comparator.matching.gold_eval` | "사람 검수 대기", 실행 범위만 출력 (A0·A·B 60/60, C·D 53/60, B-LLM 미실행) | 사람 정답 0건 |
+| `python scripts/portfolio/capture.py app` / `page` | 앱 화면 27장, 설명 페이지 5장. 14개 상자 모두 열림, 오류 0 | 저장 결과 재생 / 모의 장애 / 자동화 조작 |
+| `evaluate`, `vlm_benchmark`, `method_eval` | 이전과 같은 수치 | 저장된 결과 |
+
+매칭 수의 집계 기준(`docs/policy-integration-check.md` 2절): 전체 행 16,339, 상품 목록 371. AI 등록 46건은 전체 행 기준이고 그중 28건이 상품 목록의 상품이다. 화면의 183 → 155는 활성 상품 기준이며 차이 28이 그 미검수 상품이다. 가격 비교 대상은 179 → 154.
+
+### 3) 캡처와 설명 페이지
+
+`docs/portfolio/index.html` (상자 14개. **정답 검수 (평가용)** 추가). 새 캡처:
+
+| 파일 | 내용 | 구분 |
+|---|---|---|
+| `17-before-approval.png` | 승인 전: "AI 등록(미검수)", KREAM 가격 비어 있음 | 저장 결과 재생 |
+| `07-approved-in-comparison.png` | 승인 후: "검수 승인", 가격 반영 | 재생 + 자동화 조작 |
+| `19-after-reject.png` | 거절 후: "검수 거절", 가격 비어 있음 | 재생 + 자동화 조작 |
+| `18-legacy-ai-card.png`, `15-match.png` | 기존 AI 등록의 미검수 표시 | 저장 결과 재생 |
+| `20-gold-blind.png` | AI 결론을 숨긴 정답 검수 화면 | 저장 결과 재생 |
+| `21-gold-report-waiting.png` | 평가 결과: 실행·미실행 수와 "사람 검수 대기" | 저장 결과 재생 |
+| `22-timing-log.png`, `23-gold-progress.png` | 검토 시간 기록, 자동화 기록은 사람 정답으로 세지 않음 | 자동화 조작 |
+
+이 묶음에 쇼핑몰이나 모델을 실제로 호출한 화면은 없다. 승인·거절·정답 저장이 보이는 화면은 모두 자동화 조작이며 사람 검수의 증거가 아니다(`evidence-manifest.json`의 `category`, `humanReviewEvidence`).
+
+### 4) 현재 실제 사람 검수 건수
+
+| 항목 | 건수 |
+|---|---|
+| 사람이 만든 평가 정답 | **0 / 60** |
+| 사람이 한 운영 검수(승인·거절·보류) | **0** |
+| 사람의 검토 시간 측정 | **0** |
+
+### 5) 정답 검수를 시작하는 방법
+
+1. `http://127.0.0.1:8765/#gold` 를 연다 (서버가 꺼져 있으면 `powershell -ExecutionPolicy Bypass -File restart_server.ps1`).
+2. **검수자 (별칭)** 에 별칭 입력.
+3. 사례마다 같은 상품인 후보의 **[후보 N 선택]** → **[선택한 후보가 같은 상품 · 저장]**. 없으면 근거를 적고 **[동일 상품 없음 · 저장]**, 가릴 수 없으면 **[판단 불가 · 저장]**.
+4. 60건까지 반복. 중간에 닫아도 진행은 남는다.
+
+### 6) 검수를 마친 뒤 실행할 명령
+
+```powershell
+.\.venv\Scripts\python.exe -m shop_comparator.matching.gold status
+.\.venv\Scripts\python.exe -m shop_comparator.matching.gold_eval --save
+.\.venv\Scripts\python.exe -m shop_comparator.matching.gold_eval --json
+.\.venv\Scripts\python.exe -m shop_comparator.matching.gold export
+```
+
+### 7) 검토 시간 측정 방법
+
+`docs/review-measurement.md` 3절. 요약: `python scripts/measurement_plan.py --per-block 12 --session 1` → 출력된 블록 A 목록을 VLM 검토 탭 검색창에 붙여넣고 "AI 제안 숨기기"를 켠 채 검토 → 쉬었다가 블록 B를 끈 채 검토 → 정답 검수 탭의 [검토 시간 CSV]. 세션 2는 순서를 바꿔 새 상품으로.
+
+### 8) 아직 입증되지 않은 주장과 남은 한계
+
+- 검토 시간 감소: 측정 없음.
+- 매칭 정확도, VLM 제안의 정확도, 규칙(`local`)의 정확도: 사람이 만든 정답이 없다.
+- 통합 확인은 저장 결과 재생이다. 실제 쇼핑몰 검색과 실제 모델 호출에서의 동작은 확인하지 않았다.
+- 60개 사례는 무작위 표본이 아니고 어려운 사례의 비중이 높다. 전체 정확도로 일반화할 수 없다.
+- 검수자가 한 명이면 검수자 간 일치도를 알 수 없다.
+- 정답 검수 화면에 모델번호가 보인다(요청 사항). 사람의 판단이 모델번호 쪽으로 기울 수 있다.
+- 미실행: 텍스트 전용 LLM, "동일 상품 없음" 사례의 VLM 판정, 저장된 판정이 없는 7건의 VLM 판정.
+- 상세한 단계별 상태는 `docs/verification-status.md`.

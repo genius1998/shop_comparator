@@ -37,12 +37,14 @@ const run = promise => promise.then(d => { notify(''); return d; }).catch(e => {
 
 /* ---------- tabs ---------- */
 function showTab(name) {
+  document.body.classList.toggle('blind', name === 'gold');     // no job summary (it may carry model verdict counts) while labelling
   $$('#tabs button').forEach(b => b.classList.toggle('on', b.dataset.tab === name));
   $$('.tab').forEach(t => t.classList.toggle('on', t.id === 'tab-' + name));
   location.hash = name;
   if (name === 'products') loadProducts();
   if (name === 'match') loadMatches();
   if (name === 'review') loadReview();
+  if (name === 'gold') loadGold();
   if (name === 'monitor') loadMonitors();
   if (name === 'export') loadSettings();
   if (name === 'logs') loadLogs(true);
@@ -323,12 +325,31 @@ $$('[data-match]').forEach(button => button.addEventListener('click', () => {
   run(request).then(d => { if (d) { notify('요청을 처리했습니다.', true); loadMatches(); poll(); } });
 }));
 
+/* ---------- timing of a review: start, end, and time spent away from the tab ---------- */
+function startClock() {
+  return {startedAt: new Date().toISOString(), t0: Date.now(), hiddenMs: 0, interruptions: 0, hiddenSince: document.hidden ? Date.now() : null};
+}
+const clocks = new Set();
+document.addEventListener('visibilitychange', () => {
+  for (const c of clocks) {
+    if (document.hidden) { c.hiddenSince = Date.now(); c.interruptions += 1; }
+    else if (c.hiddenSince) { c.hiddenMs += Date.now() - c.hiddenSince; c.hiddenSince = null; }
+  }
+});
+function stopClock(c) {
+  if (!c) return {};
+  if (c.hiddenSince) { c.hiddenMs += Date.now() - c.hiddenSince; c.hiddenSince = null; }
+  clocks.delete(c);
+  const round = ms => Math.round(ms / 100) / 10;
+  return {startedAt: c.startedAt, endedAt: new Date().toISOString(), seconds: round(Date.now() - c.t0), hiddenSeconds: round(c.hiddenMs), interruptions: c.interruptions};
+}
+
 /* ---------- VLM review ---------- */
 let reviewItems = [], reviewOpened = {};
 const VERDICT = {same: ['동일', 'good'], different: ['다름', 'bad'], uncertain: ['불확실', 'warn']};
 const REVIEW_STATE = {pending: '검수 대기', approved: '승인함', rejected: '거절함', held: '보류함', no_suggestion: 'VLM 제안 없음'};
 async function loadReview() {
-  const data = await run(api('/api/review'));
+  const data = await run(api('/api/review' + ($('review-all').checked ? '?scope=all' : '')));
   if (!data) return;
   reviewItems = data.items;
   const m = data.metrics, t = m.reviewSeconds;
@@ -339,15 +360,14 @@ async function loadReview() {
     cell('판정 실패·무효', m.vlmFailed, m.stale ? `후보가 바뀐 판정 ${m.stale}` : ''), cell('사람 검수 대기', m.needsReview, m.aiUnreviewed ? `기존 AI 등록(미검수) ${m.aiUnreviewed} 포함` : ''),
     cell('승인 / 거절 / 보류', `${m.approved} / ${m.rejected} / ${m.held}`, `VLM 제안대로 승인 ${m.approvedWithVlm}`),
     cell('검토 시간 중앙값', t.assisted.count ? `${t.assisted.median}초` : '측정 없음', `AI 보조 ${t.assisted.count}건 · 수동 ${t.manual.count}건${t.manual.count ? ` (${t.manual.median}초)` : ''}`));
-  $('review-scope').textContent = `대상: 방금 수집한 상품 ${m.products}개. 저장된 VLM 판정 파일에 ${data.storedVerdicts}개 상품의 결과가 있습니다.` + (data.liveAvailable ? '' : ' 유료 실행용 키(OPENAI_API_KEY_VLM)가 설정되어 있지 않습니다.');
+  $('review-scope').textContent = `대상: ${$('review-all').checked ? '저장된 상품 전체' : '방금 수집한 상품'} ${m.products}개. 저장된 VLM 판정 파일에 ${data.storedVerdicts}개 상품의 결과가 있습니다.` + (data.liveAvailable ? '' : ' 유료 실행용 키(OPENAI_API_KEY_VLM)가 설정되어 있지 않습니다.');
   $('review-live').disabled = !data.liveAvailable;
   renderReview();
 }
 function reviewDecide(item, action, kreamId, note) {
-  const opened = reviewOpened[item.goodsNo];
-  const seconds = opened ? Math.round((Date.now() - opened) / 100) / 10 : null;
+  const timing = stopClock(reviewOpened[item.goodsNo]);
   const mode = $('review-manual').checked ? 'manual' : 'assisted';
-  run(api(`/api/review/${item.goodsNo}`, {action, kreamId, note, seconds, mode})).then(d => {
+  run(api(`/api/review/${item.goodsNo}`, {action, kreamId, note, mode, reviewer: localStorage.getItem('reviewer') || '', ...timing})).then(d => {
     if (!d) return;
     delete reviewOpened[item.goodsNo];
     notify({approve: '승인했습니다. 이 매칭을 가격 비교에 사용합니다.', reject: '거절했습니다.', hold: '보류로 기록했습니다.'}[action], true);
@@ -403,25 +423,120 @@ function reviewCard(item) {
       !manual && item.conflicts.length ? el('span', {class: 'badge bad', text: '충돌'}) : null,
       el('strong', {text: item.name}), el('small', {text: `${item.brand} · ${item.goodsNo} · 후보 ${item.candidates.length}개 · 현재 ${item.match.status}`})),
     body);
-  details.addEventListener('toggle', () => { if (details.open && !reviewOpened[item.goodsNo]) reviewOpened[item.goodsNo] = Date.now(); });
+  details.addEventListener('toggle', () => { if (details.open && !reviewOpened[item.goodsNo]) { reviewOpened[item.goodsNo] = startClock(); clocks.add(reviewOpened[item.goodsNo]); } });
   if (reviewOpened[item.goodsNo]) details.open = true;
   return details;
 }
 function renderReview() {
-  const filter = $('review-filter').value, query = $('review-search').value.toLowerCase();
-  const shown = reviewItems.filter(i => (!filter || (filter === 'conflict' ? i.conflicts.length > 0 : i.state === filter)) && `${i.name} ${i.goodsNo} ${i.serial} ${i.brand}`.toLowerCase().includes(query));
+  const filter = $('review-filter').value, query = $('review-search').value.toLowerCase().trim();
+  // several product numbers (a measurement block pasted from the plan) select exactly those products, in that order
+  const ids = /^\d+([\s,]+\d+)+$/.test(query) ? query.split(/[\s,]+/) : null;
+  let shown = reviewItems.filter(i => (!filter || (filter === 'conflict' ? i.conflicts.length > 0 : i.state === filter))
+    && (ids ? ids.includes(i.goodsNo) : `${i.name} ${i.goodsNo} ${i.serial} ${i.brand}`.toLowerCase().includes(query)));
+  if (ids) shown = shown.sort((a, b) => ids.indexOf(a.goodsNo) - ids.indexOf(b.goodsNo));
   $('review-list').replaceChildren(...shown.map(reviewCard));
   $('review-empty').hidden = shown.length > 0;
   $('review-count').textContent = `${shown.length}개 표시 / 전체 ${reviewItems.length}개`;
 }
 ['review-filter', 'review-search', 'review-manual'].forEach(id => $(id).addEventListener('input', renderReview));
-$('review-stored').addEventListener('click', () => run(api('/api/jobs/vlm', {mode: 'stored', force: $('review-force').checked})).then(d => { if (d) { notify('저장된 판정을 불러옵니다(네트워크 호출 없음).', true); poll(); } }));
+$('review-all').addEventListener('change', loadReview);
+$('review-stored').addEventListener('click', () => run(api('/api/jobs/vlm', {mode: 'stored', force: $('review-force').checked, scope: $('review-all').checked ? 'all' : undefined})).then(d => { if (d) { notify('저장된 판정을 불러옵니다(네트워크 호출 없음).', true); poll(); } }));
 $('review-live').addEventListener('click', () => {
   const max = Number($('review-max').value);
   if (!Number.isInteger(max) || max < 1) return notify('유료 호출은 최대 호출 수를 입력해야 실행됩니다.');
   if (!confirm(`OpenAI 유료 API를 최대 ${max}회 호출합니다. 실행할까요?`)) return;
   run(api('/api/jobs/vlm', {mode: 'live', max_calls: max, force: $('review-force').checked})).then(d => { if (d) { notify('VLM 검토를 시작했습니다.', true); poll(); } });
 });
+
+/* ---------- ground-truth labelling (evaluation) ---------- */
+let goldItems = [], goldIndex = 0, goldClock = null, goldAutomation = false;
+const goldReviewer = () => $('gold-reviewer').value.trim().replace(/\s+/g, ' ');
+async function loadGold(keep) {
+  if (!$('gold-reviewer').value) $('gold-reviewer').value = localStorage.getItem('reviewer') || '';
+  const data = await run(api('/api/gold?reviewer=' + encodeURIComponent(goldReviewer())));
+  if (!data) return;
+  goldItems = data.items; goldAutomation = data.automation;
+  $('gold-automation').hidden = !data.automation;
+  $('gold-progress').textContent = `사람 정답 ${data.status.humanLabelled} / ${data.status.cases}건` + (data.status.automationRecords ? ` · 자동화 기록 ${data.status.automationRecords}건(정답 아님)` : '');
+  $('gold-empty').hidden = goldItems.length > 0;
+  if (keep === 'quiet') {
+    // the reviewer field lost focus (often because a candidate was clicked): keep the open case, its selection and its timer
+    const shown = $('gold-case').dataset.caseId, current = goldItems[goldIndex];
+    if (current && current.caseId === shown && JSON.stringify(current.label) === $('gold-case').dataset.label) return loadGoldReport();
+  }
+  if (!keep) { const todo = goldItems.findIndex(i => !i.label); goldIndex = todo < 0 ? 0 : todo; }
+  renderGold(); loadGoldReport();
+}
+function renderGold() {
+  const box = $('gold-case'); box.replaceChildren();
+  if (goldClock) { clocks.delete(goldClock); goldClock = null; }
+  const item = goldItems[goldIndex];
+  if (!item) return;
+  box.dataset.caseId = item.caseId; box.dataset.label = JSON.stringify(item.label);
+  let chosen = item.label && item.label.decision === 'candidate' ? item.label.kreamId : '';
+  const picture = (file, alt) => el('img', {src: '/api/gold/image/' + file, alt, loading: 'lazy'});
+  const options = list => el('small', {text: list && list.length ? '옵션 ' + list.join(' · ') : '옵션 정보 없음'});
+  const grid = el('div', {class: 'candidates'});
+  const pick = id => { chosen = id; draw(); };
+  const draw = () => grid.replaceChildren(...item.candidates.map((c, n) => el('div', {class: 'candidate' + (c.kreamId === chosen ? ' chosen' : ''), onclick: () => pick(c.kreamId)},
+    picture(c.image, `후보 ${n + 1}`), el('strong', {text: `후보 ${n + 1}. ${c.name || '(이름 없음)'}`}),
+    el('small', {text: [c.brand, `KREAM ${c.kreamId}`, c.model ? `모델번호 ${c.model}` : '모델번호 없음'].filter(Boolean).join(' · ')}),
+    item.candidateOptionsShown ? options(c.options) : null,
+    el('button', {type: 'button', class: 'pick', 'aria-pressed': String(c.kreamId === chosen), text: c.kreamId === chosen ? '선택됨' : `후보 ${n + 1} 선택`,
+      onclick: e => { e.stopPropagation(); pick(c.kreamId); }}),
+    el('a', {href: c.url, target: '_blank', rel: 'noopener noreferrer', text: 'KREAM 페이지 ↗', onclick: e => e.stopPropagation()}))));
+  draw();
+  const rationale = el('textarea', {rows: 2, maxlength: 500, placeholder: '판단 근거 (예: 솔 색이 다름, 모델번호 계열이 다름). 동일 상품 없음·판단 불가는 필수'});
+  rationale.value = item.label && item.label.rationale || '';
+  const save = (decision) => {
+    if (goldReviewer().length < 2) return notify('검수자 별칭을 먼저 입력해 주세요.');
+    if (decision === 'candidate' && !chosen) return notify('같은 상품인 후보를 먼저 선택해 주세요.');
+    localStorage.setItem('reviewer', goldReviewer());
+    const timing = stopClock(goldClock); goldClock = null;
+    run(api(`/api/gold/${item.caseId}`, {reviewer: goldReviewer(), decision, kreamId: decision === 'candidate' ? chosen : '', rationale: rationale.value, ...timing})).then(d => {
+      if (!d) { goldClock = startClock(); clocks.add(goldClock); return; }
+      notify(d.origin === 'automation' ? '자동화 기록으로 저장했습니다(사람 정답 아님).' : '정답을 저장했습니다.', true);
+      loadGold();
+    });
+  };
+  box.append(el('div', {class: 'review-card gold-card'},
+    el('div', {class: 'gold-head'}, el('strong', {text: `사례 ${item.caseId} (${goldIndex + 1} / ${goldItems.length})`}),
+      item.label ? el('span', {class: 'badge good', text: `저장됨: ${{candidate: '후보 ' + item.label.kreamId, none: '동일 상품 없음', unsure: '판단 불가'}[item.label.decision]} · ${when(item.label.createdAt)}`}) : el('span', {class: 'badge', text: '미완료'})),
+    el('div', {class: 'review-body'},
+      el('div', {class: 'review-source'}, picture(item.musinsa.image, '원본 상품'), el('strong', {text: item.musinsa.name}),
+        el('small', {text: `${item.musinsa.brand} · 무신사 ${item.musinsa.goodsNo}`}), el('small', {text: '모델번호(품번) ' + (item.musinsa.model || '없음')}),
+        options(item.musinsa.options), el('a', {href: item.musinsa.url, target: '_blank', rel: 'noopener noreferrer', text: '무신사 페이지 ↗'})),
+      el('div', {class: 'review-main'},
+        el('p', {class: 'hint', text: `후보 ${item.candidates.length}개 중 원본과 같은 상품(같은 모델, 같은 색상)을 고르세요. 순서는 임의입니다.` + (item.candidateOptionsShown ? '' : ' 후보의 옵션은 일부만 수집되어 있어 표시하지 않습니다.')}),
+        grid, rationale,
+        el('div', {class: 'review-actions'},
+          el('button', {class: 'primary', text: '선택한 후보가 같은 상품 · 저장', onclick: () => save('candidate')}),
+          el('button', {text: '동일 상품 없음 · 저장', onclick: () => save('none')}),
+          el('button', {text: '판단 불가 · 저장', onclick: () => save('unsure')}))))));
+  goldClock = startClock(); clocks.add(goldClock);
+}
+async function loadGoldReport() {
+  const data = await api('/api/gold/report').catch(() => null);
+  if (!data) return;
+  const r = data.report, cell = m => m && m.den ? `${m.num}/${m.den} (${(m.value * 100).toFixed(1)}%)` : '—';
+  $('gold-report-status').textContent = r.status; $('gold-report-status').className = 'badge ' + (r.methods ? 'good' : 'warn');
+  $('gold-report-message').textContent = `${r.message} 자동화 기록 ${r.automationRecords}건은 정답으로 쓰지 않습니다.`;
+  const waiting = '사람 검수 대기';
+  $('gold-report-rows').replaceChildren(...Object.entries(r.execution).map(([key, e]) => {
+    const s = r.methods && r.methods[key];
+    return el('tr', {}, el('td', {text: `${key} · ${e.name}`}), el('td', {text: e.run}), el('td', {text: e.notRun}),
+      ...(s ? [cell(s.precision), String(s.wrongPicks.value), cell(s.foundRate), cell(s.deferRate), cell(s.wrongOnNone)] : [waiting, waiting, waiting, waiting, waiting]).map(t => el('td', {text: t})));
+  }), ...Object.entries(r.notRunMethods).map(([key, e]) => el('tr', {}, el('td', {text: `${key} · ${e.name}`}), el('td', {text: '0'}), el('td', {text: String(r.cases)}), el('td', {colspan: 5, text: `${e.status}: ${e.reason}`}))));
+  $('gold-report-note').textContent = '실행·미실행은 저장된 결과로 답할 수 있는 사례 수입니다(정답과 무관). 방법마다 실행 범위가 다르므로 비교는 명령줄 보고서의 공통 실행 집합 표를 쓰세요. ' + r.sampling.bias;
+  $('gold-timing-rows').replaceChildren(...data.timing.map(t => el('tr', {class: t.origin === 'automation' ? 'muted-row' : ''}, ...[
+    t.context === 'gold' ? '정답 작성' : '운영 검토', t.caseId, {blind: 'AI 숨김', manual: '수동', assisted: 'AI 보조'}[t.mode] || t.mode, t.origin, t.reviewer || '', t.decision || '',
+    (t.startedAt || '').replace('T', ' ').slice(0, 19), (t.endedAt || '').replace('T', ' ').slice(0, 19), t.seconds ?? '', t.hiddenSeconds ?? '', t.interruptions ?? ''].map(v => el('td', {text: String(v)})))));
+}
+$('gold-prev').addEventListener('click', () => { goldIndex = Math.max(0, goldIndex - 1); renderGold(); });
+$('gold-next').addEventListener('click', () => { goldIndex = Math.min(goldItems.length - 1, goldIndex + 1); renderGold(); });
+$('gold-todo').addEventListener('click', () => { const i = goldItems.findIndex(x => !x.label); if (i < 0) notify('모든 사례에 정답을 저장했습니다.', true); else { goldIndex = i; renderGold(); } });
+$('gold-reviewer').addEventListener('change', () => { localStorage.setItem('reviewer', goldReviewer()); loadGold('quiet'); });
+$('gold-report-refresh').addEventListener('click', loadGoldReport);
 
 /* ---------- monitoring ---------- */
 async function loadMonitors() {

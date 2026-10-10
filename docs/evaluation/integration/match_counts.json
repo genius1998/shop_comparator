@@ -1,0 +1,57 @@
+{
+ "database": "musinsa_data.sqlite",
+ "hasReviewColumns": true,
+ "cacheRows": 16339,
+ "productsInList": 371,
+ "activeProducts": 371,
+ "byKindAndMethod": {
+  "allRows": {
+   "unverified/-": 16130,
+   "rule/model_code": 153,
+   "ai_unreviewed/openai": 44,
+   "ai_unreviewed/image_review": 2,
+   "user/manual": 1,
+   "rule/local": 2
+  },
+  "inProductList": {
+   "rule/model_code": 153,
+   "unverified/-": 78,
+   "ai_unreviewed/openai": 26,
+   "ai_unreviewed/image_review": 2,
+   "user/manual": 1,
+   "rule/local": 1
+  },
+  "activeProducts": {
+   "rule/model_code": 153,
+   "unverified/-": 78,
+   "ai_unreviewed/openai": 26,
+   "ai_unreviewed/image_review": 2,
+   "user/manual": 1,
+   "rule/local": 1
+  }
+ },
+ "aiRegistered": {
+  "allRows": 46,
+  "inProductList": 28,
+  "activeProducts": 28,
+  "explain": "AI 등록 건수는 범위에 따라 다르다. '전체 행'은 kream_search_cache의 모든 행(예전 GUI가 남긴, 지금 상품 목록에 없는 무신사 상품의 행 포함), '상품 목록'은 그중 현재 products 표에 있는 상품의 행이다."
+ },
+ "matchedShownInApp": {
+  "before": 183,
+  "after": 155,
+  "explain": "화면 상단의 'KREAM 매칭 N개'는 숨기지 않은 상품 중 매칭된 상품 수다. 이전에는 match_verified=1이면 셌고, 지금은 규칙 확정 또는 사람이 지정·승인한 것만 센다. 차이는 활성 상품의 AI 등록(미검수) 수와 같다."
+ },
+ "priceComparisonTargets": {
+  "before": 179,
+  "after": 154,
+  "explain": "가격 비교 대상 = 활성 상품 + 사용할 수 있는 매칭 + KREAM 시세 수집됨 + 무신사 회원가 있음."
+ },
+ "humanReviewRecordsInThisDatabase": 0,
+ "labels": {
+  "rule": "규칙 확정",
+  "user": "사람이 지정·승인",
+  "ai_unreviewed": "AI 등록(미검수)",
+  "rejected": "검수 거절",
+  "unverified": "미검증(근거 없는 예전 ID)"
+ }
+}

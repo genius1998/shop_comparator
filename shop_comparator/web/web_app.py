@@ -16,6 +16,7 @@ from shop_comparator.services import exports
 from shop_comparator.services import monitoring
 from shop_comparator.services import pipeline
 from shop_comparator.services import vlm_review
+from shop_comparator.matching import gold, gold_eval
 from shop_comparator.shops import site_login
 from shop_comparator.storage import store
 from shop_comparator.core import webhook
@@ -495,9 +496,49 @@ def create_app(manager=None, monitors=None, auto=None):
     @app.post("/api/review/<goods_no>")
     def review_decide(goods_no):
         data = body()
-        review_id = vlm_review.decide(product_id(goods_no, "musinsa"), data.get("action"), data.get("kreamId"), data.get("note"),
+        goods_no = product_id(goods_no, "musinsa")
+        review_id = vlm_review.decide(goods_no, data.get("action"), data.get("kreamId"), data.get("note"),
                                       data.get("seconds"), data.get("mode", "assisted"))
+        # start/end and time away from the tab go to the evaluation store, not to the working database
+        gold.add_timing("ops", goods_no, data.get("mode", "assisted"), data.get("action"), data.get("kreamId"), data.get("reviewer"),
+                        data.get("startedAt"), data.get("endedAt"), data.get("seconds"), data.get("hiddenSeconds"),
+                        data.get("interruptions"), review_id)
         return jsonify(ok=True, review=review_id)
+
+    # ------------------------------------------------- ground-truth labelling
+    @app.get("/api/gold")
+    def gold_list():
+        reviewer = " ".join(request.args.get("reviewer", "").split())[:40]
+        return jsonify(items=gold.queue(reviewer or None), status=gold.status(), automation=gold.origin_now() == "automation")
+
+    @app.get("/api/gold/image/<case_id>/<name>")
+    def gold_image(case_id, name):
+        if not re.fullmatch(r"G\d{3}", case_id) or not re.fullmatch(r"(musinsa|kream_\d{1,12})\.jpg", name):
+            return jsonify(error="이미지를 찾을 수 없습니다."), 404
+        file_path = gold.path("images", case_id, name)
+        if not os.path.isfile(file_path):
+            return jsonify(error="이미지를 찾을 수 없습니다."), 404
+        return send_file(os.path.abspath(file_path), mimetype="image/jpeg")
+
+    @app.post("/api/gold/<case_id>")
+    def gold_label(case_id):
+        data = body()
+        label_id = gold.add_label(case_id, data.get("reviewer"), data.get("decision"), data.get("kreamId"), data.get("rationale"),
+                                  data.get("startedAt"), data.get("endedAt"), data.get("seconds"), data.get("hiddenSeconds"),
+                                  data.get("interruptions"))
+        return jsonify(ok=True, label=label_id, origin=gold.origin_now(), status=gold.status())
+
+    @app.get("/api/gold/report")
+    def gold_report():
+        return jsonify(report=gold_eval.evaluate(), timing=gold.timings()[-30:][::-1])
+
+    @app.get("/api/export/gold-labels.csv")
+    def export_gold_labels():
+        return send_file(io.BytesIO(gold.labels_csv().encode("utf-8")), download_name="gold_labels.csv", as_attachment=True, mimetype="text/csv")
+
+    @app.get("/api/export/review-timing.csv")
+    def export_review_timing():
+        return send_file(io.BytesIO(gold.timing_csv().encode("utf-8")), download_name="review_timing.csv", as_attachment=True, mimetype="text/csv")
 
     @app.get("/api/export/review-log.csv")
     def export_review_log():

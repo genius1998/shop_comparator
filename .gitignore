@@ -84,3 +84,7 @@ swea_study/
 
 # Demo copy of the database used for portfolio captures (rebuilt by scripts/portfolio/build_demo.py)
 portfolio_demo/
+
+# Evaluation ground truth (labels, frozen images) and the integration-check copy of the database
+evaluation_data/
+integration_check/
