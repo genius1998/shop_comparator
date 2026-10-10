@@ -1,0 +1,2617 @@
+{
+ "qwen3-vl-8b (LM Studio, RTX 4090)": {
+  "4923314:515349": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show identical sneakers with matching construction, materials, and design elements. The only visible differences are minor photographic variations in lighting and background, which do not ",
+   "latency_ms": 2459,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.1
+  },
+  "5329560:1039631": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show identical Adidas Tokyo sneakers with matching colorway, materials, logo placement, and structural details. The only variation is slight camera angle and lighting, which does not alter",
+   "latency_ms": 2074,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.9
+  },
+  "2032850:42637": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the exact same black Asics running shoe from a side profile. All visible features including the logo, mesh texture, lacing, and sole design are identical. The only difference is the c",
+   "latency_ms": 1977,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.6
+  },
+  "595039:118745": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the same Dr. Martens 1461 model, identifiable by the classic three-eyelet derby silhouette, yellow stitching, and rubber sole. Image A shows a top-down view of both shoes, while Image",
+   "latency_ms": 2412,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "6192576:867110": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show an identical New Balance sneaker from the same angle, with no visible differences in design, color, or structure. The lighting and background are slightly different, but these are not",
+   "latency_ms": 2009,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "4463013:21441": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show the exact same Nike Shox model from identical angles, with no visible differences in design, color, or construction. The only variation is the camera angle and slight rotation, which ",
+   "latency_ms": 2276,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.1
+  },
+  "3976349:36": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the same Nike Air Force 1 Low sneaker in black, viewed from slightly different angles but with identical visible features including logo, stitching, hardware, and overall construction",
+   "latency_ms": 2314,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "4939603:470681": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show the exact same shoe model from a nearly identical side angle. All visible features—including the logo placement (not visible but consistent), stitching, hardware, and pattern—are iden",
+   "latency_ms": 2270,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.9
+  },
+  "7318373:1117423": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show identical Asics shoes with matching grey suede upper, silver strap design, logo placement, and sole pattern. No visible differences in structure, color, or hardware. The slight variat",
+   "latency_ms": 1852,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.5
+  },
+  "6092233:838576": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show the same Puma Nitro running shoe model from identical angles and lighting conditions. All visible features including logo placement, midsole text, stitching, and overall structure mat",
+   "latency_ms": 2289,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "6897456:1028654": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show identical shoes with matching color, logo, material, and structure. The only visible differences are minor photographic variations (lighting, angle, background) which do not affect pr",
+   "latency_ms": 2107,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.6
+  },
+  "6886576:1061652": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show identical black suede derby shoes with the same three-eyelet configuration, stitching, sole design, and overall structure. The only visible difference is the angle and slight lighting",
+   "latency_ms": 2242,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.9
+  },
+  "6839079:1000435": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show identical black Adidas sneakers with the same three-stripe logo, lacing, paneling, and sole. The only visible difference is a faint 'Samba' text on the side of IMAGE B, which is a mod",
+   "latency_ms": 2000,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.2
+  },
+  "6997721:1052944": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show the exact same sneaker model from a nearly identical side angle. All visible features—including the logo, text, color, stitching, and hardware—are identical. The only differences are ",
+   "latency_ms": 2416,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.1
+  },
+  "6945906:1052396": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show identical Skechers sneakers from the same angle and perspective, with matching materials, hardware, and logo placement. The only difference is the camera angle and composition (IMAGE ",
+   "latency_ms": 2333,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "6192575:867111": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show an identical New Balance sneaker with matching colorway, logo, paneling, laces, and outsole. All visible features are consistent across both photos, including the text on the heel. No",
+   "latency_ms": 2102,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.7
+  },
+  "7276893:1085804": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the exact same New Balance sneaker model from a nearly identical side angle. All visible features including logo placement, material, stitching, laces, and sole are identical. Minor v",
+   "latency_ms": 2038,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.7
+  },
+  "3892794:247965": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show the same sneaker model with identical silver metallic upper, black outsole, and structural design. Image A shows the shoe in context on a person, while Image B shows a studio shot, bu",
+   "latency_ms": 2126,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.9
+  },
+  "6024097:875277": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the exact same ASICS running shoe model from a slightly different angle, with identical colorway, logo placement, and structural features. No visible differences in design, hardware, ",
+   "latency_ms": 2099,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "166001:18448": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the same Vans Old Skool sneaker from identical angles, with matching black colorway, construction, and logo placement. The only variation is the camera angle (slightly different heel-",
+   "latency_ms": 2019,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "5340969:598585": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the exact same shoe model from a slightly different angle and lighting, but all visible features including material, structure, logo, and sole are identical. No design or structural d",
+   "latency_ms": 1676,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.3
+  },
+  "5331552:595549": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show identical UGG-style mules with matching brown suede, platform soles, red/cream trim, and logo placement. The only visible difference is a slight variation in lighting and shadow, whic",
+   "latency_ms": 2115,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.7
+  },
+  "5705621:632282": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the same Nike Air Force 1 sneaker model, identical in design, color, and visible features. The only difference is the camera angle and slight rotation, which does not alter the produc",
+   "latency_ms": 2150,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "6111437:466444": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show identical Clarks Originals Wallabee-style loafers with matching suede texture, color, tassel, stitching, logo, and sole. The only visible differences are minor photographic variations",
+   "latency_ms": 2294,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.9
+  },
+  "5835214:754796": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the exact same sneaker model from the same angle, with identical colorway, material, logo placement, and hardware. No visible structural or design differences exist between the two im",
+   "latency_ms": 2243,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "4727100:135624": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the same New Balance sneaker model from a similar side angle. All visible features including logo, color, paneling, stitching, and hardware are identical. Minor variations in lighting",
+   "latency_ms": 2140,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "5179870:705230": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show the same Puma racing-style sneaker from different angles. All visible features including material, logo, stitching, and hardware are identical. No structural or design differences are",
+   "latency_ms": 2122,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "1163169:15251": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the identical Adidas Samba sneaker with matching features including colorway, logo placement, stitching, and sole design. The only visible difference is a slight variation in lighting",
+   "latency_ms": 2229,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "5042975:389369": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show identical black Adidas running shoes with the same three white stripes, lacing system, sole profile, and heel branding. The only visible difference is a slight variation in camera ang",
+   "latency_ms": 2103,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "6271398:888824": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show the exact same sneaker model from slightly different angles, with identical visible features including color, logo, text, and structural elements. No design or structural differences ",
+   "latency_ms": 2038,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.6
+  },
+  "706935:310551": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show the same Dr. Martens 1461 model, confirmed by identical silhouette, stitching, logo placement, and sole design. Image A shows a top-down view of a pair, while Image B shows a single s",
+   "latency_ms": 2419,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.1
+  },
+  "6002026:830777": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show identical Puma sneakers from the same product line, with matching color, material, logo placement, and structural features. The only difference is the camera angle and presentation (I",
+   "latency_ms": 2582,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.5
+  },
+  "6111791:561179": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the exact same black Nike running shoe from slightly different angles, with identical visible features including the logo, cushioning, and construction. No structural or design differ",
+   "latency_ms": 2267,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.2
+  },
+  "6996753:974158": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show the exact same sneaker model from slightly different angles, but all visible features match perfectly including logo, color, material, and structure. No design or structural differenc",
+   "latency_ms": 2099,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "6653232:971179": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show the exact same Adidas Terrex trail running shoe from the same angle, with identical design, color, and visible features. No structural or design differences are visible. The only vari",
+   "latency_ms": 2260,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.9
+  },
+  "4678344:418841": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show identical New Balance 440 sneakers with matching black mesh uppers, silver logo and stripe accents, and the same model number on the heel. All visible features are consistent across b",
+   "latency_ms": 2379,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "3976350:12831": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the identical white Nike Air Force 1 sneaker from the same angle and lighting, with no visible structural or design differences. All features including logo, stitching, sole, and pane",
+   "latency_ms": 2250,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.9
+  },
+  "4207634:1090164": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the exact same product from a slightly different angle, with no visible structural or design differences. The logo placement is consistent, and all visible features match perfectly. T",
+   "latency_ms": 2001,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "2340324:437517": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show identical black leather oxford dress shoes from the same angle and perspective, with matching construction details like stitching, lacing, and sole. The only difference is the view: I",
+   "latency_ms": 2153,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "7044931:808126": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two images show clearly different shoe designs in terms of silhouette, paneling, and construction. IMAGE A is a chunky, modern sneaker with mesh and a thick sole, while IMAGE B is a slimmer, class",
+   "latency_ms": 3138,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.8
+  },
+  "3157671:220750": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "Both images show black Reebok sneakers with similar silhouettes, but IMAGE A features a distinctive circular tag and visible logos on the heel and tongue, while IMAGE B has different logo placements a",
+   "latency_ms": 3133,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.8
+  },
+  "2114461:407392": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show identical black leather oxford shoes with matching stitching, lacing, and logo placement. The only difference is the camera angle and presentation (IMAGE A shows a pair from a front-t",
+   "latency_ms": 2238,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "6636852:263074": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the exact same black leather oxford shoe from a side profile, with identical construction, stitching, lacing, and sole. The only variation is the camera angle and slight cropping, whi",
+   "latency_ms": 2138,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "2200892:253860": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show identical Chelsea boots with matching color, material texture, stitching, hardware, and sole design. The only variation is in camera angle and lighting, which does not alter the produ",
+   "latency_ms": 1951,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.5
+  },
+  "6111436:84745": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "The shoes differ in color, sole material, and visible branding and decorative elements. The presence of a Gore-Tex logo and tassel in IMAGE A, and their absence in IMAGE B, indicates different design ",
+   "latency_ms": 2971,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.6
+  },
+  "4313969:18871": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show identical Timberland 6-inch boots with matching tan suede, black collar, gold hardware, and logo placement. The only difference is the camera angle and presentation (A shows a pair, B",
+   "latency_ms": 2288,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "4226785:13100": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the same white Nike Air Force 1 sneaker from identical angles, with no visible structural or design differences. All visible features match perfectly, including logo, stitching, and s",
+   "latency_ms": 2407,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.1
+  },
+  "2980918:797663": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show the exact same Timberland boot model from identical angles, with no visible differences in design, color, or construction. The only variation is the camera angle and slight rotation, ",
+   "latency_ms": 2201,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "7249959:430579": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show identical black leather oxford shoes with matching lacing, stitching, and silhouette. Image A shows a pair from a top-down angle, while Image B shows a single shoe from a side profile",
+   "latency_ms": 2219,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "4397345:173149": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show the same model of Timberland boot, viewed from slightly different angles. All visible features match exactly, including the logo, lacing, sole, and material. No structural or design d",
+   "latency_ms": 2664,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.3
+  },
+  "3347848:398609": {
+   "result": "same",
+   "confidence": 1.0,
+   "reason": "Both images show identical sneakers with matching color, material, stitching, sole texture, and logo placement. The only difference is the camera angle and slight rotation, which does not alter the pr",
+   "latency_ms": 2069,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.7
+  },
+  "2741233:53196": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "Both images show the exact same Reebok Classic Club C 85 sneaker from identical angles and lighting. All visible features—including logo placement, stitching, color, and sole—match perfectly. No struc",
+   "latency_ms": 2373,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.1
+  },
+  "4394971:347658": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show identical black leather boots with the same slouchy cuff, two buckle straps, rounded toe, and low heel. The only difference is the angle and background (IMAGE A shows a person wearing",
+   "latency_ms": 2119,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "4489783:689321": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show identical boots with matching suede texture, slouchy design, platform sole, and stitching. The only visible difference is the camera angle and presence of the box in IMAGE A, which do",
+   "latency_ms": 1884,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.6
+  },
+  "6744497:992992": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes differ significantly in color, logo style, midsole design, and overall silhouette. These are structural and design differences, not variations in angle or lighting. The visible features ",
+   "latency_ms": 2526,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.3
+  },
+  "5151822:109117": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The shoes are visibly different in colorway, branding, material texture, and sole design. IMAGE A is a grey/silver model with 'N' branding, while IMAGE B is solid black with '400v5' on the heel and a ",
+   "latency_ms": 3380,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 5.1
+  },
+  "7284481:1048677": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes have fundamentally different designs: IMAGE A is a platform loafer with laces, while IMAGE B is a velcro strap sneaker with a visible Nike swoosh. All visible features differ, including ",
+   "latency_ms": 2997,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.7
+  },
+  "7276893:418841": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes differ in color, material, logo style, and midsole design. These are structural and design differences, not variations in angle or lighting. The visible features clearly indicate they ar",
+   "latency_ms": 2660,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.3
+  },
+  "5520375:150413": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two images show completely different shoe designs. IMAGE A is a modern sneaker with a strap and air cushioning, while IMAGE B is a traditional boat shoe with laces and stitching. All visible featu",
+   "latency_ms": 3230,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 5.0
+  },
+  "3901126:74130": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The logos, heel branding, silhouette, and panel construction are all visibly different between the two images. These are structural and design differences that clearly indicate separate products. No v",
+   "latency_ms": 2190,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "6618043:501037": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "While both shoes share the same basic design language and key features like the swoosh and zoomx cushioning, they are clearly different colorways and material treatments. The sole patterns and overall",
+   "latency_ms": 2993,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.6
+  },
+  "6768863:108989": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes have fundamentally different colorways, logo treatments, and panel designs. IMAGE A is beige and black with black branding, while IMAGE B is black and white with gold branding. These are",
+   "latency_ms": 2332,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.1
+  },
+  "6192575:461430": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two images show entirely different products: IMAGE A is a New Balance athletic sneaker, while IMAGE B is an ASICS slip-on loafer. All visible features—including brand, silhouette, closure, sole, a",
+   "latency_ms": 2698,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.3
+  },
+  "4753881:489508": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes differ in color, logo style, sole design, and panel construction. These are structural and design differences, not variations in angle or lighting. They are clearly different models, not",
+   "latency_ms": 2435,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.1
+  },
+  "4289272:44101": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes differ in color, logo appearance, midsole, outsole tread, heel design, and upper construction. These are structural and design differences, not variations in angle or lighting. They are ",
+   "latency_ms": 3089,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 5.0
+  },
+  "6245020:888200": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes show clear structural and design differences: IMAGE A is a Nike ZoomX model with a gradient color scheme and a specific midsole, while IMAGE B is a Nike Air Max model with a visible air ",
+   "latency_ms": 3070,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.8
+  },
+  "6886576:854338": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The visible materials and surface textures are distinctly different: IMAGE A is matte suede-like while IMAGE B is glossy patent leather. The toe shape also differs, with IMAGE B having a more rounded ",
+   "latency_ms": 2421,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "4753881:418841": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes have fundamentally different designs: IMAGE A is a classic runner with a suede/leather upper and a thick, chunky sole, while IMAGE B is a modern mesh running shoe with a different logo s",
+   "latency_ms": 2356,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "5179870:637747": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The shoes in IMAGE A and IMAGE B differ in color, material composition, logo placement, and overall silhouette. These are structural and design differences, not variations of the same model. The visib",
+   "latency_ms": 2119,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.7
+  },
+  "6768863:862891": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes differ in closure type (laces vs. slip-on), silhouette, colorway, material texture, and logo placement. These are structural and design differences, not variations of the same model. No ",
+   "latency_ms": 2606,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.2
+  },
+  "3976349:893322": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "Both images show Nike Air Force 1 Low sneakers, but IMAGE B has a glossy patent leather finish while IMAGE A is matte leather. This difference in material and surface texture is a clear design distinc",
+   "latency_ms": 2453,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "6371070:774910": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes differ in color, logo, heel design, and panel construction. These are structural and design differences, not variations in angle or lighting. They are clearly different products, not var",
+   "latency_ms": 2233,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.9
+  },
+  "5327113:1046787": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two images show fundamentally different shoe types with distinct designs, materials, and structural features. IMAGE A is a modern athletic sneaker with a chunky sole and visible branding, while IM",
+   "latency_ms": 2928,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.6
+  },
+  "7276916:44101": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "While both images show black New Balance sneakers, the visible structural differences in the sole tread, upper paneling, stitching, and overall silhouette indicate they are different models. The logo ",
+   "latency_ms": 2450,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.1
+  },
+  "7466121:366002": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "The two images show clearly different products. IMAGE A is a brown suede sneaker with white shearling lining and two velcro straps, while IMAGE B is a black sneaker with mesh panels and a single strap",
+   "latency_ms": 2748,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.3
+  },
+  "3531673:944831": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "IMAGE A depicts footwear (boots) while IMAGE B depicts a wallet, which are entirely different product categories. No visible features overlap between the two items. The differences are structural and ",
+   "latency_ms": 1632,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.2
+  },
+  "5520375:946069": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes have fundamentally different designs: IMAGE A is a slip-on loafer with a strap and pull tab, while IMAGE B is a lace-up sneaker with eyelets and branding. These structural and design dif",
+   "latency_ms": 2339,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "6879519:247965": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two images show shoes with clear, visible differences in color, material, logo placement, lacing, and sole design. These are structural and design differences, not variations caused by angle or li",
+   "latency_ms": 2475,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "7093622:44101": {
+   "result": "same",
+   "confidence": 0.95,
+   "reason": "Both images show the same New Balance running shoe model, viewed from identical side angles. All visible features including the logo, material, stitching, sole design, and overall structure match perf",
+   "latency_ms": 2236,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.8
+  },
+  "5599231:775768": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two images show clearly different designs: different colors, materials, closure systems, logo placement, and sole branding. These are not variants of the same model but distinct products. All visi",
+   "latency_ms": 3056,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.7
+  },
+  "7231149:211237": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two images show clearly different sneaker models: IMAGE A is a high-top with a strap and 'Vapor' branding, while IMAGE B is a low-top with no strap and different sole markings. These are structura",
+   "latency_ms": 2889,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.7
+  },
+  "816033:369114": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "Both images show Vans Old Skool sneakers, but they are clearly different products due to visible differences in colorway, sole design, logo stripe, and material texture. These are not variations of th",
+   "latency_ms": 2549,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.1
+  },
+  "7238240:813652": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "The two images show clearly different products in terms of color, logo placement, upper construction, lacing, and heel tab. These are structural and design differences, not variations of the same mode",
+   "latency_ms": 2657,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.5
+  },
+  "7213842:45883": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "While both images show New Balance sneakers with similar structural elements, they are clearly different colorways and feature distinct design details such as the '1240' text on the heel in IMAGE B an",
+   "latency_ms": 2825,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.4
+  },
+  "4886035:406041": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "Both images show adidas Superstar sneakers, but IMAGE B has distinct visual differences including white stripes, white heel tab, and 'SUPERSTAR' text, which are not present in IMAGE A. These are desig",
+   "latency_ms": 2453,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.0
+  },
+  "3531673:991834": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two images show fundamentally different shoe types: IMAGE A is a Chelsea boot with elastic side panels and pull tabs, while IMAGE B is a lace-up dress shoe with a closed toe and flat sole. These a",
+   "latency_ms": 2036,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.7
+  },
+  "5981569:44101": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "The two shoes show clear structural and design differences: IMAGE A is a beige suede-like sneaker with a specific panel layout and logo stitching, while IMAGE B is a black mesh running shoe with a dif",
+   "latency_ms": 2081,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.7
+  },
+  "6618043:456380": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "While both images show Nike running shoes with similar silhouettes and ZoomX midsoles, there are clear visible differences in the logo color, midsole text color, outsole color, and heel pattern. These",
+   "latency_ms": 3068,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.7
+  },
+  "6192576:44101": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "The shoes show clear structural and design differences in the sole, heel, paneling, and logo style that are visible in both images. These are not variations of the same model but distinct product desi",
+   "latency_ms": 3114,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.8
+  },
+  "5179870:108989": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "While both images show Puma racing sneakers with similar structural elements, the colorway, logo color, and stripe color are visibly different. These are not minor variations but clear design differen",
+   "latency_ms": 2769,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.4
+  },
+  "5705621:416297": {
+   "result": "different",
+   "confidence": 1.0,
+   "reason": "IMAGE A is a Nike Air Force 1 sneaker with a lace-up design, visible Nike Swoosh, and rubber sole. IMAGE B is a Clarks loafer with a slip-on design, suede material, and a different sole. These are fun",
+   "latency_ms": 2258,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 3.9
+  },
+  "6852386:1031447": {
+   "result": "different",
+   "raw_result": "same_model_different_variant",
+   "confidence": 0.95,
+   "reason": "Both images show the same KEEN shoe model with identical structure and design elements, but differ in colorway and minor details like interior lining and stitching. These are variations of the same ba",
+   "latency_ms": 2892,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.7
+  },
+  "4046672:398606": {
+   "result": "different",
+   "raw_result": "same_model_different_variant",
+   "confidence": 0.95,
+   "reason": "Both images show the same model of sneaker with identical structural features: low-top design, panel stitching, white laces, and platform sole. The only visible difference is the color (black vs. navy",
+   "latency_ms": 2606,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.2
+  },
+  "5042960:831893": {
+   "result": "different",
+   "raw_result": "same_model_different_variant",
+   "confidence": 0.95,
+   "reason": "Both shoes are clearly the same model (Adidas Lightstrike Pro) with identical structural features, but differ in colorway and material finish. IMAGE B has a metallic silver upper and additional text o",
+   "latency_ms": 2881,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.7
+  },
+  "3976349:81744": {
+   "result": "different",
+   "raw_result": "same_model_different_variant",
+   "confidence": 0.95,
+   "reason": "Both images show the same Nike Air Force 1 Low model with identical upper construction, logo placement, and stitching. The only visible difference is the outsole color, which is black in IMAGE A and g",
+   "latency_ms": 2818,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.6
+  },
+  "2682873:1079153": {
+   "result": "different",
+   "raw_result": "same_model_different_variant",
+   "confidence": 0.95,
+   "reason": "Both images show the same Onitsuka Tiger Mexico 66 model, identifiable by the classic silhouette, panel layout, and logo placement. The only visible differences are color and laces, which are consiste",
+   "latency_ms": 2757,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.5
+  },
+  "6046407:543281": {
+   "result": "different",
+   "raw_result": "same_model_different_variant",
+   "confidence": 0.95,
+   "reason": "Both images show the same model of Adidas running shoe with identical structure and features, but differ in colorway: IMAGE A has white stripes and a silver reflective panel, while IMAGE B has grey st",
+   "latency_ms": 2766,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.5
+  },
+  "7260775:1108330": {
+   "result": "different",
+   "raw_result": "same_model_different_variant",
+   "confidence": 0.95,
+   "reason": "Both shoes share identical structural design, panel layout, and branding elements, confirming they are the same model. The only visible differences are color and minor text details, which are consiste",
+   "latency_ms": 3215,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 5.0
+  },
+  "6271398:895021": {
+   "result": "different",
+   "raw_result": "same_model_different_variant",
+   "confidence": 0.95,
+   "reason": "Both shoes are clearly the same model (Nike ZoomX running shoe) with identical structural features, but differ in colorway and midsole design. The visible differences are in color and accent details, ",
+   "latency_ms": 2963,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.7
+  },
+  "6967884:418841": {
+   "result": "different",
+   "raw_result": "same_model_different_variant",
+   "confidence": 0.95,
+   "reason": "Both images show the same New Balance sneaker model with identical structural and design elements, including logo placement, panel layout, and sole construction. The only visible differences are in co",
+   "latency_ms": 2863,
+   "model": "qwen3-vl-8b (LM Studio, RTX 4090)",
+   "seconds": 4.5
+  }
+ },
+ "gpt-5.4-mini": {
+  "4923314:515349": {
+   "result": "same",
+   "confidence": 0.82,
+   "reason": "두 이미지 모두 갈색/카멜 톤의 스웨이드 로우탑 스니커즈로, 아디다스의 3스트라이프와 고무색(껌) 아웃솔 등 주요 디자인이 같습니다. 각도와 조명 차이는 있지만 모델과 컬러웨이는 동일해 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 240,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.4
+  },
+  "5329560:1039631": {
+   "result": "same",
+   "confidence": 0.97,
+   "reason": "두 이미지 모두 빨간 스웨이드 갑피, 흰색 3선, 크림색 텅과 밑창, 뒤꿈치의 회색/분홍 패턴, 측면의 'adidas TOKYO' 표기가 동일합니다. 촬영 각도와 크롭만 다르고 모델과 색상은 같습니다.",
+   "input_tokens": 706,
+   "output_tokens": 132,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.9
+  },
+  "2032850:42637": {
+   "result": "same",
+   "confidence": 0.83,
+   "reason": "두 사진 모두 같은 검정색 러닝화로 보이며, 메쉬 갑피, 측면 오버레이 패턴, 힐의 투명한 쿠션/젤 형태, 미드솔 굴곡이 매우 유사합니다. 촬영 각도만 달라 보이고 다른 색상이나 다른 모델로 보일 만한 차이는 뚜렷하지 않습니다.",
+   "input_tokens": 706,
+   "output_tokens": 237,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.3
+  },
+  "595039:118745": {
+   "result": "same",
+   "confidence": 0.88,
+   "reason": "두 이미지 모두 검정색 닥터마틴 스타일의 3홀 레이스업 더비 슈즈로 보이며, 노란색 웰트 스티치와 같은 형태의 밑창이 일치합니다. 각도 차이는 있지만 모델과 색상은 동일해 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 162,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.2
+  },
+  "6192576:867110": {
+   "result": "same",
+   "confidence": 0.97,
+   "reason": "두 이미지 모두 동일한 검정색 New Balance 러닝화로 보이며, 로고 배치, 갑피 패턴, 밑창 형태와 디테일이 일치합니다. 촬영 각도와 크롭만 다르고 모델/색상은 같아 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 119,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.5
+  },
+  "4463013:21441": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "두 이미지 모두 블랙 컬러의 동일한 Nike Shox TL 형태로 보이며, 어퍼의 TPU 오버레이 배치, 측면 스우시 위치, 힐과 미드솔의 쇼크 컬럼 구조가 일치합니다. 각도 차이만 있을 뿐 같은 모델/색상으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 123,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.0
+  },
+  "3976349:36": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "두 이미지 모두 검정색 나이키 에어 포스 1 로우로 보이며, 디자인 요소(스우시 위치, 미드솔/아웃솔, 토박스, 힐 형태)가 동일합니다. 촬영 각도만 달라 좌우 측면이 다르게 보일 뿐 같은 모델·같은 컬러웨이로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 151,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.5
+  },
+  "4939603:470681": {
+   "result": "same",
+   "confidence": 0.9,
+   "reason": "두 이미지 모두 검은색 바디에 크림색 스칼럽 장식 스트랩 2개, 같은 버클 위치와 배색, 같은 고무 밑창/노란 안감이 보여 동일한 모델과 컬러웨이로 판단됩니다. 각도 차이만 있습니다.",
+   "input_tokens": 668,
+   "output_tokens": 190,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.0
+  },
+  "7318373:1117423": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "두 이미지 모두 동일한 ASICS 운동화로 보이며, 색상과 디테일(회색 스웨이드/메시 어퍼, 은색 스트라이프, 밑창 형태)이 일치합니다. 차이는 촬영 구도와 크롭 정도뿐입니다.",
+   "input_tokens": 706,
+   "output_tokens": 110,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.5
+  },
+  "6092233:838576": {
+   "result": "same",
+   "confidence": 0.88,
+   "reason": "두 이미지 모두 동일한 크림/베이지 톤의 PUMA 러닝화로 보이며, 측면의 곡선형 FORMSTRIP, 두꺼운 미드솔의 NITRO 표기, 어퍼/아웃솔 형태가 일치합니다. 사진 각도만 다르고 모델과 컬러웨이는 같은 것으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 182,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.0
+  },
+  "6897456:1028654": {
+   "result": "same",
+   "confidence": 0.96,
+   "reason": "두 이미지 모두 동일한 형광 핑크/검정 색상의 아디다스 트레일 러닝화로 보이며, 3줄 스트라이프 위치와 미드솔/아웃솔 형태가 일치합니다. 촬영 각도와 크기만 다를 뿐 같은 모델과 색상으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 130,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.6
+  },
+  "6886576:1061652": {
+   "result": "uncertain",
+   "confidence": 0.74,
+   "reason": "두 이미지 모두 매우 어두운 스웨이드 소재의 레이스업 옥스포드/더비 슈즈로 보이고 실루엣도 비슷하지만, 각도 차이만으로 동일 제품이라고 단정하기엔 부족합니다. 특히 토 박스 형태와 갑피의 스티치/패널 인상이 약간 달라 보여 같은 모델·컬러웨이인지 확정할 수 없습니다.",
+   "input_tokens": 706,
+   "output_tokens": 287,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "6839079:1000435": {
+   "result": "same",
+   "confidence": 0.92,
+   "reason": "두 이미지 모두 동일한 검정색 로우탑 스니커즈로 보이며, 측면의 3선 디테일, 토 박스 형태, 힐 구조와 밑창 패턴이 일치합니다. 사진 구도와 배경만 다르고 모델과 색상은 동일해 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 123,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.6
+  },
+  "6997721:1052944": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "두 이미지 모두 동일한 회색/은색 계열의 아디다스 러닝화로 보이며, 측면의 삼선 배치, 힐의 ‘say the moon’ 유사 문구, 밑창 형태와 갑피 패턴이 일치합니다. 색상과 모델 구성이 같아 같은 제품으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 120,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.9
+  },
+  "6945906:1052396": {
+   "result": "same",
+   "confidence": 0.91,
+   "reason": "두 이미지 모두 동일한 블랙/차콜 계열의 벨크로 스트랩 슬립온 스니커즈로 보이며, 갑피의 메쉬/오버레이 배치와 두꺼운 미드솔 형태가 일치합니다. 촬영 각도만 다를 뿐 같은 모델과 색상으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 183,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.2
+  },
+  "6192575:867111": {
+   "result": "same",
+   "confidence": 0.96,
+   "reason": "두 이미지 모두 동일한 뉴발란스 러닝화로 보이며, 색상(실버/그레이 계열), 로고 배치, 어퍼 패턴, 밑창 색과 형태가 일치합니다. 촬영 각도만 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 119,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.9
+  },
+  "7276893:1085804": {
+   "result": "same",
+   "confidence": 0.93,
+   "reason": "두 이미지 모두 동일한 뉴발란스 러닝화로 보이며, 어퍼 디자인(옆면 N 로고, 뒤꿈치의 1906R 표기, 브라운 바디와 화이트 슈레이스/미드솔 디테일)이 일치합니다. 촬영 각도 차이만 있고 모델과 컬러웨이는 같은 것으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 146,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.6
+  },
+  "3892794:247965": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 은색/회색 메쉬와 오버레이, 검은색 두꺼운 아웃솔이 동일하게 보입니다. 실루엣과 밑창 패턴도 매우 유사하여 같은 모델·색상으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 153,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.6
+  },
+  "6024097:875277": {
+   "result": "same",
+   "confidence": 0.93,
+   "reason": "두 이미지 모두 연한 민트/하늘색 갑피, 검은색 푸마 스트립, 형광 노란색 미드솔 포인트, 흰색 아웃솔 구성이 동일합니다. 촬영 각도만 다를 뿐 모델과 컬러웨이가 같은 제품으로 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 181,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.9
+  },
+  "166001:18448": {
+   "result": "same",
+   "confidence": 0.94,
+   "reason": "두 이미지 모두 검정색 로우탑 스케이트 스니커즈로, 옆면의 파도형 사이드스트라이프와 검정 미드솔, 뒤꿈치의 빨간 탭 등 디테일이 일치합니다. 각도만 다를 뿐 같은 모델/색상으로 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 140,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.8
+  },
+  "5340969:598585": {
+   "result": "same",
+   "confidence": 0.87,
+   "reason": "두 이미지 모두 갈색 스웨이드 소재의 동일한 로퍼/슬립온 스타일이며, 짙은 색의 두꺼운 밑창과 갑피의 스트랩 디테일이 같습니다. 촬영 각도만 달라 보여 같은 모델과 같은 색상으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 197,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.4
+  },
+  "5331552:595549": {
+   "result": "different",
+   "confidence": 0.89,
+   "reason": "두 사진 모두 UGG 슬리퍼 계열로 보이지만, A는 두꺼운 플랫폼 솔이 있는 반면 B는 일반 높이의 솔이라 동일한 모델/컬러웨이로 보기 어렵습니다. 같은 어퍼처럼 보여도 제품 버전이 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 172,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.0
+  },
+  "5705621:632282": {
+   "result": "same",
+   "confidence": 0.92,
+   "reason": "두 이미지 모두 블랙 컬러의 로우탑 스니커즈로, 실루엣과 스우시 위치, 밑창 형태가 동일합니다. 측면의 ‘vibram’ 표기도 같아 같은 모델/컬러웨이로 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 140,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.6
+  },
+  "6111437:466444": {
+   "result": "different",
+   "confidence": 0.93,
+   "reason": "두 이미지 모두 Clarks 계열의 비슷한 베이지색 로퍼처럼 보이지만, A는 두꺼운 러그/비브람 스타일 아웃솔과 다른 사양(예: GTX 계열로 보임)이고 B는 전형적인 크레이프 솔의 월라비 스타일이라 모델/버전이 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 303,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.5
+  },
+  "5835214:754796": {
+   "result": "same",
+   "confidence": 0.96,
+   "reason": "두 이미지 모두 동일한 아디다스 로우탑 스니커즈로 보이며, 베이지 스웨이드/검정 3선/갈색 고무창/뒤꿈치 검정 디테일이 일치합니다. 각도와 크롭만 다르고 모델과 색상 조합은 같습니다.",
+   "input_tokens": 706,
+   "output_tokens": 128,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.5
+  },
+  "4727100:135624": {
+   "result": "same",
+   "confidence": 0.91,
+   "reason": "두 이미지 모두 뉴발란스의 동일한 러닝화로 보이며, 회색/화이트 색상 배치와 로고, 미드솔의 ABZORB 표기, 오버레이 패턴이 일치합니다. 촬영 각도만 다르고 같은 모델·컬러웨이로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 180,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.1
+  },
+  "5179870:705230": {
+   "result": "same",
+   "confidence": 0.92,
+   "reason": "두 이미지 모두 동일한 네이비/블루 스웨이드 바디에 흰색 푸마식 사이드 스트라이프가 있는 같은 디자인의 스니커즈로 보입니다. 각도만 다르고 모델과 색상 조합이 일치합니다.",
+   "input_tokens": 706,
+   "output_tokens": 139,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.8
+  },
+  "1163169:15251": {
+   "result": "same",
+   "confidence": 0.91,
+   "reason": "두 사진 모두 아디다스 Samba 계열로 보이며, 흰색 바디 + 검은 3스트라이프 + 검은 힐 탭 + 고무색(검갈색) 아웃솔의 동일한 컬러 조합입니다. 로고 색상 차이는 촬영 각도/조명 또는 개체별 디테일 차이로 보이며, 모델과 컬러웨이는 같습니다.",
+   "input_tokens": 706,
+   "output_tokens": 205,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.2
+  },
+  "5042975:389369": {
+   "result": "same",
+   "confidence": 0.77,
+   "reason": "두 이미지 모두 아디다스의 검정/흰색 3선 러닝화로 보이며, 갑피 색상, 3선 배치, 미드솔 형태가 매우 유사합니다. 촬영 각도 차이로 보이는 부분이 있어 보이며, 다른 색상이나 다른 협업/성별 전용 버전으로 보일 만한 차이는 확인되지 않습니다.",
+   "input_tokens": 706,
+   "output_tokens": 396,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.2
+  },
+  "6271398:888824": {
+   "result": "same",
+   "confidence": 0.96,
+   "reason": "두 이미지 모두 동일한 연두색/형광 그린 계열의 Nike ZoomX 러닝화로 보이며, 로고 위치와 미드솔의 파란-보라 그라데이션, 뒤꿈치 루프까지 같은 디자인입니다. 다만 한쪽은 반대편 측면(좌우 반전)으로 촬영된 차이만 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 152,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.7
+  },
+  "706935:310551": {
+   "result": "same",
+   "confidence": 0.82,
+   "reason": "두 이미지 모두 닥터마틴의 로우컷 3홀 더비 슈즈로 보이며, 색상도 짙은 브라운 계열로 동일해 보입니다. A는 상단 각도, B는 측면 각도라 형태 차이는 있지만 같은 모델/색상으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 157,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.0
+  },
+  "6002026:830777": {
+   "result": "same",
+   "confidence": 0.93,
+   "reason": "두 이미지 모두 푸마 로고와 스웨이드 질감의 로우프로파일 레이싱 슈즈로 보이며, 회색/차콜 바디에 크림색 푸마 스트라이프가 들어간 동일한 색상 조합입니다. 앞코의 점프 푸마 로고 위치와 전체 실루엣도 일치합니다. 이미지 B는 단일 측면샷, A는 같은 제품의 한 쌍을 보여주는 것으로 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 207,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.9
+  },
+  "6111791:561179": {
+   "result": "same",
+   "confidence": 0.88,
+   "reason": "두 이미지 모두 검정색 나이키 러닝화로 보이며, 갑피의 스우시 위치, 미드솔의 'ZOOMX' 표기, 뒤꿈치 루프와 전체 실루엣이 일치합니다. 각도만 다르게 촬영된 같은 모델/색상으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 149,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "6996753:974158": {
+   "result": "same",
+   "confidence": 0.96,
+   "reason": "두 이미지 모두 같은 러닝화로 보이며, 색상 조합(버건디/블랙)과 미드솔의 'NITRO' 표기, 갑피 패턴과 아웃솔 형태가 일치합니다. 단지 촬영 각도만 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 122,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.2
+  },
+  "6653232:971179": {
+   "result": "same",
+   "confidence": 0.97,
+   "reason": "두 이미지 모두 동일한 검정색 아디다스 테렉스 러닝/트레일 슈즈로 보이며, 어퍼 패턴, 3스트라이프 위치, 뒤꿈치 풀탭, 미드솔 형태와 아웃솔 포인트(노란 로고)까지 일치합니다. 색상 차이도 보이지 않습니다.",
+   "input_tokens": 706,
+   "output_tokens": 128,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.5
+  },
+  "4678344:418841": {
+   "result": "same",
+   "confidence": 0.91,
+   "reason": "두 이미지 모두 동일한 뉴발란스 740로 보이며, 블랙/그레이 계열의 같은 색상 배치와 로고, 미드솔 디테일이 일치합니다. 각도 차이만 있고 다른 모델이나 컬러웨이로 보이는 차이는 없습니다.",
+   "input_tokens": 706,
+   "output_tokens": 156,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.9
+  },
+  "3976350:12831": {
+   "result": "same",
+   "confidence": 0.98,
+   "reason": "두 이미지 모두 흰색 로우탑 나이키 에어 포스 1로 보이며, 스우시 위치/밑창/갑피 디테일이 동일합니다. 색상과 모델 차이를 구분할 만한 요소가 보이지 않습니다.",
+   "input_tokens": 706,
+   "output_tokens": 114,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "4207634:1090164": {
+   "result": "same",
+   "confidence": 0.93,
+   "reason": "두 이미지 모두 동일한 검정색 클로그/뮤ල් 형태로 보이며, 컷아웃 배치와 밑창/어퍼 디자인이 같습니다. 방향만 반대로 촬영된 것으로 보여 같은 모델·색상으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 182,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.1
+  },
+  "2340324:437517": {
+   "result": "uncertain",
+   "confidence": 0.74,
+   "reason": "두 이미지 모두 검은색 레이스업 드레스 슈즈처럼 보이지만, 정면/측면 각도 차이만으로는 같은 모델인지 확정하기 어렵습니다. 라스트(발 모양), 굽 높이, 밑창 두께가 완전히 동일한지 이미지로 판별하기엔 정보가 부족합니다.",
+   "input_tokens": 706,
+   "output_tokens": 198,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.0
+  },
+  "7044931:808126": {
+   "result": "uncertain",
+   "confidence": 0.68,
+   "reason": "두 사진 모두 검정색 로우탑 스니커즈로 보이지만, 각도 차이만으로 동일 모델인지 확정하기 어렵습니다. 어퍼 패널, 미드솔/아웃솔 형태가 비슷해 보이긴 하나 세부 실루엣이 완전히 일치한다고 단정할 수는 없습니다.",
+   "input_tokens": 706,
+   "output_tokens": 237,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.2
+  },
+  "3157671:220750": {
+   "result": "different",
+   "confidence": 0.92,
+   "reason": "두 이미지 모두 검은색 Reebok 스니커즈처럼 보이지만, A에는 측면의 원형 협업/로고 패치가 있고 B에는 그 장식이 없습니다. 디자인 디테일이 달라 같은 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 131,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "2114461:407392": {
+   "result": "uncertain",
+   "confidence": 0.74,
+   "reason": "두 이미지 모두 검은색 레이스업 더비/옥스퍼드 형태와 비슷한 두툼한 솔, 둥근 앞코, 내측의 작은 장식 탭이 보여 같은 계열의 제품일 가능성은 높습니다. 다만 이미지 A는 2개가 함께 보이는 각도이고 B는 측면 단일컷이라 정확한 모델명·세부 디테일을 확정하기 어려워 동일 제품이라고 단정할 수 없습니다.",
+   "input_tokens": 706,
+   "output_tokens": 220,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.4
+  },
+  "6636852:263074": {
+   "result": "uncertain",
+   "confidence": 0.72,
+   "reason": "두 이미지 모두 검은색 레이스업 더비/옥스퍼드 스타일로 보이지만, 브랜드 표식이나 모델명을 확인할 수 없고 밑창/힐 형태와 어퍼 곡선이 약간 달라 보입니다. 각도 차이일 수도 있어 동일 제품이라고 단정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 177,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.0
+  },
+  "2200892:253860": {
+   "result": "same",
+   "confidence": 0.96,
+   "reason": "두 이미지 모두 동일한 브라운 워크 부츠로 보이며, 실루엣(첼시형), 색상, 밑창 디자인, 옆면 디테일, 풀 탭 위치가 모두 일치합니다. 촬영 각도와 크롭만 조금 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 123,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.5
+  },
+  "6111436:84745": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "이미지 A는 술 장식이 있는 로퍼형 스웨이드 슈즈이고, 이미지 B는 끈이 있는 왈라비/모카신 스타일로 보입니다. 모델 구조와 디테일이 달라 같은 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 132,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.4
+  },
+  "4313969:18871": {
+   "result": "uncertain",
+   "confidence": 0.66,
+   "reason": "두 이미지 모두 옐로우/허니 컬러의 블랙 패딩 칼라 부츠로 매우 비슷하지만, A는 정면 2켤레 제품 사진이고 B는 측면 1켤레 사진이라 세부 디테일(밑창 형태, 스티치, 실루엣)이 완전히 일치하는지 확정하기 어렵습니다. 같은 계열의 팀버랜드 스타일로 보이지만 동일 모델·동일 컬러웨이라고 단정하기엔 근거가 부족합니다.",
+   "input_tokens": 745,
+   "output_tokens": 345,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.8
+  },
+  "6852386:1031447": {
+   "result": "same",
+   "confidence": 0.88,
+   "reason": "두 이미지 모두 KEEN 로고가 있는 같은 로우컷 트레일/아웃도어 슈즈로 보이며, 브라운 스웨이드 어퍼, 밝은 스티치, 화이트 레이스, 앞코의 회색/갈색 배색과 밑창 형태가 일치합니다. 각도와 배경만 다르고 모델과 색상이 동일해 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 176,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.7
+  },
+  "4226785:13100": {
+   "result": "same",
+   "confidence": 0.94,
+   "reason": "두 이미지 모두 화이트 컬러의 나이키 에어 포스 1 로우로 보이며, 디자인 요소(로우탑 실루엣, 스우시, 미드솔/아웃솔 형태)가 일치합니다. 각도 차이만 있을 뿐 같은 모델과 색상으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 148,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.7
+  },
+  "2980918:797663": {
+   "result": "same",
+   "confidence": 0.92,
+   "reason": "두 이미지 모두 같은 팀버랜드 스타일의 옥스퍼드/워커 부츠로 보이며, 동일한 위트(황갈색) 갑피, 검은색 패딩 칼라, 같은 아웃솔/스티치 디테일과 로고 위치가 보입니다. 좌우 발 방향만 달라 보이며 모델과 색상은 동일해 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 158,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.0
+  },
+  "4046672:398606": {
+   "result": "uncertain",
+   "confidence": 0.74,
+   "reason": "두 사진 모두 흰색 두꺼운 밑창, 흰 스티치, 크림색 끈의 로우탑 캔버스 스니커즈로 모델은 매우 비슷해 보입니다. 다만 A는 검정에 가깝고 B는 아주 짙은 남색/검정처럼 보여 색상 판별이 확실하지 않아 같은 색상이라고 단정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 225,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.9
+  },
+  "7249959:430579": {
+   "result": "uncertain",
+   "confidence": 0.62,
+   "reason": "두 이미지 모두 검은색 레이스업 드레스 슈즈로 보이지만, 같은 모델이라고 단정할 만한 고유한 식별 포인트가 부족합니다. 앞코 형태, 갑피 라인, 밑창/굽 비율이 비슷해 보이긴 하나 사진 각도 차이일 수도 있어 동일 제품 여부를 확정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 174,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.9
+  },
+  "4397345:173149": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 검정색 팀버랜드 스타일의 6인치 워커/부츠로 보이며, 둥근 앞코, 두꺼운 러그 솔, 아일릿 배치와 옆면 로고 위치가 유사합니다. 촬영 각도 차이만 있고 모델과 색상은 같은 것으로 판단됩니다.",
+   "input_tokens": 745,
+   "output_tokens": 208,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.3
+  },
+  "3347848:398609": {
+   "result": "same",
+   "confidence": 0.91,
+   "reason": "두 이미지 모두 동일한 검정색 스니커즈로 보이며, 흰색 두꺼운 아웃솔, 흰 스티치, 베이지색 안감 등 주요 디자인 요소가 같습니다. 단지 촬영 각도만 반대라 같은 제품으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 143,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "2741233:53196": {
+   "result": "same",
+   "confidence": 0.92,
+   "reason": "두 이미지 모두 동일한 흰색/크림 계열의 Reebok 스니커즈로 보이며, 측면의 민트색 Reebok 로고, 베이지색 미드솔, 힐/텅의 포인트 디테일이 일치합니다. 촬영 각도만 다르고 모델과 색상 조합은 동일해 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 182,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.0
+  },
+  "4394971:347658": {
+   "result": "same",
+   "confidence": 0.84,
+   "reason": "두 이미지 모두 검은색의 슬라우치(주름진) 니하이 부츠로, 앞코 형태와 낮은 굽, 발목/종아리 쪽의 두 개 버클 스트랩 배치가 매우 유사합니다. 촬영 방식만 다를 뿐 같은 모델·색상으로 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 176,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.3
+  },
+  "4489783:689321": {
+   "result": "same",
+   "confidence": 0.84,
+   "reason": "두 이미지 모두 동일한 록피시( Rockfish Weatherwear ) 스타일의 브라운/토프 계열 스웨이드 토트 높이 부츠로 보입니다. 부츠 실루엣, 플랫폼 밑창, 앞코 형태, 소재와 색상이 서로 일치합니다. 이미지 B는 측면 단독샷이고, 이미지 A는 박스와 함께 촬영된 구성이라 구도만 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 191,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 4.4
+  },
+  "6744497:992992": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "두 사진 모두 같은 계열의 러닝화처럼 보이지만, 색상과 배색이 완전히 다릅니다. A는 짙은 브라운/블랙 계열, B는 화이트 바탕에 형광 그라데이션 포인트가 있어 같은 모델·색상으로 볼 수 없습니다.",
+   "input_tokens": 706,
+   "output_tokens": 125,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "5042960:831893": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "두 이미지 모두 아디다스의 비슷한 러닝화 실루엣이지만, A는 흰색 메쉬 상단에 검은 3스트라이프가 있는 반면 B는 전면과 측면에 은색/메탈릭 패널과 회색 힐 디테일이 있어 색상/컬러웨이가 다릅니다. 같은 모델일 가능성은 있어도 동일 제품(같은 모델·컬러웨이)로 보긴 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 257,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.4
+  },
+  "5151822:109117": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "두 이미지의 신발 실루엣과 디테일이 다릅니다. A는 메쉬와 반사 디테일이 많은 러닝화 스타일(뉴발란스 1906R 계열처럼 보임)이고, B는 더 단순한 어퍼와 다른 미드솔 형태의 블랙 러닝화로 보여 같은 모델/색상으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 245,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.7
+  },
+  "7284481:1048677": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 연한 회색/흰색 계열의 두꺼운 플랫폼 로퍼형 신발이고, 이미지 B는 검은색 나이키 벨크로 스트랩 스니커즈로 디자인, 색상, 브랜드가 모두 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 119,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.1
+  },
+  "7276893:418841": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "두 이미지 모두 뉴발란스 계열 러닝화처럼 보이지만, A는 브라운/크림 톤의 색상이고 B는 블랙/그레이 톤으로 색상과 외형 디테일이 다릅니다. 동일 모델일 수 있어도 같은 색상 조합은 아닙니다.",
+   "input_tokens": 706,
+   "output_tokens": 127,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.8
+  },
+  "5520375:150413": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 블랙 스니커즈/슬립온 스타일이고, 이미지 B는 브라운 가죽 보트슈즈 스타일로 모델과 색상, 형태가 모두 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 84,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.5
+  },
+  "3901126:74130": {
+   "result": "same",
+   "confidence": 0.84,
+   "reason": "두 이미지 모두 뉴발란스 480 계열로 보이는 동일한 블랙 컬러웨이의 로우탑 러닝화입니다. 측면의 N 로고 배치, 아웃솔 형태, 힐 카운터와 오버레이 패턴이 매우 유사하며, 이미지 A의 ‘480v5’ 표기도 같은 모델군을 뒷받침합니다.",
+   "input_tokens": 706,
+   "output_tokens": 206,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.4
+  },
+  "6618043:501037": {
+   "result": "different",
+   "confidence": 0.95,
+   "reason": "두 이미지 모두 나이키 러닝화처럼 보이지만, A는 밝은 베이지/오프화이트 계열의 모델이고 B는 올블랙 색상에 ZoomX 표기가 보입니다. 색상과 디테일이 명확히 달라 같은 제품(같은 모델/컬러웨이)로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 161,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.9
+  },
+  "6768863:108989": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "두 이미지 모두 푸마 스니커즈로 보이지만, A는 베이지/브라운 계열이고 B는 블랙/오프화이트 계열이라 색상 조합(컬러웨이)이 다릅니다. 따라서 같은 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 120,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.7
+  },
+  "6192575:461430": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 회색/실버 계열의 뉴발란스 레이스업 러닝화이고, 이미지 B는 검은색의 다른 형태(슬립온/벨크로 스타일) 신발입니다. 모델 형태와 색상이 모두 달라 같은 제품이 아닙니다.",
+   "input_tokens": 706,
+   "output_tokens": 121,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.8
+  },
+  "4753881:489508": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "두 이미지 모두 뉴발란스 계열처럼 보이지만, A는 베이지/버건디 컬러의 러닝화 스타일이고 B는 올블랙 로우탑 스니커즈로 모델과 색상이 명확히 다릅니다. 같은 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 127,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.7
+  },
+  "3976349:81744": {
+   "result": "different",
+   "confidence": 0.97,
+   "reason": "두 이미지 모두 나이키 에어 포스 1 로우 계열로 보이지만, A는 검은색 아웃솔이고 B는 고무색(검/갈색 계열) 아웃솔이라 색상 조합이 다릅니다. 같은 모델이라도 컬러웨이가 달라 다른 상품으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 158,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.8
+  },
+  "4289272:44101": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "두 사진은 같은 계열의 러닝화처럼 보이지만, 색상(그레이/화이트 vs 블랙)이 명확히 달라 동일한 상품으로 보기 어렵습니다. 동일 모델이라도 컬러웨이가 다르므로 다른 상품입니다.",
+   "input_tokens": 706,
+   "output_tokens": 136,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.5
+  },
+  "6245020:888200": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "두 이미지의 모델과 색상이 다릅니다. A는 녹색/파란색의 ZoomX 계열 러닝화로 보이고, B는 흰색 바탕에 노란/주황색 가시형 에어 유닛이 있는 다른 Nike 러닝화입니다. 동일 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 157,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.8
+  },
+  "6886576:854338": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "두 이미지 모두 검은색 레이스업 구두이지만, A는 스웨이드/매트한 질감의 더비 슈즈이고 B는 광택 있는 가죽 더비 슈즈로 소재와 외형이 뚜렷하게 다릅니다. 같은 모델·컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 136,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.5
+  },
+  "4753881:418841": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 흰색/버건디 계열의 뉴발란스 러닝/라이프스타일 스니커즈이고, 이미지 B는 블랙 컬러의 전혀 다른 뉴발란스 러닝화입니다. 모델과 색상이 모두 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 105,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.3
+  },
+  "5179870:637747": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "두 이미지 모두 비슷한 실루엣의 같은 계열 신발로 보이지만, 색상 조합이 다릅니다. A는 네이비/블루에 화이트·실버 포인트, B는 블랙/그레이 색상이라 같은 모델이라도 다른 컬러웨이입니다.",
+   "input_tokens": 706,
+   "output_tokens": 132,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "6768863:862891": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 크림/브라운 색상의 끈 있는 푸마 스니커즈이고, 이미지 B는 검정/크림 색상의 슬립온 형태로 모델과 색상 모두 다릅니다. 같은 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 112,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.3
+  },
+  "2682873:1079153": {
+   "result": "different",
+   "confidence": 0.97,
+   "reason": "두 사진 모두 비슷한 로우탑 스니커즈지만 색상 조합이 다릅니다. A는 크림/회색 계열, B는 브라운/화이트 계열로 보이며 같은 모델일 수 있어도 동일한 색상(컬러웨이)은 아닙니다.",
+   "input_tokens": 668,
+   "output_tokens": 129,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.4
+  },
+  "3976349:893322": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "두 이미지 모두 나이키 에어포스 1 계열로 보이지만, A는 무광 블랙 가죽이고 B는 유광(페이턴트) 블랙으로 마감이 달라 같은 모델/컬러웨이로 보기 어렵습니다. 색상은 둘 다 블랙이지만 제품 변형이 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 141,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.3
+  },
+  "6371070:774910": {
+   "result": "different",
+   "confidence": 0.93,
+   "reason": "두 이미지 모두 비슷한 로우탑 스니커즈지만 색상과 디테일이 다릅니다. A는 크림/오프화이트 바디에 검은 3선과 'adidas TOKYO' 라벨이 보이고, B는 전체가 검은색이며 측면 사인(서명) 디테일과 다른 힐 디자인이 있습니다. 같은 모델이라도 컬러웨이가 달라 보이므로 같은 상품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 182,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.8
+  },
+  "6046407:543281": {
+   "result": "different",
+   "confidence": 0.88,
+   "reason": "두 이미지 모두 아디다스 계열 러닝화처럼 보이지만, A는 어퍼에 은색/반사광이 강한 블랙·실버 배색이고 B는 거의 올블랙에 회색 스트라이프입니다. 같은 모델일 가능성은 있어도 색상/컬러웨이가 달라 같은 상품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 277,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.2
+  },
+  "5327113:1046787": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 두꺼운 밑창의 블랙/화이트 스니커즈이고, 이미지 B는 블랙 가죽의 드레스화(옥스퍼드/더비 스타일)입니다. 모델과 색상, 용도가 모두 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 106,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.3
+  },
+  "7276916:44101": {
+   "result": "different",
+   "confidence": 0.88,
+   "reason": "두 사진 모두 뉴발란스 계열의 검은색 운동화처럼 보이지만, 밑창 형태와 갑피 디자인이 다릅니다. A는 미드솔이 더 두껍고 뒤꿈치 구조가 더 복잡한 반면, B는 더 슬림한 러닝화형 실루엣입니다. 같은 모델·색상으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 188,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.7
+  },
+  "7260775:1108330": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "두 이미지 모두 비슷한 ASICS 러닝/트레일 슈즈로 보이지만, A는 밝은 베이지/블랙 배색이고 B는 올블랙 배색이라 색상(컬러웨이)이 다릅니다. 같은 모델일 가능성은 있어도 같은 제품으로 보기는 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 161,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "7466121:366002": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 갈색 스웨이드와 보아털 안감이 있는 클로그/슬립온 형태이고, 이미지 B는 검은색 메쉬/스웨이드의 스트랩 샌들형 제품입니다. 색상은 물론 실루엣과 소재, 디테일이 달라 같은 모델·컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 147,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "3531673:944831": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 검은색 첼시 부츠이고, 이미지 B는 Paul Smith 지갑으로 제품 종류 자체가 완전히 다릅니다. 같은 모델이나 색상일 수 없습니다.",
+   "input_tokens": 706,
+   "output_tokens": 74,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.2
+  },
+  "6271398:895021": {
+   "result": "different",
+   "confidence": 0.96,
+   "reason": "두 이미지 모두 나이키 러닝화로 보이며 비슷한 모델 실루엣과 ZoomX 미드솔이 보이지만, A는 형광 연두색/그라데이션, B는 흰색/회색 계열로 색상 배합이 확연히 다릅니다. 같은 모델일 가능성은 있어도 같은 모델·컬러웨이로 보기는 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 241,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.6
+  },
+  "5520375:946069": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "이미지 A는 슬립온/로퍼 형태의 블랙 스니커즈이고, 이미지 B는 끈이 있는 로우탑 스니커즈입니다. 실루엣, 갑피 구조, 끈 유무가 달라 같은 모델로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 160,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "6879519:247965": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "두 사진 모두 스니커즈지만 색상과 외형이 크게 다릅니다. A는 브라운 톤의 로우프로파일 러너이고, B는 실버/그레이 톤에 두꺼운 블랙 아웃솔이 있는 모델로 보입니다. 같은 모델·같은 컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 156,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.0
+  },
+  "7093622:44101": {
+   "result": "different",
+   "confidence": 0.97,
+   "reason": "두 이미지 모두 검정색 뉴발란스 운동화이지만, 실루엣과 디테일이 다릅니다. A는 더 두툼한 미드솔과 레트로 러닝화 형태이고, B는 더 낮고 트레일/러닝 계열의 다른 디자인입니다. 같은 모델로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 148,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.8
+  },
+  "5599231:775768": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 베이지/탄색의 털 안감이 있는 뉴발란스 슈즈이고, 이미지 B는 블랙 컬러의 다른 형태(슬립온/메리제인 스타일)에 가까운 뉴발란스 슈즈입니다. 모델 형태와 색상이 모두 달라 같은 제품이 아닙니다.",
+   "input_tokens": 706,
+   "output_tokens": 133,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.5
+  },
+  "7231149:211237": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 하이탑/스트랩이 있는 부츠형 스니커즈이고, 이미지 B는 로우탑 스니커즈입니다. 실루엣, 카라 높이, 발목 스트랩 유무가 달라 같은 모델·컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 118,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.4
+  },
+  "816033:369114": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "A는 검은색에 흰 줄과 흰 플랫폼 솔이 있는 반면, B는 올블랙 디자인의 로우탑 스니커즈입니다. 색상과 디테일(솔/스트라이프)이 달라 같은 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 141,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.8
+  },
+  "7238240:813652": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "두 이미지의 신발은 전체 실루엣은 비슷하지만 색상 조합이 확연히 다릅니다. A는 짙은 회색/검정 계열, B는 베이지/흰색/검정 계열이라 동일 모델·동일 컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 133,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.6
+  },
+  "7213842:45883": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "두 이미지 모두 뉴발란스 러닝화처럼 보이지만, A는 더 어두운 회색/검정 배색의 다른 모델이고 B는 연한 회색 배색에 측면 디테일과 실루엣이 다른 모델입니다. 모델명과 색상이 모두 일치하지 않습니다.",
+   "input_tokens": 706,
+   "output_tokens": 152,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 3.1
+  },
+  "4886035:406041": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "두 사진은 같은 브랜드 계열의 스니커즈처럼 보이지만, A는 올블랙에 삼선이 거의 보이지 않는 디자인이고 B는 흰색 삼선과 흰색 힐탭이 있는 슈퍼스타 스타일이라 색상과 디테일이 다릅니다. 같은 모델/색상으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 137,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.7
+  },
+  "3531673:991834": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 첼시 부츠이고, 이미지 B는 끈이 있는 옥스퍼드/더비 스타일 구두로 형태와 모델이 다릅니다.",
+   "input_tokens": 706,
+   "output_tokens": 84,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.3
+  },
+  "6967884:418841": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "두 이미지 모두 뉴발란스 러닝화로 보이지만, A는 실버/그레이 계열이고 B는 블랙 계열로 색상(컬러웨이)이 다릅니다. 동일 모델일 가능성은 있어도 요청 기준상 같은 제품으로 볼 수 없습니다.",
+   "input_tokens": 706,
+   "output_tokens": 138,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.4
+  },
+  "5981569:44101": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "두 이미지 모두 뉴발란스 계열의 유사한 러닝/트레일 실루엣이지만, A는 베이지/브라운 계열이고 B는 올블랙이라 색상이 명확히 다릅니다. 같은 모델일 가능성이 있어도 색상(컬러웨이)이 달라 동일 상품으로 볼 수 없습니다.",
+   "input_tokens": 706,
+   "output_tokens": 137,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.8
+  },
+  "6618043:456380": {
+   "result": "different",
+   "confidence": 0.89,
+   "reason": "두 이미지 모두 나이키 러닝화처럼 보이지만, A는 스우시가 옅고 미드솔 형태가 더 둥글며 측면 디테일이 다르고, B는 큰 검은 스우시와 ‘zoomx’ 표기가 보입니다. 모델/컬러웨이가 같다고 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 323,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.5
+  },
+  "6192576:44101": {
+   "result": "different",
+   "confidence": 0.97,
+   "reason": "두 사진 모두 검은색 뉴발란스 운동화처럼 보이지만, 갑피 디자인과 밑창 형태가 서로 다릅니다. A는 측면에 ‘ABZORB’ 계열의 레트로 러닝/트레일 느낌이 강하고, B는 더 현대적인 러닝화 형태로 오버레이와 아웃솔 구조가 다릅니다. 같은 모델·같은 컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 175,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.0
+  },
+  "5179870:108989": {
+   "result": "different",
+   "confidence": 0.96,
+   "reason": "두 이미지 모두 푸마 스피드캣 계열로 보이지만, A는 파란색/회색 조합이고 B는 검정/흰색 조합이라 색상(컬러웨이)이 다릅니다. 따라서 같은 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 131,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 1.7
+  },
+  "5705621:416297": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "이미지 A는 나이키 로우컷 스니커즈 형태에 가죽 어퍼와 스우시가 보이고, 미드솔에 Vibram 표기가 있습니다. 반면 이미지 B는 스웨이드 소재의 로퍼/모카신형 실루엣으로, 스우시가 없고 전체 디자인이 완전히 다릅니다. 같은 모델과 색상으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 171,
+   "model": "gpt-5.4-mini-2026-03-17",
+   "seconds": 2.3
+  }
+ },
+ "gpt-5.4-nano": {
+  "4923314:515349": {
+   "result": "same",
+   "confidence": 0.62,
+   "reason": "두 이미지 모두 동일한 로우 스니커즈 실루엣(스웨이드/누벅 소재, 3줄 스트라이프, 중앙 레이스업, 동일한 외곽 스티칭)과 같은 베이지/카키 톤 색상으로 보입니다. 다만 조명/해상도 차이로 세부 색감이 약간 달라 보여 확신은 제한적입니다.",
+   "input_tokens": 706,
+   "output_tokens": 174,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "5329560:1039631": {
+   "result": "same",
+   "confidence": 0.9,
+   "reason": "두 이미지 모두 빨간 스웨이드 바탕에 흰 3줄 스트라이프, 흰색 레더 토(앞코)와 힐 탭, 밑창은 검/브라운 계열의 톤으로 보이며 ‘TOKYO’ 로고 위치와 전반적인 실루엣이 동일합니다. 색상/색상조합과 모델 특징이 일치해 같은 제품으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 139,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.9
+  },
+  "2032850:42637": {
+   "result": "uncertain",
+   "confidence": 0.46,
+   "reason": "두 신발 모두 올블랙 계열이고 ASICS 측면 스트랩/로고 배치와 미드솔 실루엣이 유사하지만, 디테일(측면 패널/프린트 형태, 힐/토 주변 패턴, 에어타공/엣지 처리)에서 미세한 차이가 보여 동일한 모델·동일 컬러웨이(동일 세부 버전)라고 단정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 216,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.5
+  },
+  "595039:118745": {
+   "result": "different",
+   "confidence": 0.72,
+   "reason": "이미지 A는 하단 솔이 상대적으로 매끈하고(스티치 라인이 선명), 앞코 형태와 상단(레이스홀/스티치 디테일) 구성이 3홀 계열(예: 1461 스타일)에 가깝습니다. 이미지 B는 솔에 뚜렷한 트레드(골)가 있고 앞코/측면 패널 형상과 전체 실루엣이 달라 다른 모델(다른 라인)로 보입니다. 컬러(블랙/옐로우 스티치)는 유사하지만 모델이 달라 보이므로 동일 제품",
+   "input_tokens": 706,
+   "output_tokens": 237,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.3
+  },
+  "6192576:867110": {
+   "result": "same",
+   "confidence": 0.72,
+   "reason": "두 이미지 모두 블랙 바탕의 동일한 뉴발란스 스타일(측면 큰 N 로고, 동일한 러닝/테크 실루엣과 미드솔 패턴, 측면의 900-series로 보이는 레터/숫자 배치)이어서 같은 모델과 컬러웨이로 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 169,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.5
+  },
+  "4463013:21441": {
+   "result": "uncertain",
+   "confidence": 0.46,
+   "reason": "두 이미지 모두 블랙 컬러의 나이키 슈옥스(Shox) 계열로 보이지만, 옆면 패널/슈프린트와 전면 에어 포드(쿠션) 배치 등 디테일이 완전히 일치하는지 사진 각도 차이로 확정하기 어렵습니다. 모델·색상(컬러웨이) 동일 여부를 단정하기에 정보가 부족합니다.",
+   "input_tokens": 706,
+   "output_tokens": 253,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.9
+  },
+  "3976349:36": {
+   "result": "uncertain",
+   "confidence": 0.42,
+   "reason": "두 이미지 모두 올블랙 계열의 Nike 로우 스니커즈처럼 보이지만, 패널/스우시 모양, 미드솔(‘AIR’ 각인 유무 및 디자인), 아웃솔 디테일이 A와 B에서 확실히 일치한다고 보기 어렵습니다. 같은 모델·색상(컬러웨이)인지 단정하기엔 정보가 부족합니다.",
+   "input_tokens": 706,
+   "output_tokens": 255,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.9
+  },
+  "4939603:470681": {
+   "result": "different",
+   "confidence": 0.74,
+   "reason": "두 신발 모두 같은 실루엣/스트랩 디테일은 보이지만, 전체 컬러 구성(특히 미드솔/밑창의 컬러와 상단 오버레이의 톤)이 달라 보입니다. 따라서 동일한 모델·색상(컬러웨이)으로 단정하기 어렵고, 보수적으로 다른 제품으로 판단합니다.",
+   "input_tokens": 668,
+   "output_tokens": 271,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.6
+  },
+  "7318373:1117423": {
+   "result": "same",
+   "confidence": 0.68,
+   "reason": "두 이미지 모두 아식스 로우탑 스니커즈로 보이며, 측면의 3줄 스트라이프(젤/타이거 계열로 보이는 실루엣), 끈/토 박스 형태, 전반적인 그레이-그린 스웨이드 컬러 배색이 동일하게 보입니다. 다만 해상도/각도 차이로 모델명·정확한 컬러웨이 확인이 완전하진 않아 확신은 다소 낮습니다.",
+   "input_tokens": 706,
+   "output_tokens": 197,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.1
+  },
+  "6092233:838576": {
+   "result": "same",
+   "confidence": 0.62,
+   "reason": "두 사진 모두 크림/오프화이트 톤의 니트 러닝화이며, 측면의 ‘NITRO’ 로고와 물결형 미드솔 디자인이 동일하게 보입니다. 다만 각도/조명 차이로 세부 모델 식별이 100% 확정되진 않아 신뢰도는 중간입니다.",
+   "input_tokens": 706,
+   "output_tokens": 187,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.1
+  },
+  "6897456:1028654": {
+   "result": "same",
+   "confidence": 0.9,
+   "reason": "두 이미지 모두 동일한 핑크(네온 핑크) 컬러웨이와 블랙 3스트라이프, 러닝화 실루엣/밑창(스터드 형태)까지 거의 동일한 제품으로 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 110,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.5
+  },
+  "6886576:1061652": {
+   "result": "uncertain",
+   "confidence": 0.42,
+   "reason": "두 신발 모두 다크(블랙/차콜) 스웨이드 계열의 레이스업 옥스포드 형태이고 밑창도 유사해 보이지만, 토우(앞코) 형상/바느질 라인과 로우컷 실루엣 디테일이 이미지마다 미세하게 달라 동일한 모델·컬러웨이인지 확정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 185,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.0
+  },
+  "6839079:1000435": {
+   "result": "uncertain",
+   "confidence": 0.45,
+   "reason": "두 이미지 모두 올블랙 컬러의 아디다스 스타일 스니커즈(측면 3줄 스트라이프, 같은 실루엣)로 보이지만, 가죽/오버레이 디테일과 토/힐 형태가 약간 달라 보여 정확히 같은 모델/세대 및 컬러웨이(동일 리스팅)인지 확정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 213,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.6
+  },
+  "6997721:1052944": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 회색/블루 톤의 동일한 디자인(측면의 흰색 대각선 스트라이프 패턴, 메쉬/패턴 소재, 미드솔 형태, 앞코/힐 실루엣)과 동일한 형태의 로고/프린트가 보여 같은 모델과 컬러웨이로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 156,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.2
+  },
+  "6945906:1052396": {
+   "result": "different",
+   "confidence": 0.62,
+   "reason": "두 사진 모두 청색/회색 계열의 청키 스니커즈이긴 하지만, 상단의 스트랩(벨크로) 배치/개수와 옆면 패널 라인 및 아웃솔 패턴 형태가 서로 달라 보입니다. 같은 모델·컬러웨이로 단정하기 어렵고, 보수적으로는 다른 제품으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 223,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.2
+  },
+  "6192575:867111": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 뉴발란스 로우탑 스니커즈로 보이며, 실버/그레이 메탈릭 바탕에 큰 N 로고, 검은(다크 브라운) 고무 아웃솔 패턴까지 동일하게 보입니다. 모델 및 컬러웨이(화이트/그레이 계열) 차이가 뚜렷하지 않아 같은 제품으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 184,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.1
+  },
+  "7276893:1085804": {
+   "result": "same",
+   "confidence": 0.72,
+   "reason": "두 이미지 모두 브라운/다크브라운 컬러의 뉴발란스 로우 스니커즈로 보이며, 측면 N 로고 위치/형태, 레이스 색상(크림), 실루엣과 디테일(오버레이 패턴, 아웃솔 디자인)이 전반적으로 일치합니다. 다만 해상도와 각도 차이로 100% 단정은 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 225,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.4
+  },
+  "3892794:247965": {
+   "result": "uncertain",
+   "confidence": 0.42,
+   "reason": "두 사진 모두 회색/실버 메쉬 바탕에 검정 아웃솔(청키한 러닝화/트레일 스타일)로 유사하지만, 이미지 A는 착용 컷이라 로고/모델명·측면 패턴 디테일이 명확하지 않고, 이미지 B는 정면 단독컷이라도 A의 특정 특징과 1:1로 대조하기에 정보가 부족합니다. 동일 모델/컬러웨이 확정은 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 192,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.8
+  },
+  "6024097:875277": {
+   "result": "same",
+   "confidence": 0.78,
+   "reason": "두 이미지 모두 ‘NITRO’ 로고가 동일하게 보이고, 라이트 블루/그린 계열 갑피와 형광 옐로우 미드솔 컬러 조합, 옆면의 검정 스트라이프 및 러닝화 실루엣이 전반적으로 일치합니다. 모델/세대나 세부 색상 명칭이 화면에서 100% 확정되진 않지만, 상품 구성은 동일한 것으로 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 184,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.2
+  },
+  "166001:18448": {
+   "result": "uncertain",
+   "confidence": 0.45,
+   "reason": "두 이미지 모두 검정색 로우탑 스니커즈로 보이지만, 측면 패널/브랜딩 스트라이프 유무와 전체 실루엣(토 박스 형태, 사이드 오버레이 디테일, 뒤꿈치/옆면 패턴 등)이 완전히 일치한다고 단정하기 어렵습니다. 같은 모델·컬러웨이인지 확정할 정보가 부족해 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 279,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.6
+  },
+  "5340969:598585": {
+   "result": "same",
+   "confidence": 0.72,
+   "reason": "두 이미지 모두 브라운 스웨이드 소재에 블랙 두꺼운 아웃솔, 앞쪽 슬립온/로퍼 형태와 가운데 장식(작은 탭/버클 디테일) 구성이 유사합니다. 다만 각도/해상도 차이로 세부 스티치나 패널 형태가 100% 일치하는지는 확실하지 않아 신뢰도는 중간으로 평가했습니다.",
+   "input_tokens": 706,
+   "output_tokens": 169,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.2
+  },
+  "5331552:595549": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 브라운(탄) 스웨이드 어퍼에 레드 컬러의 대비 트리밍/스티치가 동일하게 보이며, 밑창 형태와 로고 위치도 일치합니다. 남녀/세대/콜라보 단서는 추가로 확인되지 않지만, 보이는 특징으로는 같은 모델·색상으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 125,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.0
+  },
+  "5705621:632282": {
+   "result": "uncertain",
+   "confidence": 0.52,
+   "reason": "두 신발 모두 검정색이고 vibram 로고가 보이는 유사한 모델로 보이지만, 측면 스우시(로고) 크기/배치와 밑창(아웃솔) 디테일·형태(특히 옆면 패널과 트레드 모양)가 이미지마다 다르게 보여 동일한 모델/색상(컬러웨이)로 단정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 261,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.6
+  },
+  "6111437:466444": {
+   "result": "uncertain",
+   "confidence": 0.44,
+   "reason": "두 사진 모두 베이지/카키 컬러의 클락스 스타일(스웨이드 슬립온, 중앙 태슬 장식, 측면 작은 로고 라벨)로 보입니다. 다만 아웃솔의 모양/펌프 라인과 로고(각인) 디테일이 사진마다 약간 달라 보여 동일 모델·동일 컬러웨이인지 확정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 187,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.2
+  },
+  "5835214:754796": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 베이지/카키 바탕에 검정 삼선(옆 로고), 브라운 톤 고무 아웃솔(페이즐리/텍스처 느낌) 조합으로 동일한 컬러웨이와 모델로 보입니다. 각도 차이만 있어 같은 제품으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 125,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.8
+  },
+  "4727100:135624": {
+   "result": "uncertain",
+   "confidence": 0.55,
+   "reason": "두 신발은 New Balance의 동일한 계열(유사한 N 로고, 메쉬/오버레이 구조, 같은 형태의 러닝화 실루엣)로 보이지만, 이미지마다 밑창 색(검/흰 대비)과 그레이 톤 오버레이가 달라 보여 같은 컬러웨이/버전인지 확정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 274,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.7
+  },
+  "5179870:705230": {
+   "result": "different",
+   "confidence": 0.72,
+   "reason": "두 이미지의 옆면 디자인과 컬러 배색이 다릅니다. Image A는 메쉬/원단 패턴과 측면의 흰색 디테일(스트라이프/로고 형태)이 Image B와 다르게 보이며, 신발 전체 톤(블루 음영과 스웨이드/메쉬 조합)도 일치하지 않습니다. 같은 모델·같은 컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 213,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.7
+  },
+  "1163169:15251": {
+   "result": "uncertain",
+   "confidence": 0.55,
+   "reason": "두 이미지 모두 아디다스 삼바(SAMBA)로 보이지만, 이미지 A에는 혀/라벨에 파란 포인트가 보이는 반면 이미지 B에서는 그 디테일이 명확히 확인되지 않습니다. 이 파란 포인트가 동일 모델/색상 변형인지(다른 각도·해상도 문제인지) 확정하기 어려워 보류합니다.",
+   "input_tokens": 706,
+   "output_tokens": 247,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.8
+  },
+  "5042975:389369": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 검정 바탕에 흰색 가로 스트라이프가 있는 동일한 아디다스 테니스/코트용 스니커즈 실루엣(아웃솔 형태와 갑피 라인, 스트라이프 배치가 일치)입니다. 남녀/세대 구분이나 콜라보/다른 컬러 단서는 보이지 않아 같은 제품으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 167,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "6271398:888824": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 네온 그린 계열 바탕에 블랙 스우시, ‘ZOOMX’ 로고, 얇은 파란 포인트(미드솔 라인/러닝화 컬러 포인트)가 동일하게 보이며 실루엣과 아웃솔 형상도 일치합니다. 따라서 같은 모델/컬러웨이로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 183,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.2
+  },
+  "706935:310551": {
+   "result": "different",
+   "confidence": 0.72,
+   "reason": "두 신발 모두 다크 브라운/옐로 스티치의 닥터마틴 계열로 보이지만, A는 클래식한 더비(낮은 굽/상대적으로 얇은 솔) 형태이고 B는 옆면 실루엣과 굽/아웃솔(트레드 패턴, 두께감)이 달라 다른 모델(색상뿐인 동일품이 아님)로 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 304,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.8
+  },
+  "6002026:830777": {
+   "result": "different",
+   "confidence": 0.62,
+   "reason": "두 신발 모두 Puma 로고와 비슷한 실루엣이지만, 옆면 패널 배치/컬러 톤(이미지 A는 더 올리브-그레이 느낌, B는 더 짙은 차콜 바탕)과 미드솔 형태·디테일이 달라 같은 모델·같은 컬러웨이로 단정하기 어렵습니다. 보수적으로 서로 다른 제품으로 판단합니다.",
+   "input_tokens": 706,
+   "output_tokens": 286,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.7
+  },
+  "6111791:561179": {
+   "result": "same",
+   "confidence": 0.62,
+   "reason": "두 사진 모두 올블랙 Nike 러닝화이며 ‘ZOOMX’가 동일 위치/표기로 보입니다. 측면 스우시 형태와 갑피(텍스처/레이싱) 디자인도 전반적으로 일치해 같은 모델·컬러웨이로 보입니다. 다만 각도/해상도 차이로 세부 패널 구성은 완전히 확정하기 어려워 확신은 다소 낮습니다.",
+   "input_tokens": 706,
+   "output_tokens": 303,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 4.2
+  },
+  "6996753:974158": {
+   "result": "same",
+   "confidence": 0.74,
+   "reason": "두 이미지 모두 보라/버건디 컬러 바탕에 검정 포인트(끈/로고 라인)와 동일한 형태의 두꺼운 미드솔(옆면 물결/레이어 디자인) 및 측면 ‘HITRO’ 로고가 보입니다. 각도만 다르고 모델·컬러웨이가 동일해 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 143,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.9
+  },
+  "6653232:971179": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 adidas TERREX 계열의 동일한 블랙/그레이 컬러웨이(측면 3줄 무늬, 보강 오버레이와 같은 디자인 요소, 미드솔/아웃솔 형태가 일치)로 보입니다. 남/여 또는 세대/콜라보 표기가 다른 차이는 확인되지 않습니다.",
+   "input_tokens": 706,
+   "output_tokens": 141,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.9
+  },
+  "4678344:418841": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 사진 모두 뉴발란스 710 모델의 블랙/실버(실버 라인·N 로고, 동일한 실루엣과 패널 구성)로 보이며, 색상과 모델이 일치합니다.",
+   "input_tokens": 706,
+   "output_tokens": 138,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.8
+  },
+  "3976350:12831": {
+   "result": "same",
+   "confidence": 0.62,
+   "reason": "두 이미지 모두 화이트 컬러의 Nike Air Force 1 로 보이며(로우탑, 스우시 위치/형태, ‘AIR’ 각인과 전형적인 AF1 패널 구조가 유사) 동일한 모델·컬러웨이로 판단됩니다. 다만 해상도/각도 차이로 디테일(발등/스티치 패턴)까지 100% 확정하긴 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 230,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.2
+  },
+  "4207634:1090164": {
+   "result": "same",
+   "confidence": 0.62,
+   "reason": "두 이미지 모두 검정(블랙) 계열의 동일한 샌들/슬리퍼 실루엣으로 보이며, 상단의 타공(세로 오픈) 패턴과 앞코 형태, 아웃솔 윤곽이 전반적으로 일치합니다. 다만 사진 각도/해상도 차이로 세부 마감(아웃솔 라인 등)을 100% 확정하긴 어려워 신뢰도는 중간입니다.",
+   "input_tokens": 706,
+   "output_tokens": 234,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.5
+  },
+  "2340324:437517": {
+   "result": "uncertain",
+   "confidence": 0.42,
+   "reason": "두 제품 모두 블랙 색상의 레이스업 구두라 공통점은 있으나, 이미지 A와 B에서 토(Box) 라인/패널 스티치 형태와 굽·밑창 실루엣이 완전히 일치한다고 단정하기 어렵습니다. 동일 모델·컬러웨이인지 확정이 불가합니다.",
+   "input_tokens": 706,
+   "output_tokens": 187,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.1
+  },
+  "7044931:808126": {
+   "result": "different",
+   "confidence": 0.86,
+   "reason": "이미지 A와 B는 신발 형태/디자인 디테일이 서로 다릅니다. A는 러닝/어퍼가 다단 패널로 구성되고 측면에 지퍼처럼 보이는 요소와 둥근 실루엣이 있으며 아웃솔 패턴도 다릅니다. B는 더 클래식한 로우 스니커즈 형태로 오버레이 라인과 토(혀끈) 처리, 전체 실루엣 및 밑창 형태가 A와 다릅니다. 색상이 모두 다크 계열로 보여도 모델(세대/라인) 자체가 달라 ",
+   "input_tokens": 706,
+   "output_tokens": 214,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.7
+  },
+  "3157671:220750": {
+   "result": "different",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 블랙 계열 리복 스니커즈지만, A는 측면에 패널/프린트 형태와 파란 원형 태그(어근 포인트)가 보이고, B는 다른 오버레이 패턴과 측면 구조(별도 패널 라인/형태) 및 밑창 쪽 디자인이 달라 동일 모델/컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 242,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.7
+  },
+  "2114461:407392": {
+   "result": "uncertain",
+   "confidence": 0.44,
+   "reason": "두 신발 모두 블랙 가죽(레이스업), 두꺼운 고무창 형태로 유사하지만, B는 옆면에 작은 가죽 패치/버클처럼 보이는 디테일이 있고 A는 그 디테일이 명확히 보이지 않습니다. 같은 모델·컬러웨이인지 확정할 만큼 핵심 외형(로고 위치/패널 구성)을 동일하게 확인하기 어려워 불확실합니다.",
+   "input_tokens": 706,
+   "output_tokens": 239,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.3
+  },
+  "6636852:263074": {
+   "result": "uncertain",
+   "confidence": 0.46,
+   "reason": "두 신발 모두 블랙 가죽 레이스업 옥스포드/더비 계열로 보이지만, 앞코 형태와 솔/굽 디자인(외곽 라인, 굽 높이, 아웃솔 형태)이 사진상에서 완전히 일치한다고 단정하기 어렵습니다. 컬러는 유사하나 모델(세부 디자인) 동일 여부를 확정할 근거가 부족합니다.",
+   "input_tokens": 706,
+   "output_tokens": 196,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.2
+  },
+  "2200892:253860": {
+   "result": "same",
+   "confidence": 0.7,
+   "reason": "두 이미지 모두 브라운 톤의 첼시(사이드 엘라스틱) 스타일 부츠이며, 발목 높이/스티치 위치/풀탭 형태와 검은 러버 아웃솔(트레드 형태)이 거의 동일해 보입니다. 다만 해상도와 조명 차이로 색감이 약간 달라 보여 100% 확정은 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 221,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.3
+  },
+  "6111436:84745": {
+   "result": "different",
+   "confidence": 0.86,
+   "reason": "두 신발 모두 스웨이드 모카신 스타일이지만, Image A는 밝은 베이지/샌드 톤이고 Image B는 올리브/카키 톤으로 색상 컬러웨이가 다릅니다. 또한 상단 스티치/끈(레이스) 디테일과 형태가 약간 달라 동일 모델·동일 컬러웨이로 확정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 203,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.4
+  },
+  "4313969:18871": {
+   "result": "different",
+   "confidence": 0.78,
+   "reason": "두 이미지 모두 호박색/누드 베이지 컬러에 블랙 칼라가 있는 듯하지만, 부츠의 전체 실루엣과 밑창(두께/패턴), 상단 블랙 배색 위치(이미지 A는 더 넓게 덮이는 형태, B는 뒤꿈치 쪽 중심) 등 디자인 디테일이 달라 동일 모델/동일 컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 745,
+   "output_tokens": 216,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "6852386:1031447": {
+   "result": "different",
+   "confidence": 0.72,
+   "reason": "두 이미지 모두 KEEN 로우 하이킹화로 보이지만, A는 측면에 더 어두운(거의 블랙에 가까운) 패널/컬러 블록이 뚜렷하고 전체 톤도 더 다크합니다. B는 단일에 가까운 브라운 컬러에 화이트/라이트 계열 디테일이 더 보입니다. 같은 모델·같은 컬러웨이로 단정하기엔 색 구성(컬러 블록)이 달라 보여 서로 다른 제품 가능성이 큽니다.",
+   "input_tokens": 706,
+   "output_tokens": 268,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.6
+  },
+  "4226785:13100": {
+   "result": "same",
+   "confidence": 0.62,
+   "reason": "두 이미지 모두 화이트 컬러의 Nike 로우 탑(에어포스 1 계열)로 보이며, 전체 실루엣과 패널/스우시 위치가 유사합니다. 다만 해상도·조명 차이로 미세한 디테일(연식/가공 차이)은 100% 확인이 어려워 확신은 낮습니다.",
+   "input_tokens": 706,
+   "output_tokens": 182,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "2980918:797663": {
+   "result": "same",
+   "confidence": 0.72,
+   "reason": "두 이미지 모두 테두리(칼라) 부분은 블랙이고 갑피는 카멜/브라운 누벅이며, 팀버랜드 로고 위치, 레이스/스티치 패턴, 아웃솔 러그 모양까지 전반적으로 일치합니다. (정확한 모델명/발매 버전 표기는 없어 확정은 어렵지만, 같은 제품일 가능성이 큽니다.)",
+   "input_tokens": 706,
+   "output_tokens": 176,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "4046672:398606": {
+   "result": "different",
+   "confidence": 0.86,
+   "reason": "두 신발의 색상/컬러웨이가 달라 보입니다( A: 블랙에 가까운 톤, B: 네이비/다크 네이비 톤). 또한 아웃솔/미드솔 형태와 질감( A: 비교적 매끈한 화이트 플랫폼, B: 더 굵고 텍스처가 보이는 화이트 아웃솔) 및 측면 스티치 디테일도 달라 보여 동일 모델·컬러웨이로 확정하기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 232,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.4
+  },
+  "7249959:430579": {
+   "result": "different",
+   "confidence": 0.72,
+   "reason": "두 신발은 색상은 모두 블랙이지만, 앞코 형태와 상단(가죽 패널/스티치) 구조, 그리고 밑창 실루엣(두께/스티치 라인)이 서로 달라 동일 모델·동일 컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 168,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.0
+  },
+  "4397345:173149": {
+   "result": "different",
+   "confidence": 0.72,
+   "reason": "이미지 A는 상단에 더 두꺼운 칼라/패널이 보이고 레이스홀 주변 형태가 다르며(측면 디자인·스티치 구성 포함) 아웃솔 러그 패턴도 A와 B가 일치하지 않습니다. 이미지 B는 Timberland 로고 배지가 보이는 더 단순한 어퍼 형태로 보여 두 모델이 동일한 색상/동일 레이아웃의 같은 제품으로 보기 어렵습니다.",
+   "input_tokens": 745,
+   "output_tokens": 209,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.0
+  },
+  "3347848:398609": {
+   "result": "same",
+   "confidence": 0.74,
+   "reason": "두 이미지 모두 블랙(네이비에 가까움) 캔버스 소재의 낮은 스니커즈이며, 흰색(오프화이트) 크러쉬/플랫폼 미드솔과 베이지 컬러의 라이닝·사이드 스티치 패턴이 유사합니다. 다른 컬러웨이/콜라보/남녀 다른 모델로 보일 만한 결정적 차이는 확인되지 않습니다.",
+   "input_tokens": 706,
+   "output_tokens": 177,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.2
+  },
+  "2741233:53196": {
+   "result": "same",
+   "confidence": 0.86,
+   "reason": "두 이미지 모두 Reebok 흰색 스니커즈로 보이며 측면의 레트로 로고(초록/분홍 포인트)와 밑창 색(크림/검정 에지)이 동일하게 보여 같은 모델과 컬러웨이로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 116,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.6
+  },
+  "4394971:347658": {
+   "result": "uncertain",
+   "confidence": 0.47,
+   "reason": "두 이미지 모두 블랙(다크) 계열의 버클 스트랩 부츠로 보이지만, A는 짧은 실루엣/주름 형태와 버클 위치가 다르게 보이고(특히 상단 스트랩 형태), B는 더 긴 샤프트와 더 평평한 밑창/전체 라인이 다르게 보입니다. 같은 모델·색상(컬러웨이)인지 단정하기엔 사진 정보가 부족합니다.",
+   "input_tokens": 706,
+   "output_tokens": 251,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.6
+  },
+  "4489783:689321": {
+   "result": "uncertain",
+   "confidence": 0.48,
+   "reason": "두 제품 모두 스웨이드 소재의 미니 부츠/슬립온 형태이고 색감도 비슷한 톤(브라운/그레이브 브라운)이라 동일 모델일 가능성이 있지만, A는 박스와 함께 2켤레 착용 컷(주름/커프 디테일), B는 단품 측면 컷(스티치 라인·밑창/칼라 형태)이어서 정확한 모델·색상(컬러웨이) 대조가 어렵습니다. 확정하기엔 차이가 있어 보수적으로 판단했습니다.",
+   "input_tokens": 706,
+   "output_tokens": 232,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.9
+  },
+  "6744497:992992": {
+   "result": "different",
+   "confidence": 0.93,
+   "reason": "두 신발은 색상 컬러웨이가 확연히 다릅니다. A는 다크 브라운/차콜 계열에 베이지 톤, B는 화이트 바탕에 네온 그린과 핑크(레드) 포인트가 보여 동일 모델·동일 컬러웨이라고 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 135,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.8
+  },
+  "5042960:831893": {
+   "result": "uncertain",
+   "confidence": 0.45,
+   "reason": "두 제품 모두 화이트/블랙 3줄 스트라이프와 동일한 러닝화 실루엣(낮은 미드솔, 측면 스트라이프 배치)이어서 같은 모델일 가능성은 있습니다. 다만 A와 B에서 스트라이프/소재의 마감(무광 블랙 vs 은은한 실버 반사감)과 세부 로고/텍스트가 선명하게 일치하는지 확정하기 어렵고, 컬러웨이나 동일 모델의 변형(연식/마감 차이)일 수도 있어 보입니다.",
+   "input_tokens": 706,
+   "output_tokens": 297,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.6
+  },
+  "5151822:109117": {
+   "result": "different",
+   "confidence": 0.86,
+   "reason": "이미지 A는 옆면에 K/N 로고와 다른 레터링/패널 구성이 보이고, 이미지 B는 ‘400is’ 표기가 확인되는 다른 모델(400is 라인)로 보입니다. 컬러(블랙 계열)는 비슷하지만 모델/컬러웨이가 동일하다고 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 163,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.2
+  },
+  "7284481:1048677": {
+   "result": "different",
+   "confidence": 0.93,
+   "reason": "이미지 A는 라이트 그레이/화이트 톤의 무광 가죽에 레이스업(끈) 타입과 대비되는 검은 러버 아웃솔의 청키 슈즈입니다. 이미지 B는 올블랙이며 벨크로 스트랩(버클)과 중앙 스우시 로고가 보여 다른 모델/색상(컬러웨이) 조합입니다. 같은 제품(동일 모델·컬러웨이)로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 169,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.3
+  },
+  "7276893:418841": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "이미지 A는 브라운(초코색) 계열, 이미지 B는 블랙 계열 컬러웨이로 보입니다. 색상/컬러웨이가 달라 동일 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 97,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "5520375:150413": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 검은색 두꺼운 러닝/슬립온 형태의 신발(에어윈도/스포티한 아웃솔)이 보이고, 이미지 B는 갈색 보트슈즈(로퍼/보트슈) 형태로 구조가 다릅니다. 모델과 색상 모두 달라 같은 상품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 135,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.9
+  },
+  "3901126:74130": {
+   "result": "different",
+   "confidence": 0.62,
+   "reason": "두 신발 모두 블랙 계열이지만, 옆면 로고/패턴과 모델 표기(이미지 A는 ‘480’ 표기처럼 보이고, 이미지 B는 다른 형태의 로고와 디자인이 보임) 및 전체 실루엣/미드솔 라인이 달라 같은 모델·컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 234,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.4
+  },
+  "6618043:501037": {
+   "result": "different",
+   "confidence": 0.95,
+   "reason": "이미지 A는 밝은 화이트/그레이 계열, 이미지 B는 블랙 계열로 컬러웨이가 서로 다릅니다. 동일 모델·동일 색상(컬러웨이) 조건을 충족하지 못해 다른 상품으로 판단됩니다.",
+   "input_tokens": 706,
+   "output_tokens": 101,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.8
+  },
+  "6768863:108989": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "두 이미지의 푸마 스니커즈는 같은 계열(푸마 로고/유사한 라인 구조)은 보이지만, 전체 컬러 배색이 다릅니다. A는 크림/베이지 바탕에 블랙 포인트, B는 다크 네이비(또는 그린 톤) 바탕에 화이트 포인트로 보여 동일한 색상 조합(컬러웨이)이 아닙니다. 따라서 같은 제품(같은 컬러웨이)으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 171,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.4
+  },
+  "6192575:461430": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "이미지 A는 그레이/실버 톤의 레이스업 스니커즈이고, 이미지 B는 블랙 톤의 다른 실루엣(스트랩/슬립온 형태로 보임)입니다. 같은 모델·같은 컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 147,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.7
+  },
+  "4753881:489508": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "두 이미지의 신발은 색상(및 컬러웨이)이 완전히 다릅니다. 이미지 A는 베이지/오프화이트 바탕에 버건디 포인트가 있는 반면, 이미지 B는 올블랙 컬러입니다. 모델/같은 컬러웨이라 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 113,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.7
+  },
+  "3976349:81744": {
+   "result": "different",
+   "confidence": 0.86,
+   "reason": "이미지 A는 올블랙 계열(미드솔/아웃솔이 검정 톤)로 보이고, 이미지 B는 아웃솔이 브라운/검브라운(검-검브라운) ‘검(굼)솔’ 컬러입니다. 같은 모델이라도 색상(컬러웨이) 차이가 커서 동일 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 180,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.0
+  },
+  "4289272:44101": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "이미지 A는 그레이/실버 톤의 뉴발란스 스니커즈이고, 이미지 B는 블랙 톤의 모델입니다. 색상 컬러웨이가 달라 같은 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 100,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.6
+  },
+  "6245020:888200": {
+   "result": "different",
+   "confidence": 0.96,
+   "reason": "두 신발은 모델/컬러웨이가 서로 다릅니다. A는 네온 그린 계열(zoomX 표기, 파란 밑창)이고 스우시 색상/디자인이 다르며, B는 화이트 바탕에 옐로-그라데이션 및 파란 스우시, 측면의 점 패턴과 발광(런닝화 LED) 같은 다른 특징이 있어 동일 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 120,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.8
+  },
+  "6886576:854338": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "이미지 A는 스웨이드/슬립온 형태의 블랙 슈즈(저통굽, 끈 없음)이고, 이미지 B는 광택 가죽의 블랙 옥스포드(앞코 끈으로 여밈)라서 모델/형태가 다릅니다. 따라서 동일한 제품(같은 모델·컬러웨이)로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 138,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.8
+  },
+  "4753881:418841": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "이미지 A는 밝은 베이지/화이트 바탕에 버건디 톤의 포인트와 V/브랜드 로고가 보이는 다른 모델의 스니커즈이고, 이미지 B는 올블랙 컬러에 뉴발란스 N 로고가 크게 들어간 완전히 다른 디자인(모델/컬러웨이)입니다.",
+   "input_tokens": 706,
+   "output_tokens": 131,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.7
+  },
+  "5179870:637747": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "이미지 A는 네이비/블루 계열(화이트 미드솔 패널 포함)이고, 이미지 B는 블랙 계열(화이트 로고/패널)로 보입니다. 또한 앞코 형태와 측면 디자인(실루엣/패널 구성)이 달라 동일 모델·동일 컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 135,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.0
+  },
+  "6768863:862891": {
+   "result": "different",
+   "confidence": 0.93,
+   "reason": "두 이미지 모두 푸마 로고/실루엣은 비슷하지만, 색상 배색이 다릅니다. Image A는 크림(오프화이트) 바탕에 다크 브라운/차콜 포인트인 반면, Image B는 블랙 바탕에 크림(오프화이트) 패널이 들어간 컬러웨이입니다. 따라서 같은 제품(동일 모델·동일 컬러웨이)로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 163,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "2682873:1079153": {
+   "result": "different",
+   "confidence": 0.97,
+   "reason": "이미지 A는 아이보리 바탕에 검정/차콜 스트라이프와 밑창이 보이고, 이미지 B는 브라운 바탕에 화이트 스트라이프와 브라운 톤의 밑창입니다. 동일 모델일 가능성은 있어도 색상(컬러웨이)이 달라 같은 상품으로 보기 어렵습니다.",
+   "input_tokens": 668,
+   "output_tokens": 138,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "3976349:893322": {
+   "result": "different",
+   "confidence": 0.78,
+   "reason": "이미지 A는 전체적으로 무광 블랙 가죽/스우시(일반 에어포스 계열)처럼 보이고, 이미지 B는 광택(페이턴트) 소재와 다른 패널/디테일(추가 스트랩/구조)이 보여 동일 모델·컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 224,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.4
+  },
+  "6371070:774910": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "이미지 A는 크림/오프화이트 바탕에 검정 토크(텍스트)와 검정 사이드 트리플 스트라이프가 보이는 컬러웨이(도쿄 모델)이고, 이미지 B는 전체가 블랙 톤으로 보이는 다른 컬러웨이입니다. 같은 모델이라도 색상이 달라 동일 상품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 134,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.4
+  },
+  "6046407:543281": {
+   "result": "uncertain",
+   "confidence": 0.42,
+   "reason": "두 이미지 모두 블랙 바탕에 실버/화이트 스트라이프가 있는 아디다스 계열로 보이지만, 측면 스트라이프 형태/엠블럼 및 아웃솔 디자인(쿠션 형태) 디테일이 완전히 일치하는지 확실하지 않습니다. 같은 모델·색상이라고 단정하기엔 정보가 부족합니다.",
+   "input_tokens": 706,
+   "output_tokens": 250,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.5
+  },
+  "5327113:1046787": {
+   "result": "different",
+   "confidence": 0.97,
+   "reason": "이미지 A는 청/흑 배색의 청키 러닝/어글리 스니커즈 형태이고, 이미지 B는 검은색 가죽 옥스퍼드(드레스 슈즈) 형태입니다. 모델/카테고리와 디자인(아웃솔·어퍼 구조)이 달라 동일 제품(같은 모델·컬러웨이)로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 139,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.9
+  },
+  "7276916:44101": {
+   "result": "different",
+   "confidence": 0.72,
+   "reason": "두 신발 모두 뉴발란스 로고가 있는 블랙 컬러이지만, 옆면 N 로고의 형태/위치, 패널(오버레이) 디자인, 그리고 밑창(러그/형태) 디테일이 서로 달라 동일 모델·동일 컬러웨이로 보긴 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 215,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.3
+  },
+  "7260775:1108330": {
+   "result": "different",
+   "confidence": 0.93,
+   "reason": "이미지 A는 베이지/그레이 계열(밝은 컬러) 상단에 로고가 보이는 반면, 이미지 B는 전체가 블랙 컬러로 보입니다. 동일 모델이라도 색상 컬러웨이가 달라 같은 상품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 120,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.0
+  },
+  "7466121:366002": {
+   "result": "different",
+   "confidence": 0.95,
+   "reason": "두 신발 모두 New Balance 로고와 슬리퍼/스니커 타입의 실루엣은 비슷하지만, Image A는 브라운(스웨이드) 컬러에 아이보리 안감/디테일이 있고 Image B는 블랙(블랙 스웨이드/메시) 컬러로 보입니다. 컬러웨이가 달라 동일 상품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 136,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.9
+  },
+  "3531673:944831": {
+   "result": "different",
+   "confidence": 0.99,
+   "reason": "이미지 A는 블랙 첼시 부츠(신발)이고, 이미지 B는 블랙 지갑(가죽 지갑) 사진입니다. 제품 종류/모델이 서로 달라 같은 상품이 아닙니다.",
+   "input_tokens": 706,
+   "output_tokens": 91,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.5
+  },
+  "6271398:895021": {
+   "result": "different",
+   "confidence": 0.96,
+   "reason": "두 신발은 컬러웨이가 완전히 다릅니다. A는 형광 그린/라임 계열이고 B는 화이트/그레이(블랙 톤의 밑창) 계열이며, 동일 모델이라도 색상 조합이 달라 같은 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 87,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.5
+  },
+  "5520375:946069": {
+   "result": "different",
+   "confidence": 0.95,
+   "reason": "이미지 A는 벨크로/슬립온 형태의 검은색 슬립 스트랩(로퍼/댄디 스니커 느낌)이고, 측면에 에어 유닛 형태 패널이 보입니다. 이미지 B는 앞코가 둥근 검은색 가죽 로우탑으로 레이스업(끈)이며 밑창 트레드/구조도 A와 다릅니다. 동일 모델/컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 178,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.0
+  },
+  "6879519:247965": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "A는 브라운/브라운 그레이 계열의 스웨이드·메쉬 조합이고 신발 외형(브랜드 로고/패널 배치와 톤)이 B의 라이트 그레이 단색(메쉬 오버레이와 아웃솔 형태)과 다릅니다. 따라서 동일 모델/컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 136,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.7
+  },
+  "7093622:44101": {
+   "result": "different",
+   "confidence": 0.86,
+   "reason": "두 사진 모두 뉴발란스 러닝/트레일 스타일의 동일 계열 디자인(측면 큰 ‘N’ 로고, 러그 아웃솔)을 공유하지만, Image A는 그레이/블랙 투톤 느낌이고 Image B는 더 올블랙/더 어두운 색감으로 보입니다. 컬러웨이가 달라 동일 상품(같은 모델+같은 컬러웨이)로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 195,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 3.3
+  },
+  "5599231:775768": {
+   "result": "different",
+   "confidence": 0.86,
+   "reason": "A는 베이지/브라운 컬러의 스니커(레터링 N자 로고와 벨크로 스트랩, 레이스 형태)이고, B는 블랙 컬러의 슬립온 스타일(스트랩/스티치/로고 배치가 다름)이라 동일한 모델·컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 132,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.5
+  },
+  "7231149:211237": {
+   "result": "different",
+   "confidence": 0.95,
+   "reason": "이미지 A는 하이탑(발목 스트랩/버클) 타입의 블랙 스니커이고, 이미지 B는 로우탑(스트랩 없는) 에어포스 1 스타일처럼 보입니다. 같은 모델/색상(컬러웨이)로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 162,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.0
+  },
+  "816033:369114": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "이미지 A는 검정/흰색 대비(흰색 아웃라인과 흰색 밑창/중창) 디자인이고, 이미지 B는 올블랙(검정 단색) 색상에 톤온톤 측면 스트라이프/밑창으로 보입니다. 같은 모델이라도 색상 컬러웨이가 다르게 보여 동일 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 175,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "7238240:813652": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "두 사진 모두 같은 실루엣/브랜드로 보이지만, 색상 컬러웨이가 확실히 다릅니다(이미지 A는 다크 그레이/블랙, 이미지 B는 화이트/베이지 베이스). 같은 모델·같은 컬러웨이로 보긴 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 149,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.9
+  },
+  "7213842:45883": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "두 이미지 모두 뉴발란스 725로 보이지만, 색상 컬러웨이가 확연히 다릅니다. A는 다크(검정/차콜) 톤이고 B는 라이트 그레이 톤이며 디테일 배색도 달라 동일 제품(동일 컬러웨이)로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 147,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.9
+  },
+  "4886035:406041": {
+   "result": "different",
+   "confidence": 0.92,
+   "reason": "이미지 A는 올블랙(검정 바탕에 흰 디테일 없음) 컬러이고, 이미지 B는 블랙 바탕에 흰색 3-스트라이프/화이트 배색이 뚜렷합니다. 모델(수퍼스타) 자체는 비슷해 보여도 컬러웨이가 달라 동일 상품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 152,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.9
+  },
+  "3531673:991834": {
+   "result": "different",
+   "confidence": 0.95,
+   "reason": "A는 첼시 부츠(측면 고어, 발목 위 원형 형태, 풀탭)이고 B는 끈이 있는 로퍼/더비 스타일의 구두(낮은 굽, 레이스)입니다. 모델 및 형태가 달라 동일 제품으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 128,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "6967884:418841": {
+   "result": "different",
+   "confidence": 0.92,
+   "reason": "두 신발 모두 뉴발란스 로고/모양은 비슷하지만, 색상이 완전히 다릅니다(이미지 A는 실버/라이트 그레이 톤, 이미지 B는 블랙/다크 톤). 따라서 동일한 모델/컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 117,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.6
+  },
+  "5981569:44101": {
+   "result": "different",
+   "confidence": 0.98,
+   "reason": "이미지 A는 베이지/크림 컬러의 뉴발란스 스니커즈, 이미지 B는 블랙 컬러의 동일 계열 디자인(‘N’ 로고 등)으로 보이지만 색상 컬러웨이가 명확히 달라 같은 제품(같은 색상/컬러웨이)으로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 142,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.8
+  },
+  "6618043:456380": {
+   "result": "different",
+   "confidence": 0.86,
+   "reason": "이미지 A와 B는 Nike 러닝화로 보이지만, 모델/디자인 요소가 다릅니다. B는 측면에 ‘ZOOMX’ 표기와 다른 형태의 우븐/프린트 및 미드솔 구성이 보이고, A는 그와 다른 패턴과 로고/가시적인 디테일(머슬/힐 탭 및 컬러 블록)이 있어 동일한 모델·동일 컬러웨이로 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 185,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.1
+  },
+  "6192576:44101": {
+   "result": "different",
+   "confidence": 0.74,
+   "reason": "두 이미지의 신발 외형(미드솔/아웃솔 러그 패턴과 측면 ‘N’ 로고 및 오버레이 형태)이 서로 다릅니다. 특히 A는 비교적 매끈한 러그 형태, B는 더 두껍고 러기한 패턴으로 보여 같은 모델/색상이라고 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 215,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.3
+  },
+  "5179870:108989": {
+   "result": "different",
+   "confidence": 0.9,
+   "reason": "이미지 A는 네이비/블루 톤에 로고·디자인(스트라이프/패널 형태)이 다른 운동화이고, 이미지 B는 푸마(PUMA) 로고가 보이는 검정/오프화이트 컬러 웨이와 실루엣(옆 패널 및 마감)이 확연히 달라 같은 모델/색상이라고 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 142,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 1.8
+  },
+  "5705621:416297": {
+   "result": "different",
+   "confidence": 0.86,
+   "reason": "이미지 A는 레이스업 스타일의 가죽 스니커(옆/토 패널 및 ‘vibram’ 라벨이 보이는 밑창)로 보이고, 이미지 B는 스웨이드(또는 퍼지 소재)로 보이며 로퍼/목(모카)형에 가까운 다른 실루엣입니다. 동일 모델·컬러웨이라고 보기 어렵습니다.",
+   "input_tokens": 706,
+   "output_tokens": 178,
+   "model": "gpt-5.4-nano-2026-03-17",
+   "seconds": 2.4
+  }
+ }
+}

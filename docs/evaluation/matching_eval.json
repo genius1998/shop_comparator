@@ -1,0 +1,9689 @@
+{
+ "vlm_models": [
+  "gpt-5.4-mini-2026-03-17",
+  "gpt-5.4-nano-2026-03-17"
+ ],
+ "products": {
+  "6997721": {
+   "goodsNo": "6997721",
+   "brand": "아디다스",
+   "name": "[SFTM 컬래버] 아디제로 EVO SL M - 도브그레이 / KJ0774",
+   "serial": "KJ0774",
+   "candidates": [
+    {
+     "kreamId": "1052944",
+     "name": "Adidas",
+     "model": "KJ0774"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1052944",
+     "confidence": 0.98,
+     "seconds": 2.9
+    },
+    "gpt-5.4-nano-2026-03-17": {
+     "decision": "uncertain",
+     "kreamId": "",
+     "confidence": 0.42,
+     "seconds": 3.2
+    }
+   }
+  },
+  "5619910": {
+   "goodsNo": "5619910",
+   "brand": "뉴발란스",
+   "name": "NBRJGF010G / WINTER Breeze / SD2205GR (GRAY)",
+   "serial": "NBRJGF010G_15",
+   "candidates": [
+    {
+     "kreamId": "775768",
+     "name": "New Balance",
+     "model": "SD2510BK"
+    },
+    {
+     "kreamId": "1081905",
+     "name": "New Balance",
+     "model": "SD2510BR"
+    },
+    {
+     "kreamId": "581611",
+     "name": "New Balance",
+     "model": "SD2203BR"
+    },
+    {
+     "kreamId": "366002",
+     "name": "New Balance",
+     "model": "SD2203BK"
+    },
+    {
+     "kreamId": "673355",
+     "name": "New Balance",
+     "model": "SD2205GR / NBRJGF010G"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "673355",
+     "confidence": 0.99,
+     "seconds": 2.8
+    },
+    "gpt-5.4-nano-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.86,
+     "seconds": 3.3
+    }
+   }
+  },
+  "7165976": {
+   "goodsNo": "7165976",
+   "brand": "푸마",
+   "name": "디비에이트 나이트로 엘리트 4 - 서니 라임-푸마 블랙 / 312127-10",
+   "serial": "312127-10",
+   "candidates": [
+    {
+     "kreamId": "1095854",
+     "name": "푸마 디비에이트 나이트로 엘리트 4 써니 라임 블랙",
+     "model": "312127-10"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1095854",
+     "confidence": 0.98,
+     "seconds": 2.3
+    },
+    "gpt-5.4-nano-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1095854",
+     "confidence": 0.86,
+     "seconds": 2.8
+    }
+   }
+  },
+  "7466121": {
+   "goodsNo": "7466121",
+   "brand": "뉴발란스",
+   "name": "NBRJGF010F / WINTER Breeze / SD2205BR (BROWN)",
+   "serial": "NBRJGF010F_85",
+   "candidates": [
+    {
+     "kreamId": "775768",
+     "name": "New Balance",
+     "model": "SD2510BK"
+    },
+    {
+     "kreamId": "366002",
+     "name": "New Balance",
+     "model": "SD2203BK"
+    },
+    {
+     "kreamId": "158833",
+     "name": "New Balance",
+     "model": "SD3305BK"
+    },
+    {
+     "kreamId": "1081905",
+     "name": "New Balance",
+     "model": "SD2510BR"
+    },
+    {
+     "kreamId": "581611",
+     "name": "New Balance",
+     "model": "SD2203BR"
+    },
+    {
+     "kreamId": "1122847",
+     "name": "New Balance",
+     "model": "SD2205BR"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1122847",
+     "confidence": 0.98,
+     "seconds": 3.1
+    },
+    "gpt-5.4-nano-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.95,
+     "seconds": 2.5
+    }
+   }
+  },
+  "6931948": {
+   "goodsNo": "6931948",
+   "brand": "푸마",
+   "name": "디비에이트 퓨어 나이트로 - 푸마 블랙:플랫 다크 그레이:푸마 실버 / 313904-16",
+   "serial": "313904-16",
+   "candidates": [
+    {
+     "kreamId": "1018256",
+     "name": "푸마 벨로시티 나이트로 5 와이드 블랙 플랫 다크 그레이",
+     "model": "313690-01"
+    },
+    {
+     "kreamId": "811375",
+     "name": "푸마 디비에이트 나이트로 4 와이드 블랙 플랫 다크 그레이",
+     "model": "312901-02"
+    },
+    {
+     "kreamId": "875277",
+     "name": "푸마 디비에이트 나이트로 4 발틱 씨 블루 프레쉬 워터",
+     "model": "312123-08"
+    },
+    {
+     "kreamId": "1018202",
+     "name": "푸마 벨로시티 나이트로 5 화이트 울트라 레드",
+     "model": "312944-05"
+    },
+    {
+     "kreamId": "930860",
+     "name": "푸마 디비에이트 퓨어 나이트로 푸마 화이트 울트라 레드",
+     "model": "313904-06"
+    },
+    {
+     "kreamId": "973781",
+     "name": "푸마 디비에이트 퓨어 나이트로 블랙 플랫 다크 그레이",
+     "model": "313904-02"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.93,
+     "seconds": 4.1
+    },
+    "gpt-5.4-nano-2026-03-17": {
+     "decision": "same",
+     "kreamId": "973781",
+     "confidence": 0.78,
+     "seconds": 3.2
+    }
+   }
+  },
+  "3276429": {
+   "goodsNo": "3276429",
+   "brand": "킨치",
+   "name": "SHOWER - 808 (a) / BLACK",
+   "serial": "KNCH808",
+   "candidates": [
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "443448",
+     "name": "Kinchi",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "263074",
+     "confidence": 0.79,
+     "seconds": 4.0
+    },
+    "gpt-5.4-nano-2026-03-17": {
+     "decision": "uncertain",
+     "kreamId": "263074",
+     "confidence": 0.52,
+     "seconds": 3.0
+    }
+   },
+   "review": {
+    "label": "doubtful",
+    "kreamId": "263074",
+    "note": "같은 브랜드지만 굽 형태가 달라 보임, 썸네일로는 확정 불가"
+   }
+  },
+  "7466120": {
+   "goodsNo": "7466120",
+   "brand": "뉴발란스",
+   "name": "NBRJGF010B / WINTER Breeze / SD2205BO (BLACK)",
+   "serial": "NBRJGF010B_19",
+   "candidates": [
+    {
+     "kreamId": "775768",
+     "name": "New Balance",
+     "model": "SD2510BK"
+    },
+    {
+     "kreamId": "366002",
+     "name": "New Balance",
+     "model": "SD2203BK"
+    },
+    {
+     "kreamId": "1081905",
+     "name": "New Balance",
+     "model": "SD2510BR"
+    },
+    {
+     "kreamId": "1059908",
+     "name": "New Balance",
+     "model": "NBNAGCO303-19"
+    },
+    {
+     "kreamId": "581611",
+     "name": "New Balance",
+     "model": "SD2203BR"
+    },
+    {
+     "kreamId": "1122846",
+     "name": "New Balance",
+     "model": "SD2205BO"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1122846",
+     "confidence": 0.98,
+     "seconds": 3.2
+    },
+    "gpt-5.4-nano-2026-03-17": {
+     "decision": "uncertain",
+     "kreamId": "",
+     "confidence": 0.42,
+     "seconds": 4.2
+    }
+   }
+  },
+  "7284480": {
+   "goodsNo": "7284480",
+   "brand": "나이키",
+   "name": "에어 조던 1 브루클린 로우 W - 블랙:메탈릭 실버 / IQ4927-001",
+   "serial": "IQ4927-001",
+   "candidates": [
+    {
+     "kreamId": "1103819",
+     "name": "Jordan",
+     "model": "IQ4927-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1103819",
+     "confidence": 0.97,
+     "seconds": 2.6
+    },
+    "gpt-5.4-nano-2026-03-17": {
+     "decision": "uncertain",
+     "kreamId": "",
+     "confidence": 0.42,
+     "seconds": 3.0
+    }
+   }
+  },
+  "5599231": {
+   "goodsNo": "5599231",
+   "brand": "뉴발란스",
+   "name": "NBRJGF010A / WINTER Breeze / SD2205BE (BEIGE)",
+   "serial": "NBRJGF010A_35",
+   "candidates": [
+    {
+     "kreamId": "775768",
+     "name": "New Balance",
+     "model": "SD2510BK"
+    },
+    {
+     "kreamId": "366002",
+     "name": "New Balance",
+     "model": "SD2203BK"
+    },
+    {
+     "kreamId": "1059908",
+     "name": "New Balance",
+     "model": "NBNAGCO303-19"
+    },
+    {
+     "kreamId": "1081905",
+     "name": "New Balance",
+     "model": "SD2510BR"
+    },
+    {
+     "kreamId": "639120",
+     "name": "New Balance",
+     "model": "SD2205BE / NBRJGF010A"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "639120",
+     "confidence": 0.99,
+     "seconds": 3.8
+    },
+    "gpt-5.4-nano-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.9,
+     "seconds": 2.4
+    }
+   }
+  },
+  "3976350": {
+   "goodsNo": "3976350",
+   "brand": "나이키",
+   "name": "에어 포스 1 07 M - 화이트 / CW2288-111",
+   "serial": "CW2288-111",
+   "candidates": [
+    {
+     "kreamId": "12831",
+     "name": "나이키 에어포스 1 '07 로우 화이트",
+     "model": "315122-111/CW2288-111"
+    },
+    {
+     "kreamId": "156663",
+     "name": "나이키 x 트래비스 스캇 에어포스 1 '07 로우 캑터스 잭 유토피아 에디션 화이트",
+     "model": "CW2288-111"
+    },
+    {
+     "kreamId": "480753",
+     "name": "나이키 에어 포스 1 '07 LV8 블랙 검 라이트 브라운",
+     "model": "IB6388-001"
+    },
+    {
+     "kreamId": "32867",
+     "name": "나이키 에어포스 1 '07 화이트 검 라이트 브라운",
+     "model": "DJ2739-100"
+    },
+    {
+     "kreamId": "893327",
+     "name": "나이키 에어포스 1 로우 '07 프리미엄 화이트 화이트",
+     "model": "IV2857-100"
+    },
+    {
+     "kreamId": "600340",
+     "name": "나이키 에어포스 1 '07 LV8 화이트 검 미디움 브라운",
+     "model": "HQ1967-100"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "12831",
+     "confidence": 0.99,
+     "seconds": 2.0
+    },
+    "gpt-5.4-nano-2026-03-17": {
+     "decision": "same",
+     "kreamId": "12831",
+     "confidence": 0.74,
+     "seconds": 2.4
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "12831",
+    "note": "에어포스 1 '07 화이트, 모델번호 CW2288-111 포함. 협업판과 모델번호가 같아 자동 확정 불가였던 상품"
+   }
+  },
+  "4678344": {
+   "goodsNo": "4678344",
+   "brand": "뉴발란스",
+   "name": "NBPDGF733B / U740BM2 (BLACK)",
+   "serial": "NBPDGF733B_19",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "418841",
+     "confidence": 0.97,
+     "seconds": 3.2
+    }
+   }
+  },
+  "4371012": {
+   "goodsNo": "4371012",
+   "brand": "나이키",
+   "name": "에어 포스 1 07 WB M - 플랙스:검 라이트 브라운:블랙:위트 / CJ9179-200",
+   "serial": "CJ9179-200",
+   "candidates": [
+    {
+     "kreamId": "21935",
+     "name": "나이키 에어포스 1 '07 WB 플랙스",
+     "model": "CJ9179-200"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "21935",
+     "confidence": 0.99,
+     "seconds": 3.0
+    }
+   }
+  },
+  "2716424": {
+   "goodsNo": "2716424",
+   "brand": "야세",
+   "name": "우든 홀스하이드 더비 슈즈 블랙",
+   "serial": "SL0015HBK",
+   "candidates": [
+    {
+     "kreamId": "532636",
+     "name": "세이코 셀렉션 SBTR021 40mm 블랙",
+     "model": "SBTR021"
+    },
+    {
+     "kreamId": "159507",
+     "name": "245,000원",
+     "model": "SUR311P1"
+    },
+    {
+     "kreamId": "605128",
+     "name": "세이코 SBPN067 37mm 스테인리스 스틸 블랙",
+     "model": "SBPN067"
+    },
+    {
+     "kreamId": "539504",
+     "name": "세이코 SNXS79K1 37mm 블랙",
+     "model": "SNXS79K1"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "438401",
+     "name": "야세 머드 홀스하이드 더비 블랙",
+     "model": "Y35DHBK"
+    },
+    {
+     "kreamId": "118744",
+     "name": "Dr. Martens",
+     "model": "14345001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.92,
+     "seconds": 2.9
+    }
+   }
+  },
+  "3901126": {
+   "goodsNo": "3901126",
+   "brand": "뉴발란스",
+   "name": "NBPFGF733K / W480SK5 (BLACK)",
+   "serial": "NBPFGF733K_19",
+   "candidates": [
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "74130",
+     "name": "(W) 아식스 조그 100 T 블랙 - 2E 엑스트라 와이드",
+     "model": "1022A335-001"
+    },
+    {
+     "kreamId": "489508",
+     "name": "New Balance",
+     "model": "BB480L3B"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "109117",
+     "confidence": 0.98,
+     "seconds": 2.5
+    }
+   }
+  },
+  "2032850": {
+   "goodsNo": "2032850",
+   "brand": "아식스",
+   "name": "젤-1130 - 블랙:그래피티 그레이 / 1201A256-002",
+   "serial": "1201A256-002",
+   "candidates": [
+    {
+     "kreamId": "42637",
+     "name": "아식스 젤 1130 블랙 그래파이트 그레이",
+     "model": "1201A256-002"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "42637",
+     "confidence": 0.96,
+     "seconds": 3.0
+    }
+   }
+  },
+  "4207634": {
+   "goodsNo": "4207634",
+   "brand": "액트플러스",
+   "name": "하이드로 블립온 트루 블랙",
+   "serial": "BA006BK",
+   "candidates": [
+    {
+     "kreamId": "1090164",
+     "name": "액트플러스 하이드로 블립온 트루블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "1098392",
+     "name": "액트플러스 얼라인플러스 슬라이드 네추럴 샌드",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1090164",
+     "confidence": 0.99,
+     "seconds": 1.9
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "1090164",
+    "note": "상품명·형태 일치"
+   }
+  },
+  "4201382": {
+   "goodsNo": "4201382",
+   "brand": "킨치",
+   "name": "BRUTAL - 649 (a) VIBRAM",
+   "serial": "KNCH649",
+   "candidates": [
+    {
+     "kreamId": "497465",
+     "name": "Adidas",
+     "model": "JN7153"
+    },
+    {
+     "kreamId": "586943",
+     "name": "Adidas",
+     "model": "JQ6789"
+    },
+    {
+     "kreamId": "904890",
+     "name": "Reebok",
+     "model": "100268281"
+    },
+    {
+     "kreamId": "497466",
+     "name": "Adidas",
+     "model": "JN7153"
+    },
+    {
+     "kreamId": "342774",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "993741",
+     "name": "Kinchi",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "uncertain",
+     "kreamId": "",
+     "confidence": 0.68,
+     "seconds": 3.6
+    }
+   }
+  },
+  "4751231": {
+   "goodsNo": "4751231",
+   "brand": "뉴발란스",
+   "name": "NBPDGF703S / M1906REH (SILVER)",
+   "serial": "NBPDGF703S_91",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "28260",
+     "name": "New Balance",
+     "model": "MR530KA"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    },
+    {
+     "kreamId": "226053",
+     "name": "New Balance",
+     "model": "M1906REH"
+    },
+    {
+     "kreamId": "692897",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "755664",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "226053",
+     "confidence": 0.98,
+     "seconds": 3.2
+    }
+   }
+  },
+  "6996757": {
+   "goodsNo": "6996757",
+   "brand": "푸마",
+   "name": "[PUMA X SAYSKY] 디비에이트 나이트로 엘리트 4 - 플랫 다크 그레이:비비드 블루 / 313942-01",
+   "serial": "313942-01",
+   "candidates": [
+    {
+     "kreamId": "1053215",
+     "name": "푸마 x 세이스카이 디비에이트 나이트로 엘리트 4 다크 그레이 비비드 블루",
+     "model": "313942-01"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1053215",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   }
+  },
+  "5767147": {
+   "goodsNo": "5767147",
+   "brand": "푸마",
+   "name": "매그맥스 나이트로 2 - 바이브런트 실버:럭스 라임 / 312125-04",
+   "serial": "312125-04",
+   "candidates": [
+    {
+     "kreamId": "702995",
+     "name": "푸마 매그맥스 나이트로 2 바이브런트 실버 럭스 라임",
+     "model": "312125-04"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "702995",
+     "confidence": 0.98,
+     "seconds": 3.2
+    }
+   }
+  },
+  "3777398": {
+   "goodsNo": "3777398",
+   "brand": "미즈노",
+   "name": "(공용) 웨이브 라이더 10 - 화이트:실버:블랙 / D1GA210405",
+   "serial": "D1GA210405",
+   "candidates": [
+    {
+     "kreamId": "263984",
+     "name": "Mizuno",
+     "model": "D1GA210405"
+    },
+    {
+     "kreamId": "144355",
+     "name": "Mizuno",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "263984",
+     "confidence": 0.79,
+     "seconds": 4.8
+    }
+   }
+  },
+  "4104562": {
+   "goodsNo": "4104562",
+   "brand": "식스핏",
+   "name": "[미누의코디 x 식스핏] [+5.5cm] BOLD TOE DERBY",
+   "serial": "BOLD",
+   "candidates": [
+    {
+     "kreamId": "797816",
+     "name": "Adidas",
+     "model": "JS3907"
+    },
+    {
+     "kreamId": "368211",
+     "name": "Adidas",
+     "model": "IE0876"
+    },
+    {
+     "kreamId": "982625",
+     "name": "Adidas",
+     "model": "JR7438"
+    },
+    {
+     "kreamId": "231407",
+     "name": "Adidas",
+     "model": "IE7349"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 3.5
+    }
+   }
+  },
+  "4727100": {
+   "goodsNo": "4727100",
+   "brand": "뉴발란스",
+   "name": "NBPDGF724G / MR530CK (GRAY)",
+   "serial": "NBPDGF724G_15",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    },
+    {
+     "kreamId": "135624",
+     "name": "New Balance",
+     "model": "MR530CK"
+    },
+    {
+     "kreamId": "688947",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "970407",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "135624",
+     "confidence": 0.98,
+     "seconds": 3.1
+    }
+   }
+  },
+  "6030953": {
+   "goodsNo": "6030953",
+   "brand": "푸마",
+   "name": "스피드캣 고 우먼스 - 블랙:모브미스트 / 403589-12",
+   "serial": "403589-12",
+   "candidates": [
+    {
+     "kreamId": "867108",
+     "name": "(W) 푸마 스피드캣 고 블랙 모브 미스트",
+     "model": "403589-12"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "867108",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   }
+  },
+  "5228975": {
+   "goodsNo": "5228975",
+   "brand": "반스",
+   "name": "스케이트 로퍼 - (스웨이드) 블랙:블랙 / VN000VA6BKA1",
+   "serial": "VN000VA6BKA1",
+   "candidates": [
+    {
+     "kreamId": "565870",
+     "name": "반스 스케이트 로퍼 스웨이드 블랙",
+     "model": "VN000VA6BKA1"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "565870",
+     "confidence": 0.98,
+     "seconds": 3.6
+    }
+   }
+  },
+  "2340324": {
+   "goodsNo": "2340324",
+   "brand": "포스트맨",
+   "name": "T-2 더비 블랙",
+   "serial": "PMS26AMSE01T020",
+   "candidates": [
+    {
+     "kreamId": "685418",
+     "name": "Parajumpers",
+     "model": "25WMPMPUEN02P180541"
+    },
+    {
+     "kreamId": "1107525",
+     "name": "Parajumpers",
+     "model": "26WMPMHYWU010541"
+    },
+    {
+     "kreamId": "680129",
+     "name": "Parajumpers",
+     "model": "25WPMHYKT020541"
+    },
+    {
+     "kreamId": "685381",
+     "name": "Parajumpers",
+     "model": "25WMPMPUSX13P240541"
+    },
+    {
+     "kreamId": "437517",
+     "name": "포스트맨 T-2 더비 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "437517",
+     "confidence": 0.99,
+     "seconds": 4.3
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "437517",
+    "note": "상품명(T-2 더비 블랙)·형태 일치"
+   }
+  },
+  "5206545": {
+   "goodsNo": "5206545",
+   "brand": "킨치",
+   "name": "WEAKER - 833 (a) / BLACK",
+   "serial": "BEKCSN01-BK",
+   "candidates": [
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "547934",
+     "name": "Timberland",
+     "model": "TB1A5MJ8015"
+    },
+    {
+     "kreamId": "430579",
+     "name": "조셉트 시메온 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "334152",
+     "name": "Kinchi",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.96,
+     "seconds": 3.9
+    }
+   }
+  },
+  "5321121": {
+   "goodsNo": "5321121",
+   "brand": "아디다스",
+   "name": "가젤 로우 프로  - 다크브라운:크림화이트 / JS2662",
+   "serial": "JS2662",
+   "candidates": [
+    {
+     "kreamId": "589113",
+     "name": "Adidas",
+     "model": "JS2662"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "589113",
+     "confidence": 0.96,
+     "seconds": 2.9
+    }
+   }
+  },
+  "3721889": {
+   "goodsNo": "3721889",
+   "brand": "야세",
+   "name": "홀리 홀스하이드 컴포트 더비 슈즈 블랙",
+   "serial": "SS160HBK",
+   "candidates": [
+    {
+     "kreamId": "196912",
+     "name": "420,000원",
+     "model": "SRPJ85K1"
+    },
+    {
+     "kreamId": "532636",
+     "name": "세이코 셀렉션 SBTR021 40mm 블랙",
+     "model": "SBTR021"
+    },
+    {
+     "kreamId": "608833",
+     "name": "세이코 5 스포츠 SRPG39 39.4mm 블랙 블루",
+     "model": "SRPG39"
+    },
+    {
+     "kreamId": "315699",
+     "name": "667,000원",
+     "model": "SRPE93K1"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "438401",
+     "name": "야세 머드 홀스하이드 더비 블랙",
+     "model": "Y35DHBK"
+    },
+    {
+     "kreamId": "385232",
+     "name": "Camper",
+     "model": "K100998-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 4.1
+    }
+   }
+  },
+  "7044931": {
+   "goodsNo": "7044931",
+   "brand": "피노키",
+   "name": "[+4.5cm] YANG - 313(p) / LEATHER",
+   "serial": "BFPNKSN02",
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "808126",
+     "confidence": 0.96,
+     "seconds": 3.5
+    }
+   },
+   "review": {
+    "label": "not",
+    "kreamId": "808126",
+    "note": "브랜드가 다름(피노키 / Romantic Move)"
+   }
+  },
+  "5767150": {
+   "goodsNo": "5767150",
+   "brand": "푸마",
+   "name": "매그맥스 나이트로 2 - 화이트:실버 미스트 / 312125-02",
+   "serial": "312125-02",
+   "candidates": [
+    {
+     "kreamId": "702970",
+     "name": "푸마 매그맥스 나이트로 2 화이트 실버 미스트",
+     "model": "312125-02"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "702970",
+     "confidence": 0.99,
+     "seconds": 2.6
+    }
+   }
+  },
+  "4702792": {
+   "goodsNo": "4702792",
+   "brand": "살로몬",
+   "name": "XA 프로 3D_L41617400",
+   "serial": "S260109SXA41",
+   "candidates": [
+    {
+     "kreamId": "74130",
+     "name": "(W) 아식스 조그 100 T 블랙 - 2E 엑스트라 와이드",
+     "model": "1022A335-001"
+    },
+    {
+     "kreamId": "103793",
+     "name": "Salomon",
+     "model": "L47179800"
+    },
+    {
+     "kreamId": "60333",
+     "name": "Salomon",
+     "model": "L41617400"
+    },
+    {
+     "kreamId": "45562",
+     "name": "아식스 조그 100 S 블랙 - 2E 와이드",
+     "model": "1201A325-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "60333",
+     "confidence": 0.98,
+     "seconds": 3.2
+    }
+   }
+  },
+  "4289272": {
+   "goodsNo": "4289272",
+   "brand": "뉴발란스",
+   "name": "NBPFGF733G / W480GG5 (4E) (GRAY)",
+   "serial": "NBPFGF733G_15",
+   "candidates": [
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "818042",
+     "name": "New Balance",
+     "model": "MELPS21O"
+    },
+    {
+     "kreamId": "24794",
+     "name": "New Balance",
+     "model": "CM878XL"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    },
+    {
+     "kreamId": "321342",
+     "name": "New Balance",
+     "model": "W480GG5"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "321342",
+     "confidence": 0.99,
+     "seconds": 3.2
+    }
+   }
+  },
+  "6997720": {
+   "goodsNo": "6997720",
+   "brand": "아디다스",
+   "name": "[SFTM 컬래버] 아디제로 EVO SL W - 도브그레이 / KJ0793",
+   "serial": "KJ0793",
+   "candidates": [
+    {
+     "kreamId": "1052954",
+     "name": "Adidas",
+     "model": "KJ0793"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1052954",
+     "confidence": 0.98,
+     "seconds": 3.1
+    }
+   }
+  },
+  "7036381": {
+   "goodsNo": "7036381",
+   "brand": "킨",
+   "name": "재스퍼 락 SP 스니커즈 Black",
+   "serial": "KNSO6FMT3BK",
+   "candidates": [
+    {
+     "kreamId": "98758",
+     "name": "킨 재스퍼 스웨이드 스니커즈 블랙",
+     "model": "1026592"
+    },
+    {
+     "kreamId": "1055791",
+     "name": "251,000원",
+     "model": "1032844"
+    },
+    {
+     "kreamId": "98754",
+     "name": "킨 재스퍼 스웨이드 스니커즈 실버 밍크",
+     "model": "1002672"
+    },
+    {
+     "kreamId": "98753",
+     "name": "(W) 킨 재스퍼 스웨이드 스니커즈 블랙",
+     "model": "1026849"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "335212",
+     "name": "킨 재스퍼 락스 SP 스니커즈 버치 블랙",
+     "model": "1030055"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 3.1
+    }
+   }
+  },
+  "5835214": {
+   "goodsNo": "5835214",
+   "brand": "아디다스",
+   "name": "몬트리올 - 베이지브라운:블랙 / KI0956",
+   "serial": "KI0956",
+   "candidates": [
+    {
+     "kreamId": "754796",
+     "name": "Adidas",
+     "model": "KI0956"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "754796",
+     "confidence": 0.98,
+     "seconds": 2.8
+    }
+   }
+  },
+  "5378047": {
+   "goodsNo": "5378047",
+   "brand": "기호",
+   "name": "레이븐 폴더블 버클 부츠 그레이",
+   "serial": "K25-SH031",
+   "candidates": [
+    {
+     "kreamId": "679573",
+     "name": "Carhartt WIP",
+     "model": "I036263-01-01"
+    },
+    {
+     "kreamId": "507957",
+     "name": "C.P. Company",
+     "model": "18CMSH249A005328G999"
+    },
+    {
+     "kreamId": "718742",
+     "name": "Carhartt WIP",
+     "model": "I029958-2F9-XX"
+    },
+    {
+     "kreamId": "464667",
+     "name": "C.P. Company",
+     "model": "18CMSH128A110143G999"
+    },
+    {
+     "kreamId": "380797",
+     "name": "Astorflex",
+     "model": ""
+    },
+    {
+     "kreamId": "380796",
+     "name": "Astorflex",
+     "model": ""
+    },
+    {
+     "kreamId": "420179",
+     "name": "투스페이스 갓필드 오트밀",
+     "model": ""
+    },
+    {
+     "kreamId": "692259",
+     "name": "Haleine",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 3.4
+    }
+   }
+  },
+  "5444818": {
+   "goodsNo": "5444818",
+   "brand": "네거티브쓰리",
+   "name": "Slouchy Long Strap Boots_Dusty Grey",
+   "serial": "NT3BEFWBO001GR",
+   "candidates": [
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "282040",
+     "name": "브라운 뉴 시리즈5 52-N1000s 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "288448",
+     "name": "조셉트 상하이 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "288371",
+     "name": "조셉트 사이먼 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.8
+    }
+   }
+  },
+  "3157671": {
+   "goodsNo": "3157671",
+   "brand": "리복",
+   "name": "클럽 C 85 GL - 트리플 블랙 / 100000153",
+   "serial": "RXSOXXCVUBK",
+   "candidates": [
+    {
+     "kreamId": "220750",
+     "name": "Reebok",
+     "model": "AR0454/100000153"
+    },
+    {
+     "kreamId": "669087",
+     "name": "Reebok",
+     "model": "100228109"
+    },
+    {
+     "kreamId": "223235",
+     "name": "Reebok",
+     "model": "100072109"
+    },
+    {
+     "kreamId": "368375",
+     "name": "Reebok",
+     "model": "GX3683 / 100007796"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "220750",
+     "confidence": 0.89,
+     "seconds": 3.4
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "220750",
+    "note": "상품명 속 100000153 이 KREAM 모델번호에 포함"
+   }
+  },
+  "3889276": {
+   "goodsNo": "3889276",
+   "brand": "살로몬",
+   "name": "XT-6 GTX - 사파리:블랙 / L47445500",
+   "serial": "L47445500",
+   "candidates": [
+    {
+     "kreamId": "228203",
+     "name": "Salomon",
+     "model": "L47445500"
+    },
+    {
+     "kreamId": "1094770",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "228203",
+     "confidence": 0.98,
+     "seconds": 3.0
+    }
+   }
+  },
+  "4466957": {
+   "goodsNo": "4466957",
+   "brand": "야세",
+   "name": "홀리 홀스하이드 컴포트 더비 슈즈 브라운",
+   "serial": "SS160HBR",
+   "candidates": [
+    {
+     "kreamId": "381661",
+     "name": "야세 홀리 홀스하이드 컴포트 더비 슈즈 브라운",
+     "model": "SS160HBR"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "381661",
+     "confidence": 0.96,
+     "seconds": 2.8
+    }
+   }
+  },
+  "4861646": {
+   "goodsNo": "4861646",
+   "brand": "나이키",
+   "name": "보메로 18 W - 블랙:코코넛 밀크:라이트 아이언 오어:서밋 화이트 / HM6804-005",
+   "serial": "HM6804-005",
+   "candidates": [
+    {
+     "kreamId": "503184",
+     "name": "(W) 나이키 보메로 18 블랙 코코넛 밀크",
+     "model": "HM6804-005"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "503184",
+     "confidence": 0.98,
+     "seconds": 2.8
+    }
+   }
+  },
+  "6111437": {
+   "goodsNo": "6111437",
+   "brand": "클락스 오리지널스",
+   "name": "(여성) 왈라비 GTX - 메이플 스웨이드 / 26179259",
+   "serial": "26179259",
+   "candidates": [
+    {
+     "kreamId": "466444",
+     "name": "Clarks Originals",
+     "model": "261-79259"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "466444",
+     "confidence": 0.96,
+     "seconds": 2.7
+    }
+   }
+  },
+  "5378044": {
+   "goodsNo": "5378044",
+   "brand": "기호",
+   "name": "레이븐 폴더블 버클 부츠 블랙",
+   "serial": "K25-SH031",
+   "candidates": [
+    {
+     "kreamId": "679573",
+     "name": "Carhartt WIP",
+     "model": "I036263-01-01"
+    },
+    {
+     "kreamId": "507957",
+     "name": "C.P. Company",
+     "model": "18CMSH249A005328G999"
+    },
+    {
+     "kreamId": "718742",
+     "name": "Carhartt WIP",
+     "model": "I029958-2F9-XX"
+    },
+    {
+     "kreamId": "464667",
+     "name": "C.P. Company",
+     "model": "18CMSH128A110143G999"
+    },
+    {
+     "kreamId": "678853",
+     "name": "조셉트 디온 브라운",
+     "model": ""
+    },
+    {
+     "kreamId": "692259",
+     "name": "Haleine",
+     "model": ""
+    },
+    {
+     "kreamId": "380796",
+     "name": "Astorflex",
+     "model": ""
+    },
+    {
+     "kreamId": "1056955",
+     "name": "지오송지오 스크래치 컴뱃 부츠 블랙 BI5AS504BK",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 3.0
+    }
+   }
+  },
+  "7356386": {
+   "goodsNo": "7356386",
+   "brand": "모노리스",
+   "name": "[허율x모노리스] DRAPE (BLACK)",
+   "serial": "R26M951BSB",
+   "candidates": [
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   }
+  },
+  "7318369": {
+   "goodsNo": "7318369",
+   "brand": "아식스",
+   "name": "젤 큐뮬러스 16 - 코코아 파우더:블랙 / 1203B072-200",
+   "serial": "1203B072-200",
+   "candidates": [
+    {
+     "kreamId": "1113437",
+     "name": "아식스 젤 큐물러스 16 코코아 파우더 블랙",
+     "model": "1203B072-200"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1113437",
+     "confidence": 0.99,
+     "seconds": 2.6
+    }
+   }
+  },
+  "2114461": {
+   "goodsNo": "2114461",
+   "brand": "레드윙",
+   "name": "포스트맨 101 - 블랙 차파랄 / 00101D",
+   "serial": "00101D",
+   "candidates": [
+    {
+     "kreamId": "423203",
+     "name": "Saint Laurent",
+     "model": "800101-DWE00-9618"
+    },
+    {
+     "kreamId": "407392",
+     "name": "Red Wing",
+     "model": "101"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "407392",
+     "confidence": 0.98,
+     "seconds": 2.5
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "407392",
+    "note": "포스트맨 101, KREAM 모델번호 101"
+   }
+  },
+  "6819740": {
+   "goodsNo": "6819740",
+   "brand": "푸마",
+   "name": "벨로시티 나이트로 5 - 알파인 스노우-무디 그레이 / 312944-06",
+   "serial": "312944-06",
+   "candidates": [
+    {
+     "kreamId": "1018229",
+     "name": "푸마 벨로시티 나이트로 5 알파인 스노우 무디 그레이",
+     "model": "312944-06"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1018229",
+     "confidence": 0.98,
+     "seconds": 3.2
+    }
+   }
+  },
+  "4371041": {
+   "goodsNo": "4371041",
+   "brand": "나이키",
+   "name": "에어 포스 1 07 WB W - 플랙스:검 라이트 브라운:블랙:위트 / FZ7372-200",
+   "serial": "FZ7372-200",
+   "candidates": [
+    {
+     "kreamId": "219423",
+     "name": "(W) 나이키 에어포스 1 '07 WB 플랙스 위트",
+     "model": "FZ7372-200"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "219423",
+     "confidence": 0.98,
+     "seconds": 3.3
+    }
+   }
+  },
+  "5077217": {
+   "goodsNo": "5077217",
+   "brand": "나이키",
+   "name": "보메로 18 M - 블랙:다크 스모크 그레이:라이트 스모크 그레이:블랙 / HM6803-005",
+   "serial": "HM6803-005",
+   "candidates": [
+    {
+     "kreamId": "501037",
+     "name": "나이키 보메로 18 블랙 다크 스모크 그레이",
+     "model": "HM6803-005"
+    },
+    {
+     "kreamId": "975471",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "501037",
+     "confidence": 0.98,
+     "seconds": 3.1
+    }
+   }
+  },
+  "7263428": {
+   "goodsNo": "7263428",
+   "brand": "크록스",
+   "name": "언퍼게터블 퀼티드 비건 스웨이드 - 버블 아이스 / 214038-7DF",
+   "serial": "214038-7DF",
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "858583",
+     "name": "Rockport",
+     "model": "M76444"
+    },
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "model": "CI1360"
+    },
+    {
+     "kreamId": "565883",
+     "name": "크록스 클래식 크래프티드 클로그 블랙 샌드",
+     "model": "211354-0LD"
+    },
+    {
+     "kreamId": "992114",
+     "name": "81,000원",
+     "model": "214105-001"
+    },
+    {
+     "kreamId": "1082887",
+     "name": "크록스 크래프티드 비건 스웨이드 스티치 클로그 세피아",
+     "model": "214048-2EY"
+    },
+    {
+     "kreamId": "1105483",
+     "name": "크록스 클래식 크래프티드 비건 스웨이드 클로그 블랙",
+     "model": "211930-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 3.4
+    }
+   }
+  },
+  "5960952": {
+   "goodsNo": "5960952",
+   "brand": "뉴발란스",
+   "name": "NBPQGF701L / 워킹 1880 V2 (2E) (L/GRAY)",
+   "serial": "NBPQGF701L_16",
+   "candidates": [
+    {
+     "kreamId": "1059908",
+     "name": "New Balance",
+     "model": "NBNAGCO303-19"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    },
+    {
+     "kreamId": "366002",
+     "name": "New Balance",
+     "model": "SD2203BK"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 3.6
+    }
+   }
+  },
+  "6183054": {
+   "goodsNo": "6183054",
+   "brand": "푸마",
+   "name": "매그니파이 나이트로 3 - 화이트:에메랄드 아이스 / 311046-19",
+   "serial": "311046-19",
+   "candidates": [
+    {
+     "kreamId": "1018256",
+     "name": "푸마 벨로시티 나이트로 5 와이드 블랙 플랫 다크 그레이",
+     "model": "313690-01"
+    },
+    {
+     "kreamId": "1018202",
+     "name": "푸마 벨로시티 나이트로 5 화이트 울트라 레드",
+     "model": "312944-05"
+    },
+    {
+     "kreamId": "597930",
+     "name": "푸마 포에버런 나이트로 2 와이드 화이트 실버",
+     "model": "311050-02"
+    },
+    {
+     "kreamId": "550056",
+     "name": "나이키 스트럭처 26 블랙 아이언 그레이",
+     "model": "HJ1102-001"
+    },
+    {
+     "kreamId": "588373",
+     "name": "푸마 매그니파이 나이트로 3 화이트 웜 화이트",
+     "model": "311046-02"
+    },
+    {
+     "kreamId": "1090763",
+     "name": "푸마 포에버런 나이트로 3 와이드 블랙 플랫 다크 그레이",
+     "model": "313702-01"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 4.3
+    }
+   }
+  },
+  "4878503": {
+   "goodsNo": "4878503",
+   "brand": "푸마",
+   "name": "스피드캣 OG - 오트커피:프로스트아이보리 / 398846-31",
+   "serial": "398846-31",
+   "candidates": [
+    {
+     "kreamId": "470832",
+     "name": "푸마 스피드캣 OG 오뜨 커피 프로스티드 아이보리",
+     "model": "398846-31"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "470832",
+     "confidence": 0.98,
+     "seconds": 2.7
+    }
+   }
+  },
+  "816033": {
+   "goodsNo": "816033",
+   "brand": "반스",
+   "name": "올드스쿨 플랫폼 - 블랙:화이트 / VN0A3B3UY281",
+   "serial": "VN0A3B3UY281",
+   "candidates": [
+    {
+     "kreamId": "18448",
+     "name": "반스 올드스쿨 블랙",
+     "model": "VN000D3HBKA"
+    },
+    {
+     "kreamId": "70910",
+     "name": "반스 컴피쿠시 올드스쿨 블랙 트루 화이트",
+     "model": "VN0A3WMAVNE"
+    },
+    {
+     "kreamId": "46265",
+     "name": "반스 올드스쿨 플랫폼 블랙 화이트",
+     "model": "VN0A3B3UY28"
+    },
+    {
+     "kreamId": "369114",
+     "name": "88,000원",
+     "model": "VN000CXTBKA1"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "46265",
+     "confidence": 0.98,
+     "seconds": 3.7
+    }
+   }
+  },
+  "1163169": {
+   "goodsNo": "1163169",
+   "brand": "아디다스",
+   "name": "삼바 OG - 화이트:블랙 / B75806",
+   "serial": "B75806",
+   "candidates": [
+    {
+     "kreamId": "15251",
+     "name": "Adidas",
+     "model": "B75806"
+    },
+    {
+     "kreamId": "944736",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "1112930",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "15251",
+     "confidence": 0.94,
+     "seconds": 3.5
+    }
+   }
+  },
+  "4201520": {
+   "goodsNo": "4201520",
+   "brand": "나이키",
+   "name": "에어 포스 1 07 W - 블랙 / DD8959-001",
+   "serial": "DD8959-001",
+   "candidates": [
+    {
+     "kreamId": "18402",
+     "name": "(W) 나이키 에어포스 1 '07 로우 트리플 블랙",
+     "model": "315115-038/DD8959-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "18402",
+     "confidence": 0.98,
+     "seconds": 2.7
+    }
+   }
+  },
+  "6996754": {
+   "goodsNo": "6996754",
+   "brand": "푸마",
+   "name": "디비에이트 퓨어 나이트로 - 모스 베일:푸마 블랙 / 313904-23",
+   "serial": "313904-23",
+   "candidates": [
+    {
+     "kreamId": "974162",
+     "name": "푸마 디비에이트 퓨어 나이트로 모스 베일 푸마 블랙",
+     "model": "313904-23"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "974162",
+     "confidence": 0.98,
+     "seconds": 3.3
+    }
+   }
+  },
+  "6996753": {
+   "goodsNo": "6996753",
+   "brand": "푸마",
+   "name": "디비에이트 퓨어 나이트로 - 리치 코코아:푸마 블랙 / 313904-18",
+   "serial": "313904-18",
+   "candidates": [
+    {
+     "kreamId": "974158",
+     "name": "푸마 디비에이트 퓨어 나이트로 리치 코코아 블랙",
+     "model": "313904-18"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "974158",
+     "confidence": 0.99,
+     "seconds": 3.0
+    }
+   }
+  },
+  "4645224": {
+   "goodsNo": "4645224",
+   "brand": "피노키",
+   "name": "[+4cm] VEIN - 301(p) / BLACK",
+   "serial": "BEPNKSN02-BK",
+   "candidates": [
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.96,
+     "seconds": 3.1
+    }
+   }
+  },
+  "5590698": {
+   "goodsNo": "5590698",
+   "brand": "나이키",
+   "name": "에어 맥스 모토 2K M - 블랙:메탈릭 다크 그레이:다크 스모크 그레이 / IO9279-001",
+   "serial": "IO9279-001",
+   "candidates": [
+    {
+     "kreamId": "669747",
+     "name": "나이키 에어맥스 모토 2K 블랙 메탈릭 다크 그레이",
+     "model": "IO9279-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "669747",
+     "confidence": 0.97,
+     "seconds": 3.3
+    }
+   }
+  },
+  "7407733": {
+   "goodsNo": "7407733",
+   "brand": "나이키",
+   "name": "문 슈 OG M - 블랙:세이프티 오렌지:세일 / IX3952-001",
+   "serial": "IX3952-001",
+   "candidates": [
+    {
+     "kreamId": "1115271",
+     "name": "(W) 나이키 문 슈 OG 블랙 세이프티 오렌지",
+     "model": "IX3952-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.95,
+     "seconds": 3.2
+    }
+   }
+  },
+  "5270777": {
+   "goodsNo": "5270777",
+   "brand": "더노피",
+   "name": "아르코 코만도 아웃솔 4홀 더비슈즈 블랙 [245-290mm]",
+   "serial": "25-040",
+   "candidates": [
+    {
+     "kreamId": "513882",
+     "name": "Kims Fruits",
+     "model": ""
+    },
+    {
+     "kreamId": "513888",
+     "name": "Kims Fruits",
+     "model": ""
+    },
+    {
+     "kreamId": "644634",
+     "name": "Diesel",
+     "model": "DX1625040"
+    },
+    {
+     "kreamId": "513884",
+     "name": "Kims Fruits",
+     "model": ""
+    },
+    {
+     "kreamId": "1012238",
+     "name": "푸마 아킬리움 쉐도우 그레이 푸마 블랙",
+     "model": "407167-02"
+    },
+    {
+     "kreamId": "1062097",
+     "name": "24/7 series",
+     "model": ""
+    },
+    {
+     "kreamId": "625568",
+     "name": "New Balance",
+     "model": "U2002RAB"
+    },
+    {
+     "kreamId": "1105070",
+     "name": "나이키 24.7 블랙 앤트러사이트",
+     "model": "IR0447-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 4.2
+    }
+   }
+  },
+  "5042975": {
+   "goodsNo": "5042975",
+   "brand": "아디다스",
+   "name": "아디제로 EVO SL M - 블랙:화이트 / JP7149",
+   "serial": "JP7149",
+   "candidates": [
+    {
+     "kreamId": "389369",
+     "name": "Adidas",
+     "model": "JP7149"
+    },
+    {
+     "kreamId": "898555",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "894499",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "898555",
+     "confidence": 0.89,
+     "seconds": 4.7
+    }
+   }
+  },
+  "4742557": {
+   "goodsNo": "4742557",
+   "brand": "아식스",
+   "name": "조그 100 S - 블랙:퓨어실버/1203A741-001",
+   "serial": "1203A741-001",
+   "candidates": [
+    {
+     "kreamId": "441086",
+     "name": "아식스 조그 100 S 블랙 퓨어 실버 - D 스탠다드",
+     "model": "1203A741-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "441086",
+     "confidence": 0.99,
+     "seconds": 12.8
+    }
+   }
+  },
+  "6747992": {
+   "goodsNo": "6747992",
+   "brand": "스케쳐스",
+   "name": "남성 고워크 아치핏 엔조이(슬립인스)_SP0MWCGY131",
+   "serial": "SP0MWCGY131",
+   "candidates": [
+    {
+     "kreamId": "552684",
+     "name": "Skechers",
+     "model": "220581-BBK"
+    },
+    {
+     "kreamId": "262393",
+     "name": "Skechers",
+     "model": "220840-BKCC"
+    },
+    {
+     "kreamId": "262268",
+     "name": "Skechers",
+     "model": "216600-BBK"
+    },
+    {
+     "kreamId": "262276",
+     "name": "Skechers",
+     "model": "216641-BBK"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "262276",
+     "confidence": 0.94,
+     "seconds": 3.6
+    }
+   },
+   "review": {
+    "label": "doubtful",
+    "kreamId": "262276",
+    "note": "갑피 디자인이 달라 보임, 썸네일로는 확정 불가"
+   }
+  },
+  "6897456": {
+   "goodsNo": "6897456",
+   "brand": "아디다스",
+   "name": "테렉스 아그라빅 스피드 울트라 2 M - 솔라터보:블랙 / KZ6512",
+   "serial": "KZ6512",
+   "candidates": [
+    {
+     "kreamId": "1028654",
+     "name": "Adidas",
+     "model": "KZ6512"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1028654",
+     "confidence": 0.99,
+     "seconds": 2.7
+    }
+   }
+  },
+  "6755843": {
+   "goodsNo": "6755843",
+   "brand": "푸마",
+   "name": "모스트로 페이 새틴 (40106302)",
+   "serial": "40106302",
+   "candidates": [
+    {
+     "kreamId": "685332",
+     "name": "비스크 도카 미니 매트 트윌 토트백 초콜릿 브라운",
+     "model": "2401-063-021500-303"
+    },
+    {
+     "kreamId": "685333",
+     "name": "비스크 도카 미니 매트 트윌 토트백 헤이지 핑크",
+     "model": "2401-063-021500-408"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.7
+    }
+   },
+   "review": {
+    "label": "none",
+    "kreamId": "",
+    "note": "검색 후보가 다른 상품(다른 모델·다른 카테고리)"
+   }
+  },
+  "6024097": {
+   "goodsNo": "6024097",
+   "brand": "푸마",
+   "name": "디비에이트 나이트로 4 - 블루:프레쉬워터 / 312123-08",
+   "serial": "312123-08",
+   "candidates": [
+    {
+     "kreamId": "875277",
+     "name": "푸마 디비에이트 나이트로 4 발틱 씨 블루 프레쉬 워터",
+     "model": "312123-08"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "875277",
+     "confidence": 0.96,
+     "seconds": 3.3
+    }
+   }
+  },
+  "6092233": {
+   "goodsNo": "6092233",
+   "brand": "푸마",
+   "name": "디비에이트 나이트로 4 우먼스 - 알파인스노우:웜화이트 / 312124-14",
+   "serial": "312124-14",
+   "candidates": [
+    {
+     "kreamId": "838576",
+     "name": "(W) 푸마 디비에이트 나이트로 4 알파인 스노우 웜 화이트",
+     "model": "312124-14"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "838576",
+     "confidence": 0.98,
+     "seconds": 2.8
+    }
+   }
+  },
+  "636821": {
+   "goodsNo": "636821",
+   "brand": "하루타",
+   "name": "남성용 소가죽 페니로퍼 HS-906_BLACK",
+   "serial": "HRT-906-BK",
+   "candidates": [
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "305355",
+     "name": "하루타 HS-906 페니로퍼 브라운",
+     "model": ""
+    },
+    {
+     "kreamId": "305327",
+     "name": "하루타 HS-906 페니로퍼 블랙&화이트",
+     "model": ""
+    },
+    {
+     "kreamId": "194609",
+     "name": "하루타 레더 페니 로퍼 블랙",
+     "model": "HS-906"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "model": "CJ2598"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "194609",
+     "confidence": 0.84,
+     "seconds": 4.1
+    }
+   }
+  },
+  "4876555": {
+   "goodsNo": "4876555",
+   "brand": "솔트앤초콜릿",
+   "name": "아콘 02 스니커즈 412510001 (6cm)",
+   "serial": "5007612108",
+   "candidates": [
+    {
+     "kreamId": "848258",
+     "name": "크록스 크록밴드 러너 서밋 화이트",
+     "model": "212831-2MD"
+    },
+    {
+     "kreamId": "352809",
+     "name": "크록스 x 배트맨 클래식 클로그 배트모빌",
+     "model": "210219-001"
+    },
+    {
+     "kreamId": "830864",
+     "name": "크록스 크록밴드 검 클로그 블랙",
+     "model": "212756-001"
+    },
+    {
+     "kreamId": "831556",
+     "name": "크록스 x 레고 크리에이티비티 클로그 화이트 미니 피규어 세트",
+     "model": "213811-100"
+    },
+    {
+     "kreamId": "852258",
+     "name": "Golden Goose",
+     "model": "GWF00110-F007861-90100"
+    },
+    {
+     "kreamId": "798935",
+     "name": "네거티브쓰리 비대칭 넘버 3 스니커즈 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "834400",
+     "name": "Prada Vintage",
+     "model": ""
+    },
+    {
+     "kreamId": "1118174",
+     "name": "Thom McAn",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.97,
+     "seconds": 3.9
+    }
+   }
+  },
+  "7284464": {
+   "goodsNo": "7284464",
+   "brand": "나이키",
+   "name": "덩크 로우 레트로 M - 화이트:블랙 / HF5441-100",
+   "serial": "HF5441-100",
+   "candidates": [
+    {
+     "kreamId": "548447",
+     "name": "나이키 덩크 로우 레트로 블랙",
+     "model": "HF5441-100"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "548447",
+     "confidence": 0.89,
+     "seconds": 3.9
+    }
+   }
+  },
+  "7037241": {
+   "goodsNo": "7037241",
+   "brand": "닥터마틴",
+   "name": "메이페어 3 홀 - 실버/아카디아 / 42864020",
+   "serial": "42864020",
+   "candidates": [
+    {
+     "kreamId": "1074606",
+     "name": "Dr. Martens",
+     "model": "42864020"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1074606",
+     "confidence": 0.84,
+     "seconds": 3.5
+    }
+   }
+  },
+  "4667476": {
+   "goodsNo": "4667476",
+   "brand": "식스핏",
+   "name": "[미누의코디 x 식스핏] [+5.5cm] BOLD TOE DERBY (BROWN)",
+   "serial": "BOLD",
+   "candidates": [
+    {
+     "kreamId": "797816",
+     "name": "Adidas",
+     "model": "JS3907"
+    },
+    {
+     "kreamId": "368211",
+     "name": "Adidas",
+     "model": "IE0876"
+    },
+    {
+     "kreamId": "982625",
+     "name": "Adidas",
+     "model": "JR7438"
+    },
+    {
+     "kreamId": "231407",
+     "name": "Adidas",
+     "model": "IE7349"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   }
+  },
+  "7010557": {
+   "goodsNo": "7010557",
+   "brand": "기호",
+   "name": "레이븐 폴더블 싸이하이 부츠 블랙",
+   "serial": "K26-SH036",
+   "candidates": [
+    {
+     "kreamId": "62265",
+     "name": "Our Legacy",
+     "model": "M2212CBC"
+    },
+    {
+     "kreamId": "239555",
+     "name": "C.P. Company",
+     "model": "15CMSH163A002824G999"
+    },
+    {
+     "kreamId": "837347",
+     "name": "아미 톤온톤 하트 로고 데님 코튼 버튼 다운 셔츠 유즈드 블랙",
+     "model": "USH785-DE0125-031"
+    },
+    {
+     "kreamId": "464667",
+     "name": "C.P. Company",
+     "model": "18CMSH128A110143G999"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "354406",
+     "name": "Tretorn",
+     "model": ""
+    },
+    {
+     "kreamId": "798932",
+     "name": "네거티브쓰리 커브드 레이스 No.2 스니커즈 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "798935",
+     "name": "네거티브쓰리 비대칭 넘버 3 스니커즈 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.8
+    }
+   }
+  },
+  "4343634": {
+   "goodsNo": "4343634",
+   "brand": "반스",
+   "name": "MTE 하버 뮬 VR3 - 카키 / VN000CW3KHK1",
+   "serial": "VN000CW3KHK1",
+   "candidates": [
+    {
+     "kreamId": "388752",
+     "name": "65,000원",
+     "model": "VN000CW3KHK1"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "388752",
+     "confidence": 0.94,
+     "seconds": 3.0
+    }
+   }
+  },
+  "166001": {
+   "goodsNo": "166001",
+   "brand": "반스",
+   "name": "올드스쿨 - (캔버스) 블랙:블랙 / VN000D3HBKA1",
+   "serial": "VN000D3HBKA1",
+   "candidates": [
+    {
+     "kreamId": "18448",
+     "name": "반스 올드스쿨 블랙",
+     "model": "VN000D3HBKA"
+    },
+    {
+     "kreamId": "384546",
+     "name": "반스 스케이트 로퍼 블랙",
+     "model": "VN0A5DXUBKA1"
+    },
+    {
+     "kreamId": "70910",
+     "name": "반스 컴피쿠시 올드스쿨 블랙 트루 화이트",
+     "model": "VN0A3WMAVNE"
+    },
+    {
+     "kreamId": "369114",
+     "name": "88,000원",
+     "model": "VN000CXTBKA1"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "18448",
+     "confidence": 0.95,
+     "seconds": 2.8
+    }
+   }
+  },
+  "6111791": {
+   "goodsNo": "6111791",
+   "brand": "나이키",
+   "name": "보메로 18 W - 블랙:다크 스모크 그레이:라이트 스모크 그레이:블랙 / HM6804-004",
+   "serial": "HM6804-004",
+   "candidates": [
+    {
+     "kreamId": "561179",
+     "name": "(W) 나이키 보메로 18 블랙 다크 스모크 그레이",
+     "model": "HM6804-004"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "561179",
+     "confidence": 0.97,
+     "seconds": 3.0
+    }
+   }
+  },
+  "4627224": {
+   "goodsNo": "4627224",
+   "brand": "나이키",
+   "name": "줌 보메로 5 W - 포톤 더스트:그리드아이언:세일:크롬 / FD0884-025",
+   "serial": "FD0884-025",
+   "candidates": [
+    {
+     "kreamId": "97347",
+     "name": "(W) 나이키 줌 보메로 5 포톤 더스트 앤 메탈릭 실버",
+     "model": "FD0884-025"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "97347",
+     "confidence": 0.96,
+     "seconds": 3.0
+    }
+   }
+  },
+  "4910752": {
+   "goodsNo": "4910752",
+   "brand": "위더로드",
+   "name": "WTRD1120 샌드맨 4홀 더비슈즈 카멜 [230~290MM]",
+   "serial": "WTRD1120G",
+   "candidates": [
+    {
+     "kreamId": "578900",
+     "name": "그라퍼리즈 데이즈 슈즈 차콜",
+     "model": ""
+    },
+    {
+     "kreamId": "488914",
+     "name": "Pemont",
+     "model": ""
+    },
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "630959",
+     "name": "로스트가든 유니폼 드라이빙 스니커즈 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "271868",
+     "name": "Pemont",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   }
+  },
+  "5359809": {
+   "goodsNo": "5359809",
+   "brand": "아디다스",
+   "name": "오즈가이아 IG6045",
+   "serial": "IG6045",
+   "candidates": [
+    {
+     "kreamId": "218041",
+     "name": "Adidas",
+     "model": "IG6045"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "218041",
+     "confidence": 0.95,
+     "seconds": 3.8
+    }
+   }
+  },
+  "7213843": {
+   "goodsNo": "7213843",
+   "brand": "뉴발란스",
+   "name": "NBP7GF717B / U880R8EU (BLACK)",
+   "serial": "NBP7GF717B_19",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "1082653",
+     "name": "New Balance",
+     "model": "U880R8EU"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1082653",
+     "confidence": 0.99,
+     "seconds": 2.7
+    }
+   }
+  },
+  "6046378": {
+   "goodsNo": "6046378",
+   "brand": "아디다스",
+   "name": "도쿄 - 블랙 / IH3990",
+   "serial": "IH3990",
+   "candidates": [
+    {
+     "kreamId": "814843",
+     "name": "Adidas",
+     "model": "IH3990"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "814843",
+     "confidence": 0.98,
+     "seconds": 2.8
+    }
+   }
+  },
+  "6636852": {
+   "goodsNo": "6636852",
+   "brand": "온루",
+   "name": "[ONRU x kinchi] RUN-841 드럼워싱 홀스레더 컴포트 슈즈",
+   "serial": "BEONDB11",
+   "candidates": [
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "826181",
+     "name": "Harman Kardon",
+     "model": ""
+    },
+    {
+     "kreamId": "140698",
+     "name": "Our Legacy",
+     "model": "A2237SBL"
+    },
+    {
+     "kreamId": "192316",
+     "name": "Converse",
+     "model": "135253C"
+    },
+    {
+     "kreamId": "869766",
+     "name": "데카트론 남성 러닝화 킵코어 그라파이트 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "294905",
+     "name": "나이키 저니 런 로드 러닝 블랙 앤트러사이트",
+     "model": "FN0228-001"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "201044",
+     "name": "나이키 리액트X 인피니티 런 4 블랙 앤트러사이트",
+     "model": "DR2665-004"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "263074",
+     "confidence": 0.92,
+     "seconds": 3.9
+    }
+   },
+   "review": {
+    "label": "not",
+    "kreamId": "263074",
+    "note": "형태가 다름(굽·밑창)"
+   }
+  },
+  "7276916": {
+   "goodsNo": "7276916",
+   "brand": "뉴발란스",
+   "name": "NBPDGF717B / U530JPB (BLACK)",
+   "serial": "NBPDGF717B_19",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    },
+    {
+     "kreamId": "1085277",
+     "name": "New Balance",
+     "model": "U530JPB"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1085277",
+     "confidence": 0.98,
+     "seconds": 3.1
+    }
+   }
+  },
+  "5987818": {
+   "goodsNo": "5987818",
+   "brand": "아디다스",
+   "name": "스탠 스미스 LO 발레 JQ6939",
+   "serial": "JQ6939",
+   "candidates": [
+    {
+     "kreamId": "560343",
+     "name": "Adidas",
+     "model": "JQ6939"
+    },
+    {
+     "kreamId": "1101929",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1101929",
+     "confidence": 0.87,
+     "seconds": 4.1
+    }
+   }
+  },
+  "5247211": {
+   "goodsNo": "5247211",
+   "brand": "나이키",
+   "name": "에어 맥스 모토 2K W - 블랙:메탈릭 실버:앤트러사이트:블랙 / HQ2056-007",
+   "serial": "HQ2056-007",
+   "candidates": [
+    {
+     "kreamId": "548299",
+     "name": "(W) 나이키 에어맥스 모토 2K 블랙 메탈릭 실버",
+     "model": "HQ2056-007"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "548299",
+     "confidence": 0.95,
+     "seconds": 3.0
+    }
+   }
+  },
+  "5262448": {
+   "goodsNo": "5262448",
+   "brand": "기호",
+   "name": "트리벨 플랫 블랙",
+   "serial": "K25-SH020",
+   "candidates": [
+    {
+     "kreamId": "464667",
+     "name": "C.P. Company",
+     "model": "18CMSH128A110143G999"
+    },
+    {
+     "kreamId": "679573",
+     "name": "Carhartt WIP",
+     "model": "I036263-01-01"
+    },
+    {
+     "kreamId": "837347",
+     "name": "아미 톤온톤 하트 로고 데님 코튼 버튼 다운 셔츠 유즈드 블랙",
+     "model": "USH785-DE0125-031"
+    },
+    {
+     "kreamId": "239473",
+     "name": "Kapital",
+     "model": "K2309LS070/EK-1668LS"
+    },
+    {
+     "kreamId": "56124",
+     "name": "Roger Vivier",
+     "model": "RVW00700920D1PB999"
+    },
+    {
+     "kreamId": "414412",
+     "name": "Roger Vivier",
+     "model": "RVW00739540TM6B999"
+    },
+    {
+     "kreamId": "296355",
+     "name": "Massimo Dutti",
+     "model": "1700/450"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 3.3
+    }
+   }
+  },
+  "2200892": {
+   "goodsNo": "2200892",
+   "brand": "블런드스톤",
+   "name": "CLASSIC 585 첼시부츠_러스틱브라운",
+   "serial": "CLASSIC",
+   "candidates": [
+    {
+     "kreamId": "845564",
+     "name": "Pokemon TCG",
+     "model": ""
+    },
+    {
+     "kreamId": "125449",
+     "name": "크록스 클래식 크러쉬 클로그 블랙",
+     "model": "207521-001"
+    },
+    {
+     "kreamId": "58296",
+     "name": "크록스 클래식 클로그 블랙",
+     "model": "10001-001"
+    },
+    {
+     "kreamId": "112762",
+     "name": "(W) 크록스 클래식 플랫폼 클로그 블랙",
+     "model": "206750-001"
+    },
+    {
+     "kreamId": "253860",
+     "name": "블런드스톤 클래식 585 첼시 부츠 러스틱 브라운",
+     "model": "585"
+    },
+    {
+     "kreamId": "261605",
+     "name": "블런드스톤 클래식 585 첼시 부츠 러스틱 브라운",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "253860",
+     "confidence": 0.98,
+     "seconds": 3.2
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "253860",
+    "note": "클래식 585 러스틱 브라운, KREAM 모델번호 585"
+   }
+  },
+  "6111436": {
+   "goodsNo": "6111436",
+   "brand": "클락스 오리지널스",
+   "name": "(남성) 왈라비 GTX - 메이플 스웨이드 / 26179252",
+   "serial": "26179252",
+   "candidates": [
+    {
+     "kreamId": "416297",
+     "name": "Clarks Originals",
+     "model": "261-79251"
+    },
+    {
+     "kreamId": "109542",
+     "name": "Clarks Originals",
+     "model": "261-72074/79252"
+    },
+    {
+     "kreamId": "84745",
+     "name": "Clarks Originals",
+     "model": "261-55515 / 88318"
+    },
+    {
+     "kreamId": "84748",
+     "name": "Clarks Originals",
+     "model": "261-55519 / 88315"
+    },
+    {
+     "kreamId": "821066",
+     "name": "Clarks Originals",
+     "model": ""
+    },
+    {
+     "kreamId": "436923",
+     "name": "Clarks Originals",
+     "model": "261-68545"
+    },
+    {
+     "kreamId": "508339",
+     "name": "Clarks Originals",
+     "model": "261-49450"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "84745",
+     "confidence": 0.94,
+     "seconds": 4.0
+    }
+   },
+   "review": {
+    "label": "not",
+    "kreamId": "84745",
+    "note": "색상이 다르고 GTX 모델이 아님"
+   }
+  },
+  "6711014": {
+   "goodsNo": "6711014",
+   "brand": "푸마",
+   "name": "벨로시티 나이트로 5 푸마 x 하이록스 - 인텐스 민트:라이트 라벤더 / 313686-02",
+   "serial": "313686-02",
+   "candidates": [
+    {
+     "kreamId": "974205",
+     "name": "푸마 x 하이록스 벨로시티 나이트로 5 인텐스 민트 라이트 라벤더",
+     "model": "313686-02"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "974205",
+     "confidence": 0.98,
+     "seconds": 3.1
+    }
+   }
+  },
+  "5329560": {
+   "goodsNo": "5329560",
+   "brand": "아디다스",
+   "name": "도쿄 - 레드:클리어핑크 / JQ7109",
+   "serial": "JQ7109",
+   "candidates": [
+    {
+     "kreamId": "1039631",
+     "name": "Adidas",
+     "model": "JQ7109"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1039631",
+     "confidence": 0.99,
+     "seconds": 3.0
+    }
+   }
+  },
+  "6427482": {
+   "goodsNo": "6427482",
+   "brand": "나이키",
+   "name": "페가수스 42 M - 블랙:앤트러사이트:블랙 / IB1873-003",
+   "serial": "IB1873-003",
+   "candidates": [
+    {
+     "kreamId": "866998",
+     "name": "비기너 러닝화",
+     "model": "IB1873-003"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "866998",
+     "confidence": 0.78,
+     "seconds": 3.2
+    }
+   }
+  },
+  "6583026": {
+   "goodsNo": "6583026",
+   "brand": "나이키",
+   "name": "보메로 플러스 M - 오프 화이트:그레이 포그:썬더스톰:옵시디언 / HV8150-111",
+   "serial": "HV8150-111",
+   "candidates": [
+    {
+     "kreamId": "966347",
+     "name": "나이키 보메로 플러스 오프 화이트 그레이 포그",
+     "model": "HV8150-111"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "966347",
+     "confidence": 0.98,
+     "seconds": 2.7
+    }
+   }
+  },
+  "6937826": {
+   "goodsNo": "6937826",
+   "brand": "야세",
+   "name": "고아웃 빈티지 풀업 스니커즈 블랙",
+   "serial": "SR1BK",
+   "candidates": [
+    {
+     "kreamId": "196912",
+     "name": "420,000원",
+     "model": "SRPJ85K1"
+    },
+    {
+     "kreamId": "315699",
+     "name": "667,000원",
+     "model": "SRPE93K1"
+    },
+    {
+     "kreamId": "173369",
+     "name": "세이코 프로스펙스 SPB317J1 블랙",
+     "model": "SPB317J1"
+    },
+    {
+     "kreamId": "605151",
+     "name": "세이코 스피릿 SCXP031 35mm 블랙 실버",
+     "model": "SCXP031"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "271868",
+     "name": "Pemont",
+     "model": ""
+    },
+    {
+     "kreamId": "569990",
+     "name": "Puma V-S1 블랙",
+     "model": "402951-08"
+    },
+    {
+     "kreamId": "220750",
+     "name": "Reebok",
+     "model": "AR0454/100000153"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 3.8
+    }
+   }
+  },
+  "6332182": {
+   "goodsNo": "6332182",
+   "brand": "나이키",
+   "name": "보메로 18 M - 서밋 화이트:블랙:오프 화이트:메탈릭 실버  / II7189-100",
+   "serial": "II7189-100",
+   "candidates": [
+    {
+     "kreamId": "948428",
+     "name": "나이키 보메로 18 서밋 화이트 블랙",
+     "model": "II7189-100"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "948428",
+     "confidence": 0.97,
+     "seconds": 3.1
+    }
+   }
+  },
+  "4409450": {
+   "goodsNo": "4409450",
+   "brand": "아디다스",
+   "name": "도쿄 - 블랙 / JI0183",
+   "serial": "JI0183",
+   "candidates": [
+    {
+     "kreamId": "349664",
+     "name": "Adidas",
+     "model": "JI0183"
+    },
+    {
+     "kreamId": "913809",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "1076073",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "349664",
+     "confidence": 0.95,
+     "seconds": 4.2
+    }
+   }
+  },
+  "3441099": {
+   "goodsNo": "3441099",
+   "brand": "후망",
+   "name": "단 BK",
+   "serial": "DAN",
+   "candidates": [
+    {
+     "kreamId": "645330",
+     "name": "Toys & Goods",
+     "model": ""
+    },
+    {
+     "kreamId": "922720",
+     "name": "아식스 댄 게이블 EVO 3 블랙 퓨어 골드",
+     "model": "1081A052-002"
+    },
+    {
+     "kreamId": "860444",
+     "name": "Golden Goose",
+     "model": "GMF00333-F008119-50969"
+    },
+    {
+     "kreamId": "1090857",
+     "name": "아식스 댄 게이블 EVO 3 세이프티 옐로우 그래파이트 그레이 - D 스탠다드",
+     "model": "1081A052-750"
+    },
+    {
+     "kreamId": "817806",
+     "name": "Jillstuart Men's Acc",
+     "model": ""
+    },
+    {
+     "kreamId": "756303",
+     "name": "Athe Vanessabruno Acc",
+     "model": ""
+    },
+    {
+     "kreamId": "1098212",
+     "name": "jestina",
+     "model": ""
+    },
+    {
+     "kreamId": "1103020",
+     "name": "jestina",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 3.4
+    }
+   }
+  },
+  "3972398": {
+   "goodsNo": "3972398",
+   "brand": "락포트",
+   "name": "모던 프렙 페니 MODERN PREP PENNY / BLACK(RM0072)",
+   "serial": "RM0072",
+   "candidates": [
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "model": "CJ2598"
+    },
+    {
+     "kreamId": "771690",
+     "name": "Rockport",
+     "model": "V80547"
+    },
+    {
+     "kreamId": "334334",
+     "name": "Rockport",
+     "model": "V80548"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "771690",
+     "confidence": 0.76,
+     "seconds": 4.0
+    }
+   },
+   "review": {
+    "label": "doubtful",
+    "kreamId": "771690",
+    "note": "비슷한 페니 로퍼지만 모델번호가 다름(RM0072 / V80547)"
+   }
+  },
+  "7318373": {
+   "goodsNo": "7318373",
+   "brand": "아식스",
+   "name": "하이퍼싱크 코리아 익스클루시브 HYPERSYNCS KOREA EXCLUSIVE - 트러플 그레이:트러플 그레이 / 1203B376-020",
+   "serial": "1203B376-020",
+   "candidates": [
+    {
+     "kreamId": "1117423",
+     "name": "아식스 하이퍼싱크 트러플 그레이 - 한국 한정",
+     "model": "1203B376-020"
+    },
+    {
+     "kreamId": "1119064",
+     "name": "New Balance",
+     "model": "MT10O6L5"
+    },
+    {
+     "kreamId": "1117424",
+     "name": "아식스 하이퍼싱크 크림 콘크리트 - 한국 한정",
+     "model": "1203B376-100"
+    },
+    {
+     "kreamId": "800767",
+     "name": "아식스 하이퍼싱크 그래파이트 그레이 블랙",
+     "model": "1203A879-021"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1117423",
+     "confidence": 0.99,
+     "seconds": 3.2
+    }
+   }
+  },
+  "595039": {
+   "goodsNo": "595039",
+   "brand": "닥터마틴",
+   "name": "1461 3홀 블랙 스무스 / 11838002",
+   "serial": "11838002",
+   "candidates": [
+    {
+     "kreamId": "118745",
+     "name": "Dr. Martens",
+     "model": "11838002"
+    },
+    {
+     "kreamId": "310551",
+     "name": "Dr. Martens",
+     "model": "11838201"
+    },
+    {
+     "kreamId": "118744",
+     "name": "Dr. Martens",
+     "model": "14345001"
+    },
+    {
+     "kreamId": "266622",
+     "name": "Dr. Martens",
+     "model": "24757001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "118745",
+     "confidence": 0.99,
+     "seconds": 2.4
+    }
+   }
+  },
+  "4662556": {
+   "goodsNo": "4662556",
+   "brand": "뉴발란스",
+   "name": "NBP7GF709G / ML2002RC (GRAY)",
+   "serial": "NBP7GF709G_15",
+   "candidates": [
+    {
+     "kreamId": "25785",
+     "name": "New Balance",
+     "model": "ML2002RC"
+    },
+    {
+     "kreamId": "625568",
+     "name": "New Balance",
+     "model": "U2002RAB"
+    },
+    {
+     "kreamId": "24794",
+     "name": "New Balance",
+     "model": "CM878XL"
+    },
+    {
+     "kreamId": "422886",
+     "name": "New Balance",
+     "model": "U2002RBL"
+    },
+    {
+     "kreamId": "692902",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "25785",
+     "confidence": 0.99,
+     "seconds": 2.4
+    }
+   }
+  },
+  "7260774": {
+   "goodsNo": "7260774",
+   "brand": "아식스",
+   "name": "젤 카야노 12.1 MSS - 블랙/블랙 / 1203B424-001",
+   "serial": "1203B424-001",
+   "candidates": [
+    {
+     "kreamId": "1108330",
+     "name": "아식스 젤 카야노 12.1 블랙",
+     "model": "1203B424-001"
+    },
+    {
+     "kreamId": "40814",
+     "name": "아식스 조그 100 T 블랙 - 4E 엑스트라 와이드",
+     "model": "1021A463-001"
+    },
+    {
+     "kreamId": "56582",
+     "name": "아식스 젤 소노마 15-50 블랙",
+     "model": "1201A438-001"
+    },
+    {
+     "kreamId": "144397",
+     "name": "아식스 젤 카야노 30 블랙",
+     "model": "1011B548-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1108330",
+     "confidence": 0.99,
+     "seconds": 1.8
+    }
+   }
+  },
+  "5835213": {
+   "goodsNo": "5835213",
+   "brand": "아디다스",
+   "name": "몬트리올 - 블랙:카키 / IH9120",
+   "serial": "IH9120",
+   "candidates": [
+    {
+     "kreamId": "754799",
+     "name": "Adidas",
+     "model": "IH9120"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "754799",
+     "confidence": 0.99,
+     "seconds": 3.2
+    }
+   }
+  },
+  "6701045": {
+   "goodsNo": "6701045",
+   "brand": "디퍼슈",
+   "name": "로에른 롱부츠 7.5CM [블랙]",
+   "serial": "P00000ZO",
+   "candidates": [
+    {
+     "kreamId": "563999",
+     "name": "무센트  라칸 사이드 라인 스트링 와이드 팬츠 남녀공용 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "692259",
+     "name": "Haleine",
+     "model": ""
+    },
+    {
+     "kreamId": "96681",
+     "name": "Hunter",
+     "model": "MFS9016RMA-BLK"
+    },
+    {
+     "kreamId": "1096023",
+     "name": "티엔지티 x 로맨틱무브 세미 스퀘어 토 스웨이드 첼시 부츠 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   }
+  },
+  "5151822": {
+   "goodsNo": "5151822",
+   "brand": "뉴발란스",
+   "name": "NBPDGF703G / M1906RES (D/GRAY)",
+   "serial": "NBPDGF703G_17",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "615791",
+     "name": "New Balance",
+     "model": "U1906RNB"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "625568",
+     "name": "New Balance",
+     "model": "U2002RAB"
+    },
+    {
+     "kreamId": "186600",
+     "name": "New Balance",
+     "model": "M1906RCH"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "346244",
+     "name": "New Balance",
+     "model": "M1906RES"
+    },
+    {
+     "kreamId": "1108282",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "346244",
+     "confidence": 0.98,
+     "seconds": 2.4
+    }
+   }
+  },
+  "4313969": {
+   "goodsNo": "4313969",
+   "brand": "팀버랜드",
+   "name": "남성 프리미엄 베이직 부츠 위트브라운_TB1180942311",
+   "serial": "TB1180942311",
+   "candidates": [
+    {
+     "kreamId": "18871",
+     "name": "Timberland",
+     "model": "TB010061713/TB110061713"
+    },
+    {
+     "kreamId": "280739",
+     "name": "Timberland",
+     "model": "TB010061713/TB110061713"
+    },
+    {
+     "kreamId": "404973",
+     "name": "Timberland",
+     "model": "TB1A27TP231"
+    },
+    {
+     "kreamId": "305612",
+     "name": "Timberland",
+     "model": "TB030003214"
+    },
+    {
+     "kreamId": "826442",
+     "name": "Timberland",
+     "model": "TB1A1P3L231"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "18871",
+     "confidence": 0.86,
+     "seconds": 4.2
+    }
+   },
+   "review": {
+    "label": "not",
+    "kreamId": "18871",
+    "note": "모델번호 계열이 다름(18094 / 10061)"
+   }
+  },
+  "7213842": {
+   "goodsNo": "7213842",
+   "brand": "뉴발란스",
+   "name": "NBP7GF717C / U880R3TR (CHARCOAL)",
+   "serial": "NBP7GF717C_60",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "24794",
+     "name": "New Balance",
+     "model": "CM878XL"
+    },
+    {
+     "kreamId": "625568",
+     "name": "New Balance",
+     "model": "U2002RAB"
+    },
+    {
+     "kreamId": "422886",
+     "name": "New Balance",
+     "model": "U2002RBL"
+    },
+    {
+     "kreamId": "489508",
+     "name": "New Balance",
+     "model": "BB480L3B"
+    },
+    {
+     "kreamId": "45883",
+     "name": "New Balance",
+     "model": "ML725P"
+    },
+    {
+     "kreamId": "992322",
+     "name": "New Balance",
+     "model": "U880R3TR"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "992322",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "7207269": {
+   "goodsNo": "7207269",
+   "brand": "마시모두띠",
+   "name": "스퀘어 토 가죽 플랫 슈즈",
+   "serial": "11557850700",
+   "candidates": [
+    {
+     "kreamId": "588358",
+     "name": "호카 트랜스포트 GTX 블랙 - 와이드",
+     "model": "1169450-BBLC"
+    },
+    {
+     "kreamId": "506862",
+     "name": "호카 아나카파 2 미드 GTX 블랙 - 와이드",
+     "model": "1155251-BBLC"
+    },
+    {
+     "kreamId": "486560",
+     "name": "(W) 호카 카와나 2 블랙 - 레귤러",
+     "model": "1147913-BBLC"
+    },
+    {
+     "kreamId": "78947",
+     "name": "호카 카하 2 고어텍스 블랙",
+     "model": "1123155-BBLC/1123155F-BBLC"
+    },
+    {
+     "kreamId": "826111",
+     "name": "Gucci Vintage",
+     "model": ""
+    },
+    {
+     "kreamId": "1002638",
+     "name": "(W) 아페쎄 스퀘어 토 레더 발레 플랫 아르장",
+     "model": "PXCDU-F53338-RAB"
+    },
+    {
+     "kreamId": "1002633",
+     "name": "아페쎄 스퀘어 토 레더 발레 플랫 누아",
+     "model": "PXCBH-F53338-LZZ"
+    },
+    {
+     "kreamId": "863663",
+     "name": "MM6 Maison Margiela",
+     "model": "S66WZ0037P7706HB495"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.97,
+     "seconds": 3.5
+    }
+   }
+  },
+  "5835212": {
+   "goodsNo": "5835212",
+   "brand": "아디다스",
+   "name": "몬트리올 - 알루미나:베이지 / IH7280",
+   "serial": "IH7280",
+   "candidates": [
+    {
+     "kreamId": "754802",
+     "name": "Adidas",
+     "model": "IH7280"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "754802",
+     "confidence": 0.99,
+     "seconds": 1.9
+    }
+   }
+  },
+  "595038": {
+   "goodsNo": "595038",
+   "brand": "닥터마틴",
+   "name": "1461 3홀 블랙 나파 / 11838001",
+   "serial": "11838001",
+   "candidates": [
+    {
+     "kreamId": "118748",
+     "name": "Dr. Martens",
+     "model": "11838001"
+    },
+    {
+     "kreamId": "118745",
+     "name": "Dr. Martens",
+     "model": "11838002"
+    },
+    {
+     "kreamId": "310551",
+     "name": "Dr. Martens",
+     "model": "11838201"
+    },
+    {
+     "kreamId": "118744",
+     "name": "Dr. Martens",
+     "model": "14345001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "118748",
+     "confidence": 0.99,
+     "seconds": 2.5
+    }
+   }
+  },
+  "4398435": {
+   "goodsNo": "4398435",
+   "brand": "아카이브앱크",
+   "name": "Vibram boots(Black)_OK3BW25202BLK",
+   "serial": "OK3BW25202BLK",
+   "candidates": [
+    {
+     "kreamId": "935744",
+     "name": "Paraboot",
+     "model": "781031"
+    },
+    {
+     "kreamId": "697962",
+     "name": "Customellow",
+     "model": ""
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "395697",
+     "name": "Vibram Fivefingers",
+     "model": "14M0701"
+    },
+    {
+     "kreamId": "997870",
+     "name": "Vibram Fivefingers",
+     "model": "26M7001"
+    },
+    {
+     "kreamId": "632282",
+     "name": "나이키 에어포스 1 로우 고어텍스 비브람 오프 누아르 앤 블랙",
+     "model": "HV5953-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "5652517": {
+   "goodsNo": "5652517",
+   "brand": "세인트새틴",
+   "name": "바르크 소가죽 폴딩 버클 롱 부츠 2color (5cm/8cm)",
+   "serial": "25FW03",
+   "candidates": [
+    {
+     "kreamId": "708995",
+     "name": "더그레이티스트 포켓 포인트 가디건 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "708994",
+     "name": "더그레이티스트 포켓 포인트 가디건 그레이",
+     "model": ""
+    },
+    {
+     "kreamId": "635654",
+     "name": "Full of Ssun",
+     "model": ""
+    },
+    {
+     "kreamId": "694695",
+     "name": "clut studio",
+     "model": ""
+    },
+    {
+     "kreamId": "782500",
+     "name": "르마스크 하이패스 RFID 차단 여권지갑 케이스 (2컬러)",
+     "model": ""
+    },
+    {
+     "kreamId": "959208",
+     "name": "로파서울 MULTI TOOL PEN 멀티툴 미니 볼펜 키링 (1.0mm) _ 2 colors",
+     "model": ""
+    },
+    {
+     "kreamId": "776460",
+     "name": "긱스타 GKG87SS 유무선 기계식 키보드 텐키리스 가스켓 리니어 게이밍 사무용 저소음 바다소금축 (2컬러)",
+     "model": ""
+    },
+    {
+     "kreamId": "1008226",
+     "name": "리닷 레트로 플립 MP3 플레이어 2COLOR",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.0
+    }
+   }
+  },
+  "7093622": {
+   "goodsNo": "7093622",
+   "brand": "뉴발란스",
+   "name": "NBPDGF734B / U740BO2 (BLACK)",
+   "serial": "NBPDGF734B_19",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "496016",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "5331552": {
+   "goodsNo": "5331552",
+   "brand": "어그",
+   "name": "[WOMEN] 타즈 II - 체스넛 / 1174471-CHE",
+   "serial": "1174471-CHE",
+   "candidates": [
+    {
+     "kreamId": "595549",
+     "name": "(W) 어그 타즈 2 체스트넛",
+     "model": "1174471-CHE"
+    },
+    {
+     "kreamId": "1113464",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "84285",
+     "name": "(W) 어그 클래식 미니 2 부츠 체스트넛",
+     "model": "1016222-CHE"
+    },
+    {
+     "kreamId": "88633",
+     "name": "어그 클래식 울트라 미니 체스트넛",
+     "model": "1137391-CHE"
+    },
+    {
+     "kreamId": "88627",
+     "name": "어그 클래식 미니 부츠 체스트넛",
+     "model": "1002072-CHE"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "595549",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "6005388": {
+   "goodsNo": "6005388",
+   "brand": "디퍼슈",
+   "name": "[이시안 착용] 로벤 롱 부츠 7.5CM [블랙]",
+   "serial": "P00000YS",
+   "candidates": [
+    {
+     "kreamId": "557078",
+     "name": "무센트 슬로프 후디 디테일 크롭 보트넥 반팔 티 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "557077",
+     "name": "무센트 슬로프 후디 디테일 크롭 보트넥 반팔 티 차콜",
+     "model": ""
+    },
+    {
+     "kreamId": "996054",
+     "name": "디야니 글라이드 슬릿 크롭 팬츠 4컬러",
+     "model": ""
+    },
+    {
+     "kreamId": "354406",
+     "name": "Tretorn",
+     "model": ""
+    },
+    {
+     "kreamId": "692259",
+     "name": "Haleine",
+     "model": ""
+    },
+    {
+     "kreamId": "1046787",
+     "name": "Rockport",
+     "model": "CI2360"
+    },
+    {
+     "kreamId": "1096022",
+     "name": "티엔지티 x 로맨틱무브 세미 스퀘어 토 스웨이드 첼시 부츠 브라운",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 3.5
+    }
+   }
+  },
+  "6192575": {
+   "goodsNo": "6192575",
+   "brand": "뉴발란스",
+   "name": "NBPDGS413S / U204L5LA (SILVER)",
+   "serial": "NBPDGS413S_91",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "385700",
+     "name": "New Balance",
+     "model": "M1906RNB"
+    },
+    {
+     "kreamId": "615791",
+     "name": "New Balance",
+     "model": "U1906RNB"
+    },
+    {
+     "kreamId": "461430",
+     "name": "New Balance",
+     "model": "U1906LBN"
+    },
+    {
+     "kreamId": "867111",
+     "name": "New Balance",
+     "model": "U204L5LA"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "867111",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "5705621": {
+   "goodsNo": "5705621",
+   "brand": "나이키",
+   "name": "에어 포스 1 GTX Vibram M - 오프 누아르:스피드 옐로우:블랙 / HV5953-001",
+   "serial": "HV5953-001",
+   "candidates": [
+    {
+     "kreamId": "632282",
+     "name": "나이키 에어포스 1 로우 고어텍스 비브람 오프 누아르 앤 블랙",
+     "model": "HV5953-001"
+    },
+    {
+     "kreamId": "109542",
+     "name": "Clarks Originals",
+     "model": "261-72074/79252"
+    },
+    {
+     "kreamId": "632304",
+     "name": "나이키 에어포스 1 로우 고어텍스 비브람 서밋 화이트",
+     "model": "HV5953-100"
+    },
+    {
+     "kreamId": "416297",
+     "name": "Clarks Originals",
+     "model": "261-79251"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "632282",
+     "confidence": 0.99,
+     "seconds": 2.5
+    }
+   }
+  },
+  "6257985": {
+   "goodsNo": "6257985",
+   "brand": "아식스",
+   "name": "젤-님버스 10.1 - 피드몬트그레이:블랙 / 1203B165-020",
+   "serial": "1203B165-020",
+   "candidates": [
+    {
+     "kreamId": "953321",
+     "name": "아식스 젤 님버스 10.1 피드몬트 그레이 블랙",
+     "model": "1203B165-020"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "953321",
+     "confidence": 0.99,
+     "seconds": 1.6
+    }
+   }
+  },
+  "4786149": {
+   "goodsNo": "4786149",
+   "brand": "푸마",
+   "name": "스피드캣 프리미엄 - 그레이:매트실버 / 403902-03",
+   "serial": "403902-03",
+   "candidates": [
+    {
+     "kreamId": "461103",
+     "name": "푸마 스피드캣 프리미엄 그레이 매트 실버",
+     "model": "403902-03"
+    },
+    {
+     "kreamId": "1027764",
+     "name": "푸마 스피드캣 프리미엄 쿨 라이트 그레이 매트 실버",
+     "model": "403902-02"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "461103",
+     "confidence": 0.99,
+     "seconds": 1.9
+    }
+   }
+  },
+  "4778565": {
+   "goodsNo": "4778565",
+   "brand": "살로몬",
+   "name": "XT-6_L41086600",
+   "serial": "S260109SX611",
+   "candidates": [
+    {
+     "kreamId": "944831",
+     "name": "Paul Smith",
+     "model": "M1A-4832-USTRGS-79"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "834471",
+     "name": "Prada Vintage",
+     "model": ""
+    },
+    {
+     "kreamId": "1001773",
+     "name": "라코스테 백코트 스니커즈 블랙",
+     "model": "747CMA0005-454"
+    },
+    {
+     "kreamId": "25673",
+     "name": "Salomon",
+     "model": "L41086600"
+    },
+    {
+     "kreamId": "1094781",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "1043979",
+     "name": "Salomon",
+     "model": "L45416900"
+    },
+    {
+     "kreamId": "227028",
+     "name": "Salomon",
+     "model": "L47450600"
+    },
+    {
+     "kreamId": "557965",
+     "name": "Salomon",
+     "model": "L47873800"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "25673",
+     "confidence": 0.98,
+     "seconds": 2.6
+    }
+   }
+  },
+  "6680958": {
+   "goodsNo": "6680958",
+   "brand": "푸마",
+   "name": "매그맥스 나이트로 2 - 크림 드 민트:무디 그레이 / 312125-31",
+   "serial": "312125-31",
+   "candidates": [
+    {
+     "kreamId": "960691",
+     "name": "푸마 매그맥스 나이트로 2 크림 드 민트 무디 그레이",
+     "model": "312125-31"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "960691",
+     "confidence": 0.99,
+     "seconds": 1.7
+    }
+   }
+  },
+  "5059393": {
+   "goodsNo": "5059393",
+   "brand": "나이키",
+   "name": "리액트X 리주버네이트 슬라이드 M - 블랙 / HV4479-001",
+   "serial": "HV4479-001",
+   "candidates": [
+    {
+     "kreamId": "507578",
+     "name": "나이키 리액트X 리주버네이트 슬라이드 블랙",
+     "model": "HV4479-001"
+    },
+    {
+     "kreamId": "465724",
+     "name": "나이키 리액트X 리주버네이트 트리플 블랙",
+     "model": "HV5060-001"
+    },
+    {
+     "kreamId": "529647",
+     "name": "나이키 리액트X 리주버네이트 슬라이드 서밋 화이트",
+     "model": "HV4479-100"
+    },
+    {
+     "kreamId": "465731",
+     "name": "나이키 리액트X 리주버네이트 라이트 오어우드 브라운",
+     "model": "HV5060-100"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "507578",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "6477847": {
+   "goodsNo": "6477847",
+   "brand": "호카",
+   "name": "(남성) 마파테 5 - 시멘트:블랙 / 1168722-CMNTB",
+   "serial": "1168722-CMNTB",
+   "candidates": [
+    {
+     "kreamId": "763738",
+     "name": "호카 마파테 5 시멘트 블랙",
+     "model": "1168722-CMNTB"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "763738",
+     "confidence": 0.99,
+     "seconds": 1.8
+    }
+   }
+  },
+  "6852386": {
+   "goodsNo": "6852386",
+   "brand": "킨",
+   "name": "재스퍼 여성 스니커즈 DARK EARTH/BIRCH",
+   "serial": "KNSO6F301W2",
+   "candidates": [
+    {
+     "kreamId": "98754",
+     "name": "킨 재스퍼 스웨이드 스니커즈 실버 밍크",
+     "model": "1002672"
+    },
+    {
+     "kreamId": "98758",
+     "name": "킨 재스퍼 스웨이드 스니커즈 블랙",
+     "model": "1026592"
+    },
+    {
+     "kreamId": "1030348",
+     "name": "(키즈) 킨 재스퍼 2 알로이 버치",
+     "model": "1032605"
+    },
+    {
+     "kreamId": "335212",
+     "name": "킨 재스퍼 락스 SP 스니커즈 버치 블랙",
+     "model": "1030055"
+    },
+    {
+     "kreamId": "1031447",
+     "name": "(W) 킨 재스퍼 스니커즈 다크 어스 버치",
+     "model": "1032947"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1031447",
+     "confidence": 0.98,
+     "seconds": 2.6
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "1031447",
+    "note": "재스퍼 다크 어스/버치, 상품명·색상 일치"
+   }
+  },
+  "3976349": {
+   "goodsNo": "3976349",
+   "brand": "나이키",
+   "name": "에어 포스 1 07 M - 블랙 / CW2288-001",
+   "serial": "CW2288-001",
+   "candidates": [
+    {
+     "kreamId": "36",
+     "name": "나이키 에어포스 1 '07 로우 트리플 블랙",
+     "model": "315122-001/CW2288-001"
+    },
+    {
+     "kreamId": "480753",
+     "name": "나이키 에어 포스 1 '07 LV8 블랙 검 라이트 브라운",
+     "model": "IB6388-001"
+    },
+    {
+     "kreamId": "893322",
+     "name": "나이키 에어포스 1 로우 '07 프리미엄 블랙 블랙",
+     "model": "IV2857-010"
+    },
+    {
+     "kreamId": "28530",
+     "name": "나이키 에어포스 1 '07 LV8 스웨이드 블랙 검",
+     "model": "AA1117-001"
+    },
+    {
+     "kreamId": "81744",
+     "name": "나이키 에어포스 1 '07 블랙 검 라이트 브라운",
+     "model": "DZ4404-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "36",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "6192576": {
+   "goodsNo": "6192576",
+   "brand": "뉴발란스",
+   "name": "NBPDGS413B / U204L3TH (BLACK)",
+   "serial": "NBPDGS413B_19",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "1119064",
+     "name": "New Balance",
+     "model": "MT10O6L5"
+    },
+    {
+     "kreamId": "615791",
+     "name": "New Balance",
+     "model": "U1906RNB"
+    },
+    {
+     "kreamId": "461430",
+     "name": "New Balance",
+     "model": "U1906LBN"
+    },
+    {
+     "kreamId": "867110",
+     "name": "New Balance",
+     "model": "U204L3TH"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "867110",
+     "confidence": 0.99,
+     "seconds": 2.5
+    }
+   }
+  },
+  "4409448": {
+   "goodsNo": "4409448",
+   "brand": "아디다스",
+   "name": "도쿄 - 베이지:블랙 / JI0182",
+   "serial": "JI0182",
+   "candidates": [
+    {
+     "kreamId": "348733",
+     "name": "Adidas",
+     "model": "JI0182"
+    },
+    {
+     "kreamId": "425071",
+     "name": "아식스 x 논네이티브 젤 예티 도쿄 하이 머쉬룸 월넛 블랙",
+     "model": "1203A705-020"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "348733",
+     "confidence": 0.99,
+     "seconds": 1.8
+    }
+   }
+  },
+  "6653232": {
+   "goodsNo": "6653232",
+   "brand": "아디다스",
+   "name": "테렉스 프리하이커 SL 클라이마쿨  - 카본 / KJ0183",
+   "serial": "KJ0183",
+   "candidates": [
+    {
+     "kreamId": "971179",
+     "name": "Adidas",
+     "model": "KJ0183"
+    },
+    {
+     "kreamId": "983079",
+     "name": "Adidas",
+     "model": "KJ0180"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "971179",
+     "confidence": 0.99,
+     "seconds": 2.4
+    }
+   }
+  },
+  "4319321": {
+   "goodsNo": "4319321",
+   "brand": "슈펜",
+   "name": "유니 레더 v2 스웨이드 독일군 HPMR6EA301",
+   "serial": "5005761026",
+   "candidates": [
+    {
+     "kreamId": "935744",
+     "name": "Paraboot",
+     "model": "781031"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "311841",
+     "name": "Paraboot",
+     "model": "780031"
+    },
+    {
+     "kreamId": "311840",
+     "name": "Paraboot",
+     "model": "190818"
+    },
+    {
+     "kreamId": "388602",
+     "name": "Shoopen",
+     "model": "HPMR6EA301"
+    },
+    {
+     "kreamId": "388582",
+     "name": "Shoopen",
+     "model": "HPMR6EA301/HPMR6FA301"
+    },
+    {
+     "kreamId": "388576",
+     "name": "Shoopen",
+     "model": "HPMR6EA301"
+    },
+    {
+     "kreamId": "388573",
+     "name": "Shoopen",
+     "model": "HPMR6EA301"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.92,
+     "seconds": 3.3
+    }
+   }
+  },
+  "4384975": {
+   "goodsNo": "4384975",
+   "brand": "솔트앤초콜릿",
+   "name": "아콘 스니커즈 412430006 (6cm/3colors)",
+   "serial": "5006554599",
+   "candidates": [
+    {
+     "kreamId": "416297",
+     "name": "Clarks Originals",
+     "model": "261-79251"
+    },
+    {
+     "kreamId": "150413",
+     "name": "Paraboot",
+     "model": "780001/781001"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "821064",
+     "name": "Clarks Originals",
+     "model": ""
+    },
+    {
+     "kreamId": "798127",
+     "name": "르마스크 여행용 가벼운 백팩 초경량 폴딩 Daily series 001 3컬러",
+     "model": ""
+    },
+    {
+     "kreamId": "821191",
+     "name": "에포메이커 Galaxy100 Lite 유무선 기계식 키보드 3모드 핫스왑 풀배열 영문각인 마블화이트축 (2 컬러)",
+     "model": ""
+    },
+    {
+     "kreamId": "712940",
+     "name": "지비에이치 홈 롱 앞치마 (3 Colors)",
+     "model": ""
+    },
+    {
+     "kreamId": "756400",
+     "name": "르마스크 16인치 비즈니스 노트북 백팩 Core series 001 3컬러",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 3.2
+    }
+   }
+  },
+  "4028712": {
+   "goodsNo": "4028712",
+   "brand": "오클리",
+   "name": "(공용) 라이트 브리드 스니커 - 트리플 블랙 / FOF10058802Y",
+   "serial": "FOF10058802Y",
+   "candidates": [
+    {
+     "kreamId": "303517",
+     "name": "Oakley",
+     "model": "FOF100588-02Y"
+    },
+    {
+     "kreamId": "92376",
+     "name": "Merrell",
+     "model": "J004565"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "697962",
+     "name": "Customellow",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "303517",
+     "confidence": 0.99,
+     "seconds": 1.8
+    }
+   }
+  },
+  "4226785": {
+   "goodsNo": "4226785",
+   "brand": "나이키",
+   "name": "에어 포스 1 07 W - 화이트 / DD8959-100",
+   "serial": "DD8959-100",
+   "candidates": [
+    {
+     "kreamId": "13100",
+     "name": "(W) 나이키 에어포스 1 '07 로우 화이트",
+     "model": "315115-112/DD8959-100"
+    },
+    {
+     "kreamId": "184932",
+     "name": "(W) 나이키 x 트래비스 스캇 에어포스 1 '07 로우 캑터스 잭 유토피아 에디션 화이트",
+     "model": "DD8959-100"
+    },
+    {
+     "kreamId": "684106",
+     "name": "(W) 나이키 에어포스 1 '07 LV8 블랙 화이트",
+     "model": "IM7809-010"
+    },
+    {
+     "kreamId": "231023",
+     "name": "(W) 나이키 에어포스 1 '07 에센셜 TRK3 세일",
+     "model": "HF1058-133"
+    },
+    {
+     "kreamId": "25931",
+     "name": "(W) 나이키 에어포스 1 로우 '07 LX 크롬 럭스",
+     "model": "CT1990-100"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "13100",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "13100",
+    "note": "에어포스 1 '07 W 화이트, 모델번호 DD8959-100 포함"
+   }
+  },
+  "5029004": {
+   "goodsNo": "5029004",
+   "brand": "킨치",
+   "name": "[GOODYEAR WELTED] CLOAFER - C07 / BROWN",
+   "serial": "BEKCLF03-BR",
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "858439",
+     "name": "Rockport",
+     "model": "CJ2594"
+    },
+    {
+     "kreamId": "1046787",
+     "name": "Rockport",
+     "model": "CI2360"
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "model": "CJ2598"
+    },
+    {
+     "kreamId": "775744",
+     "name": "70,000원",
+     "model": "2515/610/800 / 2515/611/800"
+    },
+    {
+     "kreamId": "396021",
+     "name": "Dr. Martens",
+     "model": "14573001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 2.7
+    }
+   }
+  },
+  "5340969": {
+   "goodsNo": "5340969",
+   "brand": "반스",
+   "name": "스케이트 로퍼 - (스웨이드) 브라운:블랙 / VN000VA6Y491",
+   "serial": "VN000VA6Y491",
+   "candidates": [
+    {
+     "kreamId": "384546",
+     "name": "반스 스케이트 로퍼 블랙",
+     "model": "VN0A5DXUBKA1"
+    },
+    {
+     "kreamId": "718924",
+     "name": "반스 스케이트 로퍼 블랙",
+     "model": "VN000VAQBKA"
+    },
+    {
+     "kreamId": "565870",
+     "name": "반스 스케이트 로퍼 스웨이드 블랙",
+     "model": "VN000VA6BKA1"
+    },
+    {
+     "kreamId": "598585",
+     "name": "반스 스케이트 로퍼 스웨이드 브라운 블랙",
+     "model": "VN000VA6Y49"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "598585",
+     "confidence": 0.98,
+     "seconds": 2.6
+    }
+   }
+  },
+  "4923314": {
+   "goodsNo": "4923314",
+   "brand": "아디다스",
+   "name": "토바코 - 브라운 / JP9651",
+   "serial": "JP9651",
+   "candidates": [
+    {
+     "kreamId": "515349",
+     "name": "Adidas",
+     "model": "JP9651"
+    },
+    {
+     "kreamId": "82296",
+     "name": "Adidas",
+     "model": "GX6941"
+    },
+    {
+     "kreamId": "96970",
+     "name": "Adidas",
+     "model": "GY7396"
+    },
+    {
+     "kreamId": "982753",
+     "name": "Adidas",
+     "model": "KJ4590"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "515349",
+     "confidence": 0.99,
+     "seconds": 2.1
+    }
+   }
+  },
+  "5379027": {
+   "goodsNo": "5379027",
+   "brand": "나이키",
+   "name": "에어 포스 1 07 M - 카카오 와우:코코넛 밀크:빈티지 그린:세일 / FZ3592-259",
+   "serial": "FZ3592-259",
+   "candidates": [
+    {
+     "kreamId": "218059",
+     "name": "나이키 에어포스 1 '07 카카오 와우 코코넛 밀크",
+     "model": "FZ3592-259"
+    },
+    {
+     "kreamId": "179981",
+     "name": "(W) 나이키 에어포스 1 '07 카카오 와우",
+     "model": "FQ8901-259"
+    },
+    {
+     "kreamId": "966349",
+     "name": "나이키 에어포스 1 '07 LV8 데님 앤트러사이트 미디움 애쉬",
+     "model": "IR0951-003"
+    },
+    {
+     "kreamId": "907463",
+     "name": "나이키 에어포스 1 '07 LV8 바로크 브라운",
+     "model": "IU2363-200"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "218059",
+     "confidence": 0.99,
+     "seconds": 2.4
+    }
+   }
+  },
+  "4939603": {
+   "goodsNo": "4939603",
+   "brand": "오니츠카타이거",
+   "name": "멕시코 66 TGRS 1182A678_001",
+   "serial": "1182A678_001",
+   "candidates": [
+    {
+     "kreamId": "470681",
+     "name": "Onitsuka Tiger",
+     "model": "1182A678-001"
+    },
+    {
+     "kreamId": "745415",
+     "name": "Onitsuka Tiger",
+     "model": "1182A678-200"
+    },
+    {
+     "kreamId": "470687",
+     "name": "Onitsuka Tiger",
+     "model": "1182A678-700"
+    },
+    {
+     "kreamId": "745398",
+     "name": "Onitsuka Tiger",
+     "model": "1182A678-750"
+    },
+    {
+     "kreamId": "470685",
+     "name": "Onitsuka Tiger",
+     "model": "1182A660-001"
+    },
+    {
+     "kreamId": "156415",
+     "name": "Onitsuka Tiger",
+     "model": "1183A872-003"
+    },
+    {
+     "kreamId": "854725",
+     "name": "Onitsuka Tiger",
+     "model": "1182A705-001"
+    },
+    {
+     "kreamId": "131770",
+     "name": "Onitsuka Tiger",
+     "model": "1183C102-002"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "470681",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "6691450": {
+   "goodsNo": "6691450",
+   "brand": "마시모두띠",
+   "name": "소프트 레더 발레리나",
+   "serial": "11516850800",
+   "candidates": [
+    {
+     "kreamId": "1120653",
+     "name": "Stussy",
+     "model": "WSA4267WB"
+    },
+    {
+     "kreamId": "783754",
+     "name": "(W) 어그 클래식 숏 크리센트 부츠 블랙",
+     "model": "1161770-BLK"
+    },
+    {
+     "kreamId": "1120665",
+     "name": "Stussy",
+     "model": "WSA4267LBL"
+    },
+    {
+     "kreamId": "637055",
+     "name": "어그 클래식 울트라 미니 웨더 하이브리드 체스트넛 화이트캡",
+     "model": "1174196-CWTC"
+    },
+    {
+     "kreamId": "53952",
+     "name": "Roger Vivier",
+     "model": "RVW57527920NK0B999"
+    },
+    {
+     "kreamId": "332556",
+     "name": "Thom Browne",
+     "model": "FFD140A-00216-001"
+    },
+    {
+     "kreamId": "250851",
+     "name": "Roger Vivier",
+     "model": "RVW57527920NK0B206"
+    },
+    {
+     "kreamId": "201190",
+     "name": "Roger Vivier",
+     "model": "RVW57527920NK0C217"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.94,
+     "seconds": 3.1
+    }
+   }
+  },
+  "7271990": {
+   "goodsNo": "7271990",
+   "brand": "어그",
+   "name": "[WOMEN] 코케트 - 체스넛 / 5125-CHE",
+   "serial": "5125-CHE",
+   "candidates": [
+    {
+     "kreamId": "84283",
+     "name": "(W) 어그 코케트 슬리퍼 체스트넛",
+     "model": "5125-CHE"
+    },
+    {
+     "kreamId": "1115150",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "595549",
+     "name": "(W) 어그 타즈 2 체스트넛",
+     "model": "1174471-CHE"
+    },
+    {
+     "kreamId": "84285",
+     "name": "(W) 어그 클래식 미니 2 부츠 체스트넛",
+     "model": "1016222-CHE"
+    },
+    {
+     "kreamId": "88444",
+     "name": "어그 타스만 슬리퍼 체스트넛",
+     "model": "5950-CHE"
+    },
+    {
+     "kreamId": "88627",
+     "name": "어그 클래식 미니 부츠 체스트넛",
+     "model": "1002072-CHE"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "84283",
+     "confidence": 0.99,
+     "seconds": 2.8
+    }
+   }
+  },
+  "5981569": {
+   "goodsNo": "5981569",
+   "brand": "뉴발란스",
+   "name": "NBPDGF766F / U204LMMA (BROWN)",
+   "serial": "NBPDGF766F_85",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "615791",
+     "name": "New Balance",
+     "model": "U1906RNB"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    },
+    {
+     "kreamId": "538811",
+     "name": "New Balance",
+     "model": "U204LMMA"
+    },
+    {
+     "kreamId": "867388",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "975455",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "867250",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "538811",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "6918834": {
+   "goodsNo": "6918834",
+   "brand": "아디다스",
+   "name": "삼바 OG 뮬 - 화이트:블랙 / LB3814",
+   "serial": "LB3814",
+   "candidates": [
+    {
+     "kreamId": "1032515",
+     "name": "Adidas",
+     "model": "LB3814"
+    },
+    {
+     "kreamId": "1027290",
+     "name": "Adidas",
+     "model": "LB3815"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1032515",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "6965588": {
+   "goodsNo": "6965588",
+   "brand": "락피쉬웨더웨어",
+   "name": "ZANE X-STRAP SNEAKERS(SUEDE) - 5 colors",
+   "serial": "RF1SHBG3SK006",
+   "candidates": [
+    {
+     "kreamId": "1090645",
+     "name": "Rockfishweatherwear",
+     "model": "RF1SHBG3SK006TG"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 2.2
+    }
+   }
+  },
+  "7312737": {
+   "goodsNo": "7312737",
+   "brand": "에이이에이이",
+   "name": "[지연 PICK] AEAE FUZZY FAT SNEAKERS [CHARCOAL]",
+   "serial": "AE46FWSH002CHA",
+   "candidates": [
+    {
+     "kreamId": "196711",
+     "name": "반스 카버 로우 블랙",
+     "model": "V398"
+    },
+    {
+     "kreamId": "458117",
+     "name": "Arc'teryx",
+     "model": "L08141200/9602"
+    },
+    {
+     "kreamId": "296167",
+     "name": "Arc'teryx",
+     "model": "L08098800/9019"
+    },
+    {
+     "kreamId": "851873",
+     "name": "아포아 아크 플랫슈즈 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "5837662": {
+   "goodsNo": "5837662",
+   "brand": "마시모두띠",
+   "name": "소프트 레더 발레리나",
+   "serial": "11528750800",
+   "candidates": [
+    {
+     "kreamId": "580954",
+     "name": "Stussy",
+     "model": "115878"
+    },
+    {
+     "kreamId": "463699",
+     "name": "Stussy",
+     "model": "115828"
+    },
+    {
+     "kreamId": "101170",
+     "name": "Stussy",
+     "model": "115566"
+    },
+    {
+     "kreamId": "489522",
+     "name": "Stussy",
+     "model": "115851"
+    },
+    {
+     "kreamId": "53952",
+     "name": "Roger Vivier",
+     "model": "RVW57527920NK0B999"
+    },
+    {
+     "kreamId": "332556",
+     "name": "Thom Browne",
+     "model": "FFD140A-00216-001"
+    },
+    {
+     "kreamId": "250851",
+     "name": "Roger Vivier",
+     "model": "RVW57527920NK0B206"
+    },
+    {
+     "kreamId": "201190",
+     "name": "Roger Vivier",
+     "model": "RVW57527920NK0C217"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.7
+    }
+   }
+  },
+  "5279986": {
+   "goodsNo": "5279986",
+   "brand": "로맨틱무브",
+   "name": "[삭형x로맨틱무브] 유팁 키높이 더비 R25M400 (워싱블랙)",
+   "serial": "R25M400WBK",
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "697962",
+     "name": "Customellow",
+     "model": ""
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "model": "CJ2598"
+    },
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "model": "CI1360"
+    },
+    {
+     "kreamId": "288378",
+     "name": "조셉트 제이콥 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "996475",
+     "name": "조셉트 마론 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "864124",
+     "name": "요위 우토 블랙 매트",
+     "model": ""
+    },
+    {
+     "kreamId": "866417",
+     "name": "요위 우온 블랙 매트",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.96,
+     "seconds": 2.6
+    }
+   }
+  },
+  "6879519": {
+   "goodsNo": "6879519",
+   "brand": "휠라",
+   "name": "글리오 LX 에스프레소(FS263OD03X078217)",
+   "serial": "1100FS263OD03X078217",
+   "candidates": [
+    {
+     "kreamId": "1011918",
+     "name": "[5% 적립] 휠라 글리오 LX 에스프레소",
+     "model": ""
+    },
+    {
+     "kreamId": "1009606",
+     "name": "(W) 휠라 글리오 LX 에스프레소",
+     "model": "FS263OD03X078217"
+    },
+    {
+     "kreamId": "343618",
+     "name": "휠라 에샤페 초코",
+     "model": "1XM02361G200/1XM02361H200"
+    },
+    {
+     "kreamId": "247965",
+     "name": "휠라 에샤페 MS 실버 문",
+     "model": "1XM02348G063/1XM02348H063/FS261OD03X040063"
+    },
+    {
+     "kreamId": "581260",
+     "name": "휠라 에샤페 LX 블랙",
+     "model": "FS253OD03X012001/FS261OD03X087001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1011918",
+     "confidence": 0.88,
+     "seconds": 3.8
+    }
+   }
+  },
+  "4791040": {
+   "goodsNo": "4791040",
+   "brand": "슈펜",
+   "name": "신세틱 스웨이드 클로그 HPCV4GA401",
+   "serial": "5006748946",
+   "candidates": [
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "model": "CI1360"
+    },
+    {
+     "kreamId": "858583",
+     "name": "Rockport",
+     "model": "M76444"
+    },
+    {
+     "kreamId": "150413",
+     "name": "Paraboot",
+     "model": "780001/781001"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "906329",
+     "name": "Homme Plisse Issey Miyake",
+     "model": "HP66/HP61-JJ051-15"
+    },
+    {
+     "kreamId": "316142",
+     "name": "Homme Plisse Issey Miyake",
+     "model": "HP48/HP43-JJ102-15"
+    },
+    {
+     "kreamId": "59900",
+     "name": "Homme Plisse Issey Miyake",
+     "model": "JM030/JM330/JM430/JM530/JM801"
+    },
+    {
+     "kreamId": "575662",
+     "name": "Homme Plisse Issey Miyake",
+     "model": "HP53-JF084-15"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.5
+    }
+   }
+  },
+  "1590039": {
+   "goodsNo": "1590039",
+   "brand": "닥터마틴",
+   "name": "2976 첼시부츠 YS 블랙 / 22227001",
+   "serial": "22227001",
+   "candidates": [
+    {
+     "kreamId": "382895",
+     "name": "Dr. Martens",
+     "model": "22227001"
+    },
+    {
+     "kreamId": "226542",
+     "name": "Dr. Martens",
+     "model": "11853001"
+    },
+    {
+     "kreamId": "293288",
+     "name": "Dr. Martens",
+     "model": "25685001"
+    },
+    {
+     "kreamId": "96681",
+     "name": "Hunter",
+     "model": "MFS9016RMA-BLK"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "382895",
+     "confidence": 0.99,
+     "seconds": 2.6
+    }
+   }
+  },
+  "6697125": {
+   "goodsNo": "6697125",
+   "brand": "야세",
+   "name": "김보라x야세 데크 보드슈즈 블랙",
+   "serial": "CSS02BK",
+   "candidates": [
+    {
+     "kreamId": "382931",
+     "name": "185,000원",
+     "model": "SBTR005"
+    },
+    {
+     "kreamId": "532636",
+     "name": "세이코 셀렉션 SBTR021 40mm 블랙",
+     "model": "SBTR021"
+    },
+    {
+     "kreamId": "196912",
+     "name": "420,000원",
+     "model": "SRPJ85K1"
+    },
+    {
+     "kreamId": "605012",
+     "name": "세이코 스피릿 SBTR013 42mm 스테인리스 스틸 블랙",
+     "model": "SBTR013"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.1
+    }
+   }
+  },
+  "5332518": {
+   "goodsNo": "5332518",
+   "brand": "슈펜",
+   "name": "캐주얼 볼륨 더비 HPMR7GF701",
+   "serial": "5007669852",
+   "candidates": [
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "model": "CI1360"
+    },
+    {
+     "kreamId": "1005846",
+     "name": "Saint Laurent Vintage",
+     "model": ""
+    },
+    {
+     "kreamId": "935744",
+     "name": "Paraboot",
+     "model": "781031"
+    },
+    {
+     "kreamId": "150413",
+     "name": "Paraboot",
+     "model": "780001/781001"
+    },
+    {
+     "kreamId": "532608",
+     "name": "Homme Plisse Issey Miyake",
+     "model": "HP56/HP51-JL126-15"
+    },
+    {
+     "kreamId": "991474",
+     "name": "Adidas",
+     "model": "KH8484"
+    },
+    {
+     "kreamId": "552087",
+     "name": "Homme Plisse Issey Miyake",
+     "model": "HP53 / HP58-JL071-15"
+    },
+    {
+     "kreamId": "103150",
+     "name": "Reproduction of Found",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 2.9
+    }
+   }
+  },
+  "6009391": {
+   "goodsNo": "6009391",
+   "brand": "아디다스",
+   "name": "가젤 로우 프로 - 블랙:초크화이트 / IH1929",
+   "serial": "IH1929",
+   "candidates": [
+    {
+     "kreamId": "801219",
+     "name": "Adidas",
+     "model": "IH1929"
+    },
+    {
+     "kreamId": "801211",
+     "name": "Adidas",
+     "model": "IH1930"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "801219",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "3741204": {
+   "goodsNo": "3741204",
+   "brand": "뉴발란스",
+   "name": "NBPFGF733B / W480KB5 (4E) (BLACK)",
+   "serial": "NBPFGF733B_19",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "489508",
+     "name": "New Balance",
+     "model": "BB480L3B"
+    },
+    {
+     "kreamId": "971173",
+     "name": "New Balance",
+     "model": "M10804O2"
+    },
+    {
+     "kreamId": "24794",
+     "name": "New Balance",
+     "model": "CM878XL"
+    },
+    {
+     "kreamId": "61086",
+     "name": "New Balance",
+     "model": "W480KB5"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "61086",
+     "confidence": 0.96,
+     "seconds": 2.4
+    }
+   }
+  },
+  "6886576": {
+   "goodsNo": "6886576",
+   "brand": "닥터마틴",
+   "name": "메이페어 - 블랙 터프티드 스웨이드 / 44090001",
+   "serial": "44090001",
+   "candidates": [
+    {
+     "kreamId": "1061652",
+     "name": "Dr. Martens",
+     "model": "44090001"
+    },
+    {
+     "kreamId": "628192",
+     "name": "Levi's",
+     "model": "A44090001"
+    },
+    {
+     "kreamId": "854383",
+     "name": "Dr. Martens",
+     "model": "42864600"
+    },
+    {
+     "kreamId": "854338",
+     "name": "Dr. Martens",
+     "model": "42863001"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1061652",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "5975032": {
+   "goodsNo": "5975032",
+   "brand": "코오롱스포츠",
+   "name": "[적립금 5%] 어프로치 슈즈 811 GTX FE4XX26150DBE",
+   "serial": "FE4XX26150DBE",
+   "candidates": [
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "model": "CI1360"
+    },
+    {
+     "kreamId": "1009276",
+     "name": "(W) 라코스테 카나비 세트 레더 스니커즈 오프 화이트",
+     "model": "51SFA0129-18C"
+    },
+    {
+     "kreamId": "834471",
+     "name": "Prada Vintage",
+     "model": ""
+    },
+    {
+     "kreamId": "377463",
+     "name": "자라 레더 스니커즈 블랙",
+     "model": "2122/320/800"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   }
+  },
+  "5247213": {
+   "goodsNo": "5247213",
+   "brand": "나이키",
+   "name": "에어 맥스 모토 2K W - 화이트:메탈릭 실버:블랙:포톤 더스트 / HQ2056-103",
+   "serial": "HQ2056-103",
+   "candidates": [
+    {
+     "kreamId": "554930",
+     "name": "(W) 나이키 에어맥스 모토 2K 화이트 메탈릭 실버",
+     "model": "HQ2056-103"
+    },
+    {
+     "kreamId": "669747",
+     "name": "나이키 에어맥스 모토 2K 블랙 메탈릭 다크 그레이",
+     "model": "IO9279-001"
+    },
+    {
+     "kreamId": "757895",
+     "name": "(W) 나이키 에어맥스 모토 2K SE 블랙 앤트러사이트",
+     "model": "IO4862-001"
+    },
+    {
+     "kreamId": "757884",
+     "name": "나이키 에어맥스 모토 2K 세쿼이아 블랙",
+     "model": "IQ4924-300"
+    },
+    {
+     "kreamId": "1005729",
+     "name": "(GS) 나이키 에어맥스 모토 2K 블랙 메탈릭 다크 그레이",
+     "model": "IQ9430-003"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "554930",
+     "confidence": 0.99,
+     "seconds": 2.5
+    }
+   }
+  },
+  "4463013": {
+   "goodsNo": "4463013",
+   "brand": "나이키",
+   "name": "샥스 TL W - 블랙:맥스 오렌지 / AR3566-002",
+   "serial": "AR3566-002",
+   "candidates": [
+    {
+     "kreamId": "21441",
+     "name": "(W) 나이키 샥스 TL 블랙 앤 맥스 오렌지",
+     "model": "AR3566-002"
+    },
+    {
+     "kreamId": "958087",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "917625",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "21441",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "7260775": {
+   "goodsNo": "7260775",
+   "brand": "아식스",
+   "name": "젤 카야노 12.1 MSS - 샌드쉘/블랙 / 1203B424-250",
+   "serial": "1203B424-250",
+   "candidates": [
+    {
+     "kreamId": "1108329",
+     "name": "아식스 젤 카야노 12.1 샌드쉘 블랙",
+     "model": "1203B424-250"
+    },
+    {
+     "kreamId": "1108330",
+     "name": "아식스 젤 카야노 12.1 블랙",
+     "model": "1203B424-001"
+    },
+    {
+     "kreamId": "1072417",
+     "name": "아식스 젤 카야노 12.1 화이트 크림",
+     "model": "1203A759-106"
+    },
+    {
+     "kreamId": "627194",
+     "name": "아식스 젤 카야노 12.1 블랙 그라파이트 그레이",
+     "model": "1203A759-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1108329",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "4680101": {
+   "goodsNo": "4680101",
+   "brand": "나이키",
+   "name": "샥스 R4 M - 메탈릭 실버:블랙:피칸테 레드 / HQ1988-002",
+   "serial": "HQ1988-002",
+   "candidates": [
+    {
+     "kreamId": "402232",
+     "name": "99,000원",
+     "model": "HQ1988-002"
+    },
+    {
+     "kreamId": "917622",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "958106",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "455940",
+     "name": "나이키 샥스 R4 블랙 브라이트 크림슨",
+     "model": "HQ1988-001"
+    },
+    {
+     "kreamId": "717795",
+     "name": "(W) 나이키 샥스 Z 블랙 유니버시티 레드",
+     "model": "HQ7540-003"
+    },
+    {
+     "kreamId": "20522",
+     "name": "나이키 샥스 TL 블랙 메탈릭 헤마타이트",
+     "model": "AV3595-002"
+    },
+    {
+     "kreamId": "250825",
+     "name": "76,000원",
+     "model": "AR3565-004"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "402232",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   }
+  },
+  "5347573": {
+   "goodsNo": "5347573",
+   "brand": "위더로드",
+   "name": "WTRD3115 레이지 홀스레더 레이싱 스니커즈 워싱 블랙",
+   "serial": "WTRD3115",
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "858583",
+     "name": "Rockport",
+     "model": "M76444"
+    },
+    {
+     "kreamId": "1046787",
+     "name": "Rockport",
+     "model": "CI2360"
+    },
+    {
+     "kreamId": "288449",
+     "name": "조셉트 하멜 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "985762",
+     "name": "자라 레더 로퍼 블랙",
+     "model": "2653/720/800"
+    },
+    {
+     "kreamId": "407953",
+     "name": "반스 2 아일렛 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "697962",
+     "name": "Customellow",
+     "model": ""
+    },
+    {
+     "kreamId": "135667",
+     "name": "반스 올드스쿨 레더 블랙",
+     "model": "VN0003Z6L3A"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 2.9
+    }
+   }
+  },
+  "5269359": {
+   "goodsNo": "5269359",
+   "brand": "마이애미프로젝트",
+   "name": "MONO09 올슈틴 베이직 페니 로퍼 제트블랙",
+   "serial": "5016410426",
+   "candidates": [
+    {
+     "kreamId": "871638",
+     "name": "Ferragamo Vintage",
+     "model": ""
+    },
+    {
+     "kreamId": "935744",
+     "name": "Paraboot",
+     "model": "781031"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "405769",
+     "name": "Ferragamo",
+     "model": "020990-769243"
+    },
+    {
+     "kreamId": "569990",
+     "name": "Puma V-S1 블랙",
+     "model": "402951-08"
+    },
+    {
+     "kreamId": "600371",
+     "name": "Pemont",
+     "model": ""
+    },
+    {
+     "kreamId": "864124",
+     "name": "요위 우토 블랙 매트",
+     "model": ""
+    },
+    {
+     "kreamId": "271868",
+     "name": "Pemont",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 3.0
+    }
+   }
+  },
+  "7046676": {
+   "goodsNo": "7046676",
+   "brand": "23.65",
+   "name": "4홀 더비 슈즈 - 블랙",
+   "serial": "5002180461",
+   "candidates": [
+    {
+     "kreamId": "315324",
+     "name": "Dr. Martens",
+     "model": "31303001"
+    },
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "model": "CI1360"
+    },
+    {
+     "kreamId": "565611",
+     "name": "Rockport",
+     "model": "CI9253"
+    },
+    {
+     "kreamId": "1005736",
+     "name": "Rockport",
+     "model": "CJ1937"
+    },
+    {
+     "kreamId": "1072605",
+     "name": "슬로우스텝 SP3204 로렌스 4홀 스퀘어 더비슈즈 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.8
+    }
+   }
+  },
+  "6245020": {
+   "goodsNo": "6245020",
+   "brand": "나이키",
+   "name": "보메로 18 M - 화이트:볼트 틴트:사파이어:블랙 스프루스 / HM6803-111",
+   "serial": "HM6803-111",
+   "candidates": [
+    {
+     "kreamId": "930848",
+     "name": "나이키 보메로 18 화이트 볼트 틴트",
+     "model": "HM6803-111"
+    },
+    {
+     "kreamId": "501037",
+     "name": "나이키 보메로 18 블랙 다크 스모크 그레이",
+     "model": "HM6803-005"
+    },
+    {
+     "kreamId": "456380",
+     "name": "나이키 보메로 18 서밋 화이트 코코넛 밀크",
+     "model": "HM6803-101"
+    },
+    {
+     "kreamId": "379254",
+     "name": "나이키 보메로 17 앤트러사이트 화이트",
+     "model": "FB1309-004"
+    },
+    {
+     "kreamId": "888200",
+     "name": "나이키 보메로 프리미엄 화이트 토탈 오렌지",
+     "model": "HQ2050-101"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "930848",
+     "confidence": 0.99,
+     "seconds": 2.4
+    }
+   }
+  },
+  "5277377": {
+   "goodsNo": "5277377",
+   "brand": "나이키",
+   "name": "보메로 플러스 W - 블랙:메탈릭 다크 그레이:쿨 그레이:다크 스모크 그레이 / HV8154-001",
+   "serial": "HV8154-001",
+   "candidates": [
+    {
+     "kreamId": "573211",
+     "name": "(W) 나이키 보메로 플러스 블랙 메탈릭 다크 그레이",
+     "model": "HV8154-001"
+    },
+    {
+     "kreamId": "602680",
+     "name": "나이키 보메로 플러스 블랙 메탈릭 다크 그레이",
+     "model": "HV8150-003"
+    },
+    {
+     "kreamId": "610305",
+     "name": "나이키 보메로 플러스 화이트 포톤 더스트",
+     "model": "HV8150-102"
+    },
+    {
+     "kreamId": "895021",
+     "name": "나이키 보메로 플러스 화이트 블랙",
+     "model": "II7181-102"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "573211",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "7181158": {
+   "goodsNo": "7181158",
+   "brand": "머렐",
+   "name": "[MEN] MOAB 3 MID GTX_BRACKEN",
+   "serial": "M26A1-MMG004BCN",
+   "candidates": [
+    {
+     "kreamId": "770547",
+     "name": "Merrell",
+     "model": "J500239"
+    },
+    {
+     "kreamId": "244351",
+     "name": "Merrell",
+     "model": "J067917"
+    },
+    {
+     "kreamId": "967999",
+     "name": "Merrell",
+     "model": ""
+    },
+    {
+     "kreamId": "639031",
+     "name": "Merrell",
+     "model": "J60801"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "6382400": {
+   "goodsNo": "6382400",
+   "brand": "노버크",
+   "name": "플렉스 라이트 로퍼",
+   "serial": "NOVERQ",
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "687616",
+     "name": "조셉트 벨 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "288371",
+     "name": "조셉트 사이먼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "model": "CJ2598"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.95,
+     "seconds": 2.7
+    }
+   }
+  },
+  "3645257": {
+   "goodsNo": "3645257",
+   "brand": "뉴발란스",
+   "name": "NBPDGF703T / M1906RCH (BLACK)",
+   "serial": "NBPDGF703T_19",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "615791",
+     "name": "New Balance",
+     "model": "U1906RNB"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "186600",
+     "name": "New Balance",
+     "model": "M1906RCH"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "892306",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "891884",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "186600",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "5270467": {
+   "goodsNo": "5270467",
+   "brand": "스케쳐스",
+   "name": "여성 아치핏 2.0 (슬립인스)_SL0WPCFY051",
+   "serial": "SL0WPCFY051",
+   "candidates": [
+    {
+     "kreamId": "262393",
+     "name": "Skechers",
+     "model": "220840-BKCC"
+    },
+    {
+     "kreamId": "552684",
+     "name": "Skechers",
+     "model": "220581-BBK"
+    },
+    {
+     "kreamId": "262268",
+     "name": "Skechers",
+     "model": "216600-BBK"
+    },
+    {
+     "kreamId": "262276",
+     "name": "Skechers",
+     "model": "216641-BBK"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 2.5
+    }
+   }
+  },
+  "2980918": {
+   "goodsNo": "2980918",
+   "brand": "팀버랜드",
+   "name": "[ICON] (여성) 넬리 워터프루프 추카부츠 - 위트 누벅 / 23399-713",
+   "serial": "23399-713",
+   "candidates": [
+    {
+     "kreamId": "797663",
+     "name": "Timberland",
+     "model": "TB1233997131"
+    },
+    {
+     "kreamId": "18871",
+     "name": "Timberland",
+     "model": "TB010061713/TB110061713"
+    },
+    {
+     "kreamId": "510425",
+     "name": "Timberland",
+     "model": "TB118094231"
+    },
+    {
+     "kreamId": "821066",
+     "name": "Clarks Originals",
+     "model": ""
+    },
+    {
+     "kreamId": "404973",
+     "name": "Timberland",
+     "model": "TB1A27TP231"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "797663",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "797663",
+    "note": "넬리 추카 23399-713, KREAM TB1233997131 에 포함"
+   }
+  },
+  "4046672": {
+   "goodsNo": "4046672",
+   "brand": "르무통",
+   "name": "르무통 메이트 발 편한 메리노울 운동화",
+   "serial": "5010982846",
+   "candidates": [
+    {
+     "kreamId": "483155",
+     "name": "Ferragamo",
+     "model": "661572-780091"
+    },
+    {
+     "kreamId": "1012860",
+     "name": "라코스테 크로코델 레더 빌폴드 블랙",
+     "model": "NF5119EE-000"
+    },
+    {
+     "kreamId": "1055879",
+     "name": "라코스테 샨타코 스몰 월렛 블랙",
+     "model": "NH2824C-56N-000"
+    },
+    {
+     "kreamId": "1012816",
+     "name": "라코스테 스몰 크로코델 레더 코인 퍼스 블랙",
+     "model": "NF5120EE-000"
+    },
+    {
+     "kreamId": "398609",
+     "name": "LeMouton",
+     "model": ""
+    },
+    {
+     "kreamId": "398606",
+     "name": "LeMouton",
+     "model": ""
+    },
+    {
+     "kreamId": "398607",
+     "name": "LeMouton",
+     "model": ""
+    },
+    {
+     "kreamId": "404245",
+     "name": "LeMouton",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "398606",
+     "confidence": 0.97,
+     "seconds": 2.3
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "398606",
+    "note": "메이트 네이비, 형태·색상 일치"
+   }
+  },
+  "5214071": {
+   "goodsNo": "5214071",
+   "brand": "르무통",
+   "name": "업 브라운",
+   "serial": "5017515767",
+   "candidates": [
+    {
+     "kreamId": "325272",
+     "name": "Levi's",
+     "model": ""
+    },
+    {
+     "kreamId": "852105",
+     "name": "Levi's",
+     "model": "005011484"
+    },
+    {
+     "kreamId": "852097",
+     "name": "Levi's",
+     "model": "501550080"
+    },
+    {
+     "kreamId": "1002846",
+     "name": "Levi's",
+     "model": ""
+    },
+    {
+     "kreamId": "678882",
+     "name": "Rockport",
+     "model": "CJ5031"
+    },
+    {
+     "kreamId": "188367",
+     "name": "자라 레더 슈즈 브라운",
+     "model": "2407/720"
+    },
+    {
+     "kreamId": "310551",
+     "name": "Dr. Martens",
+     "model": "11838201"
+    },
+    {
+     "kreamId": "604490",
+     "name": "하루타 610XL 다크 브라운 남성 엑스트라 라이트 스코치가드 티롤리안 슈즈",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "7266366": {
+   "goodsNo": "7266366",
+   "brand": "나이키",
+   "name": "보메로 프리미엄 M - 화이트:그린 스파크:서밋 화이트:미드나이트 네이비 / HQ2050-102",
+   "serial": "HQ2050-102",
+   "candidates": [
+    {
+     "kreamId": "1010258",
+     "name": "나이키 보메로 프리미엄 화이트 미드나잇 네이비",
+     "model": "HQ2050-102"
+    },
+    {
+     "kreamId": "888200",
+     "name": "나이키 보메로 프리미엄 화이트 토탈 오렌지",
+     "model": "HQ2050-101"
+    },
+    {
+     "kreamId": "800361",
+     "name": "나이키 페가수스 프리미엄 리얼트리 오프 누아르 블랙",
+     "model": "IF9630-001"
+    },
+    {
+     "kreamId": "861714",
+     "name": "나이키 보메로 프리미엄 볼트 틴트 사파이어",
+     "model": "HQ2050-702"
+    },
+    {
+     "kreamId": "970624",
+     "name": "나이키 보메로 프리미엄 오프 화이트 그레이 포그",
+     "model": "HQ2050-104"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1010258",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "5983235": {
+   "goodsNo": "5983235",
+   "brand": "피렌체 아뜨리에",
+   "name": "[SECOND.A Light] 5cm 캐주얼솔 티롤리안슈즈 SL33 [MATT BLACK]",
+   "serial": "SL33",
+   "candidates": [
+    {
+     "kreamId": "1101856",
+     "name": "Saint Laurent",
+     "model": "SL-338-001"
+    },
+    {
+     "kreamId": "1122468",
+     "name": "Parajumpers",
+     "model": "26WMPWPUSL330131"
+    },
+    {
+     "kreamId": "1122476",
+     "name": "Parajumpers",
+     "model": "26WMPWPUSL330541"
+    },
+    {
+     "kreamId": "943909",
+     "name": "Gucci Vintage",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "6653235": {
+   "goodsNo": "6653235",
+   "brand": "아디다스",
+   "name": "도쿄 - 화이트:나이트인디고 / KJ7534",
+   "serial": "KJ7534",
+   "candidates": [
+    {
+     "kreamId": "982176",
+     "name": "Adidas",
+     "model": "KJ7534"
+    },
+    {
+     "kreamId": "109784",
+     "name": "Adidas",
+     "model": "ID4852"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "982176",
+     "confidence": 0.99,
+     "seconds": 2.7
+    }
+   }
+  },
+  "6098215": {
+   "goodsNo": "6098215",
+   "brand": "마크모크",
+   "name": "Kkotci 꽃씨 베이직 리본 쿠션 플랫_15colors",
+   "serial": "Kkotci",
+   "candidates": [
+    {
+     "kreamId": "1051343",
+     "name": "Apple Refurbished",
+     "model": ""
+    },
+    {
+     "kreamId": "184522",
+     "name": "나이키 KD 15 커뮤니티 나피사 콜리어 멀티 컬러",
+     "model": "DV1682-900"
+    },
+    {
+     "kreamId": "14686",
+     "name": "나이키 르브론 15 멀티컬러",
+     "model": "897648-901"
+    },
+    {
+     "kreamId": "295590",
+     "name": "Pleats Please Issey Miyake",
+     "model": "PP46-JH126-15"
+    },
+    {
+     "kreamId": "919893",
+     "name": "Medicube",
+     "model": ""
+    },
+    {
+     "kreamId": "813798",
+     "name": "레이즈미야 아오이 리본 발레 셔링 티 포슬린 핑크",
+     "model": ""
+    },
+    {
+     "kreamId": "698481",
+     "name": "Flower Knows",
+     "model": ""
+    },
+    {
+     "kreamId": "880506",
+     "name": "Skater",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.6
+    }
+   }
+  },
+  "7249959": {
+   "goodsNo": "7249959",
+   "brand": "킨치",
+   "name": "TYPE2 - 808(a)",
+   "serial": "BFKCDB08",
+   "candidates": [
+    {
+     "kreamId": "1046787",
+     "name": "Rockport",
+     "model": "CI2360"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "model": "CI1360"
+    },
+    {
+     "kreamId": "858583",
+     "name": "Rockport",
+     "model": "M76444"
+    },
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "430579",
+     "name": "조셉트 시메온 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "219037",
+     "name": "Kinchi",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "430579",
+     "confidence": 0.88,
+     "seconds": 3.3
+    }
+   },
+   "review": {
+    "label": "not",
+    "kreamId": "430579",
+    "note": "브랜드가 다름(킨치 / 조셉트)"
+   }
+  },
+  "5960953": {
+   "goodsNo": "5960953",
+   "brand": "뉴발란스",
+   "name": "NBPQGF701K / 워킹 1880 V2 (2E) (BLACK)",
+   "serial": "NBPQGF701K_19",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "471738",
+     "name": "New Balance",
+     "model": "SD2202BK2"
+    },
+    {
+     "kreamId": "366002",
+     "name": "New Balance",
+     "model": "SD2203BK"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.1
+    }
+   }
+  },
+  "6937839": {
+   "goodsNo": "6937839",
+   "brand": "야세",
+   "name": "[EXTRALIGHT] 해머 홀스하이드 코만도솔 보트슈즈 블랙",
+   "serial": "PPR02BK",
+   "candidates": [
+    {
+     "kreamId": "241656",
+     "name": "이스트팩 어센틱 패디드 파커 백팩 블랙",
+     "model": "EK000620-008"
+    },
+    {
+     "kreamId": "432260",
+     "name": "One Piece TCG",
+     "model": ""
+    },
+    {
+     "kreamId": "799335",
+     "name": "One Piece TCG",
+     "model": "PRB-02"
+    },
+    {
+     "kreamId": "911682",
+     "name": "One Piece TCG",
+     "model": "PRB02-017-SR-P"
+    },
+    {
+     "kreamId": "288371",
+     "name": "조셉트 사이먼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "438401",
+     "name": "야세 머드 홀스하이드 더비 블랙",
+     "model": "Y35DHBK"
+    },
+    {
+     "kreamId": "305612",
+     "name": "Timberland",
+     "model": "TB030003214"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 2.3
+    }
+   }
+  },
+  "706935": {
+   "goodsNo": "706935",
+   "brand": "닥터마틴",
+   "name": "1461 3홀 빈티지브라운 / 11838201",
+   "serial": "11838201",
+   "candidates": [
+    {
+     "kreamId": "310551",
+     "name": "Dr. Martens",
+     "model": "11838201"
+    },
+    {
+     "kreamId": "1002156",
+     "name": "Dr. Martens",
+     "model": "11838601"
+    },
+    {
+     "kreamId": "770329",
+     "name": "Dr. Martens",
+     "model": "42397200"
+    },
+    {
+     "kreamId": "532285",
+     "name": "Dr. Martens",
+     "model": "11838600"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "310551",
+     "confidence": 0.99,
+     "seconds": 2.4
+    }
+   }
+  },
+  "5484356": {
+   "goodsNo": "5484356",
+   "brand": "닥터마틴",
+   "name": "1461 화이트스티치 - 블랙 / 24757001",
+   "serial": "24757001",
+   "candidates": [
+    {
+     "kreamId": "266622",
+     "name": "Dr. Martens",
+     "model": "24757001"
+    },
+    {
+     "kreamId": "427774",
+     "name": "Dr. Martens",
+     "model": "41100001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "266622",
+     "confidence": 0.99,
+     "seconds": 2.0
+    }
+   }
+  },
+  "4397345": {
+   "goodsNo": "4397345",
+   "brand": "팀버랜드",
+   "name": "남성 클래식 6인치 워터프루프 워커부츠 블랙_TB1190390011",
+   "serial": "TB1190390011",
+   "candidates": [
+    {
+     "kreamId": "18871",
+     "name": "Timberland",
+     "model": "TB010061713/TB110061713"
+    },
+    {
+     "kreamId": "280739",
+     "name": "Timberland",
+     "model": "TB010061713/TB110061713"
+    },
+    {
+     "kreamId": "404973",
+     "name": "Timberland",
+     "model": "TB1A27TP231"
+    },
+    {
+     "kreamId": "173149",
+     "name": "Timberland",
+     "model": "TB010073001/TB110073001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "173149",
+     "confidence": 0.84,
+     "seconds": 3.2
+    }
+   },
+   "review": {
+    "label": "not",
+    "kreamId": "173149",
+    "note": "모델번호 계열이 다름(19039 / 10073)"
+   }
+  },
+  "3633613": {
+   "goodsNo": "3633613",
+   "brand": "식스핏",
+   "name": "[오정규 x 식스핏] [특수가죽 +5cm] NORM DERBY 더비",
+   "serial": "NORM",
+   "candidates": [
+    {
+     "kreamId": "530230",
+     "name": "노다 마인드스케이프 티셔츠 미네랄 신더",
+     "model": ""
+    },
+    {
+     "kreamId": "169525",
+     "name": "CDG x 노스페이스 놈 햇 블랙",
+     "model": "NF0A86KYJK3"
+    },
+    {
+     "kreamId": "760171",
+     "name": "Diesel",
+     "model": "A204460BKBW-900"
+    },
+    {
+     "kreamId": "760161",
+     "name": "Diesel",
+     "model": "A204470BKBW-900"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 1.5
+    }
+   }
+  },
+  "3892794": {
+   "goodsNo": "3892794",
+   "brand": "휠라",
+   "name": "에샤페 실버문(1XM02348H063)",
+   "serial": "11001XM02348H063",
+   "candidates": [
+    {
+     "kreamId": "880876",
+     "name": "휠라 x 에이알씨 플로트 TR9 2.0 블랙",
+     "model": "1100FS261RU02X048001"
+    },
+    {
+     "kreamId": "792199",
+     "name": "[5% 적립] 휠라 에샤페 MS 그레이",
+     "model": ""
+    },
+    {
+     "kreamId": "792216",
+     "name": "[5% 적립] 휠라 에샤페 LX v2 브라운",
+     "model": ""
+    },
+    {
+     "kreamId": "788687",
+     "name": "[5% 적립] 휠라 하레핀 1998 크림",
+     "model": ""
+    },
+    {
+     "kreamId": "247965",
+     "name": "휠라 에샤페 MS 실버 문",
+     "model": "1XM02348G063/1XM02348H063/FS261OD03X040063"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "247965",
+     "confidence": 0.96,
+     "seconds": 2.8
+    }
+   }
+  },
+  "6002026": {
+   "goodsNo": "6002026",
+   "brand": "푸마",
+   "name": "스피드캣 OG -쉐도우그레이:블랙 / 398846-64",
+   "serial": "398846-64",
+   "candidates": [
+    {
+     "kreamId": "830777",
+     "name": "푸마 스피드캣 OG 쉐도우 그레이 푸마 블랙",
+     "model": "398846-64"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "830777",
+     "confidence": 0.99,
+     "seconds": 1.8
+    }
+   }
+  },
+  "2091749": {
+   "goodsNo": "2091749",
+   "brand": "위더로드",
+   "name": "WTRD1203 클리프 스퀘어토 4홀 더비슈즈 블랙 [230~290MM]",
+   "serial": "WTRD1203",
+   "candidates": [
+    {
+     "kreamId": "1046411",
+     "name": "아식스 젤 벤트엑스 블랙 캐리어 그레이",
+     "model": "1203B040-002"
+    },
+    {
+     "kreamId": "1037623",
+     "name": "아식스 젤 키네틱 FR 블랙 퓨어 실버",
+     "model": "1203B051-001"
+    },
+    {
+     "kreamId": "958356",
+     "name": "아식스 x 스튜디오 니콜슨 젤 키네틱 SP 블랙 브라운",
+     "model": "1203B064-201"
+    },
+    {
+     "kreamId": "40814",
+     "name": "아식스 조그 100 T 블랙 - 4E 엑스트라 와이드",
+     "model": "1021A463-001"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "864124",
+     "name": "요위 우토 블랙 매트",
+     "model": ""
+    },
+    {
+     "kreamId": "866417",
+     "name": "요위 우온 블랙 매트",
+     "model": ""
+    },
+    {
+     "kreamId": "1046787",
+     "name": "Rockport",
+     "model": "CI2360"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.6
+    }
+   }
+  },
+  "6819736": {
+   "goodsNo": "6819736",
+   "brand": "푸마",
+   "name": "벨로시티 나이트로 5 - 푸마 화이트-울트라 레드 / 312944-05",
+   "serial": "312944-05",
+   "candidates": [
+    {
+     "kreamId": "1018202",
+     "name": "푸마 벨로시티 나이트로 5 화이트 울트라 레드",
+     "model": "312944-05"
+    },
+    {
+     "kreamId": "1019155",
+     "name": "(W) 푸마 벨로시티 나이트로 5 화이트 울트라 레드",
+     "model": "312945-05"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1018202",
+     "confidence": 0.99,
+     "seconds": 1.8
+    }
+   }
+  },
+  "6078106": {
+   "goodsNo": "6078106",
+   "brand": "로맨틱무브",
+   "name": "러그 더비 R26H920 / 홀스레더블랙",
+   "serial": "R26H920HSL",
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "model": "CJ2598"
+    },
+    {
+     "kreamId": "194611",
+     "name": "하루타 페니 로퍼 블랙",
+     "model": "HS-6550"
+    },
+    {
+     "kreamId": "995939",
+     "name": "조셉트 알리스 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "858583",
+     "name": "Rockport",
+     "model": "M76444"
+    },
+    {
+     "kreamId": "288371",
+     "name": "조셉트 사이먼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "687616",
+     "name": "조셉트 벨 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   }
+  },
+  "6711019": {
+   "goodsNo": "6711019",
+   "brand": "푸마",
+   "name": "디비에이트 나이트로 4 푸마 x 하이록스 - 인텐스 민트:라이트 라벤더 / 314155-01",
+   "serial": "314155-01",
+   "candidates": [
+    {
+     "kreamId": "974185",
+     "name": "푸마 x 하이록스 디비에이트 나이트로 4 인텐스 민트 라이트 라벤더",
+     "model": "314155-01"
+    },
+    {
+     "kreamId": "974104",
+     "name": "푸마 x 하이록스 디비에이트 나이트로 엘리트 4 인텐스 민트 라이트 라벤더",
+     "model": "314156-01"
+    },
+    {
+     "kreamId": "973833",
+     "name": "(W) 푸마 x 하이록스 디비에이트 나이트로 엘리트 4 인텐스 민트 라이트 라벤더",
+     "model": "314157-01"
+    },
+    {
+     "kreamId": "974202",
+     "name": "(W) 푸마 x 하이록스 디비에이트 나이트로 4 인텐스 민트 라이트 라벤더",
+     "model": "314154-01"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "974185",
+     "confidence": 0.99,
+     "seconds": 1.8
+    }
+   }
+  },
+  "6839079": {
+   "goodsNo": "6839079",
+   "brand": "아디다스",
+   "name": "삼바 OG - 블랙 / KZ6720",
+   "serial": "KZ6720",
+   "candidates": [
+    {
+     "kreamId": "1000435",
+     "name": "Adidas",
+     "model": "KZ6720"
+    },
+    {
+     "kreamId": "15248",
+     "name": "Adidas",
+     "model": "B75807"
+    },
+    {
+     "kreamId": "672069",
+     "name": "Adidas",
+     "model": "JR0887"
+    },
+    {
+     "kreamId": "418794",
+     "name": "Adidas",
+     "model": "JI4647"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1000435",
+     "confidence": 0.99,
+     "seconds": 2.5
+    }
+   }
+  },
+  "5042960": {
+   "goodsNo": "5042960",
+   "brand": "아디다스",
+   "name": "아디제로 EVO SL W - 화이트:블랙 / JH6208",
+   "serial": "JH6208",
+   "candidates": [
+    {
+     "kreamId": "363694",
+     "name": "Adidas",
+     "model": "JH6208"
+    },
+    {
+     "kreamId": "894490",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "898556",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "1019046",
+     "name": "Adidas",
+     "model": "KZ9023"
+    },
+    {
+     "kreamId": "831893",
+     "name": "Adidas",
+     "model": "KI4782"
+    },
+    {
+     "kreamId": "1006148",
+     "name": "Adidas",
+     "model": "KI4796"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "363694",
+     "confidence": 0.99,
+     "seconds": 2.5
+    }
+   }
+  },
+  "7284481": {
+   "goodsNo": "7284481",
+   "brand": "나이키",
+   "name": "에어 조던 1 브루클린 로우 W - 스완:메탈릭 실버:블랙 / IQ4927-100",
+   "serial": "IQ4927-100",
+   "candidates": [
+    {
+     "kreamId": "1103818",
+     "name": "Jordan",
+     "model": "IQ4927-100"
+    },
+    {
+     "kreamId": "624563",
+     "name": "Jordan",
+     "model": "HF3184-001"
+    },
+    {
+     "kreamId": "624875",
+     "name": "Jordan",
+     "model": "HF3184-002"
+    },
+    {
+     "kreamId": "1103819",
+     "name": "Jordan",
+     "model": "IQ4927-001"
+    },
+    {
+     "kreamId": "1048677",
+     "name": "나이키 에어포스 1 로우 럭스 블랙 메탈릭 실버",
+     "model": "JA3822-010"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1103818",
+     "confidence": 0.99,
+     "seconds": 2.6
+    }
+   }
+  },
+  "5364463": {
+   "goodsNo": "5364463",
+   "brand": "닥터마틴",
+   "name": "테마라 로퍼 - 블랙 폴리시드 스무스 / 41359001",
+   "serial": "41359001",
+   "candidates": [
+    {
+     "kreamId": "627206",
+     "name": "Dr. Martens",
+     "model": "41359001"
+    },
+    {
+     "kreamId": "396021",
+     "name": "Dr. Martens",
+     "model": "14573001"
+    },
+    {
+     "kreamId": "411426",
+     "name": "Dr. Martens",
+     "model": "31858001"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "627206",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "6046407": {
+   "goodsNo": "6046407",
+   "brand": "아디다스",
+   "name": "아디제로 EVO SL EXO M - 블랙:화이트:아이언메탈릭 / KI4764",
+   "serial": "KI4764",
+   "candidates": [
+    {
+     "kreamId": "814727",
+     "name": "Adidas",
+     "model": "KI4764"
+    },
+    {
+     "kreamId": "744687",
+     "name": "Adidas",
+     "model": "KK2683"
+    },
+    {
+     "kreamId": "543281",
+     "name": "Adidas",
+     "model": "JR4888"
+    },
+    {
+     "kreamId": "1052944",
+     "name": "Adidas",
+     "model": "KJ0774"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "814727",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "7238240": {
+   "goodsNo": "7238240",
+   "brand": "휠라",
+   "name": "하레핀 98/26 PRM(FS263OD03X082218)",
+   "serial": "1100FS263OD03X082218",
+   "candidates": [
+    {
+     "kreamId": "1076057",
+     "name": "[5% 적립] 휠라 하레핀 98/26 PRM 브라운",
+     "model": ""
+    },
+    {
+     "kreamId": "1065791",
+     "name": "휠라 하레핀 98/26 PRM 브라운",
+     "model": "FS263OD03X082218"
+    },
+    {
+     "kreamId": "464559",
+     "name": "휠라 판테라 99/25 블랙 실버",
+     "model": "1RM02946H010"
+    },
+    {
+     "kreamId": "1009606",
+     "name": "(W) 휠라 글리오 LX 에스프레소",
+     "model": "FS263OD03X078217"
+    },
+    {
+     "kreamId": "343618",
+     "name": "휠라 에샤페 초코",
+     "model": "1XM02361G200/1XM02361H200"
+    },
+    {
+     "kreamId": "813652",
+     "name": "휠라 하레핀 1998 화이트 블랙",
+     "model": "FS261OD03X095100"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1065791",
+     "confidence": 0.99,
+     "seconds": 2.7
+    }
+   }
+  },
+  "3347848": {
+   "goodsNo": "3347848",
+   "brand": "르무통",
+   "name": "메이트 블랙",
+   "serial": "5009530523",
+   "candidates": [
+    {
+     "kreamId": "935744",
+     "name": "Paraboot",
+     "model": "781031"
+    },
+    {
+     "kreamId": "150413",
+     "name": "Paraboot",
+     "model": "780001/781001"
+    },
+    {
+     "kreamId": "757865",
+     "name": "Timberland",
+     "model": "TB0A2JU5AAM"
+    },
+    {
+     "kreamId": "1096022",
+     "name": "티엔지티 x 로맨틱무브 세미 스퀘어 토 스웨이드 첼시 부츠 브라운",
+     "model": ""
+    },
+    {
+     "kreamId": "430917",
+     "name": "푸마 퓨쳐 8 얼티메이트 MG 블랙 화이트",
+     "model": "108359-01"
+    },
+    {
+     "kreamId": "129586",
+     "name": "Island Slipper",
+     "model": "PT203SL"
+    },
+    {
+     "kreamId": "1021304",
+     "name": "푸마 울트라 나이트로 7 얼티메이트 MG 울트라 레드 블랙",
+     "model": "109228-01"
+    },
+    {
+     "kreamId": "398609",
+     "name": "LeMouton",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "398609",
+     "confidence": 0.99,
+     "seconds": 2.1
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "398609",
+    "note": "메이트 블랙, 형태·색상 일치"
+   }
+  },
+  "6768863": {
+   "goodsNo": "6768863",
+   "brand": "푸마",
+   "name": "스피드캣 - 버터크림:초콜렛퐁듀 / 406329-83",
+   "serial": "406329-83",
+   "candidates": [
+    {
+     "kreamId": "1030461",
+     "name": "푸마 스피드캣 버터크림 초콜릿 퐁듀",
+     "model": "406329-83"
+    },
+    {
+     "kreamId": "1119489",
+     "name": "(W) 푸마 x 로제 스피드캣 VTG 버건디 오베르진",
+     "model": "410911-01"
+    },
+    {
+     "kreamId": "862891",
+     "name": "푸마 슬립캣 블랙",
+     "model": "406357-03"
+    },
+    {
+     "kreamId": "108989",
+     "name": "264,000원",
+     "model": "380173-01"
+    },
+    {
+     "kreamId": "1026873",
+     "name": "124,000원",
+     "model": "407673-02"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1030461",
+     "confidence": 0.99,
+     "seconds": 2.5
+    }
+   }
+  },
+  "4886035": {
+   "goodsNo": "4886035",
+   "brand": "아디다스",
+   "name": "슈퍼스타 II - 블랙 / JI0081",
+   "serial": "JI0081",
+   "candidates": [
+    {
+     "kreamId": "406042",
+     "name": "Adidas",
+     "model": "JI0081"
+    },
+    {
+     "kreamId": "327818",
+     "name": "디제이아이 트랜스미션 콤보",
+     "model": ""
+    },
+    {
+     "kreamId": "406041",
+     "name": "Adidas",
+     "model": "JI0079"
+    },
+    {
+     "kreamId": "486881",
+     "name": "Adidas",
+     "model": "JH7696"
+    },
+    {
+     "kreamId": "417188",
+     "name": "Adidas",
+     "model": "JH9977"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "406042",
+     "confidence": 0.99,
+     "seconds": 2.6
+    }
+   }
+  },
+  "2741233": {
+   "goodsNo": "2741233",
+   "brand": "리복",
+   "name": "클럽 C 85 빈티지 - 크림 / DV6434",
+   "serial": "RXSOXXCVUE1",
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "697962",
+     "name": "Customellow",
+     "model": ""
+    },
+    {
+     "kreamId": "985762",
+     "name": "자라 레더 로퍼 블랙",
+     "model": "2653/720/800"
+    },
+    {
+     "kreamId": "53196",
+     "name": "Reebok",
+     "model": "DV6434/100000317"
+    },
+    {
+     "kreamId": "1120895",
+     "name": "Reebok",
+     "model": "DV6434/RESO6ECP1E2"
+    },
+    {
+     "kreamId": "866745",
+     "name": "Reebok",
+     "model": "100000317"
+    },
+    {
+     "kreamId": "1108357",
+     "name": "Reebok",
+     "model": "RESO6F014CR"
+    },
+    {
+     "kreamId": "678621",
+     "name": "Reebok",
+     "model": "ID9262/100033000"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "53196",
+     "confidence": 0.95,
+     "seconds": 2.9
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "53196",
+    "note": "클럽 C 85 빈티지, 상품명 속 DV6434 일치"
+   }
+  },
+  "5327113": {
+   "goodsNo": "5327113",
+   "brand": "오클리",
+   "name": "(공용) 라이트 브리드 스니커 - 블랙:아크틱 화이트 / FOF1005889X9",
+   "serial": "FOF1005889X9",
+   "candidates": [
+    {
+     "kreamId": "307739",
+     "name": "Oakley",
+     "model": "FOF100588-9X9"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "354406",
+     "name": "Tretorn",
+     "model": ""
+    },
+    {
+     "kreamId": "1046787",
+     "name": "Rockport",
+     "model": "CI2360"
+    },
+    {
+     "kreamId": "92376",
+     "name": "Merrell",
+     "model": "J004565"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "307739",
+     "confidence": 0.99,
+     "seconds": 2.5
+    }
+   }
+  },
+  "6105243": {
+   "goodsNo": "6105243",
+   "brand": "아디다스",
+   "name": "몬트리올 - 블랙:카본 / IH7249",
+   "serial": "IH7249",
+   "candidates": [
+    {
+     "kreamId": "449773",
+     "name": "Adidas",
+     "model": "JI3231"
+    },
+    {
+     "kreamId": "907961",
+     "name": "Adidas",
+     "model": "KI4762"
+    },
+    {
+     "kreamId": "301609",
+     "name": "Adidas",
+     "model": "IF9403"
+    },
+    {
+     "kreamId": "246075",
+     "name": "Adidas",
+     "model": "IF8768"
+    },
+    {
+     "kreamId": "754799",
+     "name": "Adidas",
+     "model": "IH9120"
+    },
+    {
+     "kreamId": "569990",
+     "name": "Puma V-S1 블랙",
+     "model": "402951-08"
+    },
+    {
+     "kreamId": "600371",
+     "name": "Pemont",
+     "model": ""
+    },
+    {
+     "kreamId": "1057523",
+     "name": "Adidas",
+     "model": "KZ6834"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 2.3
+    }
+   }
+  },
+  "4466918": {
+   "goodsNo": "4466918",
+   "brand": "야세",
+   "name": "우든 홀스하이드 더비 슈즈 브라운",
+   "serial": "SL0015HBR",
+   "candidates": [
+    {
+     "kreamId": "381662",
+     "name": "야세 우든 홀스하이드 더비 슈즈 브라운",
+     "model": "SL0015HBR"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "381662",
+     "confidence": 0.98,
+     "seconds": 2.1
+    }
+   }
+  },
+  "4723317": {
+   "goodsNo": "4723317",
+   "brand": "나이키",
+   "name": "리액트X 리주버네이트 M - 블랙 / HV5060-001",
+   "serial": "HV5060-001",
+   "candidates": [
+    {
+     "kreamId": "465724",
+     "name": "나이키 리액트X 리주버네이트 트리플 블랙",
+     "model": "HV5060-001"
+    },
+    {
+     "kreamId": "507578",
+     "name": "나이키 리액트X 리주버네이트 슬라이드 블랙",
+     "model": "HV4479-001"
+    },
+    {
+     "kreamId": "465731",
+     "name": "나이키 리액트X 리주버네이트 라이트 오어우드 브라운",
+     "model": "HV5060-100"
+    },
+    {
+     "kreamId": "472839",
+     "name": "(W) 나이키 리액트X 리주버네이트 블랙",
+     "model": "HV5062-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "465724",
+     "confidence": 0.99,
+     "seconds": 2.0
+    }
+   }
+  },
+  "6928389": {
+   "goodsNo": "6928389",
+   "brand": "아식스",
+   "name": "젤 님버스 10.1 - 블랙:퓨어 실버 / 1203A820-001",
+   "serial": "1203A820-001",
+   "candidates": [
+    {
+     "kreamId": "485748",
+     "name": "아식스 젤 님버스 10.1 블랙 퓨어 실버 - 한국 한정",
+     "model": "1203A820-001"
+    },
+    {
+     "kreamId": "531964",
+     "name": "아식스 x 키스 젤 님버스 10.1 블랙 퓨어 실버",
+     "model": "1203A844-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "485748",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "3983703": {
+   "goodsNo": "3983703",
+   "brand": "킨",
+   "name": "재스퍼 락 스니커즈 Taupe Evergreen",
+   "serial": "KNSO4EF13I1",
+   "candidates": [
+    {
+     "kreamId": "98758",
+     "name": "킨 재스퍼 스웨이드 스니커즈 블랙",
+     "model": "1026592"
+    },
+    {
+     "kreamId": "98754",
+     "name": "킨 재스퍼 스웨이드 스니커즈 실버 밍크",
+     "model": "1002672"
+    },
+    {
+     "kreamId": "335212",
+     "name": "킨 재스퍼 락스 SP 스니커즈 버치 블랙",
+     "model": "1030055"
+    },
+    {
+     "kreamId": "1055791",
+     "name": "251,000원",
+     "model": "1032844"
+    },
+    {
+     "kreamId": "810399",
+     "name": "킨 재스퍼 락스 스니커즈 블랙 브론즈 브라운",
+     "model": "1032229"
+    },
+    {
+     "kreamId": "374256",
+     "name": "킨 X THC 재스퍼 나이트타임 페이즐리 블랙",
+     "model": "1027712"
+    },
+    {
+     "kreamId": "98650",
+     "name": "112,000원",
+     "model": "1027425"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.96,
+     "seconds": 3.1
+    }
+   }
+  },
+  "6794268": {
+   "goodsNo": "6794268",
+   "brand": "뉴발란스",
+   "name": "NBPDGF704W / U1906980 (WHITE)",
+   "serial": "NBPDGF704W_10",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "1119064",
+     "name": "New Balance",
+     "model": "MT10O6L5"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "615791",
+     "name": "New Balance",
+     "model": "U1906RNB"
+    },
+    {
+     "kreamId": "999369",
+     "name": "New Balance",
+     "model": "U1906980"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "999369",
+     "confidence": 0.98,
+     "seconds": 2.3
+    }
+   }
+  },
+  "6744497": {
+   "goodsNo": "6744497",
+   "brand": "써코니",
+   "name": "(여성) 엔돌핀 아주라 - 토르트 / S101348-1005",
+   "serial": "S101348-1005",
+   "candidates": [
+    {
+     "kreamId": "993307",
+     "name": "Saucony",
+     "model": "S101348-1005"
+    },
+    {
+     "kreamId": "807636",
+     "name": "Saucony",
+     "model": "S21070-141"
+    },
+    {
+     "kreamId": "992992",
+     "name": "Saucony",
+     "model": "S101329-1041"
+    },
+    {
+     "kreamId": "1117514",
+     "name": "Saucony",
+     "model": "S101329-1014"
+    },
+    {
+     "kreamId": "1059071",
+     "name": "Saucony",
+     "model": "S101098-1024"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "993307",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "3409664": {
+   "goodsNo": "3409664",
+   "brand": "오니츠카타이거",
+   "name": "멕시코 66 1183C102_002",
+   "serial": "1183C102_002",
+   "candidates": [
+    {
+     "kreamId": "131770",
+     "name": "Onitsuka Tiger",
+     "model": "1183C102-002"
+    },
+    {
+     "kreamId": "99184",
+     "name": "Onitsuka Tiger",
+     "model": "1183C102-751"
+    },
+    {
+     "kreamId": "101161",
+     "name": "Onitsuka Tiger",
+     "model": "1183C102-001"
+    },
+    {
+     "kreamId": "104659",
+     "name": "Onitsuka Tiger",
+     "model": "1183C102-200"
+    },
+    {
+     "kreamId": "813575",
+     "name": "Onitsuka Tiger",
+     "model": "1183B566-022"
+    },
+    {
+     "kreamId": "278899",
+     "name": "Onitsuka Tiger",
+     "model": "1183A360-002"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "131770",
+     "confidence": 0.98,
+     "seconds": 2.9
+    }
+   }
+  },
+  "4394971": {
+   "goodsNo": "4394971",
+   "brand": "네거티브쓰리",
+   "name": "Slouchy Long Boots_Washed Black",
+   "serial": "NT3BDFWBO051BK",
+   "candidates": [
+    {
+     "kreamId": "482720",
+     "name": "The North Face",
+     "model": "NP6NR09A"
+    },
+    {
+     "kreamId": "801634",
+     "name": "The North Face",
+     "model": "NP6NS01J"
+    },
+    {
+     "kreamId": "608893",
+     "name": "스웨이드 워시드 카고 팬츠 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "517260",
+     "name": "Undermycar",
+     "model": ""
+    },
+    {
+     "kreamId": "347658",
+     "name": "네거티브쓰리 슬라우치 롱부츠 워시드 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "951007",
+     "name": "네거티브쓰리 슬러치 롱 부츠 워시드 블랙",
+     "model": "NT3BDFWBO057BK"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "347658",
+     "confidence": 0.96,
+     "seconds": 3.5
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "347658",
+    "note": "슬라우치 롱부츠 워시드 블랙, 상품명 일치"
+   }
+  },
+  "5629616": {
+   "goodsNo": "5629616",
+   "brand": "블랙 퍼플",
+   "name": "러스크 스트랩 슬라우치드 부츠 Rusk Strap Slouched Boots_Black",
+   "serial": "BP25FWSH01_BK",
+   "candidates": [
+    {
+     "kreamId": "817316",
+     "name": "Jillstuart Men's Acc",
+     "model": ""
+    },
+    {
+     "kreamId": "817296",
+     "name": "Jillstuart Men's Acc",
+     "model": ""
+    },
+    {
+     "kreamId": "817286",
+     "name": "Jillstuart Men's Acc",
+     "model": ""
+    },
+    {
+     "kreamId": "1001773",
+     "name": "라코스테 백코트 스니커즈 블랙",
+     "model": "747CMA0005-454"
+    },
+    {
+     "kreamId": "692259",
+     "name": "Haleine",
+     "model": ""
+    },
+    {
+     "kreamId": "349513",
+     "name": "로스트가든 유니폼 필드 부츠 베이지",
+     "model": ""
+    },
+    {
+     "kreamId": "96681",
+     "name": "Hunter",
+     "model": "MFS9016RMA-BLK"
+    },
+    {
+     "kreamId": "226542",
+     "name": "Dr. Martens",
+     "model": "11853001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "6945906": {
+   "goodsNo": "6945906",
+   "brand": "뉴발란스",
+   "name": "NBRJGF710K / 브리즈 / SD2203BB (BLACK)",
+   "serial": "NBRJGF710K_19",
+   "candidates": [
+    {
+     "kreamId": "158833",
+     "name": "New Balance",
+     "model": "SD3305BK"
+    },
+    {
+     "kreamId": "775768",
+     "name": "New Balance",
+     "model": "SD2510BK"
+    },
+    {
+     "kreamId": "523920",
+     "name": "New Balance",
+     "model": "SD2401BK"
+    },
+    {
+     "kreamId": "1081905",
+     "name": "New Balance",
+     "model": "SD2510BR"
+    },
+    {
+     "kreamId": "1052396",
+     "name": "New Balance",
+     "model": "SD2203BB"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1052396",
+     "confidence": 0.99,
+     "seconds": 1.9
+    }
+   }
+  },
+  "5427399": {
+   "goodsNo": "5427399",
+   "brand": "오찌",
+   "name": "[오찌x로파서울] 토피 스웨이드 클로그 OZV5GA149B",
+   "serial": "OZV5GA149B",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "21591",
+     "name": "Adidas",
+     "model": "EE6999"
+    },
+    {
+     "kreamId": "467187",
+     "name": "Adidas",
+     "model": "JQ4110"
+    },
+    {
+     "kreamId": "948761",
+     "name": "Adidas",
+     "model": "KI7980"
+    },
+    {
+     "kreamId": "499626",
+     "name": "Birkenstock",
+     "model": "1028287"
+    },
+    {
+     "kreamId": "415106",
+     "name": "Needles",
+     "model": "OT057"
+    },
+    {
+     "kreamId": "1105483",
+     "name": "크록스 클래식 크래프티드 비건 스웨이드 클로그 블랙",
+     "model": "211930-001"
+    },
+    {
+     "kreamId": "170898",
+     "name": "Island Slipper",
+     "model": "PT205BS"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 3.2
+    }
+   }
+  },
+  "4377720": {
+   "goodsNo": "4377720",
+   "brand": "팀버랜드",
+   "name": "남성 래드포드 워터프루프 워커부츠 블랙_TB1A1JI20011",
+   "serial": "TB1A1JI20011",
+   "candidates": [
+    {
+     "kreamId": "1074208",
+     "name": "Timberland",
+     "model": "TB1A1JI20011"
+    },
+    {
+     "kreamId": "18871",
+     "name": "Timberland",
+     "model": "TB010061713/TB110061713"
+    },
+    {
+     "kreamId": "173149",
+     "name": "Timberland",
+     "model": "TB010073001/TB110073001"
+    },
+    {
+     "kreamId": "404973",
+     "name": "Timberland",
+     "model": "TB1A27TP231"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1074208",
+     "confidence": 0.99,
+     "seconds": 2.2
+    }
+   }
+  },
+  "4463982": {
+   "goodsNo": "4463982",
+   "brand": "크록스",
+   "name": "에코 클로그 - 본/블랙 / 207937-2YJ",
+   "serial": "207937-2YJ",
+   "candidates": [
+    {
+     "kreamId": "114028",
+     "name": "크록스 에코 클로그 본 블랙",
+     "model": "207937-2YJ"
+    },
+    {
+     "kreamId": "899280",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "1061587",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "602803",
+     "name": "크록스 에코 덕 카모 클로그 본 블랙",
+     "model": "211981-2YJ"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "114028",
+     "confidence": 0.99,
+     "seconds": 1.9
+    }
+   }
+  },
+  "3185069": {
+   "goodsNo": "3185069",
+   "brand": "블런드스톤",
+   "name": "ORIGINAL #2036 첼시슬립온_러스틱브라운",
+   "serial": "ORIGINAL-2036",
+   "candidates": [
+    {
+     "kreamId": "253874",
+     "name": "블런드스톤 오리지널 2036 첼시 슬립온 러스틱 브라운",
+     "model": "ORIGINAL-2036"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "253874",
+     "confidence": 0.99,
+     "seconds": 1.7
+    }
+   }
+  },
+  "6337137": {
+   "goodsNo": "6337137",
+   "brand": "푸마",
+   "name": "캐치 솔레일 발레리나 SD PUMA CATCH SOLEIL BALLERINASD (40631001)",
+   "serial": "40631001",
+   "candidates": [
+    {
+     "kreamId": "336131",
+     "name": "Dr. Martens",
+     "model": "31816001"
+    },
+    {
+     "kreamId": "770341",
+     "name": "Dr. Martens",
+     "model": "43033001"
+    },
+    {
+     "kreamId": "771961",
+     "name": "Dr. Martens",
+     "model": "25584001"
+    },
+    {
+     "kreamId": "552107",
+     "name": "Dr. Martens",
+     "model": "40717001"
+    },
+    {
+     "kreamId": "569990",
+     "name": "Puma V-S1 블랙",
+     "model": "402951-08"
+    },
+    {
+     "kreamId": "742001",
+     "name": "(W) 푸마 캐치 솔레일 SD 블랙 화이트",
+     "model": "403955-03"
+    },
+    {
+     "kreamId": "1032796",
+     "name": "(W) 푸마 벨라 미나 스웨이드 스니커즈 블랙",
+     "model": "407671-04"
+    },
+    {
+     "kreamId": "535722",
+     "name": "90,000원",
+     "model": "404383-01"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "uncertain",
+     "kreamId": "",
+     "confidence": 0.86,
+     "seconds": 3.1
+    }
+   }
+  },
+  "6271398": {
+   "goodsNo": "6271398",
+   "brand": "나이키",
+   "name": "보메로 플러스 M - 볼트 틴트:라임 블라스트:사파이어:블랙 스프루스 / HV8150-702",
+   "serial": "HV8150-702",
+   "candidates": [
+    {
+     "kreamId": "888824",
+     "name": "나이키 보메로 플러스 볼트 틴트 라임 블라스트",
+     "model": "HV8150-702"
+    },
+    {
+     "kreamId": "602680",
+     "name": "나이키 보메로 플러스 블랙 메탈릭 다크 그레이",
+     "model": "HV8150-003"
+    },
+    {
+     "kreamId": "771906",
+     "name": "나이키 보메로 플러스 블랙 앤트러사이트",
+     "model": "IO4482-002"
+    },
+    {
+     "kreamId": "970656",
+     "name": "나이키 보메로 플러스 앤트러사이트 브라이트 크림슨",
+     "model": "HV8150-017"
+    },
+    {
+     "kreamId": "895021",
+     "name": "나이키 보메로 플러스 화이트 블랙",
+     "model": "II7181-102"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "888824",
+     "confidence": 0.99,
+     "seconds": 2.4
+    }
+   }
+  },
+  "5839602": {
+   "goodsNo": "5839602",
+   "brand": "스케쳐스",
+   "name": "여성 고런 컨시스턴트 2.0_SP0WRCGX143",
+   "serial": "SP0WRCGX143",
+   "candidates": [
+    {
+     "kreamId": "262393",
+     "name": "Skechers",
+     "model": "220840-BKCC"
+    },
+    {
+     "kreamId": "552684",
+     "name": "Skechers",
+     "model": "220581-BBK"
+    },
+    {
+     "kreamId": "262276",
+     "name": "Skechers",
+     "model": "216641-BBK"
+    },
+    {
+     "kreamId": "262268",
+     "name": "Skechers",
+     "model": "216600-BBK"
+    },
+    {
+     "kreamId": "634477",
+     "name": "Skechers",
+     "model": "216784-BBK"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.98,
+     "seconds": 2.8
+    }
+   }
+  },
+  "7329742": {
+   "goodsNo": "7329742",
+   "brand": "솔레뜨",
+   "name": "Rumble High sneakers BLACK",
+   "serial": "5011530813",
+   "candidates": [
+    {
+     "kreamId": "935744",
+     "name": "Paraboot",
+     "model": "781031"
+    },
+    {
+     "kreamId": "272683",
+     "name": "카시나 x 팀버랜드 3 아이 웨지 비브람 다크 그린",
+     "model": ""
+    },
+    {
+     "kreamId": "508201",
+     "name": "Converse",
+     "model": "A15020C"
+    },
+    {
+     "kreamId": "378301",
+     "name": "자라 볼류메트릭 베이스 로퍼 블랙",
+     "model": "2630/320/800"
+    },
+    {
+     "kreamId": "808680",
+     "name": "GU x 언더커버 하이 탑 스니커즈 블랙",
+     "model": "360224-09"
+    },
+    {
+     "kreamId": "103867",
+     "name": "Balenciaga",
+     "model": "688752W3RC11090"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "523679",
+     "name": "Romantic Move",
+     "model": "R24M018"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "uncertain",
+     "kreamId": "",
+     "confidence": 0.41,
+     "seconds": 3.6
+    }
+   }
+  },
+  "3568935": {
+   "goodsNo": "3568935",
+   "brand": "킨치",
+   "name": "OVATE - 500 (a) / BLACK",
+   "serial": "KNCH500",
+   "candidates": [
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "1046787",
+     "name": "Rockport",
+     "model": "CI2360"
+    },
+    {
+     "kreamId": "864124",
+     "name": "요위 우토 블랙 매트",
+     "model": ""
+    },
+    {
+     "kreamId": "219054",
+     "name": "Kinchi",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.94,
+     "seconds": 3.2
+    }
+   }
+  },
+  "3531673": {
+   "goodsNo": "3531673",
+   "brand": "로맨틱무브",
+   "name": "[삭형x로맨틱무브] 세미 스퀘어토 키높이 첼시부츠 R23M351 (블랙)",
+   "serial": "3M351-BK0",
+   "candidates": [
+    {
+     "kreamId": "944831",
+     "name": "Paul Smith",
+     "model": "M1A-4832-USTRGS-79"
+    },
+    {
+     "kreamId": "119728",
+     "name": "Tom Ford",
+     "model": ""
+    },
+    {
+     "kreamId": "858439",
+     "name": "Rockport",
+     "model": "CJ2594"
+    },
+    {
+     "kreamId": "991834",
+     "name": "Rockport",
+     "model": "CH1232"
+    },
+    {
+     "kreamId": "381638",
+     "name": "Romantic Move",
+     "model": "R23M351"
+    },
+    {
+     "kreamId": "226542",
+     "name": "Dr. Martens",
+     "model": "11853001"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "692259",
+     "name": "Haleine",
+     "model": ""
+    },
+    {
+     "kreamId": "1096022",
+     "name": "티엔지티 x 로맨틱무브 세미 스퀘어 토 스웨이드 첼시 부츠 브라운",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "381638",
+     "confidence": 0.98,
+     "seconds": 2.5
+    }
+   }
+  },
+  "7157395": {
+   "goodsNo": "7157395",
+   "brand": "파스코로젠",
+   "name": "JC1317 Versatile hybrid dress shoe 58.10",
+   "serial": "JC1317",
+   "candidates": [
+    {
+     "kreamId": "800655",
+     "name": "Adidas",
+     "model": "KE1366"
+    },
+    {
+     "kreamId": "641130",
+     "name": "Adidas",
+     "model": "KC2605"
+    },
+    {
+     "kreamId": "453528",
+     "name": "Adidas",
+     "model": "JC6717"
+    },
+    {
+     "kreamId": "453530",
+     "name": "Adidas",
+     "model": "JC6717"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "model": "CJ2598"
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.94,
+     "seconds": 3.8
+    }
+   }
+  },
+  "4454243": {
+   "goodsNo": "4454243",
+   "brand": "나이키",
+   "name": "에어 포스 1 07 W - 카카오 와우:샌드드리프트 / FQ8901-259",
+   "serial": "FQ8901-259",
+   "candidates": [
+    {
+     "kreamId": "179981",
+     "name": "(W) 나이키 에어포스 1 '07 카카오 와우",
+     "model": "FQ8901-259"
+    },
+    {
+     "kreamId": "1090724",
+     "name": "(W) 나이키 에어포스 1 '07 카카오 와우 소프트 펄",
+     "model": "IQ0136-200"
+    },
+    {
+     "kreamId": "218059",
+     "name": "나이키 에어포스 1 '07 카카오 와우 코코넛 밀크",
+     "model": "FZ3592-259"
+    },
+    {
+     "kreamId": "907463",
+     "name": "나이키 에어포스 1 '07 LV8 바로크 브라운",
+     "model": "IU2363-200"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "179981",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "6711021": {
+   "goodsNo": "6711021",
+   "brand": "푸마",
+   "name": "디비에이트 나이트로 엘리트 4 푸마 x 하이록스 여성용 - 인텐스 민트:라이트 라벤더 / 314157-01",
+   "serial": "314157-01",
+   "candidates": [
+    {
+     "kreamId": "973833",
+     "name": "(W) 푸마 x 하이록스 디비에이트 나이트로 엘리트 4 인텐스 민트 라이트 라벤더",
+     "model": "314157-01"
+    },
+    {
+     "kreamId": "811375",
+     "name": "푸마 디비에이트 나이트로 4 와이드 블랙 플랫 다크 그레이",
+     "model": "312901-02"
+    },
+    {
+     "kreamId": "960524",
+     "name": "푸마 디비에이트 나이트로 4 울트라 레드 푸마 실버",
+     "model": "312123-19"
+    },
+    {
+     "kreamId": "982157",
+     "name": "푸마 디비에이트 나이트로 4 슬레이트 스카이 무디 그레이",
+     "model": "312123-30"
+    },
+    {
+     "kreamId": "677308",
+     "name": "푸마 디비에이트 나이트로 엘리트 트레일 LS 블랙 실버",
+     "model": "313532-02"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "973833",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "3417694": {
+   "goodsNo": "3417694",
+   "brand": "킨치",
+   "name": "GRAINY - 647 (a) VIBRAM",
+   "serial": "KNCH547V",
+   "candidates": [
+    {
+     "kreamId": "219037",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "401645",
+     "name": "Reebok",
+     "model": "100220304"
+    },
+    {
+     "kreamId": "640612",
+     "name": "Carhartt WIP",
+     "model": "I035398-33H-XX"
+    },
+    {
+     "kreamId": "1076576",
+     "name": "위캔더스 x 챔피온 클래식 하프집 스웨터 네이비",
+     "model": "WS2604KN01NV"
+    },
+    {
+     "kreamId": "395697",
+     "name": "Vibram Fivefingers",
+     "model": "14M0701"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "697962",
+     "name": "Customellow",
+     "model": ""
+    },
+    {
+     "kreamId": "858583",
+     "name": "Rockport",
+     "model": "M76444"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.96,
+     "seconds": 3.3
+    }
+   }
+  },
+  "4489783": {
+   "goodsNo": "4489783",
+   "brand": "락피쉬웨더웨어",
+   "name": "MAXI FOLDED BOOTS MIDDLE(10inch) - 3 colors",
+   "serial": "RF1SHBF3UG007",
+   "candidates": [
+    {
+     "kreamId": "689323",
+     "name": "Rockfishweatherwear",
+     "model": "RF1SHBF3UG007"
+    },
+    {
+     "kreamId": "689319",
+     "name": "Rockfishweatherwear",
+     "model": "RF1SHBF3UG007"
+    },
+    {
+     "kreamId": "689321",
+     "name": "Rockfishweatherwear",
+     "model": "RF1SHBF3UG007"
+    },
+    {
+     "kreamId": "640782",
+     "name": "Garmin",
+     "model": ""
+    },
+    {
+     "kreamId": "789476",
+     "name": "Tanglewood",
+     "model": ""
+    },
+    {
+     "kreamId": "789520",
+     "name": "Tanglewood",
+     "model": ""
+    },
+    {
+     "kreamId": "834621",
+     "name": "Celine Vintage",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "689321",
+     "confidence": 0.98,
+     "seconds": 2.5
+    }
+   },
+   "review": {
+    "label": "same",
+    "kreamId": "689321",
+    "note": "모델번호 일치, 색상별 상품이 같은 모델번호를 써서 자동 확정 불가였던 상품"
+   }
+  },
+  "6842604": {
+   "goodsNo": "6842604",
+   "brand": "나이키",
+   "name": "스프린트 시스터 W - 카카오 와우:세일 / IO8030-201",
+   "serial": "IO8030-201",
+   "candidates": [
+    {
+     "kreamId": "1039943",
+     "name": "(W) 나이키 스프린트 시스터 코카오 와우 세일",
+     "model": "IO8030-201"
+    },
+    {
+     "kreamId": "179981",
+     "name": "(W) 나이키 에어포스 1 '07 카카오 와우",
+     "model": "FQ8901-259"
+    },
+    {
+     "kreamId": "858059",
+     "name": "(W) 나이키 에어포스 1 '07 LV8 리저록 오션 큐브",
+     "model": "IR5690-256"
+    },
+    {
+     "kreamId": "672063",
+     "name": "(W) 나이키 토탈 90 SE 바로크 브라운 오프 누아르",
+     "model": "IM8053-237"
+    },
+    {
+     "kreamId": "513264",
+     "name": "(W) 나이키 에어 리프트 브리드 스트랩 블랙",
+     "model": "IB8881-001"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1039943",
+     "confidence": 0.99,
+     "seconds": 3.0
+    }
+   }
+  },
+  "6747997": {
+   "goodsNo": "6747997",
+   "brand": "스케쳐스",
+   "name": "남성 맥스쿠셔닝 아치핏 2.0(와이드 슬립인스)_SP0MRCGY072",
+   "serial": "SP0MRCGY072",
+   "candidates": [
+    {
+     "kreamId": "262393",
+     "name": "Skechers",
+     "model": "220840-BKCC"
+    },
+    {
+     "kreamId": "552684",
+     "name": "Skechers",
+     "model": "220581-BBK"
+    },
+    {
+     "kreamId": "262276",
+     "name": "Skechers",
+     "model": "216641-BBK"
+    },
+    {
+     "kreamId": "262268",
+     "name": "Skechers",
+     "model": "216600-BBK"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.96,
+     "seconds": 3.0
+    }
+   }
+  },
+  "2682873": {
+   "goodsNo": "2682873",
+   "brand": "오니츠카타이거",
+   "name": "멕시코 66 VIN SD 1183C015_200",
+   "serial": "1183C015_200",
+   "candidates": [
+    {
+     "kreamId": "91060",
+     "name": "Onitsuka Tiger",
+     "model": "1183C015-200"
+    },
+    {
+     "kreamId": "344225",
+     "name": "Onitsuka Tiger",
+     "model": "1183C015-202"
+    },
+    {
+     "kreamId": "91054",
+     "name": "Onitsuka Tiger",
+     "model": "1183C015-101"
+    },
+    {
+     "kreamId": "554564",
+     "name": "Onitsuka Tiger",
+     "model": "1183C015-204"
+    },
+    {
+     "kreamId": "813575",
+     "name": "Onitsuka Tiger",
+     "model": "1183B566-022"
+    },
+    {
+     "kreamId": "1079153",
+     "name": "Onitsuka Tiger",
+     "model": "1183C102-205"
+    },
+    {
+     "kreamId": "216487",
+     "name": "Onitsuka Tiger",
+     "model": "1183B391-251"
+    },
+    {
+     "kreamId": "811279",
+     "name": "Onitsuka Tiger",
+     "model": "1183C555-250"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "91060",
+     "confidence": 0.99,
+     "seconds": 2.1
+    }
+   }
+  },
+  "4328804": {
+   "goodsNo": "4328804",
+   "brand": "휠라",
+   "name": "에샤페 초코(FS261OD03X087219)",
+   "serial": "1100FS261OD03X087219",
+   "candidates": [
+    {
+     "kreamId": "593710",
+     "name": "휠라 에샤페 초코",
+     "model": "FS253OD03X012219/FS261OD03X087219"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "593710",
+     "confidence": 0.99,
+     "seconds": 1.8
+    }
+   }
+  },
+  "7231149": {
+   "goodsNo": "7231149",
+   "brand": "나이키",
+   "name": "에어 포스 1 미드 07 GORE-TEX Vibram® M - 블랙:스모크 그레이:블랙 / IO1875-001",
+   "serial": "IO1875-001",
+   "candidates": [
+    {
+     "kreamId": "1090442",
+     "name": "나이키 에어포스 1 미드 '07 고어텍스 비브람 블랙 스모크 그레이",
+     "model": "IO1875-001"
+    },
+    {
+     "kreamId": "632282",
+     "name": "나이키 에어포스 1 로우 고어텍스 비브람 오프 누아르 앤 블랙",
+     "model": "HV5953-001"
+    },
+    {
+     "kreamId": "36",
+     "name": "나이키 에어포스 1 '07 로우 트리플 블랙",
+     "model": "315122-001/CW2288-001"
+    },
+    {
+     "kreamId": "211237",
+     "name": "나이키 에어포스 1 '07 프로-테크 워터프루프 블랙 클리어",
+     "model": "FB8875-001"
+    },
+    {
+     "kreamId": "6146",
+     "name": "나이키 에어포스 1 미드 '07 화이트",
+     "model": "315123-111/CW2289-111"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1090442",
+     "confidence": 0.99,
+     "seconds": 1.9
+    }
+   }
+  },
+  "6371070": {
+   "goodsNo": "6371070",
+   "brand": "아디다스",
+   "name": "도쿄 - 화이트:블랙 / JQ0597",
+   "serial": "JQ0597",
+   "candidates": [
+    {
+     "kreamId": "789989",
+     "name": "Adidas",
+     "model": "JQ0597"
+    },
+    {
+     "kreamId": "349664",
+     "name": "Adidas",
+     "model": "JI0183"
+    },
+    {
+     "kreamId": "348733",
+     "name": "Adidas",
+     "model": "JI0182"
+    },
+    {
+     "kreamId": "774910",
+     "name": "Y-3 도쿄 블랙 오프 화이트",
+     "model": "KI0884"
+    },
+    {
+     "kreamId": "772486",
+     "name": "Adidas",
+     "model": "JQ0598"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "789989",
+     "confidence": 0.99,
+     "seconds": 2.9
+    }
+   }
+  },
+  "5520375": {
+   "goodsNo": "5520375",
+   "brand": "나이키",
+   "name": "에어 맥스 페노메나 W - 블랙:스모크 그레이:핑크 폼:메탈릭 골드 / IM8814-001",
+   "serial": "IM8814-001",
+   "candidates": [
+    {
+     "kreamId": "632470",
+     "name": "(W) 나이키 에어맥스 페노메나 블랙 스모크 그레이",
+     "model": "IM8814-001"
+    },
+    {
+     "kreamId": "946069",
+     "name": "나이키 에어 맥스 고아돔 로우 SP 블랙",
+     "model": "IR2173-001"
+    },
+    {
+     "kreamId": "150413",
+     "name": "Paraboot",
+     "model": "780001/781001"
+    },
+    {
+     "kreamId": "600371",
+     "name": "Pemont",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "632470",
+     "confidence": 0.98,
+     "seconds": 1.9
+    }
+   }
+  },
+  "2440110": {
+   "goodsNo": "2440110",
+   "brand": "슈펜",
+   "name": "[키높이 6.5cm 추가]유니 레더 독일군 HPMR6GF702",
+   "serial": "745647",
+   "candidates": [
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "model": "CI1360"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "858583",
+     "name": "Rockport",
+     "model": "M76444"
+    },
+    {
+     "kreamId": "565611",
+     "name": "Rockport",
+     "model": "CI9253"
+    },
+    {
+     "kreamId": "1001773",
+     "name": "라코스테 백코트 스니커즈 블랙",
+     "model": "747CMA0005-454"
+    },
+    {
+     "kreamId": "991474",
+     "name": "Adidas",
+     "model": "KH8484"
+    },
+    {
+     "kreamId": "103150",
+     "name": "Reproduction of Found",
+     "model": ""
+    },
+    {
+     "kreamId": "526228",
+     "name": "Adidas",
+     "model": "JQ4040"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.6
+    }
+   }
+  },
+  "6618043": {
+   "goodsNo": "6618043",
+   "brand": "나이키",
+   "name": "보메로 18 SE W - 팬텀:그레이 포그:메탈릭 실버:서밋 화이트 / IM8330-001",
+   "serial": "IM8330-001",
+   "candidates": [
+    {
+     "kreamId": "966348",
+     "name": "(W) 나이키 보메로 18 SE 팬텀 서밋 화이트",
+     "model": "IM8330-001"
+    },
+    {
+     "kreamId": "501037",
+     "name": "나이키 보메로 18 블랙 다크 스모크 그레이",
+     "model": "HM6803-005"
+    },
+    {
+     "kreamId": "561179",
+     "name": "(W) 나이키 보메로 18 블랙 다크 스모크 그레이",
+     "model": "HM6804-004"
+    },
+    {
+     "kreamId": "456380",
+     "name": "나이키 보메로 18 서밋 화이트 코코넛 밀크",
+     "model": "HM6803-101"
+    },
+    {
+     "kreamId": "543232",
+     "name": "(W) 나이키 보메로 18 화이트 포톤 더스트",
+     "model": "HM6804-104"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "966348",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "7276893": {
+   "goodsNo": "7276893",
+   "brand": "뉴발란스",
+   "name": "NBPDGF775F / U204L3W2 (BROWN)",
+   "serial": "NBPDGF775F_85",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "615791",
+     "name": "New Balance",
+     "model": "U1906RNB"
+    },
+    {
+     "kreamId": "489508",
+     "name": "New Balance",
+     "model": "BB480L3B"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    },
+    {
+     "kreamId": "1085804",
+     "name": "New Balance",
+     "model": "U204L3W2"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1085804",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "6967884": {
+   "goodsNo": "6967884",
+   "brand": "뉴발란스",
+   "name": "NBPDGF736S / U7401P5 (SILVER)",
+   "serial": "NBPDGF736S_91",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "28260",
+     "name": "New Balance",
+     "model": "MR530KA"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "1030456",
+     "name": "New Balance",
+     "model": "U7401P5"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1030456",
+     "confidence": 0.98,
+     "seconds": 2.4
+    }
+   }
+  },
+  "6967885": {
+   "goodsNo": "6967885",
+   "brand": "뉴발란스",
+   "name": "NBPDGF712W / U5098Y0 (WHITE)",
+   "serial": "NBPDGF712W_10",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "496016",
+     "name": "New Balance",
+     "model": "U740BO2"
+    },
+    {
+     "kreamId": "1030298",
+     "name": "New Balance",
+     "model": "U5098Y0"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "1030298",
+     "confidence": 0.98,
+     "seconds": 2.0
+    }
+   }
+  },
+  "7049568": {
+   "goodsNo": "7049568",
+   "brand": "네거티브쓰리",
+   "name": "NO.2 Folded lace-up long boots_Vintage Brown",
+   "serial": "NT3BFFWBO001BR",
+   "candidates": [
+    {
+     "kreamId": "597590",
+     "name": "Fossil",
+     "model": ""
+    },
+    {
+     "kreamId": "564214",
+     "name": "Paul Smith",
+     "model": "M1A-4832-TSTRGS-79"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "776314",
+     "name": "조셉트 고반 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "84751",
+     "name": "Clarks Originals",
+     "model": "261-55527"
+    },
+    {
+     "kreamId": "692259",
+     "name": "Haleine",
+     "model": ""
+    },
+    {
+     "kreamId": "106087",
+     "name": "Clarks Originals",
+     "model": "261-55517"
+    },
+    {
+     "kreamId": "126267",
+     "name": "Hunter",
+     "model": "MFS9000RMA-BLK"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.8
+    }
+   }
+  },
+  "5916278": {
+   "goodsNo": "5916278",
+   "brand": "닥터마틴",
+   "name": "버즈 발레리나 레이스 업 - 블랙 / 42842001",
+   "serial": "42842001",
+   "candidates": [
+    {
+     "kreamId": "800266",
+     "name": "Dr. Martens",
+     "model": "42842001"
+    },
+    {
+     "kreamId": "14404",
+     "name": "나이키 에어 베이퍼맥스 플라이니트 2 블랙 화이트",
+     "model": "942842-001"
+    },
+    {
+     "kreamId": "851873",
+     "name": "아포아 아크 플랫슈즈 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "469008",
+     "name": "Dr. Martens",
+     "model": "41060001"
+    },
+    {
+     "kreamId": "1040058",
+     "name": "(W) 자라 스포티 발레리나 슈즈 블랙",
+     "model": "5240/810/800 / 5241/811/800"
+    },
+    {
+     "kreamId": "922846",
+     "name": "Athe Vanessabruno Acc",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "800266",
+     "confidence": 0.99,
+     "seconds": 2.7
+    }
+   }
+  },
+  "5288155": {
+   "goodsNo": "5288155",
+   "brand": "로맨틱무브",
+   "name": "[심시티x로맨틱무브] 오프셋 더비 R25M111 (워싱블랙)",
+   "serial": "R25M111",
+   "candidates": [
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "model": "CI1360"
+    },
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "311841",
+     "name": "Paraboot",
+     "model": "780031"
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "263074",
+     "name": "Kinchi",
+     "model": ""
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "uncertain",
+     "kreamId": "",
+     "confidence": 0.78,
+     "seconds": 3.4
+    }
+   }
+  },
+  "7074663": {
+   "goodsNo": "7074663",
+   "brand": "로맨틱무브",
+   "name": "[피로x로맨틱무브] 레거시 로퍼 R26M910 (오일 다크브라운)",
+   "serial": "R26M910DBR",
+   "candidates": [
+    {
+     "kreamId": "387727",
+     "name": "Rockport",
+     "model": "M76443"
+    },
+    {
+     "kreamId": "334293",
+     "name": "Rockport",
+     "model": "CJ2598"
+    },
+    {
+     "kreamId": "334352",
+     "name": "Rockport",
+     "model": "CI1360"
+    },
+    {
+     "kreamId": "305356",
+     "name": "하루타 HS-906 페니로퍼 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "288433",
+     "name": "조셉트 모건 블랙",
+     "model": ""
+    },
+    {
+     "kreamId": "808126",
+     "name": "Romantic Move",
+     "model": "R25M200"
+    },
+    {
+     "kreamId": "288371",
+     "name": "조셉트 사이먼 블랙",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "5179870": {
+   "goodsNo": "5179870",
+   "brand": "푸마",
+   "name": "스피드캣 프리미엄 - 뉴네이비:실버 / 403902-05",
+   "serial": "403902-05",
+   "candidates": [
+    {
+     "kreamId": "705230",
+     "name": "푸마 스피드캣 프리미엄 네이비 실버",
+     "model": "403902-05"
+    },
+    {
+     "kreamId": "115755",
+     "name": "179,000원",
+     "model": "391964-01"
+    },
+    {
+     "kreamId": "108989",
+     "name": "264,000원",
+     "model": "380173-01"
+    },
+    {
+     "kreamId": "637747",
+     "name": "푸마 에이치-스트리트 OG 쉐도우 그레이 매트 실버",
+     "model": "403692-14"
+    },
+    {
+     "kreamId": "60022",
+     "name": "푸마 베이더런 블랙",
+     "model": "387532-02"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "705230",
+     "confidence": 0.99,
+     "seconds": 1.9
+    }
+   }
+  },
+  "6467153": {
+   "goodsNo": "6467153",
+   "brand": "피노키",
+   "name": "[+4cm] MODIFY(p)",
+   "serial": "BFPNKDB01",
+   "candidates": [
+    {
+     "kreamId": "817806",
+     "name": "Jillstuart Men's Acc",
+     "model": ""
+    },
+    {
+     "kreamId": "564214",
+     "name": "Paul Smith",
+     "model": "M1A-4832-TSTRGS-79"
+    },
+    {
+     "kreamId": "817638",
+     "name": "Jillstuart Men's Acc",
+     "model": ""
+    },
+    {
+     "kreamId": "944831",
+     "name": "Paul Smith",
+     "model": "M1A-4832-USTRGS-79"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "different",
+     "kreamId": "",
+     "confidence": 0.99,
+     "seconds": 2.1
+    }
+   }
+  },
+  "4289228": {
+   "goodsNo": "4289228",
+   "brand": "푸마",
+   "name": "스피드캣 OG - 블랙:모브 미스트 / 398846-09",
+   "serial": "398846-09",
+   "candidates": [
+    {
+     "kreamId": "338430",
+     "name": "81,000원",
+     "model": "398846-09"
+    },
+    {
+     "kreamId": "615688",
+     "name": "(W) 푸마 스피드캣 OG 블랙 모브 미스트",
+     "model": "400986-09"
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "338430",
+     "confidence": 0.99,
+     "seconds": 2.3
+    }
+   }
+  },
+  "4753881": {
+   "goodsNo": "4753881",
+   "brand": "뉴발란스",
+   "name": "NBPDGF787U / WS327KA (BURGUNDY)",
+   "serial": "NBPDGF787U_29",
+   "candidates": [
+    {
+     "kreamId": "44101",
+     "name": "New Balance",
+     "model": "MT410CK5"
+    },
+    {
+     "kreamId": "109117",
+     "name": "New Balance",
+     "model": "W480SK5"
+    },
+    {
+     "kreamId": "615791",
+     "name": "New Balance",
+     "model": "U1906RNB"
+    },
+    {
+     "kreamId": "489508",
+     "name": "New Balance",
+     "model": "BB480L3B"
+    },
+    {
+     "kreamId": "636585",
+     "name": "New Balance",
+     "model": "U509BC"
+    },
+    {
+     "kreamId": "418841",
+     "name": "New Balance",
+     "model": "U740BM2"
+    },
+    {
+     "kreamId": "27537",
+     "name": "New Balance",
+     "model": "WS327KA"
+    },
+    {
+     "kreamId": "1108259",
+     "name": "Seller Week",
+     "model": ""
+    },
+    {
+     "kreamId": "753729",
+     "name": "Seller Week",
+     "model": ""
+    }
+   ],
+   "vlm": {
+    "gpt-5.4-mini-2026-03-17": {
+     "decision": "same",
+     "kreamId": "27537",
+     "confidence": 0.99,
+     "seconds": 2.7
+    }
+   }
+  }
+ }
+}
