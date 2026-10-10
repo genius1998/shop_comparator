@@ -80,6 +80,8 @@ def match_info(match):
         status = "이미지 검토"
     elif method == "model_code" and verified:
         status = "모델번호 일치"
+    elif method == "human_review" and verified:
+        status = "검수 승인"
     elif verified:
         status = "자동 검증"
     else:

@@ -1,6 +1,8 @@
 """Local, single-user web control panel. Run: python main.py"""
+import csv
 import io
 import os
+import re
 import secrets
 import zipfile
 from urllib.parse import urlparse
@@ -13,6 +15,7 @@ from shop_comparator.storage import database
 from shop_comparator.services import exports
 from shop_comparator.services import monitoring
 from shop_comparator.services import pipeline
+from shop_comparator.services import vlm_review
 from shop_comparator.shops import site_login
 from shop_comparator.storage import store
 from shop_comparator.core import webhook
@@ -298,6 +301,15 @@ def create_app(manager=None, monitors=None, auto=None):
             low = _int(data.get("min_total", 0) or 0, "최소 거래건수", 0, 10**9)
             monthly = _int(data.get("min_monthly", 0) or 0, "최소 한달 거래수", 0, 10**9)
             return start(kind, "KREAM 거래량 필터", ["kream"], lambda ctx: pipeline.kream_filter(ids, low, monthly, ctx))
+        if kind == "vlm":
+            ids, mode, force = selection(data), data.get("mode", "stored"), bool(data.get("force"))
+            if mode not in ("stored", "live"):
+                raise ValueError("실행 방식이 올바르지 않습니다.")
+            max_calls = None
+            if mode == "live":       # paid: never without an explicit, bounded call count
+                max_calls = _int(data.get("max_calls"), "최대 호출 수", 1, 500)
+            title = "VLM 검토 (저장된 판정 재생)" if mode == "stored" else f"VLM 검토 (실시간, 최대 {max_calls}회)"
+            return start(kind, title, ["vlm"], lambda ctx: vlm_review.review_products(ids, ctx, mode, max_calls, force))
         if kind in ("poizon", "full_poizon"):
             creds = site_login.vault.get("poizon") or (str(data.get("account") or "").strip(), str(data.get("password") or ""))
             if not creds[0] or not creds[1]:
@@ -316,7 +328,46 @@ def create_app(manager=None, monitors=None, auto=None):
 
     @app.get("/api/jobs/history")
     def history():
-        return jsonify(jobs=store.recent_jobs())
+        rows = store.recent_jobs()
+        for row in rows:
+            row["items"] = store.job_item_summary(row["id"])
+            row["unfinished"] = sum(len(v) for v in pipeline.unfinished(row["id"]).values())
+        return jsonify(jobs=rows)
+
+    @app.get("/api/jobs/<job_id>/items")
+    def job_items(job_id):
+        if not store.job_run(job_id):
+            return jsonify(error="작업을 찾을 수 없습니다."), 404
+        return jsonify(summary=store.job_item_summary(job_id), unfinished=pipeline.unfinished(job_id),
+                       items=[i for i in store.job_items(job_id) if i["state"] != "ok"][:500])
+
+    @app.post("/api/jobs/<job_id>/resume")
+    def job_resume(job_id):
+        """Run only what an earlier job left failed or untouched.  Finished products are not requested again."""
+        previous = store.job_run(job_id)
+        if not previous:
+            return jsonify(error="작업을 찾을 수 없습니다."), 404
+        if previous["state"] in ("running", "stopping"):
+            raise CrawlError("작업", "busy", "아직 실행 중인 작업입니다. 끝나거나 중단한 뒤 다시 실행해 주세요.")
+        todo = pipeline.unfinished(job_id)
+        if not todo:
+            raise CrawlError("작업", "prerequisite", "다시 실행할 실패·미처리 항목이 없습니다.")
+        price_mode = previous["summary"].get("priceMode") or "grouped"
+        if price_mode not in pipeline.PRICE_MODES:
+            price_mode = "grouped"
+
+        def action(ctx):
+            ctx.note("resumeOf", job_id)
+            if todo.get("musinsa"):
+                pipeline.resume_musinsa(todo["musinsa"], price_mode, ctx)
+            if todo.get("kream"):
+                pipeline.collect_kream(todo["kream"], ctx)
+            if todo.get("vlm"):
+                vlm_review.review_products(todo["vlm"], ctx, "stored")     # a paid run is never repeated automatically
+
+        resources = [r for r in ("musinsa", "kream", "vlm") if todo.get(r)]
+        total = sum(len(v) for v in todo.values())
+        return start("resume", f"실패·미처리 {total}개 재실행 ({previous['title']})", resources, action)
 
     # --------------------------------------------------------- products
     @app.get("/api/products")
@@ -416,6 +467,46 @@ def create_app(manager=None, monitors=None, auto=None):
             raise ValueError("지원하지 않는 동작입니다.")
         L.log(f"매칭 {action}: 상품 {len(ids)}개", shop="kream", stage="kream-match")
         return jsonify(ok=True)
+
+    # ----------------------------------------------------------- review
+    @app.get("/api/review")
+    def review_list():
+        ids = _ids(request.args.get("ids", "").split(",")) if request.args.get("ids") else \
+            (list(last_collection()["goods"]) if request.args.get("scope", "last") == "last" else [str(p["goodsNo"]) for p in store.products()])
+        items = vlm_review.queue(ids)
+        return jsonify(items=items, metrics=vlm_review.metrics(ids), confidenceNote=vlm_review.CONFIDENCE_NOTE,
+                       liveAvailable=bool(os.getenv("OPENAI_API_KEY_VLM")), storedVerdicts=len(vlm_review.stored_verdicts()))
+
+    @app.get("/api/review/image/<goods_no>/<name>")
+    def review_image(goods_no, name):
+        from shop_comparator.matching import match_review
+        if not goods_no.isdigit() or not re.fullmatch(r"(musinsa|kream_\d{1,12})\.jpg", name):
+            return jsonify(error="이미지를 찾을 수 없습니다."), 404
+        path = os.path.join(match_review.IMAGES, goods_no, name)
+        if not os.path.isfile(path):
+            return jsonify(error="이미지를 찾을 수 없습니다."), 404
+        return send_file(os.path.abspath(path), mimetype="image/jpeg")
+
+    @app.post("/api/review/<goods_no>")
+    def review_decide(goods_no):
+        data = body()
+        review_id = vlm_review.decide(product_id(goods_no, "musinsa"), data.get("action"), data.get("kreamId"), data.get("note"),
+                                      data.get("seconds"), data.get("mode", "assisted"))
+        return jsonify(ok=True, review=review_id)
+
+    @app.get("/api/export/review-log.csv")
+    def export_review_log():
+        """Every human decision with its timer, for the review-time measurement."""
+        out = io.StringIO()
+        writer = csv.writer(out)
+        writer.writerow(["id", "createdAt(UTC)", "goodsNo", "action", "kreamId", "mode", "reviewSeconds", "suggestionDecision",
+                         "suggestionKreamId", "previousKreamId", "previousMethod", "note"])
+        for r in store.reviews():
+            writer.writerow([exports._csv_safe(r.get(k)) for k in ("id", "createdAt", "goodsNo", "action", "kreamId", "mode", "reviewSeconds",
+                                                                 "suggestionDecision", "suggestionKreamId", "previousKreamId",
+                                                                 "previousMethod", "note")])
+        return send_file(io.BytesIO(("\ufeff" + out.getvalue()).encode("utf-8")), download_name="review_log.csv",
+                         as_attachment=True, mimetype="text/csv")
 
     # ---------------------------------------------------------- exports
     def export_rows():

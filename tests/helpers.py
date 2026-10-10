@@ -66,9 +66,11 @@ class TempDbTestCase(unittest.TestCase):
         blacklist.start()
         self.addCleanup(blacklist.stop)
         # Match-review files (candidates, thumbnails) live in a temp folder and no image is downloaded.
-        from shop_comparator.matching import match_review
+        from shop_comparator.matching import match_review, vlm_match
         review = Path(self._tmp.name) / "match_review"
         for guard in (mock.patch.object(match_review, "ROOT", str(review)),
+                      mock.patch.object(vlm_match, "RESULTS", str(review / "vlm_results.json")),
+                      mock.patch.object(vlm_match, "judge", side_effect=AssertionError("paid API blocked in tests")),
                       mock.patch.object(match_review, "IMAGES", str(review / "images")),
                       mock.patch.object(match_review, "CANDIDATES", str(review / "candidates.json")),
                       mock.patch.object(match_review, "save_image", return_value=False)):

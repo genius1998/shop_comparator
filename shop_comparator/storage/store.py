@@ -61,6 +61,22 @@ def init():
         c.execute("CREATE TABLE IF NOT EXISTS web_settings (key TEXT PRIMARY KEY, value TEXT)")
         c.execute("""CREATE TABLE IF NOT EXISTS site_sessions (
             site TEXT PRIMARY KEY, state TEXT, account TEXT, verifiedAt TEXT, detail TEXT)""")
+        # AI suggestion and human decision are separate records: a suggestion never changes a match.
+        c.execute("""CREATE TABLE IF NOT EXISTS vlm_suggestions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, goodsNo TEXT NOT NULL, model TEXT, source TEXT,
+            status TEXT NOT NULL, decision TEXT, kreamId TEXT, confidence REAL, reason TEXT,
+            candidateKey TEXT, candidateIds TEXT, errorKind TEXT, error TEXT,
+            inputTokens INTEGER, outputTokens INTEGER, seconds REAL, jobId TEXT, judgedAt TEXT, createdAt TEXT)""")
+        c.execute("CREATE INDEX IF NOT EXISTS vlm_suggestions_goods ON vlm_suggestions (goodsNo, id)")
+        c.execute("""CREATE TABLE IF NOT EXISTS match_reviews (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, goodsNo TEXT NOT NULL, action TEXT NOT NULL, kreamId TEXT,
+            note TEXT, suggestionId INTEGER, suggestionDecision TEXT, suggestionKreamId TEXT,
+            previousKreamId TEXT, previousMethod TEXT, mode TEXT, reviewSeconds REAL, createdAt TEXT)""")
+        c.execute("CREATE INDEX IF NOT EXISTS match_reviews_goods ON match_reviews (goodsNo, id)")
+        # One row per target of a job stage, so an interrupted run can be finished without redoing what succeeded.
+        c.execute("""CREATE TABLE IF NOT EXISTS job_items (
+            jobId TEXT NOT NULL, stage TEXT NOT NULL, goodsNo TEXT NOT NULL, state TEXT NOT NULL,
+            errorKind TEXT, error TEXT, updatedAt TEXT, PRIMARY KEY (jobId, stage, goodsNo))""")
         conn.commit()
 
 
@@ -366,3 +382,100 @@ def delete_monitor_items(kind, goods_nos):
         for goods_no in goods_nos:
             conn.execute("DELETE FROM monitor_items WHERE kind = ? AND goodsNo = ?", (kind, str(goods_no)))
         conn.commit()
+
+
+# ---------- job items (what a job was asked to do, and how far it got) ----------
+def plan_items(job_id, stage, goods_nos):
+    """Register the targets of a stage as 'pending'.  Re-planning keeps finished rows."""
+    with database.get_db_conn() as conn:
+        conn.executemany("INSERT OR IGNORE INTO job_items (jobId, stage, goodsNo, state, updatedAt) VALUES (?, ?, ?, 'pending', ?)",
+                         [(job_id, stage, str(g), now()) for g in goods_nos])
+        conn.commit()
+
+
+def mark_item(job_id, stage, goods_no, state, error_kind=None, error=None):
+    """state: ok | failed | skipped.  One row per (job, stage, product); a retry overwrites, never duplicates."""
+    _exec("""INSERT INTO job_items (jobId, stage, goodsNo, state, errorKind, error, updatedAt) VALUES (?, ?, ?, ?, ?, ?, ?)
+             ON CONFLICT(jobId, stage, goodsNo) DO UPDATE SET state = excluded.state, errorKind = excluded.errorKind,
+               error = excluded.error, updatedAt = excluded.updatedAt""",
+          (job_id, stage, str(goods_no), state, error_kind, (error or "")[:300] or None, now()))
+
+
+def job_items(job_id):
+    return _rows("SELECT * FROM job_items WHERE jobId = ? ORDER BY rowid", (job_id,))
+
+
+def job_item_summary(job_id):
+    """{stage: {pending, ok, failed, skipped}} for one job."""
+    out = {}
+    for row in _rows("SELECT stage, state, COUNT(*) AS n FROM job_items WHERE jobId = ? GROUP BY stage, state", (job_id,)):
+        out.setdefault(row["stage"], {"pending": 0, "ok": 0, "failed": 0, "skipped": 0})[row["state"]] = row["n"]
+    return out
+
+
+def job_run(job_id):
+    rows = _rows("SELECT * FROM job_runs WHERE id = ?", (job_id,))
+    if not rows:
+        return None
+    row = rows[0]
+    try:
+        row["summary"] = json.loads(row.get("summary") or "{}")
+    except ValueError:
+        row["summary"] = {}
+    return row
+
+
+# ---------- VLM suggestions and human reviews ----------
+SUGGESTION_FIELDS = ("goodsNo", "model", "source", "status", "decision", "kreamId", "confidence", "reason", "candidateKey",
+                     "candidateIds", "errorKind", "error", "inputTokens", "outputTokens", "seconds", "jobId", "judgedAt")
+
+
+def add_suggestion(**values):
+    """Append one model verdict (or one failed attempt).  Earlier rows are kept as history."""
+    row = {k: values.get(k) for k in SUGGESTION_FIELDS}
+    row["createdAt"] = now()
+    with database.get_db_conn() as conn:
+        cursor = conn.execute(f"INSERT INTO vlm_suggestions ({', '.join(row)}) VALUES ({', '.join('?' * len(row))})", list(row.values()))
+        conn.commit()
+        return cursor.lastrowid
+
+
+def latest_suggestions(goods_nos=None, valid_only=False):
+    """{goodsNo: newest suggestion row}.  valid_only skips failed attempts so an error never hides a good verdict."""
+    where = "WHERE status = 'valid'" if valid_only else ""
+    rows = _rows(f"SELECT * FROM vlm_suggestions WHERE id IN (SELECT MAX(id) FROM vlm_suggestions {where} GROUP BY goodsNo)")
+    wanted = None if goods_nos is None else {str(g) for g in goods_nos}
+    return {r["goodsNo"]: r for r in rows if wanted is None or r["goodsNo"] in wanted}
+
+
+def suggestion_counts(goods_nos=None):
+    rows = _rows("SELECT goodsNo, status, COUNT(*) AS n FROM vlm_suggestions GROUP BY goodsNo, status")
+    wanted = None if goods_nos is None else {str(g) for g in goods_nos}
+    out = {}
+    for row in rows:
+        if wanted is None or row["goodsNo"] in wanted:
+            out.setdefault(row["goodsNo"], {})[row["status"]] = row["n"]
+    return out
+
+
+def add_review(goods_no, action, kream_id=None, note=None, suggestion=None, previous=None, mode=None, seconds=None):
+    suggestion, previous = suggestion or {}, previous or {}
+    with database.get_db_conn() as conn:
+        cursor = conn.execute(
+            """INSERT INTO match_reviews (goodsNo, action, kreamId, note, suggestionId, suggestionDecision, suggestionKreamId,
+                                          previousKreamId, previousMethod, mode, reviewSeconds, createdAt)
+               VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+            (str(goods_no), action, kream_id, (note or "")[:300] or None, suggestion.get("id"), suggestion.get("decision"),
+             suggestion.get("kreamId"), previous.get("kreamId") or None, previous.get("method") or None, mode, seconds, now()))
+        conn.commit()
+        return cursor.lastrowid
+
+
+def reviews(goods_nos=None):
+    rows = _rows("SELECT * FROM match_reviews ORDER BY id")
+    wanted = None if goods_nos is None else {str(g) for g in goods_nos}
+    return [r for r in rows if wanted is None or r["goodsNo"] in wanted]
+
+
+def latest_reviews(goods_nos=None):
+    return {r["goodsNo"]: r for r in reviews(goods_nos)}

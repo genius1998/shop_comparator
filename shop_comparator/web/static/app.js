@@ -42,6 +42,7 @@ function showTab(name) {
   location.hash = name;
   if (name === 'products') loadProducts();
   if (name === 'match') loadMatches();
+  if (name === 'review') loadReview();
   if (name === 'monitor') loadMonitors();
   if (name === 'export') loadSettings();
   if (name === 'logs') loadLogs(true);
@@ -85,6 +86,7 @@ function renderJobs() {
       if (job.state === 'failed') notify(`${job.title} 실패: ${job.error || ''}`);
       if ($('tab-products').classList.contains('on')) loadProducts();
       if ($('tab-match').classList.contains('on')) loadMatches();
+      if ($('tab-review').classList.contains('on')) loadReview();
       if ($('tab-monitor').classList.contains('on')) loadMonitors();
       if ($('tab-export').classList.contains('on')) loadHistory();
     }
@@ -320,6 +322,99 @@ $$('[data-match]').forEach(button => button.addEventListener('click', () => {
   run(request).then(d => { if (d) { notify('요청을 처리했습니다.', true); loadMatches(); poll(); } });
 }));
 
+/* ---------- VLM review ---------- */
+let reviewItems = [], reviewOpened = {};
+const VERDICT = {same: ['동일', 'good'], different: ['다름', 'bad'], uncertain: ['불확실', 'warn']};
+const REVIEW_STATE = {pending: '검수 대기', approved: '승인함', rejected: '거절함', held: '보류함', no_suggestion: 'VLM 제안 없음'};
+async function loadReview() {
+  const data = await run(api('/api/review'));
+  if (!data) return;
+  reviewItems = data.items;
+  const m = data.metrics, t = m.reviewSeconds;
+  const cell = (label, value, note) => el('div', {class: 'metric'}, el('strong', {text: value}), el('span', {text: label}), note ? el('small', {text: note}) : null);
+  $('review-metrics').replaceChildren(
+    cell('대상 상품', m.products), cell('규칙으로 확정', m.ruleConfirmed, '모델번호 일치'), cell('VLM 검토 대상', m.vlmTargets, '규칙으로 확정되지 않은 상품'),
+    cell('VLM 판정', m.vlmJudged, `동일 ${m.vlmSame} · 다름 ${m.vlmDifferent} · 불확실 ${m.vlmUncertain}`),
+    cell('판정 실패·무효', m.vlmFailed, m.stale ? `후보가 바뀐 판정 ${m.stale}` : ''), cell('사람 검수 대기', m.needsReview),
+    cell('승인 / 거절 / 보류', `${m.approved} / ${m.rejected} / ${m.held}`, `VLM 제안대로 승인 ${m.approvedWithVlm}`),
+    cell('검토 시간 중앙값', t.assisted.count ? `${t.assisted.median}초` : '측정 없음', `AI 보조 ${t.assisted.count}건 · 수동 ${t.manual.count}건${t.manual.count ? ` (${t.manual.median}초)` : ''}`));
+  $('review-scope').textContent = `대상: 방금 수집한 상품 ${m.products}개. 저장된 VLM 판정 파일에 ${data.storedVerdicts}개 상품의 결과가 있습니다.` + (data.liveAvailable ? '' : ' 유료 실행용 키(OPENAI_API_KEY_VLM)가 설정되어 있지 않습니다.');
+  $('review-live').disabled = !data.liveAvailable;
+  renderReview();
+}
+function reviewDecide(item, action, kreamId, note) {
+  const opened = reviewOpened[item.goodsNo];
+  const seconds = opened ? Math.round((Date.now() - opened) / 100) / 10 : null;
+  const mode = $('review-manual').checked ? 'manual' : 'assisted';
+  run(api(`/api/review/${item.goodsNo}`, {action, kreamId, note, seconds, mode})).then(d => {
+    if (!d) return;
+    delete reviewOpened[item.goodsNo];
+    notify({approve: '승인했습니다. 이 매칭을 가격 비교에 사용합니다.', reject: '거절했습니다.', hold: '보류로 기록했습니다.'}[action], true);
+    loadReview();
+  });
+}
+function reviewCard(item) {
+  const manual = $('review-manual').checked, s = manual ? null : item.suggestion;
+  let chosen = s && s.decision === 'same' ? s.kreamId : (item.match.usable ? item.match.kreamId : '');
+  const picture = (src, alt) => src ? el('img', {src, alt, loading: 'lazy'}) : el('div', {class: 'noimg', text: '이미지 없음'});
+  const note = el('input', {type: 'text', placeholder: '메모(선택)', maxlength: 200});
+  const options = el('div', {class: 'candidates'});
+  const draw = () => options.replaceChildren(...item.candidates.map(c => el('button', {
+    type: 'button', class: 'candidate' + (c.kreamId === chosen ? ' chosen' : '') + (s && s.kreamId === c.kreamId ? ' picked' : ''),
+    'aria-pressed': String(c.kreamId === chosen), onclick: () => { chosen = c.kreamId; draw(); }},
+    picture(c.image, 'KREAM ' + c.kreamId), el('strong', {text: c.name || c.brand || c.kreamId}),
+    el('small', {text: `KREAM ${c.kreamId}${c.model ? ' · 모델번호 ' + c.model : ' · 모델번호 없음'}`}),
+    s && s.kreamId === c.kreamId ? el('span', {class: 'badge good', text: 'VLM이 고른 후보'}) : null,
+    item.match.usable && item.match.kreamId === c.kreamId ? el('span', {class: 'badge', text: '현재 등록: ' + item.match.status}) : null)));
+  draw();
+  const verdict = s ? VERDICT[s.decision] : null;
+  const body = el('div', {class: 'review-body'},
+    el('div', {class: 'review-source'}, picture(item.musinsaImage, '무신사 ' + item.goodsNo),
+      el('strong', {text: item.name}), el('small', {text: `${item.brand} · 무신사 ${item.goodsNo}`}), el('small', {text: '품번 ' + (item.serial || '없음')}),
+      el('a', {href: item.musinsaUrl, target: '_blank', rel: 'noopener noreferrer', text: '무신사 페이지 ↗'})),
+    el('div', {class: 'review-main'},
+      manual ? el('p', {class: 'hint', text: '수동 검토 측정 중: AI 제안을 가렸습니다.'})
+        : s ? el('div', {class: 'verdict'},
+            el('span', {class: 'badge ' + verdict[1], text: 'VLM 판정: ' + verdict[0]}),
+            el('span', {class: 'hint', text: `${s.model || '모델 미상'} · ${when(s.judgedAt)} · ${s.source === 'stored' ? '저장된 판정 재생' : '실시간 호출'}`}),
+            s.confidence != null ? el('span', {class: 'hint', title: '모델이 스스로 출력한 값입니다. 검증된 정답 확률이 아닙니다.', text: `모델 출력 신뢰도 ${s.confidence} (확률 아님)`}) : null,
+            el('p', {text: s.reason || '사유 없음'}))
+        : el('p', {class: 'hint', text: item.lastAttempt ? `VLM 제안 없음: ${item.lastAttempt.error} (${item.lastAttempt.errorKind})` : item.stale ? '후보 목록이 바뀌어 이전 판정을 제안으로 쓰지 않습니다. 다시 실행해 주세요.' : 'VLM 제안이 없습니다.'}),
+      !manual && item.conflicts.length ? el('ul', {class: 'conflicts'}, item.conflicts.map(c => el('li', {text: '충돌: ' + c}))) : null,
+      el('p', {class: 'hint', text: item.candidates.length ? '같은 상품인 KREAM 후보를 고르세요. 테두리가 굵은 후보가 선택된 것입니다.' : 'KREAM 검색 후보가 없습니다.'}),
+      options,
+      el('div', {class: 'review-actions'}, note,
+        el('button', {class: 'primary', text: '승인 (선택한 후보)', onclick: () => chosen ? reviewDecide(item, 'approve', chosen, note.value) : notify('승인할 후보를 선택해 주세요.')}),
+        el('button', {text: '거절 (같은 상품 없음)', onclick: () => reviewDecide(item, 'reject', item.match.usable ? item.match.kreamId : (s && s.kreamId) || '', note.value)}),
+        el('button', {text: '보류', onclick: () => reviewDecide(item, 'hold', chosen, note.value)})),
+      item.review ? el('p', {class: 'hint', text: `마지막 검수: ${{approve: '승인', reject: '거절', hold: '보류'}[item.review.action]}${item.review.kreamId ? ' (KREAM ' + item.review.kreamId + ')' : ''} · ${when(item.review.at)}${item.review.seconds != null ? ` · ${item.review.seconds}초` : ''}${item.review.note ? ' · ' + item.review.note : ''} · 검수 이력 ${item.reviewCount}건`}) : null));
+  const details = el('details', {class: 'review-card ' + item.state, 'data-goods': item.goodsNo},
+    el('summary', {},
+      el('span', {class: 'badge ' + ({approved: 'good', rejected: 'bad', held: 'warn'}[item.state] || ''), text: REVIEW_STATE[item.state]}),
+      !manual && s ? el('span', {class: 'badge ' + verdict[1], text: 'VLM ' + verdict[0]}) : null,
+      !manual && item.conflicts.length ? el('span', {class: 'badge bad', text: '충돌'}) : null,
+      el('strong', {text: item.name}), el('small', {text: `${item.brand} · ${item.goodsNo} · 후보 ${item.candidates.length}개 · 현재 ${item.match.status}`})),
+    body);
+  details.addEventListener('toggle', () => { if (details.open && !reviewOpened[item.goodsNo]) reviewOpened[item.goodsNo] = Date.now(); });
+  if (reviewOpened[item.goodsNo]) details.open = true;
+  return details;
+}
+function renderReview() {
+  const filter = $('review-filter').value, query = $('review-search').value.toLowerCase();
+  const shown = reviewItems.filter(i => (!filter || (filter === 'conflict' ? i.conflicts.length > 0 : i.state === filter)) && `${i.name} ${i.goodsNo} ${i.serial} ${i.brand}`.toLowerCase().includes(query));
+  $('review-list').replaceChildren(...shown.map(reviewCard));
+  $('review-empty').hidden = shown.length > 0;
+  $('review-count').textContent = `${shown.length}개 표시 / 전체 ${reviewItems.length}개`;
+}
+['review-filter', 'review-search', 'review-manual'].forEach(id => $(id).addEventListener('input', renderReview));
+$('review-stored').addEventListener('click', () => run(api('/api/jobs/vlm', {mode: 'stored', force: $('review-force').checked})).then(d => { if (d) { notify('저장된 판정을 불러옵니다(네트워크 호출 없음).', true); poll(); } }));
+$('review-live').addEventListener('click', () => {
+  const max = Number($('review-max').value);
+  if (!Number.isInteger(max) || max < 1) return notify('유료 호출은 최대 호출 수를 입력해야 실행됩니다.');
+  if (!confirm(`OpenAI 유료 API를 최대 ${max}회 호출합니다. 실행할까요?`)) return;
+  run(api('/api/jobs/vlm', {mode: 'live', max_calls: max, force: $('review-force').checked})).then(d => { if (d) { notify('VLM 검토를 시작했습니다.', true); poll(); } });
+});
+
 /* ---------- monitoring ---------- */
 async function loadMonitors() {
   const data = await api('/api/monitors').catch(() => null);
@@ -367,7 +462,9 @@ async function loadHistory() {
   const data = await api('/api/jobs/history').catch(() => null);
   if (!data) return;
   $('history-rows').replaceChildren(...data.jobs.map(j => el('tr', {}, el('td', {text: when(j.startedAt)}), el('td', {text: j.title}), el('td', {text: j.state}),
-    el('td', {text: Object.entries(j.summary || {}).filter(([k, v]) => v != null && !['goods', 'byStatus'].includes(k)).map(([k, v]) => `${k} ${Array.isArray(v) ? v.join(' / ') : v}`).join(' · ')}))));
+    el('td', {text: Object.entries(j.summary || {}).filter(([k, v]) => v != null && !['goods', 'byStatus'].includes(k)).map(([k, v]) => `${k} ${Array.isArray(v) ? v.join(' / ') : v}`).join(' · ')}),
+    el('td', {}, Object.entries(j.items || {}).map(([stage, c]) => el('small', {text: `${stage}: 완료 ${c.ok} · 실패 ${c.failed} · 미처리 ${c.pending} · 건너뜀 ${c.skipped}`})),
+      j.unfinished && !['running', 'stopping'].includes(j.state) ? el('button', {text: `실패·미처리 ${j.unfinished}개만 다시 실행`, onclick: () => run(api(`/api/jobs/${j.id}/resume`, {})).then(d => { if (d) { notify('실패·미처리 항목만 다시 실행합니다.', true); poll(); } })}) : null))));
 }
 $('settings-form').addEventListener('submit', e => {
   e.preventDefault();

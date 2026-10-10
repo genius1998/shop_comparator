@@ -16,6 +16,7 @@
   <button role="tab" data-tab="collect">수집</button>
   <button role="tab" data-tab="products">상품·비교</button>
   <button role="tab" data-tab="match">매칭</button>
+  <button role="tab" data-tab="review">VLM 검토</button>
   <button role="tab" data-tab="monitor">모니터링·자동화</button>
   <button role="tab" data-tab="export">내보내기·설정</button>
   <button role="tab" data-tab="logs">로그</button>
@@ -185,6 +186,37 @@
   <div class="table-wrap"><table><thead><tr><th></th><th>무신사 상품</th><th>품번</th><th>KREAM 상품</th><th>매칭 상태</th><th>신뢰도·근거</th><th>직접 지정</th></tr></thead><tbody id="match-rows"></tbody></table></div>
 </section>
 
+<!-- ───────────── VLM 검토 ───────────── -->
+<section class="tab" id="tab-review">
+  <p class="lead">비전 모델(VLM)이 이미지를 보고 낸 제안을 사람이 확인하는 화면입니다. 제안은 매칭을 바꾸지 않습니다. <strong>승인한 것만</strong> 가격 비교에 쓰이고, 거절하면 그 매칭은 가격 비교에서 빠집니다.</p>
+  <div class="toolbar">
+    <button id="review-stored" class="primary">저장된 판정 불러오기</button>
+    <span class="hint">네트워크 호출 없음</span>
+    <span class="sep"></span>
+    <label>최대 호출 수 <input id="review-max" type="number" min="1" max="500" placeholder="예: 20" class="narrow"></label>
+    <button id="review-live">VLM 실행 (유료 API)</button>
+    <label class="check"><input id="review-force" type="checkbox"> 이미 판정한 상품도 다시</label>
+    <span class="grow"></span>
+    <a class="button" href="/api/export/review-log.csv" data-download>검수 기록 CSV</a>
+  </div>
+  <p class="hint" id="review-scope"></p>
+  <div class="metrics" id="review-metrics"></div>
+  <div class="toolbar">
+    <select id="review-filter" aria-label="표시할 상품">
+      <option value="pending">검수 대기 (VLM 제안 있음)</option><option value="conflict">규칙·등록 매칭과 충돌</option>
+      <option value="approved">승인함</option><option value="rejected">거절함</option><option value="held">보류함</option>
+      <option value="no_suggestion">VLM 제안 없음</option><option value="">전체</option>
+    </select>
+    <input id="review-search" type="search" placeholder="상품명·번호 검색">
+    <label class="check" title="AI 제안을 가리고 사람만의 검토 시간을 재는 용도입니다."><input id="review-manual" type="checkbox"> AI 제안 숨기기 (수동 검토 시간 측정)</label>
+    <span class="grow"></span>
+    <span class="hint" id="review-count"></span>
+  </div>
+  <p class="hint">검토 시간은 카드를 펼친 순간부터 승인·거절·보류를 누를 때까지 잽니다. 신뢰도는 모델이 스스로 출력한 값이며 검증된 정답 확률이 아닙니다.</p>
+  <div id="review-list"></div>
+  <div class="empty" id="review-empty" hidden><h3>표시할 상품이 없습니다</h3><p>위에서 [저장된 판정 불러오기]를 누르거나 표시 조건을 바꿔 보세요.</p></div>
+</section>
+
 <!-- ───────────── 모니터링 ───────────── -->
 <section class="tab" id="tab-monitor">
   <div class="card">
@@ -252,7 +284,7 @@
       </form>
       <p class="hint">웹훅 URL은 이 PC의 DB에만 저장하고 화면과 응답에는 끝 6자만 표시합니다. KREAM 가격 수집을 할 때, 선택한 기준의 차액이 알림 마진 이상인 사이즈마다 디스코드로 알립니다.</p>
       <h2>작업 이력</h2>
-      <div class="table-wrap small"><table><thead><tr><th>시작</th><th>작업</th><th>결과</th><th>요약</th></tr></thead><tbody id="history-rows"></tbody></table></div>
+      <div class="table-wrap small"><table><thead><tr><th>시작</th><th>작업</th><th>결과</th><th>요약</th><th>실패·미처리</th></tr></thead><tbody id="history-rows"></tbody></table></div>
     </div>
   </div>
 </section>

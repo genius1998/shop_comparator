@@ -286,7 +286,10 @@ def collect_musinsa(settings, ctx):
                 L.log("기존 목록의 다른 상품은 숨김 처리했습니다(데이터는 보존).")
             ctx.note("targets", len(targets))
             # Recorded up front so the products tab shows this batch while it is being collected.
-            store.set_setting("last_collection", {"goods": [g for g, _, _ in targets], "at": store.now()})
+            if not settings.get("keep_batch"):
+                store.set_setting("last_collection", {"goods": [g for g, _, _ in targets], "at": store.now()})
+            store.plan_items(ctx.id, "musinsa", [g for g, _, _ in targets])
+            ctx.note("priceMode", price_mode)
             failures = [0]
             for index, (goods_no, rank, meta) in enumerate(targets):
                 ctx.check()
@@ -296,12 +299,15 @@ def collect_musinsa(settings, ctx):
                     try:
                         result = collect_one(session, payload, goods_no, rank, meta or metas.get(goods_no), price_mode, ctx, failures)
                         store.set_state(goods_no, "musinsa", result, None if result == "ok" else "일부 사이즈 회원가 확인 실패")
+                        store.mark_item(ctx.id, "musinsa", goods_no, "ok" if result == "ok" else "failed",
+                                        None if result == "ok" else "partial", None if result == "ok" else "일부 사이즈 회원가 확인 실패")
                         ctx.count("ok" if result == "ok" else "failed")
                     except CrawlError as exc:
                         if exc.code == "auth":
                             site_login.mark_expired("musinsa", str(exc))
                         if store.product(goods_no):
                             store.set_state(goods_no, "musinsa", "error", str(exc))
+                        store.mark_item(ctx.id, "musinsa", goods_no, "failed", exc.code, L.redact(str(exc)))
                         if exc.code in STOP_CODES or exc.code == "pricing" and failures[0] >= MAX_CONSECUTIVE_FAILURES:
                             raise
                         ctx.count("failed")
@@ -310,7 +316,8 @@ def collect_musinsa(settings, ctx):
             ctx.progress("무신사 수집", len(targets), len(targets))
             ctx.note("goods", [g for g, _, _ in targets])
             # "KREAM 매칭 / KREAM 가격 / 비교" default to exactly this batch.
-            store.set_setting("last_collection", {"goods": [g for g, _, _ in targets], "at": store.now()})
+            if not settings.get("keep_batch"):
+                store.set_setting("last_collection", {"goods": [g for g, _, _ in targets], "at": store.now()})
     return [g for g, _, _ in targets]
 
 
@@ -506,6 +513,7 @@ def quote_products(products, token, ctx):
     """Fetch quotes for matched products (needs kream_session)."""
     fetched = {}
     network_failures = 0
+    store.plan_items(ctx.id, "kream", [p["goodsNo"] for p in products])
     for index, product in enumerate(products):
         ctx.check()
         ctx.progress("KREAM 가격 수집", index, len(products))
@@ -514,9 +522,11 @@ def quote_products(products, token, ctx):
             info = cmp.match_info(store.match_for(goods_no))
             if not info["kreamId"]:
                 ctx.count("unmatched")
+                store.mark_item(ctx.id, "kream", goods_no, "skipped", "unmatched", "매칭된 KREAM 상품이 없습니다.")
                 continue
             if not info["usable"]:
                 ctx.count("unverified")
+                store.mark_item(ctx.id, "kream", goods_no, "skipped", "unverified", "미검증 매칭이라 가격을 수집하지 않았습니다.")
                 L.warn(f"KREAM 상품 {info['kreamId']} 매칭이 미검증 상태라 가격을 수집하지 않습니다(매칭 탭에서 승인).")
                 continue
             kream_id = info["kreamId"]
@@ -539,12 +549,14 @@ def quote_products(products, token, ctx):
                     ctx.wait(1.0)
                 quotes = fetched[kream_id]
                 store.set_state(goods_no, "kream", "ok")
+                store.mark_item(ctx.id, "kream", goods_no, "ok")
                 ctx.count("ok")
                 L.log(f"KREAM {kream_id}: 사이즈 {len(quotes)}개, 즉시구매가 {sum(q['instantBuy'] is not None for q in quotes)}개, "
                       f"즉시판매가 {sum(q['instantSell'] is not None for q in quotes)}개")
                 _notify_margin(product, kream_id, quotes)
             except CrawlError as exc:
                 store.set_state(goods_no, "kream", "error", str(exc))  # earlier quotes stay in place
+                store.mark_item(ctx.id, "kream", goods_no, "failed", exc.code, L.redact(str(exc)))
                 if exc.code == "auth":
                     site_login.mark_expired("kream", str(exc))
                 if exc.code in STOP_CODES:
@@ -568,6 +580,25 @@ def collect_kream(goods_nos, ctx, match_missing=False):
             if match_missing:
                 match_products(products, ctx)
             quote_products(products, token, ctx)
+
+
+RESUMABLE = {"musinsa": "무신사 수집", "kream": "KREAM 가격 수집", "vlm": "VLM 검토"}
+
+
+def unfinished(job_id):
+    """{stage: [goodsNo, ...]} of the targets a job did not finish: failed, or never reached."""
+    out = {}
+    for row in store.job_items(job_id):
+        if row["stage"] in RESUMABLE and row["state"] in ("pending", "failed"):
+            out.setdefault(row["stage"], []).append(row["goodsNo"])
+    return out
+
+
+def resume_musinsa(goods_nos, price_mode, ctx):
+    """Collect only the given products again.  Rows are upserted, so nothing is duplicated."""
+    settings = {"mode": "selected", "ids": [str(g) for g in goods_nos], "limit": len(goods_nos), "price_mode": price_mode,
+                "keep_batch": True}      # a retry must not shrink "the batch collected last" to the retried products
+    return collect_musinsa(settings, ctx)
 
 
 def compare(goods_nos, ctx):
