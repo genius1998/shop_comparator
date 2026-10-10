@@ -415,6 +415,13 @@ def match_products(products, ctx, force=False):
             if info["usable"] and not force:
                 ctx.count("alreadyMatched")
                 continue
+            if info["kind"] in ("ai_unreviewed", "rejected") and not force:
+                # waiting for (or already answered by) a person: searching again would only repeat the model call
+                ctx.count("awaitingReview" if info["kind"] == "ai_unreviewed" else "rejected")
+                continue
+            if not force and store.latest_suggestions([goods_no], valid_only=True).get(goods_no, {}).get("source", "").startswith("matcher"):
+                ctx.count("awaitingReview")
+                continue
             if goods_no in skip:
                 ctx.count("blacklisted")
                 L.log("검색 제외 목록에 있어 건너뜁니다(매칭 탭에서 해제 가능).")
@@ -439,6 +446,15 @@ def match_products(products, ctx, force=False):
             if database.is_kream_id_already_used(str(int(found)), goods_no, verified_only=True):
                 ctx.count("duplicate")
                 L.warn(f"KREAM 상품 {int(found)}은 이미 다른 무신사 상품에 연결되어 있어 건너뜁니다.")
+                continue
+            method = getattr(found, "match_method", None) or ""
+            if method not in store.RULE_METHODS:
+                # A language or vision model (or anything that is not a rule) only suggests.
+                # The suggestion waits in the review tab; a person's approval registers the match.
+                from shop_comparator.services import vlm_review
+                vlm_review.suggest_from_matcher(product, found, ctx.id)
+                ctx.count("suggested")
+                L.log(f"KREAM 상품 {int(found)}을(를) 제안으로 저장했습니다(방식 {method or '미상'}). VLM 검토 탭에서 승인해야 반영됩니다.")
                 continue
             url = f"https://kream.co.kr/products/{int(found)}"
             database.cache_kream_search(goods_no, found, url)

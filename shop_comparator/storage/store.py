@@ -61,6 +61,11 @@ def init():
         c.execute("CREATE TABLE IF NOT EXISTS web_settings (key TEXT PRIMARY KEY, value TEXT)")
         c.execute("""CREATE TABLE IF NOT EXISTS site_sessions (
             site TEXT PRIMARY KEY, state TEXT, account TEXT, verifiedAt TEXT, detail TEXT)""")
+        # Where a match came from and what a reviewer decided, kept next to the match itself.
+        have = {row[1] for row in c.execute("PRAGMA table_info(kream_search_cache)")}
+        for column in ("review_state", "origin_method", "origin_reason"):
+            if column not in have:
+                c.execute(f"ALTER TABLE kream_search_cache ADD COLUMN {column} TEXT")
         # AI suggestion and human decision are separate records: a suggestion never changes a match.
         c.execute("""CREATE TABLE IF NOT EXISTS vlm_suggestions (
             id INTEGER PRIMARY KEY AUTOINCREMENT, goodsNo TEXT NOT NULL, model TEXT, source TEXT,
@@ -222,12 +227,17 @@ def kream_quotes(kream_id=None):
     return _rows("SELECT * FROM kream_quotes WHERE kreamId = ? AND present = 1", (str(kream_id),))
 
 
-def match_for(goods_no):
-    return database.get_cached_kream_search(str(goods_no))
-
-
 MATCH_COLUMNS = ("musinsa_goods_no, kream_product_id, kream_product_url, kream_brand, kream_product_name, "
-                 "match_verified, match_method, match_confidence, match_reason, verified_at")
+                 "match_verified, match_method, match_confidence, match_reason, verified_at, "
+                 "review_state, origin_method, origin_reason")
+# Who may confirm a match.  Anything else (a language or vision model, an AI-assisted review) is a suggestion.
+RULE_METHODS = ("model_code", "local")
+USER_METHODS = ("manual", "human_review", "approved")
+
+
+def match_for(goods_no):
+    rows = _rows(f"SELECT {MATCH_COLUMNS}, kream_image_url FROM kream_search_cache WHERE musinsa_goods_no = ?", (str(goods_no),))
+    return rows[0] if rows else None
 
 
 def all_matches():
@@ -245,6 +255,8 @@ def counts():
           (SELECT COUNT(*) FROM products p LEFT JOIN web_product_state s ON s.goodsNo = p.goodsNo
             JOIN kream_search_cache m ON m.musinsa_goods_no = p.goodsNo
             WHERE COALESCE(s.active, 1) = 1 AND COALESCE(m.match_verified, 0) = 1
+              AND COALESCE(m.review_state, '') != 'rejected'
+              AND COALESCE(m.match_method, '') IN ('model_code', 'local', 'manual', 'human_review', 'approved')
               AND COALESCE(m.kream_product_id, '') NOT IN ('', '0')) AS matched""")[0]
     return row
 
@@ -275,6 +287,40 @@ def set_manual_match(goods_no, kream_id, note="사용자 직접 지정", method=
             (goods_no, kream_id, f"https://kream.co.kr/products/{kream_id}", method, confidence, note))
         conn.execute("UPDATE products SET kream_product_id = ?, kream_product_url = ? WHERE goodsNo = ?",
                      (kream_id, f"https://kream.co.kr/products/{kream_id}", goods_no))
+        conn.commit()
+
+
+def review_approve(goods_no, kream_id, note):
+    """A person approved this KREAM product.  The earlier source of the match is kept in origin_*."""
+    goods_no, kream_id = str(goods_no), str(kream_id)
+    url = f"https://kream.co.kr/products/{kream_id}"
+    with database.get_db_conn() as conn:
+        conn.execute("""INSERT INTO kream_search_cache
+            (musinsa_goods_no, kream_product_id, kream_product_url, match_verified, match_method, match_confidence,
+             match_reason, verified_at, last_searched_at, review_state)
+            VALUES (?, ?, ?, 1, 'human_review', NULL, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, 'approved')
+            ON CONFLICT(musinsa_goods_no) DO UPDATE SET
+              origin_method = CASE WHEN kream_search_cache.kream_product_id = excluded.kream_product_id
+                                   THEN COALESCE(kream_search_cache.origin_method, NULLIF(kream_search_cache.match_method, 'human_review')) END,
+              origin_reason = CASE WHEN kream_search_cache.kream_product_id = excluded.kream_product_id
+                                   THEN COALESCE(kream_search_cache.origin_reason, kream_search_cache.match_reason) END,
+              kream_brand = CASE WHEN kream_search_cache.kream_product_id = excluded.kream_product_id THEN kream_search_cache.kream_brand END,
+              kream_product_name = CASE WHEN kream_search_cache.kream_product_id = excluded.kream_product_id THEN kream_search_cache.kream_product_name END,
+              kream_image_url = CASE WHEN kream_search_cache.kream_product_id = excluded.kream_product_id THEN kream_search_cache.kream_image_url END,
+              kream_product_id = excluded.kream_product_id, kream_product_url = excluded.kream_product_url,
+              match_verified = 1, match_method = 'human_review', match_confidence = NULL, match_reason = excluded.match_reason,
+              review_state = 'approved', verified_at = CURRENT_TIMESTAMP""", (goods_no, kream_id, url, note))
+        conn.execute("UPDATE products SET kream_product_id = ?, kream_product_url = ? WHERE goodsNo = ?", (kream_id, url, goods_no))
+        conn.commit()
+
+
+def review_reject(goods_no, note):
+    """A person rejected the registered match.  The row and its source stay; it is no longer used for prices."""
+    with database.get_db_conn() as conn:
+        conn.execute("""UPDATE kream_search_cache SET match_verified = 0, review_state = 'rejected',
+                          origin_method = COALESCE(origin_method, match_method), origin_reason = COALESCE(origin_reason, match_reason),
+                          match_reason = ? WHERE musinsa_goods_no = ?""", (note, str(goods_no)))
+        conn.execute("UPDATE products SET kream_product_id = NULL, kream_product_url = NULL WHERE goodsNo = ?", (str(goods_no),))
         conn.commit()
 
 

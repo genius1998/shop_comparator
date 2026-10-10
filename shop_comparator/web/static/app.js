@@ -207,7 +207,7 @@ function renderProducts() {
     box.addEventListener('click', e => e.stopPropagation());
     box.addEventListener('change', () => { box.checked ? selected.add(p.goodsNo) : selected.delete(p.goodsNo); selectionChanged(); });
     const m = p.match;
-    const info = [p.brandName, p.goodsNo, p.serial && `품번 ${p.serial}`, m.kreamId ? `KREAM ${m.kreamId} (${m.status}${m.confidence != null ? ' ' + Math.round(m.confidence * 100) + '%' : ''})` : 'KREAM 매칭 없음',
+    const info = [p.brandName, p.goodsNo, p.serial && `품번 ${p.serial}`, m.kreamId ? `KREAM ${m.kreamId} (${m.status})` : 'KREAM 매칭 없음',
                   p.totalTrades ? `거래 ${p.totalTrades}건` : null].filter(Boolean).join(' · ');
     const errors = [p.musinsaStatus === 'error' && `무신사 오류: ${p.musinsaError}`, p.kreamStatus === 'error' && `KREAM 오류: ${p.kreamError}`].filter(Boolean).join(' / ');
     const links = el('small', {},
@@ -308,8 +308,9 @@ function renderMatches() {
     return el('tr', {}, el('td', {}, el('input', {type: 'checkbox', 'data-goods': m.goodsNo, checked: kept.has(m.goodsNo)})),
       el('td', {}, m.goodsName, el('small', {text: `${m.brandName} · ${m.goodsNo}`})), el('td', {text: m.serial}),
       el('td', {}, m.kreamId ? el('a', {href: `https://kream.co.kr/products/${encodeURIComponent(m.kreamId)}`, target: '_blank', rel: 'noopener noreferrer', text: m.kreamId + ' ↗'}) : '—', el('small', {text: [m.kreamBrand, m.kreamName].filter(Boolean).join(' ')})),
-      el('td', {}, el('span', {class: 'badge ' + ({'직접 지정': 'good', '모델번호 일치': 'good', '이미지 검토': 'good', '자동 검증': 'good', '미검증': 'warn'}[m.status] || ''), text: m.status}), m.blacklisted ? el('small', {text: '검색 제외 목록'}) : null),
-      el('td', {}, m.confidence != null ? Math.round(m.confidence * 100) + '%' : '', el('small', {text: [m.method, m.reason].filter(Boolean).join(' · ')})),
+      el('td', {}, el('span', {class: 'badge ' + ({'직접 지정': 'good', '검수 승인': 'good', '사용자 승인': 'good', '모델번호 일치': 'good', '규칙 확정': 'good', 'AI 등록(미검수)': 'warn', '미검증': 'warn', '검수 거절': 'bad'}[m.status] || ''), text: m.status}), m.blacklisted ? el('small', {text: '검색 제외 목록'}) : null),
+      el('td', {}, m.confidence != null ? el('span', {title: '모델이나 규칙이 출력한 값입니다. 검증된 정답 확률이 아닙니다.', text: `출력값 ${m.confidence}`}) : '',
+        el('small', {text: [m.kind === 'ai_unreviewed' ? `출처: ${m.source} · 사람이 승인하기 전에는 가격 비교에 쓰지 않습니다` : m.method, m.originMethod && `이전 출처: ${m.source || m.originMethod}`, m.reason].filter(Boolean).join(' · ')})),
       el('td', {class: 'inline'}, input, save));
   }));
 }
@@ -335,7 +336,7 @@ async function loadReview() {
   $('review-metrics').replaceChildren(
     cell('대상 상품', m.products), cell('규칙으로 확정', m.ruleConfirmed, '모델번호 일치'), cell('VLM 검토 대상', m.vlmTargets, '규칙으로 확정되지 않은 상품'),
     cell('VLM 판정', m.vlmJudged, `동일 ${m.vlmSame} · 다름 ${m.vlmDifferent} · 불확실 ${m.vlmUncertain}`),
-    cell('판정 실패·무효', m.vlmFailed, m.stale ? `후보가 바뀐 판정 ${m.stale}` : ''), cell('사람 검수 대기', m.needsReview),
+    cell('판정 실패·무효', m.vlmFailed, m.stale ? `후보가 바뀐 판정 ${m.stale}` : ''), cell('사람 검수 대기', m.needsReview, m.aiUnreviewed ? `기존 AI 등록(미검수) ${m.aiUnreviewed} 포함` : ''),
     cell('승인 / 거절 / 보류', `${m.approved} / ${m.rejected} / ${m.held}`, `VLM 제안대로 승인 ${m.approvedWithVlm}`),
     cell('검토 시간 중앙값', t.assisted.count ? `${t.assisted.median}초` : '측정 없음', `AI 보조 ${t.assisted.count}건 · 수동 ${t.manual.count}건${t.manual.count ? ` (${t.manual.median}초)` : ''}`));
   $('review-scope').textContent = `대상: 방금 수집한 상품 ${m.products}개. 저장된 VLM 판정 파일에 ${data.storedVerdicts}개 상품의 결과가 있습니다.` + (data.liveAvailable ? '' : ' 유료 실행용 키(OPENAI_API_KEY_VLM)가 설정되어 있지 않습니다.');
@@ -355,7 +356,8 @@ function reviewDecide(item, action, kreamId, note) {
 }
 function reviewCard(item) {
   const manual = $('review-manual').checked, s = manual ? null : item.suggestion;
-  let chosen = s && s.decision === 'same' ? s.kreamId : (item.match.usable ? item.match.kreamId : '');
+  const legacy = item.match.kind === 'ai_unreviewed';      // registered by a model before the review policy
+  let chosen = s && s.decision === 'same' ? s.kreamId : (item.match.usable || legacy ? item.match.kreamId : '');
   const picture = (src, alt) => src ? el('img', {src, alt, loading: 'lazy'}) : el('div', {class: 'noimg', text: '이미지 없음'});
   const note = el('input', {type: 'text', placeholder: '메모(선택)', maxlength: 200});
   const options = el('div', {class: 'candidates'});
@@ -365,7 +367,7 @@ function reviewCard(item) {
     picture(c.image, 'KREAM ' + c.kreamId), el('strong', {text: c.name || c.brand || c.kreamId}),
     el('small', {text: `KREAM ${c.kreamId}${c.model ? ' · 모델번호 ' + c.model : ' · 모델번호 없음'}`}),
     s && s.kreamId === c.kreamId ? el('span', {class: 'badge good', text: 'VLM이 고른 후보'}) : null,
-    item.match.usable && item.match.kreamId === c.kreamId ? el('span', {class: 'badge', text: '현재 등록: ' + item.match.status}) : null)));
+    (item.match.usable || legacy) && item.match.kreamId === c.kreamId ? el('span', {class: 'badge' + (legacy ? ' warn' : ''), text: '현재 등록: ' + item.match.status}) : null)));
   draw();
   const verdict = s ? VERDICT[s.decision] : null;
   const body = el('div', {class: 'review-body'},
@@ -376,22 +378,28 @@ function reviewCard(item) {
       manual ? el('p', {class: 'hint', text: '수동 검토 측정 중: AI 제안을 가렸습니다.'})
         : s ? el('div', {class: 'verdict'},
             el('span', {class: 'badge ' + verdict[1], text: 'VLM 판정: ' + verdict[0]}),
-            el('span', {class: 'hint', text: `${s.model || '모델 미상'} · ${when(s.judgedAt)} · ${s.source === 'stored' ? '저장된 판정 재생' : '실시간 호출'}`}),
+            el('span', {class: 'hint', text: `${s.model || '모델 미상'} · ${when(s.judgedAt)} · ${s.source === 'stored' ? '저장된 판정 재생' : (s.source || '').startsWith('matcher') ? '수집 중 자동 판별기의 제안' : '실시간 호출'}`}),
             s.confidence != null ? el('span', {class: 'hint', title: '모델이 스스로 출력한 값입니다. 검증된 정답 확률이 아닙니다.', text: `모델 출력 신뢰도 ${s.confidence} (확률 아님)`}) : null,
             el('p', {text: s.reason || '사유 없음'}))
+        : legacy ? el('div', {class: 'verdict'},
+            el('span', {class: 'badge warn', text: 'AI 등록(미검수)'}),
+            el('span', {class: 'hint', text: `출처: ${item.match.source || item.match.method} · 승인 전에는 가격 비교에 쓰지 않습니다`}),
+            item.match.confidence != null ? el('span', {class: 'hint', title: '모델이 스스로 출력한 값입니다. 검증된 정답 확률이 아닙니다.', text: `모델 출력 신뢰도 ${item.match.confidence} (확률 아님)`}) : null,
+            el('p', {text: item.match.reason || '등록 당시 근거가 저장되어 있지 않습니다.'}))
         : el('p', {class: 'hint', text: item.lastAttempt ? `VLM 제안 없음: ${item.lastAttempt.error} (${item.lastAttempt.errorKind})` : item.stale ? '후보 목록이 바뀌어 이전 판정을 제안으로 쓰지 않습니다. 다시 실행해 주세요.' : 'VLM 제안이 없습니다.'}),
       !manual && item.conflicts.length ? el('ul', {class: 'conflicts'}, item.conflicts.map(c => el('li', {text: '충돌: ' + c}))) : null,
       el('p', {class: 'hint', text: item.candidates.length ? '같은 상품인 KREAM 후보를 고르세요. 테두리가 굵은 후보가 선택된 것입니다.' : 'KREAM 검색 후보가 없습니다.'}),
       options,
       el('div', {class: 'review-actions'}, note,
         el('button', {class: 'primary', text: '승인 (선택한 후보)', onclick: () => chosen ? reviewDecide(item, 'approve', chosen, note.value) : notify('승인할 후보를 선택해 주세요.')}),
-        el('button', {text: '거절 (같은 상품 없음)', onclick: () => reviewDecide(item, 'reject', item.match.usable ? item.match.kreamId : (s && s.kreamId) || '', note.value)}),
+        el('button', {text: '거절 (같은 상품 없음)', onclick: () => reviewDecide(item, 'reject', item.match.usable || legacy ? item.match.kreamId : (s && s.kreamId) || '', note.value)}),
         el('button', {text: '보류', onclick: () => reviewDecide(item, 'hold', chosen, note.value)})),
       item.review ? el('p', {class: 'hint', text: `마지막 검수: ${{approve: '승인', reject: '거절', hold: '보류'}[item.review.action]}${item.review.kreamId ? ' (KREAM ' + item.review.kreamId + ')' : ''} · ${when(item.review.at)}${item.review.seconds != null ? ` · ${item.review.seconds}초` : ''}${item.review.note ? ' · ' + item.review.note : ''} · 검수 이력 ${item.reviewCount}건`}) : null));
   const details = el('details', {class: 'review-card ' + item.state, 'data-goods': item.goodsNo},
     el('summary', {},
       el('span', {class: 'badge ' + ({approved: 'good', rejected: 'bad', held: 'warn'}[item.state] || ''), text: REVIEW_STATE[item.state]}),
-      !manual && s ? el('span', {class: 'badge ' + verdict[1], text: 'VLM ' + verdict[0]}) : null,
+      !manual && s ? el('span', {class: 'badge ' + verdict[1], text: 'AI ' + verdict[0]}) : null,
+      !manual && !s && legacy ? el('span', {class: 'badge warn', text: 'AI 등록(미검수)'}) : null,
       !manual && item.conflicts.length ? el('span', {class: 'badge bad', text: '충돌'}) : null,
       el('strong', {text: item.name}), el('small', {text: `${item.brand} · ${item.goodsNo} · 후보 ${item.candidates.length}개 · 현재 ${item.match.status}`})),
     body);

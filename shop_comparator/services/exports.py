@@ -134,7 +134,8 @@ def bid_rows(margin_percent, quantity, deadline, goods_nos=None):
     for row in cmp.build(goods_nos, include_kream_only=False):
         if not row["kreamId"] or not row["kreamSize"] or row["musinsaPrice"] is None or row["soldout"]:
             continue
-        if row["matchStatus"] not in ("직접 지정", "자동 검증", "이미지 검토", "모델번호 일치") and not cmp.trust_unverified():
+        if row["matchStatus"] not in ("직접 지정", "검수 승인", "사용자 승인", "규칙 확정", "모델번호 일치") \
+                and not (row["matchStatus"] == "미검증" and cmp.trust_unverified()):
             continue
         key = (row["kreamId"], row["kreamSize"])
         if key in seen:

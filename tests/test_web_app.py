@@ -366,7 +366,7 @@ class SizeAndCompareTests(unittest.TestCase):
         self.assertEqual(cmp.size_key("L(100)"), "=:L(100)")            # unknown format: exact match only
 
     def test_no_first_size_price_is_copied(self):
-        match = {"kream_product_id": "5", "match_verified": 1, "match_method": "style_code", "match_confidence": 0.95}
+        match = {"kream_product_id": "5", "match_verified": 1, "match_method": "local", "match_confidence": 0.95}
         variants = [{"size": "250", "optionNo": "1", "finalPrice": 90000, "priceStatus": "verified"},
                     {"size": "260", "optionNo": "2", "finalPrice": None, "priceStatus": "error", "error": "주문서 오류"},
                     {"size": "270", "optionNo": "3", "priceStatus": "not_requested"}]
@@ -377,7 +377,7 @@ class SizeAndCompareTests(unittest.TestCase):
         self.assertIsNone(rows["260"]["difference"])
         self.assertEqual(rows["260"]["status"], "회원가 확인 실패")
         self.assertEqual(rows["270"]["status"], "회원가 미조회")
-        self.assertEqual((rows["250"]["matchStatus"], rows["250"]["matchConfidence"]), ("자동 검증", 0.95))
+        self.assertEqual((rows["250"]["matchStatus"], rows["250"]["matchConfidence"]), ("규칙 확정", 0.95))
 
     def test_ambiguous_kream_sizes_are_not_matched(self):
         match = {"kream_product_id": "5", "match_verified": 1, "match_method": "manual"}

@@ -94,19 +94,21 @@ GUI는 `size_converter.normalize_size`로 숫자만 뽑아 비교했기 때문�
 | 매칭 상태 | 조건 | 가격 수집에 사용 |
 |---|---|---|
 | 모델번호 일치 | 무신사 품번(또는 상품명 속 모델번호)과 KREAM 모델번호가 같은 후보가 하나뿐 (`match_method=model_code`) | 예 |
-| 이미지 검토 | 저장한 썸네일을 나란히 비교한 AI 보조 검토로 등록 (`match_method=image_review`, 사람 미검수) | 예(검수 권장) |
 | 검수 승인 | 웹의 VLM 검토 탭에서 사람이 승인 (`match_method=human_review`) | 예 |
 | 직접 지정 | 매칭 탭 또는 수집 입력에서 KREAM URL을 지정 (`match_method=manual`, 신뢰도 1.0) | 예 |
-| 자동 검증 | `kream_crawler.search_product` 결과가 `product_matcher.select_best_kream_match` 검증을 통과 (`match_verified=1`) | 예 |
+| 규칙 확정 | `kream_crawler.search_product`의 규칙 판별(`match_method=local`: 상품명·브랜드·품번 점수)이 확정 | 예 |
+| AI 등록(미검수) | 언어 모델(`openai`), 임베딩(`embedding`), AI 보조 이미지 검토(`image_review`)가 등록했던 매칭. 삭제하지 않고 출처와 함께 보존 | 아니오. VLM 검토 탭에서 승인하면 "검수 승인" |
+| 검수 거절 | 사람이 거절한 매칭. 행과 출처(`origin_method`)는 남는다 | 아니오 |
 | 미검증 | GUI 시절 CSV·캐시에서 온 ID로 검증 기록이 없음 | 아니오(매칭 탭에서 [선택 승인]하거나 다시 검색) |
 | 매칭 없음 | | 아니오 |
 
 - 모델번호 대조, 이미지 판정(VLM), 기존 규칙과의 성능 비교는 [matching-evaluation.md](matching-evaluation.md)에 있다.
-- 화면, 엑셀, CSV에 매칭 상태, 신뢰도, 방식, 근거를 함께 표시한다.
+- 모델의 판단만으로는 매칭을 등록하지 않는다. [KREAM 매칭], [KREAM 가격 수집]의 누락 매칭 검색, [전체 순차 실행], 이벤트 자동화가 모두 `pipeline.match_products`를 거치며, 규칙(`model_code`, `local`)이 확정한 것만 바로 등록한다. 언어 모델·임베딩의 선택은 제안(`vlm_suggestions`, 출처 `matcher:openai` 등)으로 저장되고 VLM 검토 탭에서 승인해야 반영된다.
+- 화면, 엑셀, CSV에 매칭 상태, 방식, 근거, 출처를 함께 표시한다. 모델이 출력한 신뢰도는 "출력값"으로 표시하며 확률로 쓰지 않는다.
 - 같은 KREAM 상품이 이미 다른 무신사 상품에 검증 매칭되어 있으면 새로 연결하지 않는다.
 - KREAM 검색과 시세 조회는 로그인 없이 실행된다.
 - 검증을 통과한 결과가 없으면 `kream_search_blacklist.csv`(검색 제외 목록, GUI와 공유)에 추가해 반복 검색을 막는다. 매칭 탭에서 해제할 수 있다.
-- 환경변수 `KREAM_TRUST_EXISTING_MATCHES=1`이면 GUI처럼 미검증 매칭도 사용한다.
+- 환경변수 `KREAM_TRUST_EXISTING_MATCHES=1`이면 GUI처럼 미검증 매칭도 사용한다. 이 설정은 "AI 등록(미검수)"와 "검수 거절"에는 적용되지 않는다.
 
 ### 검증용 상품 쌍 확인 (2026-10-09)
 

@@ -275,14 +275,14 @@ class KreamStageTests(TempDbTestCase):
             search.assert_not_called()
             self.assertEqual(ctx.summary["blacklisted"], 1)
 
-    def test_auto_match_is_stored_with_confidence(self):
+    def test_rule_match_is_stored_with_confidence(self):
         seed_product("1")
         from shop_comparator.shops import kream_crawler
-        found = kream_crawler.KreamSearchResult(321, match_verified=True, match_method="style_code", match_confidence=0.97, match_reason="모델번호 일치")
+        found = kream_crawler.KreamSearchResult(321, match_verified=True, match_method="local", match_confidence=0.97, match_reason="모델번호 일치")
         with mock.patch.object(pipeline, "_blacklist", return_value=set()), mock.patch.object(kream_crawler, "search_product", return_value=found):
             pipeline.match_products(store.products(goods_nos=["1"]), FakeContext())
         info = cmp.match_info(store.match_for("1"))
-        self.assertEqual((info["kreamId"], info["status"], info["confidence"], info["usable"]), ("321", "자동 검증", 0.97, True))
+        self.assertEqual((info["kreamId"], info["status"], info["confidence"], info["usable"]), ("321", "규칙 확정", 0.97, True))
 
 
 class AlertTests(TempDbTestCase):

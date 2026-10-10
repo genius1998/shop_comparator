@@ -13,8 +13,8 @@
 | [method-evaluation.md](method-evaluation.md) | 규칙·텍스트·VLM·결합 방법의 1:N 비교와 "동일 상품 없음" 평가, 라벨 출처, 개발용·평가용 분리, 미실행 실험 |
 | [review-measurement.md](review-measurement.md) | 검수 업무량 집계, 수동 대비 AI 보조 검토 시간을 재는 절차, 실제 측정이 필요한 항목 |
 | [portfolio/index.html](portfolio/index.html) | 클릭 가능한 시스템 다이어그램. 기능별 실행 화면, 소스 위치, 한계. 재현 방법은 [portfolio/README.md](portfolio/README.md) |
-| [troubleshooting.md](troubleshooting.md) | 실제로 발생한 문제 25건. 증상, 재현 조건, 관측 근거, 원인, 수정, 검증, 남은 한계 |
-| [testing.md](testing.md) | 모의 데이터 테스트 124개의 구성과 요구사항별 대응, 격리 방법 |
+| [troubleshooting.md](troubleshooting.md) | 실제로 발생한 문제 26건. 증상, 재현 조건, 관측 근거, 원인, 수정, 검증, 남은 한계 |
+| [testing.md](testing.md) | 모의 데이터 테스트 130개의 구성과 요구사항별 대응, 격리 방법 |
 | [live-verification.md](live-verification.md) | 실제 무신사·KREAM을 상대로 한 실행 기록(작업 ID, 가격, 비교표)과 미검증 항목 |
 | [logging.md](logging.md) | 중앙 로그의 필드, 저장 위치와 회전 정책, 웹 로그 탭, 마스킹, 민감정보를 제거한 예시, 문제 추적 순서 |
 | [limitations.md](limitations.md) | 검증하지 못한 것, 동작상의 제한, 쇼핑몰 변경에 취약한 지점, 정리 과제 |

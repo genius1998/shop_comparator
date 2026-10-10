@@ -393,7 +393,7 @@ def export_xlsx(goods_nos=None, path=None, stream=None):
             verdicts = {r["musinsa_goods_no"]: r for r in csv.DictReader(f)}
     except OSError:
         pass
-    label = {"model_code": "모델번호 일치", "image_review": "이미지 검토", "manual": "직접 지정"}
+    label = {"model_code": "모델번호 일치", "local": "규칙 확정", "manual": "직접 지정", "human_review": "검수 승인", "approved": "사용자 승인"}
     try:
         with open(os.path.join(ROOT, "vlm_results.json"), encoding="utf-8") as f:
             vlm = json.load(f)
@@ -455,9 +455,8 @@ def export_xlsx(goods_nos=None, path=None, stream=None):
                     and not any(code_match(c, picked.get("model")) for c in musinsa_codes(product))
                 cross = f"VLM 제안: {v_id}" + (f" (단, 모델번호 {picked.get('model')}는 무신사 품번과 다름)" if conflict else "")
                 fill = red if conflict else yellow
-        state = info["status"] if usable else ("후보 있음·확정 못 함" if not info["kreamId"] else "예전 매칭(근거 없음, 사용 안 함)")
-        if state == "자동 검증":
-            state = "자동 판별기(미확인)"
+        state = info["status"] if usable or info["kind"] in ("ai_unreviewed", "rejected") else \
+            ("후보 있음·확정 못 함" if not info["kreamId"] else "예전 매칭(근거 없음, 사용 안 함)")
         monthly = product.get("kream_monthly_transactions") if usable else None
         price = price_summary(size_rows.get(goods_no, []), monthly)
         ws.append([index, state, "", "",
@@ -535,7 +534,7 @@ def export_xlsx(goods_nos=None, path=None, stream=None):
             sizes.append([number, "", "", goods_no, row["kreamId"], row.get("brandName") or "", row.get("goodsName") or "", row["size"],
                           row["kreamSize"], row["musinsaPrice"], row.get("kreamBuy"), row.get("kreamBuyDelivery") or "",
                           row.get("difference"), ratio, row.get("kreamSell"), monthly,
-                          "자동 판별기(미확인)" if row.get("matchStatus") == "자동 검증" else row.get("matchStatus"),
+                          row.get("matchStatus"),
                           row.get("musinsaUrl"), row.get("kreamUrl")])
             line = sizes.max_row
             level = price_level(row["musinsaPrice"], row.get("kreamBuy"), monthly)
@@ -578,9 +577,9 @@ def export_xlsx(goods_nos=None, path=None, stream=None):
 
     guide = wb.create_sheet("보는 법")
     for line in [
-        ["매칭 상태", "모델번호 일치 = 무신사 품번과 KREAM 모델번호가 같은 후보가 하나뿐 / 이미지 검토 = 썸네일을 나란히 비교해 판정 / 직접 지정 = 사람이 KREAM 주소를 지정"],
+        ["매칭 상태", "모델번호 일치·규칙 확정 = 규칙이 확정 / 직접 지정·검수 승인 = 사람이 지정하거나 승인 / AI 등록(미검수) = 모델이 등록한 것으로, 사람이 승인하기 전에는 가격 비교에 쓰지 않음 / 검수 거절 = 사람이 거절"],
         ["VLM 열", "gpt-5.4-mini가 저장된 이미지로 판정한 결과(참고용, 매칭 등록에는 반영하지 않음). 초록 = 등록된 매칭과 일치, 빨강 = 엇갈림 또는 모델번호 충돌, 노랑 = 미매칭 상품에 대한 VLM 제안(KREAM 이미지 칸에 제안 후보 표시)."],
-        ["자동 판별기(미확인)", "프로그램의 기존 자동 매칭(상품명 규칙 + OpenAI 판별)이 등록한 것. 모델번호 대조를 거치지 않았으므로 직접 확인 권장."],
+        ["AI 등록(미검수)", "언어·비전 모델이나 AI 보조 검토가 등록했던 매칭. 지우지 않고 출처와 함께 보여 주지만, 웹의 VLM 검토 탭에서 사람이 승인하기 전에는 가격 비교에 쓰지 않습니다."],
         ["후보 있음·확정 못 함", "KREAM 검색 결과는 있으나 같은 상품이라고 확정할 근거(모델번호 일치 등)가 없는 상품."],
         ["가격 열", "무신사 회원가와 KREAM 즉시구매가를 같은 사이즈끼리 비교한 값입니다. 'KREAM÷무신사(최대)'는 사이즈 중 가장 큰 비율이고, 사이즈별 값은 '사이즈별 가격 비교' 시트에 있습니다. KREAM 수수료·배송비는 반영하지 않았습니다."],
         ["사이즈별 가격 비교", "무신사에 재고가 있어 회원가를 확인한 사이즈 중 KREAM에 같은 사이즈가 있는 것만 한 행씩 보여 줍니다. 이미지는 상품의 첫 행에 있습니다. KREAM 즉시구매가가 비어 있으면 그 사이즈는 입찰만 가능한 상태입니다."],

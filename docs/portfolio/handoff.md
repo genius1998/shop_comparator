@@ -45,7 +45,7 @@
 
 | 명령 | 결과 |
 |---|---|
-| `.\.venv\Scripts\python.exe -m unittest discover -s tests` | **124개 통과, 실패 0** (약 35초). 쇼핑몰·유료 API 접속 없음 |
+| `.\.venv\Scripts\python.exe -m unittest discover -s tests` | **130개 통과, 실패 0**. 쇼핑몰·유료 API 접속 없음 (이 문서를 처음 쓸 때는 124개) |
 | `python -m shop_comparator.matching.evaluate` | 118 (48.0%) / 153 (62.2%) / 167 (67.9%). 이전과 같은 수치 |
 | `python -m shop_comparator.matching.vlm_benchmark` | Qwen 92.0% / mini 87.0% / nano 73.0%. 이전과 같은 수치 |
 | `python -m shop_comparator.matching.method_eval` | 아래 4)의 표 |
@@ -163,10 +163,50 @@ VLM 호출 기록 246건(`gpt-5.4-mini-2026-03-17`): 응답 시간 중앙값 2.7
 | 미검증 | 디스코드 발송, 이벤트 자동화, 가격변동 모니터링, 브랜드·카테고리 수집, POIZON | 이전부터 미검증 |
 | 미구현 | 자동 승인, 구매·입찰 자동화, 순이익 계산, 배포·다중 사용자 | 계획 단계. 설명 페이지에 보라색 점선으로 구분 |
 | 미구현 | 무신사 수집의 "중단 지점부터 자동 재개" | 사용자가 [실패·미처리만 다시 실행]을 눌러야 한다 |
-| 알려진 문제 | 웹의 [KREAM 매칭]이 설정에 따라 `gpt-5.4-nano`의 판단을 바로 등록 | 색상이 다른 상품 1건(무신사 6931948)이 등록돼 있다. 검수 화면에서 충돌로 표시된다. 이 경로를 검수 대기열로 돌리는 수정이 남았다 |
+| 해결됨 (2026-10-10 추가 작업) | 웹의 자동 판별기가 모델의 판단을 바로 등록하던 경로 | 아래 "추가: AI 직접 등록 경로 통합" 참고 |
 
 ### 공개 전 확인
 
 - 캡처에는 무신사·KREAM의 상품 이미지와 상품명, 가격이 들어 있다. 공개 범위와 대상 사이트의 이용약관을 작성자가 확인해야 한다.
 - 캡처와 공개 파일에 계정, API 키, 쿠키, 웹훅 주소는 없다(데모 DB에서 삭제, `.env` 미사용). 서버 주소가 들어 있던 원격 VLM 클라이언트는 저장소에 없다.
 - `docs/portfolio/assets/`의 이미지는 약 3.5MB다.
+
+---
+
+## 추가 (2026-10-10): AI 직접 등록 경로를 검수 정책으로 통합
+
+**문제**: 검수 화면을 만든 뒤에도 `pipeline.match_products`가 자동 판별기의 결과를 방식과 무관하게 등록했다. 호출 경로는 넷이다: [KREAM 매칭](`match_kream`), [KREAM 가격 수집]의 누락 매칭 검색(`collect_kream(match_missing=True)`), [전체 순차 실행](`full`), 이벤트 자동화(`monitoring`의 두 곳). 운영 DB에는 언어 모델이 등록한 매칭 44건과 AI 보조 이미지 검토 2건이 있었다.
+
+**변경**
+
+| 파일 | 내용 |
+|---|---|
+| `services/pipeline.py` `match_products` | 규칙(`store.RULE_METHODS` = `model_code`, `local`) 결과만 등록. 그 밖의 방식은 `vlm_review.suggest_from_matcher`로 제안만 저장하고 `suggested`로 센다. 검수를 기다리거나 거절된 상품은 다시 검색하지 않는다 |
+| `services/vlm_review.py` | `suggest_from_matcher`(제안 저장, 후보·이미지 추가, 중복 방지), `queue`(기존 AI 등록을 검수 대기로 표시), `decide`(승인·거절이 행을 지우지 않음) |
+| `services/comparison_service.py` `match_info` | `kind`: `rule` / `user` / `ai_unreviewed` / `rejected` / `unverified`. `ai_unreviewed`와 `rejected`는 `KREAM_TRUST_EXISTING_MATCHES=1`이어도 가격 비교에 쓰지 않는다 |
+| `storage/store.py` | `kream_search_cache`에 `review_state`, `origin_method`, `origin_reason` 열 추가(ALTER, 기존 값 유지). `review_approve`, `review_reject`, `RULE_METHODS`, `USER_METHODS`. `counts()`의 매칭 수에서 미검수 제외 |
+| `web/web_app.py` | 매칭 탭의 [선택 승인]이 `vlm_review.decide`를 거쳐 검수 이력을 남김 |
+| `web/static/app.js`, `templates/index.html` | 상태 표시와 필터, 검수 카드의 "AI 등록(미검수)" 표시 |
+| `tests/test_vlm_review.py` `MatcherPolicyTests` | 6개 |
+
+**기존 데이터**: 삭제한 행은 없다. 기존 AI 등록 행은 그대로이고 읽을 때 "AI 등록(미검수)"로 분류된다. 승인하면 `match_method='human_review'`, `origin_method`에 원래 방식이 남는다. 거절하면 `match_verified=0`, `review_state='rejected'`로 남는다.
+
+**회귀 테스트** (`python -m unittest discover -s tests` → 130개 통과)
+
+| 확인한 것 | 테스트 |
+|---|---|
+| 승인 전 가격 비교 제외, 승인 후 반영 | `test_llm_pick_is_a_suggestion_until_a_person_approves_it` |
+| 거절 후 제외, 수집한 시세는 유지 | `test_rejected_suggestion_stays_out_of_the_price_comparison` |
+| 네 작업 경로 모두 등록하지 않음, 승인 전 가격 요청 없음 | `test_every_job_path_goes_through_the_same_policy` |
+| 규칙 확정과 사용자 선택의 구분 | `test_rule_and_user_matches_are_registered_and_told_apart` |
+| 기존 AI 등록 보존, 미검수 표시, 출처 유지, 재검색 안 함 | `test_matches_registered_by_a_model_earlier_are_kept_but_wait_for_review` |
+| 매칭 탭 승인도 검수 이력으로 | `test_approval_from_the_match_tab_is_recorded_as_a_review` |
+
+**남은 한계**
+
+- **실제 사람 검수와 검토 시간 측정은 여전히 없다.** 기존 AI 등록 46건도 아무도 검수하지 않았다. 알려진 오매칭(무신사 6931948 ↔ KREAM 973781)은 이제 가격 비교에서 빠져 있지만 "거절"로 처리된 것은 아니다.
+- 미검수가 된 만큼 가격 비교 대상이 줄었다. 승인해야 다시 포함된다.
+- 규칙 판별(`local`)은 바로 등록한다. 이 규칙 자체의 오판율은 측정하지 않았다.
+- 이번 변경은 모의 테스트로만 확인했다. 실제 쇼핑몰 검색과 실제 모델 호출로 이 경로를 실행하지 않았다.
+- 이벤트 자동화 경로는 `match_products`를 공유하므로 같은 정책이 적용되지만, 자동화 자체의 장시간 동작은 이전부터 미검증이다.
+- 데스크톱 GUI(`desktop/gui.py`)는 자체 등록 경로를 그대로 쓴다. 웹과 같은 DB를 쓰므로 GUI로 매칭하면 모델의 선택이 등록될 수 있다. 그 행도 웹에서는 "AI 등록(미검수)"로 분류된다.

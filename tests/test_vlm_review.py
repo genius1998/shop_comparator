@@ -161,11 +161,13 @@ class DecisionTests(TempDbTestCase):
         vlm_review.decide("1", "hold", "500")
         self.assertEqual(cmp.match_info(store.match_for("1"))["kreamId"], "500")
         vlm_review.decide("1", "reject", "500", "색상이 다름")
-        self.assertEqual(cmp.match_info(store.match_for("1"))["status"], "매칭 없음")
+        rejected = cmp.match_info(store.match_for("1"))
+        self.assertEqual((rejected["status"], rejected["usable"], rejected["kreamId"], rejected["originMethod"]),
+                         ("검수 거절", False, "500", "openai"))                            # kept with its source, not deleted
         self.assertFalse(any(r["kreamBuy"] for r in cmp.build(["1"])))
         history = store.reviews(["1"])
         self.assertEqual([(r["action"], r["previousKreamId"], r["previousMethod"]) for r in history],
-                         [("hold", "500", "openai"), ("reject", "500", "openai")])            # the trail survives the unmatch
+                         [("hold", "500", "openai"), ("reject", "500", "openai")])
         self.assertEqual(vlm_review.queue(["1"])[0]["state"], "rejected")
         self.assertEqual(store.kream_quotes("500")[0]["instantBuy"], 100000)                   # collected prices are not deleted
 
@@ -320,6 +322,150 @@ class PriceRecoveryTests(TempDbTestCase):
         self.assertEqual({p["kreamStatus"] for p in store.products()}, {"ok"})
         self.assertEqual(self.post(f"/api/jobs/{job_id}/resume").status_code, 202)           # the old ledger still lists them ...
         self.jobs.wait(self.client.get("/api/state").get_json()["jobs"][0]["id"], 10)
+
+
+class MatcherPolicyTests(TempDbTestCase):
+    """A model's judgement never registers a match: it becomes a suggestion that a person approves or rejects."""
+
+    def setUp(self):
+        super().setUp()
+        from shop_comparator.shops import kream_crawler
+        self.kream_crawler = kream_crawler
+        seed_product("1", "러너", sizes=(("10", "250", 90000),))
+        store.save_kream_quotes("900", [{"size": "250", "instantBuy": 100000, "instantBuyDelivery": "일반배송", "instantSell": 80000}])
+
+    def found(self, kream_id=900, method="openai", confidence=0.93):
+        return self.kream_crawler.KreamSearchResult(kream_id, match_verified=True, match_method=method, match_confidence=confidence,
+                                                    match_reason="상품명과 이미지가 일치합니다.", kream_brand="K", kream_product_name="러너 블랙")
+
+    def search(self, result):
+        return mock.patch.object(self.kream_crawler, "search_product", return_value=result)
+
+    def priced(self, goods_no="1"):
+        return [r["kreamBuy"] for r in cmp.build([goods_no]) if r["kreamBuy"] is not None]
+
+    def test_llm_pick_is_a_suggestion_until_a_person_approves_it(self):
+        ctx = FakeContext()
+        with self.search(self.found()), mock.patch.object(pipeline, "_blacklist_add") as blacklist:
+            pipeline.match_products(store.products(goods_nos=["1"]), ctx)
+        blacklist.assert_not_called()                                   # something was found: not "no match"
+        self.assertEqual(ctx.summary, {"suggested": 1})
+        self.assertIsNone(store.match_for("1"))                         # nothing registered
+        self.assertEqual(store.counts()["matched"], 0)
+        suggestion = store.latest_suggestions(["1"])["1"]
+        self.assertEqual((suggestion["source"], suggestion["decision"], suggestion["kreamId"], suggestion["confidence"], suggestion["status"]),
+                         ("matcher:openai", "same", "900", 0.93, "valid"))
+        self.assertEqual(self.priced(), [])                             # before approval: not in the price comparison
+        item = vlm_review.queue(["1"])[0]
+        self.assertEqual((item["state"], item["suggestion"]["kreamId"], [c["kreamId"] for c in item["candidates"]]), ("pending", "900", ["900"]))
+
+        with self.search(self.found()) as search:                       # running again neither asks the model nor duplicates
+            again = FakeContext()
+            pipeline.match_products(store.products(goods_nos=["1"]), again)
+            search.assert_not_called()
+        self.assertEqual(again.summary, {"awaitingReview": 1})
+        self.assertEqual(len(store._rows("SELECT id FROM vlm_suggestions")), 1)
+
+        vlm_review.decide("1", "approve", "900", seconds=5)
+        info = cmp.match_info(store.match_for("1"))
+        self.assertEqual((info["status"], info["kind"], info["usable"]), ("검수 승인", "user", True))
+        self.assertEqual(self.priced(), [100000])                       # after approval: used
+        self.assertEqual(store.counts()["matched"], 1)
+
+    def test_rejected_suggestion_stays_out_of_the_price_comparison(self):
+        with self.search(self.found()):
+            pipeline.match_products(store.products(goods_nos=["1"]), FakeContext())
+        vlm_review.decide("1", "reject", "900", "다른 색상")
+        self.assertIsNone(store.match_for("1"))
+        self.assertEqual(self.priced(), [])
+        self.assertEqual(vlm_review.queue(["1"])[0]["state"], "rejected")
+        self.assertEqual(store.kream_quotes("900")[0]["instantBuy"], 100000)   # collected prices are untouched
+
+    def test_every_job_path_goes_through_the_same_policy(self):
+        """KREAM matching, price collection with missing matches, and the full run."""
+        no_wait = mock.patch.object(JobContext, "wait", lambda self, seconds: self.check())
+        for run in (lambda ctx: pipeline.match_kream(["1"], ctx),
+                    lambda ctx: pipeline.match_kream(["1"], ctx, force=True),
+                    lambda ctx: pipeline.collect_kream(["1"], ctx, match_missing=True),
+                    lambda ctx: pipeline.full({"mode": "selected", "ids": ["1"], "limit": 1, "price_mode": "none"}, ctx)):
+            store._exec("DELETE FROM vlm_suggestions")
+            with fake_kream_session(), no_wait, self.search(self.found()), mock.patch.object(pipeline, "_blacklist", return_value=set()), \
+                    mock.patch.object(pipeline, "collect_musinsa", return_value=["1"]), \
+                    mock.patch.object(pipeline.kream_api, "fetch_quotes", side_effect=AssertionError("no price request before approval")):
+                ctx = FakeContext()
+                run(ctx)
+            self.assertIsNone(store.match_for("1"))
+            self.assertEqual(ctx.summary.get("suggested"), 1)
+            self.assertEqual(self.priced(), [])
+
+    def test_rule_and_user_matches_are_registered_and_told_apart(self):
+        with self.search(self.found(method="local", confidence=0.9)):
+            pipeline.match_products(store.products(goods_nos=["1"]), FakeContext())
+        info = cmp.match_info(store.match_for("1"))
+        self.assertEqual((info["status"], info["kind"], info["usable"]), ("규칙 확정", "rule", True))
+        seed_product("2", "부츠")
+        store.set_manual_match("2", "901")
+        seed_product("3", "로퍼")
+        store.set_manual_match("3", "902", method="model_code")
+        kinds = {g: cmp.match_info(store.match_for(g))["kind"] for g in ("1", "2", "3")}
+        self.assertEqual(kinds, {"1": "rule", "2": "user", "3": "rule"})
+
+    def test_matches_registered_by_a_model_earlier_are_kept_but_wait_for_review(self):
+        for goods_no, kream_id, method in (("1", "900", "openai"), ("2", "901", "image_review"), ("3", "902", "embedding"), ("4", "903", "something_new")):
+            if goods_no != "1":
+                seed_product(goods_no, f"상품 {goods_no}", sizes=(("10", "250", 90000),))
+                store.save_kream_quotes(kream_id, [{"size": "250", "instantBuy": 100000, "instantSell": None}])
+            store.set_manual_match(goods_no, kream_id, "자동 판별기 근거", method=method, confidence=0.94)
+        with mock.patch.dict(os.environ, {"KREAM_TRUST_EXISTING_MATCHES": "1"}):      # even the "trust old matches" switch does not apply
+            infos = {g: cmp.match_info(store.match_for(g)) for g in ("1", "2", "3", "4")}
+            self.assertEqual({(i["status"], i["kind"], i["usable"]) for i in infos.values()}, {("AI 등록(미검수)", "ai_unreviewed", False)})
+            self.assertEqual([self.priced(g) for g in ("1", "2", "3", "4")], [[], [], [], []])
+        self.assertEqual(infos["1"]["source"], "언어 모델(자동 판별기)")
+        self.assertEqual(infos["2"]["source"], "AI 보조 이미지 검토")
+        self.assertEqual(len(store._rows("SELECT 1 FROM kream_search_cache WHERE match_method IN ('openai', 'image_review', 'embedding', 'something_new')")), 4)
+        self.assertEqual(store.counts()["matched"], 0)
+        queue = {i["goodsNo"]: i for i in vlm_review.queue(["1", "2"])}
+        self.assertEqual((queue["1"]["state"], [c["kreamId"] for c in queue["1"]["candidates"]]), ("pending", ["900"]))
+        self.assertEqual(vlm_review.metrics(["1", "2", "3", "4"])["aiUnreviewed"], 4)
+
+        with self.search(self.found()) as search:                        # a waiting match is not searched (and billed) again
+            ctx = FakeContext()
+            pipeline.match_products(store.products(goods_nos=["1"]), ctx)
+            search.assert_not_called()
+        self.assertEqual(ctx.summary, {"awaitingReview": 1})
+
+        vlm_review.decide("1", "approve", "900")
+        approved = cmp.match_info(store.match_for("1"))
+        self.assertEqual((approved["status"], approved["usable"], approved["originMethod"], approved["originReason"]),
+                         ("검수 승인", True, "openai", "자동 판별기 근거"))               # the source survives the approval
+        self.assertEqual(self.priced("1"), [100000])
+
+        vlm_review.decide("2", "reject", "901", "색상이 다름")
+        rejected = store.match_for("2")
+        self.assertEqual((rejected["kream_product_id"], rejected["match_verified"], rejected["review_state"], rejected["origin_method"]),
+                         ("901", 0, "rejected", "image_review"))                       # not deleted
+        with mock.patch.dict(os.environ, {"KREAM_TRUST_EXISTING_MATCHES": "1"}):
+            self.assertEqual((cmp.match_info(rejected)["status"], cmp.match_info(rejected)["usable"]), ("검수 거절", False))
+            self.assertEqual(self.priced("2"), [])
+        with self.search(self.found(901)) as search:
+            ctx = FakeContext()
+            pipeline.match_products(store.products(goods_nos=["2"]), ctx)
+            search.assert_not_called()                                   # a rejected match is not proposed again by itself
+        self.assertEqual(ctx.summary, {"rejected": 1})
+
+    def test_approval_from_the_match_tab_is_recorded_as_a_review(self):
+        store.set_manual_match("1", "900", "자동 판별기 근거", method="openai", confidence=0.9)
+        jobs = JobManager(persist=False)
+        client = create_app(jobs).test_client()
+        token = re.search(r'name="csrf-token" content="([^"]+)"', client.get("/").text)[1]
+        row = client.get("/api/matches").get_json()["matches"][0]
+        self.assertEqual((row["status"], row["usable"]), ("AI 등록(미검수)", False))
+        response = client.post("/api/matches/approve", json={"ids": ["1"]}, headers={"X-CSRF-Token": token})
+        self.assertEqual(response.status_code, 200)
+        row = client.get("/api/matches").get_json()["matches"][0]
+        self.assertEqual((row["status"], row["usable"], row["originMethod"]), ("검수 승인", True, "openai"))
+        review = store.reviews(["1"])[-1]
+        self.assertEqual((review["action"], review["kreamId"], review["previousMethod"]), ("approve", "900", "openai"))
 
 
 if __name__ == "__main__":

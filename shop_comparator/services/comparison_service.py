@@ -68,28 +68,46 @@ def trust_unverified():
     return os.getenv("KREAM_TRUST_EXISTING_MATCHES", "").strip().lower() in {"1", "true", "yes", "on"}
 
 
+AI_LABELS = {"openai": "언어 모델(자동 판별기)", "embedding": "임베딩 유사도(자동 판별기)", "image_review": "AI 보조 이미지 검토"}
+
+
 def match_info(match):
-    """Describe a kream_search_cache row for display and decide if it is usable."""
+    """Describe a kream_search_cache row for display and decide if it may be used for prices.
+
+    kind      rule           decided by a rule (model code, name/brand/code scorer)
+              user           typed or approved by a person
+              ai_unreviewed  registered by a model or an AI-assisted review: kept, shown, NOT used until a person approves
+              rejected       a person rejected it: kept, not used
+              unverified     an old id without any record of how it was matched
+    """
     if not match or not match.get("kream_product_id") or str(match["kream_product_id"]) in ("", "0", "None"):
-        return {"kreamId": "", "status": "매칭 없음", "usable": False, "confidence": None, "method": "", "reason": ""}
+        return {"kreamId": "", "status": "매칭 없음", "usable": False, "confidence": None, "method": "", "reason": "", "kind": "none"}
     verified = int(match.get("match_verified") or 0) == 1
     method = match.get("match_method") or ""
-    if method == "manual":
-        status = "직접 지정"
-    elif method == "image_review" and verified:
-        status = "이미지 검토"
-    elif method == "model_code" and verified:
-        status = "모델번호 일치"
+    origin = match.get("origin_method") or ""
+    if match.get("review_state") == "rejected":
+        kind, status, usable = "rejected", "검수 거절", False
+    elif method == "manual":
+        kind, status, usable = "user", "직접 지정", True
     elif method == "human_review" and verified:
-        status = "검수 승인"
+        kind, status, usable = "user", "검수 승인", True
+    elif method == "approved" and verified:
+        kind, status, usable = "user", "사용자 승인", True
+    elif method == "model_code" and verified:
+        kind, status, usable = "rule", "모델번호 일치", True
+    elif method == "local" and verified:
+        kind, status, usable = "rule", "규칙 확정", True
     elif verified:
-        status = "자동 검증"
+        # a model's judgement alone never confirms a match, whatever confidence it reported
+        kind, status, usable = "ai_unreviewed", "AI 등록(미검수)", False
     else:
-        status = "미검증"
+        kind, status, usable = "unverified", "미검증", trust_unverified()
     return {
-        "kreamId": str(match["kream_product_id"]).split(".")[0], "status": status,
-        "usable": verified or trust_unverified(), "confidence": match.get("match_confidence"),
+        "kreamId": str(match["kream_product_id"]).split(".")[0], "status": status, "kind": kind,
+        "usable": usable, "confidence": match.get("match_confidence"),
         "method": method, "reason": match.get("match_reason") or "",
+        "source": AI_LABELS.get(method, method) if kind == "ai_unreviewed" else AI_LABELS.get(origin, origin),
+        "originMethod": origin, "originReason": match.get("origin_reason") or "",
         "kreamName": match.get("kream_product_name") or "", "kreamBrand": match.get("kream_brand") or "",
         "verifiedAt": match.get("verified_at"),
     }

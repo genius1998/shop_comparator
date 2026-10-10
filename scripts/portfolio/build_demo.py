@@ -28,8 +28,7 @@ FEATURED = [
     "5042975",   # model-code rule and VLM pick different candidates
     "7407733",   # model-code match that the VLM calls "different"
 ]
-REOPENED = {"3976350": "AI 보조 이미지 검토로 등록돼 있던 매칭을 데모에서 해제해 사람 검수 대기 상태로 되돌림",
-            "4207634": "AI 보조 이미지 검토로 등록돼 있던 매칭을 데모에서 해제해 사람 검수 대기 상태로 되돌림"}
+REOPENED = {}      # nothing is unmatched for the demo: matches registered by a model already wait for review
 
 
 def main():

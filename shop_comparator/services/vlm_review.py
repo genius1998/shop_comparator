@@ -169,6 +169,49 @@ def review_products(goods_nos, ctx, mode="stored", max_calls=None, force=False, 
         ctx.note("apiCalls", calls)
 
 
+def suggest_from_matcher(product, found, job_id=None):
+    """Store what the automatic matcher's model picked as a suggestion (never as a match).
+
+    `found` is the search result object of kream_crawler.search_product.  The picked product is added to
+    the product's candidate list (with thumbnails when they can be saved) so the review card can show it.
+    """
+    goods_no, kream_id = str(product["goodsNo"]), str(int(found))
+    method = getattr(found, "match_method", None) or "unknown"
+    data = match_review.load()
+    entry = data.setdefault(goods_no, {
+        "goodsNo": goods_no, "rank": product.get("rank"), "brand": product.get("brandName"), "name": product.get("goodsName"),
+        "serial": product.get("serial_number"), "musinsaImage": None, "query": None, "candidates": [], "error": None,
+        "collectedAt": store.now()})
+    candidate = next((c for c in entry["candidates"] if str(c["kreamId"]) == kream_id), None)
+    if candidate is None:
+        candidate = {"kreamId": kream_id, "brand": getattr(found, "kream_brand", None), "name": getattr(found, "kream_product_name", None),
+                     "image": None, "model": ""}
+        entry["candidates"].append(candidate)
+    folder = os.path.join(match_review.IMAGES, goods_no)
+    try:
+        if not entry.get("musinsaImage") and match_review.save_image(product.get("imageUrl"), os.path.join(folder, "musinsa.jpg")):
+            entry["musinsaImage"] = f"images/{goods_no}/musinsa.jpg"
+        if not candidate.get("image") and match_review.save_image(getattr(found, "kream_image_url", None),
+                                                                  os.path.join(folder, f"kream_{kream_id}.jpg")):
+            candidate["image"] = f"images/{goods_no}/kream_{kream_id}.jpg"
+    except Exception as exc:                      # a missing thumbnail must not lose the suggestion
+        L.warn(f"제안 후보의 이미지를 저장하지 못했습니다: {type(exc).__name__}", goods=goods_no)
+    match_review.save(data)
+    key = candidate_key(entry)
+    latest = store.latest_suggestions([goods_no], valid_only=True).get(goods_no)
+    source = f"matcher:{method}"
+    if latest and latest["source"] == source and latest["kreamId"] == kream_id and latest["candidateKey"] == key:
+        return latest["id"]                        # same suggestion again: no duplicate row
+    confidence = getattr(found, "match_confidence", None)
+    if isinstance(confidence, bool) or not isinstance(confidence, (int, float)) or not 0 <= confidence <= 1:
+        confidence = None
+    model = (os.getenv("OPENAI_MATCH_MODEL") or "") if method == "openai" else (os.getenv("OPENAI_EMBEDDING_MODEL") or "") if method == "embedding" else ""
+    return store.add_suggestion(goodsNo=goods_no, jobId=job_id, source=source, status="valid", decision="same", kreamId=kream_id,
+                                confidence=confidence, reason=str(getattr(found, "match_reason", "") or "")[:600], model=model or method,
+                                candidateKey=key, candidateIds=json.dumps(sorted(str(c["kreamId"]) for c in entry["candidates"])),
+                                judgedAt=store.now())
+
+
 def _conflicts(entry, info, suggestion, rule):
     """Disagreements a reviewer should see before deciding."""
     out = []
@@ -212,8 +255,15 @@ def queue(goods_nos):
         entry = {**(data.get(goods_no) or {"candidates": []}), "goodsNo": goods_no,
                  "brand": product.get("brandName"), "name": product.get("goodsName"), "serial": product.get("serial_number")}
         info = cmp.match_info(matches.get(goods_no))
+        if info["kreamId"] and info["kind"] in ("ai_unreviewed", "rejected") \
+                and not any(str(c["kreamId"]) == info["kreamId"] for c in entry["candidates"]):
+            # a match registered by a model before the review policy: show it as a candidate so it can be approved or rejected
+            image = f"images/{goods_no}/kream_{info['kreamId']}.jpg"
+            entry = {**entry, "candidates": entry["candidates"] + [{
+                "kreamId": info["kreamId"], "brand": info["kreamBrand"], "name": info["kreamName"], "model": "",
+                "image": image if os.path.exists(os.path.join(match_review.ROOT, image)) else None}]}
         suggestion, attempt = valid.get(goods_no), suggestions.get(goods_no)
-        stale = bool(suggestion and suggestion["candidateKey"] != candidate_key(entry))
+        stale = bool(suggestion and suggestion["candidateKey"] != candidate_key(data.get(goods_no) or {"candidates": []}))
         usable = None if stale else suggestion
         reviews = history.get(goods_no, [])
         last = reviews[-1] if reviews else None
@@ -221,7 +271,7 @@ def queue(goods_nos):
             state = "approved" if last["action"] == "approve" else "rejected"
         elif last:
             state = "held"
-        elif usable:
+        elif usable or info["kind"] == "ai_unreviewed":
             state = "pending"
         else:
             state = "no_suggestion"
@@ -275,10 +325,16 @@ def decide(goods_no, action, kream_id=None, note=None, seconds=None, mode="assis
     review_id = store.add_review(goods_no, action, kream_id or None, note, suggestion, previous, mode, seconds)
     if action == "approve":
         agreed = suggestion and suggestion["decision"] == "same" and suggestion["kreamId"] == kream_id
-        basis = f"VLM 제안({suggestion['model'] or 'VLM'})과 일치" if agreed else "VLM 제안과 무관하게 사람이 선택" if suggestion else "VLM 제안 없이 사람이 선택"
-        store.set_manual_match(goods_no, kream_id, f"사람 검수 승인 #{review_id}: {basis}", method="human_review", confidence=None)
+        if agreed:
+            basis = f"AI 제안({suggestion['model'] or 'AI'})과 일치"
+        elif previous["kind"] == "ai_unreviewed" and previous["kreamId"] == kream_id:
+            basis = f"기존 AI 등록({previous['source'] or previous['method']})을 사람이 확인"
+        else:
+            basis = "AI 제안과 무관하게 사람이 선택" if suggestion else "AI 제안 없이 사람이 선택"
+        store.review_approve(goods_no, kream_id, f"사람 검수 승인 #{review_id}: {basis}")
     elif action == "reject" and previous["kreamId"] and (not kream_id or kream_id == previous["kreamId"]):
-        store.clear_match(goods_no)          # the rejected product must not feed the price comparison
+        # the rejected product must not feed the price comparison; the row and its source are kept
+        store.review_reject(goods_no, f"사람 검수 거절 #{review_id}" + (f": {note}" if note else ""))
     L.log(f"매칭 검수: {action} (KREAM {kream_id or '-'})", goods=goods_no, stage="vlm-review")
     return review_id
 
@@ -292,6 +348,7 @@ def metrics(goods_nos):
     goods_nos = [str(g) for g in goods_nos]
     items = queue(goods_nos)
     methods = [i["match"]["method"] if i["match"]["usable"] else "" for i in items]
+    kinds = [i["match"]["kind"] for i in items]
     reviews = store.reviews(goods_nos)
     last = {r["goodsNo"]: r for r in reviews}
     timed = {mode: [r["reviewSeconds"] for r in reviews if r["mode"] == mode and r["reviewSeconds"] is not None]
@@ -305,6 +362,8 @@ def metrics(goods_nos):
         "humanApprovedMatches": sum(1 for m in methods if m == "human_review"),
         "otherMatches": sum(1 for m in methods if m and m not in ("model_code", "human_review")),
         "unmatched": sum(1 for m in methods if not m),
+        "aiUnreviewed": kinds.count("ai_unreviewed"),      # registered by a model earlier; shown, not used for prices
+        "rejectedMatches": kinds.count("rejected"),
         "vlmTargets": sum(1 for i in items if not (i["match"]["usable"] and i["match"]["method"] == "model_code")),
         "vlmJudged": len(suggestions),
         "vlmSame": sum(1 for s in suggestions if s["decision"] == "same"),

@@ -14,7 +14,7 @@
 </header>
 <main>
   <section class="strengths" aria-label="핵심 강점">
-    <article><h2>수집에서 화면까지 직접 구현</h2><strong class="num">7개 패키지 · 테스트 124개</strong><p>데이터 수집, 상품 매칭, 저장, 가격 비교, 웹 화면, 내보내기를 한 사람이 설계하고 구현했습니다.</p></article>
+    <article><h2>수집에서 화면까지 직접 구현</h2><strong class="num">7개 패키지 · 테스트 130개</strong><p>데이터 수집, 상품 매칭, 저장, 가격 비교, 웹 화면, 내보내기를 한 사람이 설계하고 구현했습니다.</p></article>
     <article><h2>이미지 검토에 VLM 적용, 오판까지 측정</h2><strong class="num">246개 · 100쌍 · 3개 모델</strong><p>사람이 이미지를 보고 하던 동일 상품 검토에 VLM을 붙이고, 맞은 것과 틀린 것을 같은 데이터로 측정했습니다. VLM의 제안은 사람이 승인해야 반영됩니다.</p></article>
     <article><h2>기존 규칙의 오매칭 제거</h2><strong class="num">118 → 153 → 167개</strong><p>확인해 확보한 매칭 수입니다(정확도 아님). 49개 증가 중 35개는 규칙 개선, 14개는 VLM 제안을 검토해 채택한 것입니다.</p></article>
     <article><h2>판매한 프로그램의 재설계</h2><strong class="num">GUI 1파일 → 웹 7패키지</strong><p>원형인 데스크톱 프로그램은 작성자가 고객에게 판매한 프로그램입니다(작성자 설명. 이 저장소에는 판매 증빙이 없습니다).</p></article>
@@ -214,7 +214,7 @@ SELECT kreamId, size, COUNT(*) FROM kream_quotes GROUP BY kreamId, size</pre>
     <h3>소스 위치</h3>
     <p class="src"><code>matching/match_review.py</code> <code>name_codes</code>, <code>code_match</code>, <code>decide</code>, <code>apply_model_matches</code> · <code>matching/evaluate.py</code> <code>legacy_pick</code>, <code>model_code_pick</code></p>
     <h3>실패 처리와 한계</h3>
-    <div class="limits"><ul><li>모델번호 일치를 정답으로 보는 것은 가정입니다. 이 153개에서 규칙이 맞는 것은 정의상 당연하며 규칙의 정확도 증거가 아닙니다.</li><li>모델번호가 없는 상품(국내 브랜드 구두 등)은 확정하지 못합니다.</li><li>웹의 [KREAM 매칭] 버튼은 아직 기존 자동 판별기를 씁니다. 설정에 따라 <code>gpt-5.4-nano</code>의 판단을 바로 등록하며, 색상이 다른 상품 1건이 등록된 것을 확인했습니다. "자동 검증"으로 표시되고 검수 화면에서 충돌로 드러납니다.</li></ul></div>
+    <div class="limits"><ul><li>모델번호 일치를 정답으로 보는 것은 가정입니다. 이 153개에서 규칙이 맞는 것은 정의상 당연하며 규칙의 정확도 증거가 아닙니다.</li><li>모델번호가 없는 상품(국내 브랜드 구두 등)은 확정하지 못합니다.</li><li>수집 중에 도는 자동 판별기도 같은 정책을 따릅니다. 규칙이 확정한 것만 바로 등록하고, 언어 모델의 선택은 제안으로 저장해 검수 화면으로 보냅니다. 예전에 모델이 직접 등록한 매칭은 지우지 않고 "AI 등록(미검수)"로 표시하며 승인 전에는 가격 비교에서 뺍니다. 그중 색상이 다른 상품 1건이 있었습니다.</li></ul></div>
     <div class="linkbar"><button data-goto="vlm">VLM 판정 →</button><button data-goto="eval">평가 →</button></div>
   </article>
 
@@ -266,7 +266,7 @@ match_reviews:   id=2, goodsNo=3976350, action=approve, kreamId=12831,
     <h3>소스 위치</h3>
     <p class="src"><code>services/vlm_review.py</code> <code>queue</code>, <code>decide</code>, <code>metrics</code>, <code>_conflicts</code> · <code>web/web_app.py</code> <code>review_list</code>, <code>review_decide</code> · <code>web/static/app.js</code> <code>reviewCard</code> · <code>docs/review-measurement.md</code> · 테스트 <code>DecisionTests</code></p>
     <h3>실패 처리와 한계</h3>
-    <div class="limits"><ul><li>후보 목록에 없는 상품은 승인할 수 없습니다. 잘못된 요청은 이력을 남기지 않고 거절됩니다.</li><li>거절해도 수집한 시세는 지우지 않습니다. 가격 비교에서만 빠집니다.</li><li><strong>아직 사람이 이 화면으로 검수한 기록이 없습니다.</strong> 저장소의 기존 라벨(동일 14, 아님 6, 보류 3)은 AI 보조 도구가 만든 것이며 사람 미검수입니다.</li><li>검토 시간은 측정 기능만 있습니다. 수동 대비 AI 보조의 시간 감소율은 측정하지 않았으므로 제시하지 않습니다.</li><li>"AI 제안 숨기기"로 수동 조건을 만들 수 있습니다. 절차는 <code>docs/review-measurement.md</code>에 있습니다.</li></ul></div>
+    <div class="limits"><ul><li>후보 목록에 없는 상품은 승인할 수 없습니다. 잘못된 요청은 이력을 남기지 않고 거절됩니다.</li><li>거절해도 매칭 행과 출처, 수집한 시세는 지우지 않습니다. "검수 거절"로 남고 가격 비교에서만 빠집니다.</li><li><strong>아직 사람이 이 화면으로 검수한 기록이 없습니다.</strong> 저장소의 기존 라벨(동일 14, 아님 6, 보류 3)은 AI 보조 도구가 만든 것이며 사람 미검수입니다.</li><li>검토 시간은 측정 기능만 있습니다. 수동 대비 AI 보조의 시간 감소율은 측정하지 않았으므로 제시하지 않습니다.</li><li>"AI 제안 숨기기"로 수동 조건을 만들 수 있습니다. 절차는 <code>docs/review-measurement.md</code>에 있습니다.</li></ul></div>
     <div class="linkbar"><button data-goto="compare">가격 비교 →</button><button data-goto="storage">저장 →</button></div>
   </article>
 

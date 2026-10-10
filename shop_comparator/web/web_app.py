@@ -457,8 +457,12 @@ def create_app(manager=None, monitors=None, auto=None):
         if not ids:
             raise ValueError("상품을 선택해 주세요.")
         if action == "approve":
+            # the same decision as in the review tab: recorded in the review history, source of the match kept
             for goods_no in ids:
-                store.approve_match(goods_no)
+                current = cmp.match_info(store.match_for(goods_no))
+                if not current["kreamId"]:
+                    raise ValueError(f"상품 {goods_no}에는 승인할 KREAM 매칭이 없습니다.")
+                vlm_review.decide(goods_no, "approve", current["kreamId"], "매칭 탭에서 승인")
         elif action == "clear":
             for goods_no in ids:
                 store.clear_match(goods_no)

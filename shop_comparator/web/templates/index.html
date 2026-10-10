@@ -174,17 +174,17 @@
 
 <!-- ───────────── 매칭 ───────────── -->
 <section class="tab" id="tab-match">
-  <p class="lead">무신사 상품과 KREAM 상품의 연결 상태입니다. 자동 매칭은 모델번호·브랜드·상품명 검증을 통과한 경우만 "자동 검증"이 됩니다. 미검증 매칭은 가격 수집에 쓰지 않습니다.</p>
+  <p class="lead">무신사 상품과 KREAM 상품의 연결 상태입니다. 규칙(모델번호, 상품명·브랜드·품번)으로 확정되거나 사람이 지정·승인한 매칭만 가격 비교에 씁니다. 언어·비전 모델의 판단은 제안으로 저장되며, "AI 등록(미검수)"는 VLM 검토 탭에서 승인해야 반영됩니다.</p>
   <div class="toolbar">
     <input id="match-search" type="search" placeholder="상품명·번호 검색">
-    <select id="match-filter"><option value="">전체</option><option>직접 지정</option><option>모델번호 일치</option><option>이미지 검토</option><option>자동 검증</option><option>미검증</option><option>매칭 없음</option></select>
+    <select id="match-filter"><option value="">전체</option><option>직접 지정</option><option>검수 승인</option><option>모델번호 일치</option><option>규칙 확정</option><option>AI 등록(미검수)</option><option>검수 거절</option><option>미검증</option><option>매칭 없음</option></select>
     <span class="grow"></span>
     <button data-match="approve">선택 승인</button>
     <button data-match="clear">선택 매칭 해제</button>
     <button data-match="unblacklist">선택 검색 제외 해제</button>
     <button data-match="search">선택 다시 검색</button>
   </div>
-  <div class="table-wrap"><table><thead><tr><th></th><th>무신사 상품</th><th>품번</th><th>KREAM 상품</th><th>매칭 상태</th><th>신뢰도·근거</th><th>직접 지정</th></tr></thead><tbody id="match-rows"></tbody></table></div>
+  <div class="table-wrap"><table><thead><tr><th></th><th>무신사 상품</th><th>품번</th><th>KREAM 상품</th><th>매칭 상태</th><th>출력값·근거</th><th>직접 지정</th></tr></thead><tbody id="match-rows"></tbody></table></div>
 </section>
 
 <!-- ───────────── VLM 검토 ───────────── -->
@@ -204,7 +204,7 @@
   <div class="metrics" id="review-metrics"></div>
   <div class="toolbar">
     <select id="review-filter" aria-label="표시할 상품">
-      <option value="pending">검수 대기 (VLM 제안 있음)</option><option value="conflict">규칙·등록 매칭과 충돌</option>
+      <option value="pending">검수 대기 (AI 제안·AI 등록 미검수)</option><option value="conflict">규칙·등록 매칭과 충돌</option>
       <option value="approved">승인함</option><option value="rejected">거절함</option><option value="held">보류함</option>
       <option value="no_suggestion">VLM 제안 없음</option><option value="">전체</option>
     </select>
