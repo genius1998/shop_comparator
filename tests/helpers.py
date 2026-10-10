@@ -65,6 +65,15 @@ class TempDbTestCase(unittest.TestCase):
         blacklist = mock.patch.object(pipeline, "_blacklist_path", return_value=str(Path(self._tmp.name) / "blacklist.csv"))
         blacklist.start()
         self.addCleanup(blacklist.stop)
+        # Match-review files (candidates, thumbnails) live in a temp folder and no image is downloaded.
+        from shop_comparator.matching import match_review
+        review = Path(self._tmp.name) / "match_review"
+        for guard in (mock.patch.object(match_review, "ROOT", str(review)),
+                      mock.patch.object(match_review, "IMAGES", str(review / "images")),
+                      mock.patch.object(match_review, "CANDIDATES", str(review / "candidates.json")),
+                      mock.patch.object(match_review, "save_image", return_value=False)):
+            guard.start()
+            self.addCleanup(guard.stop)
         self.addCleanup(self._tmp.cleanup)
         self.addCleanup(close_all)
         self.addCleanup(patcher.stop)

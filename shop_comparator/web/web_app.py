@@ -429,6 +429,18 @@ def create_app(manager=None, monitors=None, auto=None):
     def export_xlsx():
         return send_file(exports.comparison_workbook(export_rows()), download_name="shop_comparison.xlsx", as_attachment=True, mimetype=XLSX)
 
+    @app.get("/api/export/price-check.xlsx")
+    def export_price_check():
+        """Per-size price comparison with thumbnails and highlights (last collected batch unless ids are given)."""
+        from shop_comparator.matching import match_review
+        ids = _ids(request.args.get("ids", "").split(",")) if request.args.get("ids") else \
+            (store.get_setting("last_collection") or {}).get("goods") or []
+        if not ids or not cmp.build(ids, include_kream_only=False):
+            raise CrawlError("내보내기", "prerequisite", "다운로드할 결과가 없습니다. 먼저 수집을 실행해 주세요.")
+        match_review.fill_match_images(ids, log=lambda text: L.log(text, level="warning", stage="export"))
+        return send_file(match_review.export_xlsx(ids, stream=io.BytesIO()), download_name="price_check.xlsx",
+                         as_attachment=True, mimetype=XLSX)
+
     @app.get("/api/export/comparison.csv")
     def export_csv():
         return send_file(exports.comparison_csv(export_rows()), download_name="shop_comparison.csv", as_attachment=True, mimetype="text/csv")

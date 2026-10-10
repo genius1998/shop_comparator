@@ -289,6 +289,37 @@ class DataTests(ApiCase):
         self.assertEqual(gui[0]["price_diff"], "-10000")   # GUI sign: 무신사 − KREAM
         self.assertEqual(gui[0]["kream_link"], "https://kream.co.kr/products/500")
 
+    def test_price_check_download_has_one_row_per_shared_size_and_highlights(self):
+        self.assertEqual(self.client.get("/api/export/price-check.xlsx").status_code, 409)       # nothing collected yet
+        self.seed()
+        seed_product("2", "부츠", sizes=(("20", "250", 100000),))
+        store.set_manual_match("2", "600")
+        store.save_kream_quotes("600", [{"size": "250", "instantBuy": 104000, "instantBuyDelivery": "일반배송", "instantSell": 90000}])
+        store.set_setting("last_collection", {"goods": ["1", "2"], "at": store.now()})
+        from shop_comparator.storage import database
+        conn = database.get_db_conn()
+        conn.execute("UPDATE products SET kream_monthly_transactions = 30 WHERE goodsNo IN ('1', '2')")
+        conn.commit()
+        book = load_workbook(io.BytesIO(self.client.get("/api/export/price-check.xlsx").data))
+        sheet = book.worksheets[0]
+        self.assertEqual(sheet.title, "사이즈별 가격 비교")
+        header = [c.value for c in sheet[1]]
+        rows = {(r[header.index("무신사 상품ID")].value, r[header.index("무신사 사이즈")].value): r for r in sheet.iter_rows(min_row=2)}
+        # sizes Musinsa priced AND KREAM lists: 270 has no Musinsa price, 280 exists only on KREAM
+        self.assertEqual(set(rows), {("1", "250"), ("1", "260"), ("2", "250")})
+
+        def cell(key, name):
+            return rows[key][header.index(name)]
+
+        self.assertEqual((cell(("1", "250"), "무신사 회원가").value, cell(("1", "250"), "KREAM 즉시구매가").value), (90000, 100000))
+        self.assertAlmostEqual(cell(("1", "250"), "KREAM÷무신사").value, 100000 / 90000)
+        self.assertTrue(cell(("1", "250"), "KREAM 즉시구매가").fill.fgColor.rgb.endswith("F4511E"))   # 111%: strong
+        self.assertTrue(cell(("2", "250"), "KREAM 즉시구매가").fill.fgColor.rgb.endswith("FFD966"))   # 104%: soft
+        self.assertIsNone(cell(("1", "260"), "KREAM 즉시구매가").value)                              # bid only: no guessed price
+        self.assertIsNone(cell(("1", "260"), "KREAM 즉시구매가").fill.fill_type)
+        only_two = load_workbook(io.BytesIO(self.client.get("/api/export/price-check.xlsx?ids=2").data)).worksheets[0]
+        self.assertEqual(only_two.max_row, 2)
+
     def test_bid_sheet_uses_each_sizes_own_price_and_only_matched_sizes(self):
         self.seed()
         rows = exports.bid_rows(10.0, 2, "30일")
